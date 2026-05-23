@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://developer.bentley.com/schemas/reality-data.json",
+  "title": "RealityData",
+  "type": "object",
+  "description": "Reality capture output (point cloud, mesh, 3D Tiles, orthophoto) attached to an iTwin.",
+  "required": [
+    "id",
+    "displayName",
+    "type"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "description": "RealityMesh3DTiles, OPC, Cesium3DTiles, Terrain3DTiles, etc."
+    },
+    "classification": {
+      "type": "string",
+      "enum": [
+        "Imagery",
+        "Terrain",
+        "Pinned",
+        "Model",
+        "Undefined"
+      ]
+    },
+    "size": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "authoring": {
+      "type": "boolean"
+    },
+    "extent": {
+      "type": "object"
+    },
+    "accessControl": {
+      "type": "string"
+    },
+    "modifiedDateTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "createdDateTime": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

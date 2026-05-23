@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://developer.bentley.com/schemas/schedule-task.json",
+  "title": "ScheduleTask",
+  "type": "object",
+  "description": "A 4D construction schedule task representing planned work over a time interval, optionally linked to iModel elements.",
+  "required": [
+    "id",
+    "name"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "plannedStart": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "plannedFinish": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "actualStart": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "actualFinish": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "percentComplete": {
+      "type": "number"
+    },
+    "wbsCode": {
+      "type": "string"
+    },
+    "predecessors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-structure.org/schema",
+  "name": "iTwin",
+  "description": "Structural definition of an iTwin container \u2014 Bentley's top-level digital twin organizational unit.",
+  "fields": [
+    {
+      "name": "id",
+      "type": "uuid",
+      "required": true,
+      "description": "Globally unique iTwin identifier."
+    },
+    {
+      "name": "class",
+      "type": "enum",
+      "required": true,
+      "values": [
+        "Account",
+        "Thing",
+        "Endeavor"
+      ],
+      "description": "iTwin classification."
+    },
+    {
+      "name": "displayName",
+      "type": "string",
+      "required": true,
+      "description": "Human-readable iTwin name."
+    },
+    {
+      "name": "parentId",
+      "type": "uuid",
+      "required": false,
+      "description": "Parent iTwin in the hierarchy."
+    },
+    {
+      "name": "geographicLocation",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "dataCenterLocation",
+      "type": "string",
+      "required": false,
+      "description": "Region where iTwin data is stored."
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "values": [
+        "Active",
+        "Inactive",
+        "Trial"
+      ],
+      "required": false
+    },
+    {
+      "name": "createdDateTime",
+      "type": "datetime",
+      "required": true
+    }
+  ]
+}

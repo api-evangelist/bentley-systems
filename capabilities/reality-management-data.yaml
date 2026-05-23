@@ -1,0 +1,47 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: "iTwin Reality Management API \u2014 Data"
+  description: "iTwin Reality Management API \u2014 Data. Self-contained Naftiko capability covering the Data resource of\
+    \ the iTwin Reality Management API."
+  tags:
+  - Bentley
+  - iTwin
+  - Data
+  created: '2026-05-23'
+  modified: '2026-05-23'
+binds:
+- namespace: env
+  keys:
+    ITWIN_ACCESS_TOKEN: ITWIN_ACCESS_TOKEN
+capability:
+  consumes:
+  - type: http
+    namespace: reality-management-data
+    baseUri: https://api.bentley.com/reality-management
+    description: iTwin Reality Management API Data capability against the iTwin Platform.
+    resources:
+    - name: data
+      path: /data
+      operations:
+      - name: listData
+        method: GET
+        description: List Data via iTwin Reality Management API
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters: []
+      - name: createData
+        method: POST
+        description: Create Data via iTwin Reality Management API
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).

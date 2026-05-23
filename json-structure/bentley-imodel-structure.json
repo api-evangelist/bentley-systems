@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-structure.org/schema",
+  "name": "iModel",
+  "description": "Structural definition of an iModel \u2014 a distributed relational BIM database derived from an iTwin asset.",
+  "fields": [
+    {
+      "name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "name": "displayName",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "iTwinId",
+      "type": "uuid",
+      "required": true,
+      "description": "Parent iTwin holding this iModel."
+    },
+    {
+      "name": "state",
+      "type": "enum",
+      "values": [
+        "initialized",
+        "notInitialized"
+      ],
+      "required": true
+    },
+    {
+      "name": "dataCenterLocation",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "extent",
+      "type": "object",
+      "required": false,
+      "description": "Geographic bounding box."
+    },
+    {
+      "name": "createdDateTime",
+      "type": "datetime",
+      "required": true
+    }
+  ]
+}

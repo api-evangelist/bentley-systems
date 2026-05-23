@@ -1,0 +1,47 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: "iTwin Issues API \u2014 Management"
+  description: "iTwin Issues API \u2014 Management. Self-contained Naftiko capability covering the Management resource of\
+    \ the iTwin Issues API."
+  tags:
+  - Bentley
+  - iTwin
+  - Management
+  created: '2026-05-23'
+  modified: '2026-05-23'
+binds:
+- namespace: env
+  keys:
+    ITWIN_ACCESS_TOKEN: ITWIN_ACCESS_TOKEN
+capability:
+  consumes:
+  - type: http
+    namespace: issues-management
+    baseUri: https://api.bentley.com/issues
+    description: iTwin Issues API Management capability against the iTwin Platform.
+    resources:
+    - name: management
+      path: /management
+      operations:
+      - name: listManagement
+        method: GET
+        description: List Management via iTwin Issues API
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters: []
+      - name: createManagement
+        method: POST
+        description: Create Management via iTwin Issues API
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).

@@ -1,0 +1,122 @@
+openapi: 3.1.0
+info:
+  title: iTwin Named Groups API
+  description: Create and manage logical groupings of iTwin elements by query, selection, or hierarchy.
+  version: '1.0'
+  contact:
+    name: Bentley Developer Relations
+    url: https://developer.bentley.com/apis/named-groups/
+  license:
+    name: Bentley Developer Portal Terms
+    url: https://developer.bentley.com/legal/
+servers:
+- url: https://api.bentley.com/namedgroups
+  description: iTwin Platform Production
+externalDocs:
+  description: iTwin Named Groups API Documentation
+  url: https://developer.bentley.com/apis/named-groups/
+tags:
+- name: Named Groups
+  description: Named Groups resources for the iTwin Named Groups API.
+security:
+- OAuth2: []
+paths:
+  /:
+    get:
+      tags:
+      - Named Groups
+      summary: Get Named Groups
+      operationId: GetNamedGroups
+      responses:
+        '200':
+          description: List of Named Groups
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Named Groups
+      summary: Create Named Group
+      operationId: CreateNamedGroup
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Named Group created
+          content:
+            application/json:
+              schema:
+                type: object
+  /{groupId}:
+    parameters:
+    - name: groupId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Named Groups
+      summary: Get Named Groups
+      operationId: GetNamedGroups
+      responses:
+        '200':
+          description: List of Named Groups
+          content:
+            application/json:
+              schema:
+                type: object
+    patch:
+      tags:
+      - Named Groups
+      summary: Update Named Group
+      operationId: UpdateNamedGroup
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Named Group updated
+    delete:
+      tags:
+      - Named Groups
+      summary: Delete Named Group
+      operationId: DeleteNamedGroup
+      responses:
+        '204':
+          description: Named Group deleted
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: "iTwin Platform OAuth2 \u2014 Bentley IMS"
+      flows:
+        authorizationCode:
+          authorizationUrl: https://ims.bentley.com/connect/authorize
+          tokenUrl: https://ims.bentley.com/connect/token
+          scopes:
+            itwin-platform: Full access to iTwin Platform APIs
+  schemas:
+    Error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+            details:
+              type: array
+              items:
+                type: object

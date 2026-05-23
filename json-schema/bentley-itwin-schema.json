@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://developer.bentley.com/schemas/itwin.json",
+  "title": "iTwin",
+  "type": "object",
+  "description": "An iTwin is the top-level container holding iModels, reality data, schedules, and other digital twin assets for a single infrastructure project.",
+  "required": [
+    "id",
+    "displayName",
+    "class"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "class": {
+      "type": "string",
+      "enum": [
+        "Account",
+        "Thing",
+        "Endeavor"
+      ],
+      "description": "iTwin classification."
+    },
+    "subClass": {
+      "type": "string",
+      "description": "Sub-classification within the class."
+    },
+    "type": {
+      "type": "string"
+    },
+    "number": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "geographicLocation": {
+      "type": "string"
+    },
+    "ianaTimeZone": {
+      "type": "string"
+    },
+    "dataCenterLocation": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Active",
+        "Inactive",
+        "Trial"
+      ]
+    },
+    "parentId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "iTwinAccountId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "imageName": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string",
+      "format": "uri"
+    },
+    "createdDateTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "createdBy": {
+      "type": "string",
+      "format": "uuid"
+    }
+  }
+}

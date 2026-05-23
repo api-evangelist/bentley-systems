@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://developer.bentley.com/schemas/changeset.json",
+  "title": "Changeset",
+  "type": "object",
+  "description": "A changeset records a discrete set of changes pushed against an iModel by an authoring session.",
+  "required": [
+    "id",
+    "index",
+    "briefcaseId"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "index": {
+      "type": "integer"
+    },
+    "parentId": {
+      "type": "string"
+    },
+    "creatorId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "pushDateTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "state": {
+      "type": "string",
+      "enum": [
+        "waitingForFile",
+        "fileUploaded"
+      ]
+    },
+    "containingChanges": {
+      "type": "integer"
+    },
+    "fileSize": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "briefcaseId": {
+      "type": "integer"
+    },
+    "groupId": {
+      "type": "string",
+      "format": "uuid"
+    }
+  }
+}

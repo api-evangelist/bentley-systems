@@ -1,0 +1,47 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: "iTwin Access Control API \u2014 Roles"
+  description: "iTwin Access Control API \u2014 Roles. Self-contained Naftiko capability covering the Roles resource of the\
+    \ iTwin Access Control API."
+  tags:
+  - Bentley
+  - iTwin
+  - Roles
+  created: '2026-05-23'
+  modified: '2026-05-23'
+binds:
+- namespace: env
+  keys:
+    ITWIN_ACCESS_TOKEN: ITWIN_ACCESS_TOKEN
+capability:
+  consumes:
+  - type: http
+    namespace: access-control-roles
+    baseUri: https://api.bentley.com/accesscontrol
+    description: iTwin Access Control API Roles capability against the iTwin Platform.
+    resources:
+    - name: roles
+      path: /roles
+      operations:
+      - name: listRoles
+        method: GET
+        description: List Roles via iTwin Access Control API
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters: []
+      - name: createRole
+        method: POST
+        description: Create Role via iTwin Access Control API
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).

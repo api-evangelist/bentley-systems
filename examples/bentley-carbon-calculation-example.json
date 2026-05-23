@@ -1,0 +1,18 @@
+{
+  "jobName": "I-405 Embodied Carbon Baseline",
+  "ec3ConfigurationId": "ec3-config-abc",
+  "iModelId": "5e19bee0-3aea-4355-a9f0-c6df9989ee7d",
+  "namedVersionId": "9f4d2e0c-7b3a-4d11-89c4-1d2f3a9b5c6d",
+  "materialMappings": [
+    {
+      "material": "Concrete (4000 psi)",
+      "ec3Material": "concrete_30mpa",
+      "quantityProperty": "Volume"
+    },
+    {
+      "material": "Steel Reinforcement",
+      "ec3Material": "steel_rebar_us",
+      "quantityProperty": "Mass"
+    }
+  ]
+}

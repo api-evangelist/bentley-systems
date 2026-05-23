@@ -1,0 +1,47 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: "iTwin Schedules API \u2014 Resources"
+  description: "iTwin Schedules API \u2014 Resources. Self-contained Naftiko capability covering the Resources resource of\
+    \ the iTwin Schedules API."
+  tags:
+  - Bentley
+  - iTwin
+  - Resources
+  created: '2026-05-23'
+  modified: '2026-05-23'
+binds:
+- namespace: env
+  keys:
+    ITWIN_ACCESS_TOKEN: ITWIN_ACCESS_TOKEN
+capability:
+  consumes:
+  - type: http
+    namespace: schedules-resources
+    baseUri: https://api.bentley.com/schedules
+    description: iTwin Schedules API Resources capability against the iTwin Platform.
+    resources:
+    - name: resources
+      path: /resources
+      operations:
+      - name: listResources
+        method: GET
+        description: List Resources via iTwin Schedules API
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters: []
+      - name: createResource
+        method: POST
+        description: Create Resource via iTwin Schedules API
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).

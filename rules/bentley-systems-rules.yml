@@ -1,0 +1,123 @@
+extends: spectral:oas
+rules:
+  bentley-itwin-base-url:
+    description: All iTwin Platform APIs must use api.bentley.com as the host
+    message: "Server URL '{{value}}' must use https://api.bentley.com host"
+    given: "$.servers[*].url"
+    severity: error
+    then:
+      function: pattern
+      functionOptions:
+        match: "^https://api\\.bentley\\.com"
+
+  bentley-oauth2-required:
+    description: iTwin Platform APIs must define OAuth2 (Bentley IMS) as the security scheme
+    message: "Security scheme 'OAuth2' (Bentley IMS) must be defined"
+    given: "$.components.securitySchemes.OAuth2"
+    severity: error
+    then:
+      function: truthy
+
+  bentley-operation-id-required:
+    description: All iTwin operations must define an operationId
+    message: "Operation at {{path}} is missing operationId"
+    given: "$.paths[*][get,post,put,patch,delete]"
+    severity: error
+    then:
+      field: operationId
+      function: truthy
+
+  bentley-operation-id-pascal-case:
+    description: iTwin operationIds use PascalCase (e.g., GetIModel, CreateChangeset)
+    message: "operationId '{{value}}' should use PascalCase"
+    given: "$.paths[*][get,post,put,patch,delete].operationId"
+    severity: warn
+    then:
+      function: pattern
+      functionOptions:
+        match: "^[A-Z][a-zA-Z0-9]+$"
+
+  bentley-tags-required:
+    description: All iTwin operations must include at least one tag
+    message: "Operation '{{path}}' must include a tag"
+    given: "$.paths[*][get,post,put,patch,delete]"
+    severity: warn
+    then:
+      field: tags
+      function: truthy
+
+  bentley-summary-title-case:
+    description: iTwin operation summaries should use Title Case
+    message: "Summary '{{value}}' should use Title Case"
+    given: "$.paths[*][get,post,put,patch,delete].summary"
+    severity: warn
+    then:
+      function: pattern
+      functionOptions:
+        match: "^[A-Z][a-zA-Z0-9]*( [A-Z][a-zA-Z0-9]*)*"
+
+  bentley-response-200-or-201:
+    description: All iTwin operations must define a 2xx success response
+    message: "Operation at {{path}} must define a 2xx response"
+    given: "$.paths[*][get,post,put,patch,delete].responses"
+    severity: error
+    then:
+      function: schema
+      functionOptions:
+        schema:
+          type: object
+          anyOf:
+            - required: ["200"]
+            - required: ["201"]
+            - required: ["202"]
+            - required: ["204"]
+
+  bentley-uuid-path-params:
+    description: iTwin resource id path parameters should be uuid-typed
+    message: "Path parameter '{{property}}' that ends in 'Id' should declare format=uuid"
+    given: "$.paths[*].parameters[?(@.in=='path' && @.name=~/Id$/)].schema"
+    severity: warn
+    then:
+      field: format
+      function: pattern
+      functionOptions:
+        match: "^uuid$"
+
+  bentley-itwin-id-required:
+    description: Top-level collection GETs should accept iTwinId query parameter for scoping
+    message: "Collection endpoint at {{path}} should support iTwinId query parameter"
+    given: "$.paths[?(@property==/)].get.parameters[?(@.name=='iTwinId')]"
+    severity: info
+    then:
+      function: truthy
+
+  bentley-external-docs-required:
+    description: iTwin Platform API specs should reference developer.bentley.com via externalDocs
+    message: "Spec should include externalDocs pointing to developer.bentley.com"
+    given: "$.externalDocs.url"
+    severity: warn
+    then:
+      function: pattern
+      functionOptions:
+        match: "^https://developer\\.bentley\\.com/"
+
+  bentley-info-contact-required:
+    description: Spec info.contact must reference Bentley Developer Relations
+    message: "info.contact must be defined and reference Bentley Developer Relations"
+    given: "$.info.contact"
+    severity: warn
+    then:
+      field: name
+      function: pattern
+      functionOptions:
+        match: "Bentley"
+
+  bentley-license-required:
+    description: Spec info.license should reference the Bentley Developer Portal terms
+    message: "info.license should point to https://developer.bentley.com/legal/"
+    given: "$.info.license.url"
+    severity: info
+    then:
+      function: pattern
+      functionOptions:
+        match: "^https://developer\\.bentley\\.com/legal/"

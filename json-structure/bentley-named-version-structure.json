@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-structure.org/schema",
+  "name": "NamedVersion",
+  "description": "Structural definition of a NamedVersion \u2014 a pinned, named point in iModel history.",
+  "fields": [
+    {
+      "name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "changesetId",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "changesetIndex",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "name": "state",
+      "type": "enum",
+      "values": [
+        "visible",
+        "hidden"
+      ],
+      "required": true
+    }
+  ]
+}

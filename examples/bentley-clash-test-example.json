@@ -1,0 +1,16 @@
+{
+  "name": "Structural vs MEP Clash Test",
+  "description": "Detect interferences between structural members and MEP routing.",
+  "setA": {
+    "namedGroupIds": [
+      "group-structural-elements"
+    ]
+  },
+  "setB": {
+    "namedGroupIds": [
+      "group-mep-elements"
+    ]
+  },
+  "suppressionRuleIds": [],
+  "tolerance": 0.01
+}

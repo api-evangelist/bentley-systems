@@ -1,0 +1,15 @@
+{
+  "id": "f1c2a3b4-5d6e-7f80-9a1b-2c3d4e5f6071",
+  "subject": "Conflict between bridge deck rebar and post-tensioning duct",
+  "description": "PT duct routed through rebar congestion zone at pier 2. Need design revision.",
+  "type": "Issue",
+  "state": "Open",
+  "createdBy": "engineer-jdoe",
+  "createdDateTime": "2026-04-12T14:22:00Z",
+  "dueDate": "2026-04-19",
+  "assignee": {
+    "id": "designer-lsmith",
+    "displayName": "Lisa Smith"
+  },
+  "iTwinId": "8a3c8b16-c1b7-4f86-95f5-1a6a23c3a4c9"
+}

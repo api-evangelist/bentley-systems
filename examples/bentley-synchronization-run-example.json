@@ -1,0 +1,16 @@
+{
+  "id": "run-7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d",
+  "connectionId": "conn-1234",
+  "state": "Completed",
+  "result": "Success",
+  "startedDateTime": "2026-04-15T08:00:00Z",
+  "endedDateTime": "2026-04-15T08:14:32Z",
+  "sourceFiles": [
+    {
+      "id": "src-001",
+      "fileName": "Bridge.dgn",
+      "connector": "MstnDgn",
+      "state": "Processed"
+    }
+  ]
+}

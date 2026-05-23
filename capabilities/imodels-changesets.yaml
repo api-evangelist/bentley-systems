@@ -1,0 +1,47 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: "iTwin iModels API \u2014 Changesets"
+  description: "iTwin iModels API \u2014 Changesets. Self-contained Naftiko capability covering the Changesets resource of\
+    \ the iTwin iModels API."
+  tags:
+  - Bentley
+  - iTwin
+  - Changesets
+  created: '2026-05-23'
+  modified: '2026-05-23'
+binds:
+- namespace: env
+  keys:
+    ITWIN_ACCESS_TOKEN: ITWIN_ACCESS_TOKEN
+capability:
+  consumes:
+  - type: http
+    namespace: imodels-changesets
+    baseUri: https://api.bentley.com/imodels
+    description: iTwin iModels API Changesets capability against the iTwin Platform.
+    resources:
+    - name: changesets
+      path: /changesets
+      operations:
+      - name: listChangesets
+        method: GET
+        description: List Changesets via iTwin iModels API
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters: []
+      - name: createChangeset
+        method: POST
+        description: Create Changeset via iTwin iModels API
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).

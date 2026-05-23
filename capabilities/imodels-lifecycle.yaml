@@ -1,0 +1,47 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: "iTwin iModels API \u2014 Lifecycle"
+  description: "iTwin iModels API \u2014 Lifecycle. Self-contained Naftiko capability covering the Lifecycle resource of the\
+    \ iTwin iModels API."
+  tags:
+  - Bentley
+  - iTwin
+  - Lifecycle
+  created: '2026-05-23'
+  modified: '2026-05-23'
+binds:
+- namespace: env
+  keys:
+    ITWIN_ACCESS_TOKEN: ITWIN_ACCESS_TOKEN
+capability:
+  consumes:
+  - type: http
+    namespace: imodels-lifecycle
+    baseUri: https://api.bentley.com/imodels
+    description: iTwin iModels API Lifecycle capability against the iTwin Platform.
+    resources:
+    - name: lifecycle
+      path: /lifecycle
+      operations:
+      - name: listLifecycle
+        method: GET
+        description: List Lifecycle via iTwin iModels API
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters: []
+      - name: createLifecycle
+        method: POST
+        description: Create Lifecycle via iTwin iModels API
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).

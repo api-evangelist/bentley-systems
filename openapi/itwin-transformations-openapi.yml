@@ -1,0 +1,204 @@
+openapi: 3.1.0
+info:
+  title: iTwin Transformations API
+  description: Submit and manage transformation jobs that derive new iModels from existing ones.
+  version: '1.0'
+  contact:
+    name: Bentley Developer Relations
+    url: https://developer.bentley.com/apis/transformations/
+  license:
+    name: Bentley Developer Portal Terms
+    url: https://developer.bentley.com/legal/
+servers:
+- url: https://api.bentley.com/transformations
+  description: iTwin Platform Production
+externalDocs:
+  description: iTwin Transformations API Documentation
+  url: https://developer.bentley.com/apis/transformations/
+tags:
+- name: Transformations
+  description: Transformations resources for the iTwin Transformations API.
+- name: Runs
+  description: Runs resources for the iTwin Transformations API.
+security:
+- OAuth2: []
+paths:
+  /:
+    get:
+      tags:
+      - Transformations
+      summary: Get Transformations
+      operationId: GetTransformations
+      responses:
+        '200':
+          description: List of Transformations
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Transformations
+      summary: Create Transformation
+      operationId: CreateTransformation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Transformation created
+          content:
+            application/json:
+              schema:
+                type: object
+  /{transformationId}:
+    parameters:
+    - name: transformationId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Transformations
+      summary: Get Transformations
+      operationId: GetTransformations
+      responses:
+        '200':
+          description: List of Transformations
+          content:
+            application/json:
+              schema:
+                type: object
+    patch:
+      tags:
+      - Transformations
+      summary: Update Transformation
+      operationId: UpdateTransformation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Transformation updated
+    delete:
+      tags:
+      - Transformations
+      summary: Delete Transformation
+      operationId: DeleteTransformation
+      responses:
+        '204':
+          description: Transformation deleted
+  /{transformationId}/run:
+    parameters:
+    - name: transformationId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Runs
+      summary: Get Runs
+      operationId: GetRuns
+      responses:
+        '200':
+          description: List of Runs
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Runs
+      summary: Create Run
+      operationId: CreateRun
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Run created
+          content:
+            application/json:
+              schema:
+                type: object
+  /runs/{runId}:
+    parameters:
+    - name: runId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Runs
+      summary: Get Runs
+      operationId: GetRuns
+      responses:
+        '200':
+          description: List of Runs
+          content:
+            application/json:
+              schema:
+                type: object
+    patch:
+      tags:
+      - Runs
+      summary: Update Run
+      operationId: UpdateRun
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Run updated
+    delete:
+      tags:
+      - Runs
+      summary: Delete Run
+      operationId: DeleteRun
+      responses:
+        '204':
+          description: Run deleted
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: "iTwin Platform OAuth2 \u2014 Bentley IMS"
+      flows:
+        authorizationCode:
+          authorizationUrl: https://ims.bentley.com/connect/authorize
+          tokenUrl: https://ims.bentley.com/connect/token
+          scopes:
+            itwin-platform: Full access to iTwin Platform APIs
+  schemas:
+    Error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+            details:
+              type: array
+              items:
+                type: object

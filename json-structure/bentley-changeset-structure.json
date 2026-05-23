@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-structure.org/schema",
+  "name": "Changeset",
+  "description": "Structural definition of an iModel changeset \u2014 atomic set of edits in an authoring session.",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "index",
+      "type": "integer",
+      "required": true,
+      "description": "Sequential index in the iModel timeline."
+    },
+    {
+      "name": "parentId",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "briefcaseId",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "name": "pushDateTime",
+      "type": "datetime",
+      "required": true
+    },
+    {
+      "name": "fileSize",
+      "type": "long",
+      "required": true
+    },
+    {
+      "name": "state",
+      "type": "enum",
+      "values": [
+        "waitingForFile",
+        "fileUploaded"
+      ]
+    }
+  ]
+}

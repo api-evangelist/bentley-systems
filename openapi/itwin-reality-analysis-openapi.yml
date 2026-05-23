@@ -1,0 +1,194 @@
+openapi: 3.1.0
+info:
+  title: iTwin Reality Analysis API
+  description: "Run AI-powered analyses against reality data \u2014 object detection, segmentation, line extraction, change\
+    \ detection."
+  version: '1.0'
+  contact:
+    name: Bentley Developer Relations
+    url: https://developer.bentley.com/apis/reality-analysis/
+  license:
+    name: Bentley Developer Portal Terms
+    url: https://developer.bentley.com/legal/
+servers:
+- url: https://api.bentley.com/realitydataanalysis
+  description: iTwin Platform Production
+externalDocs:
+  description: iTwin Reality Analysis API Documentation
+  url: https://developer.bentley.com/apis/reality-analysis/
+tags:
+- name: Jobs
+  description: Jobs resources for the iTwin Reality Analysis API.
+- name: Detectors
+  description: Detectors resources for the iTwin Reality Analysis API.
+security:
+- OAuth2: []
+paths:
+  /jobs:
+    get:
+      tags:
+      - Jobs
+      summary: Get Jobs
+      operationId: GetJobs
+      responses:
+        '200':
+          description: List of Jobs
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Jobs
+      summary: Create Job
+      operationId: CreateJob
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Job created
+          content:
+            application/json:
+              schema:
+                type: object
+  /jobs/{jobId}:
+    parameters:
+    - name: jobId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Jobs
+      summary: Get Jobs
+      operationId: GetJobs
+      responses:
+        '200':
+          description: List of Jobs
+          content:
+            application/json:
+              schema:
+                type: object
+    patch:
+      tags:
+      - Jobs
+      summary: Update Job
+      operationId: UpdateJob
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Job updated
+    delete:
+      tags:
+      - Jobs
+      summary: Delete Job
+      operationId: DeleteJob
+      responses:
+        '204':
+          description: Job deleted
+  /jobs/{jobId}/progress:
+    parameters:
+    - name: jobId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Jobs
+      summary: Get Jobs
+      operationId: GetJobs
+      responses:
+        '200':
+          description: List of Jobs
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Jobs
+      summary: Create Job
+      operationId: CreateJob
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Job created
+          content:
+            application/json:
+              schema:
+                type: object
+  /detectors:
+    get:
+      tags:
+      - Detectors
+      summary: Get Detectors
+      operationId: GetDetectors
+      responses:
+        '200':
+          description: List of Detectors
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Detectors
+      summary: Create Detector
+      operationId: CreateDetector
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Detector created
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: "iTwin Platform OAuth2 \u2014 Bentley IMS"
+      flows:
+        authorizationCode:
+          authorizationUrl: https://ims.bentley.com/connect/authorize
+          tokenUrl: https://ims.bentley.com/connect/token
+          scopes:
+            itwin-platform: Full access to iTwin Platform APIs
+  schemas:
+    Error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+            details:
+              type: array
+              items:
+                type: object

@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://developer.bentley.com/schemas/imodel.json",
+  "title": "iModel",
+  "type": "object",
+  "description": "An iModel is a distributed relational database derived from an infrastructure asset's BIM data \u2014 exchanged through changesets that record all modifications.",
+  "required": [
+    "id",
+    "displayName",
+    "iTwinId"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string",
+      "enum": [
+        "initialized",
+        "notInitialized"
+      ]
+    },
+    "iTwinId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "createdDateTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "creatorId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "dataCenterLocation": {
+      "type": "string"
+    },
+    "containersEnabled": {
+      "type": "integer"
+    },
+    "extent": {
+      "type": "object",
+      "properties": {
+        "southWest": {
+          "type": "object",
+          "properties": {
+            "latitude": {
+              "type": "number"
+            },
+            "longitude": {
+              "type": "number"
+            }
+          }
+        },
+        "northEast": {
+          "type": "object",
+          "properties": {
+            "latitude": {
+              "type": "number"
+            },
+            "longitude": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    }
+  }
+}

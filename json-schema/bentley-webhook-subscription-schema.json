@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://developer.bentley.com/schemas/webhook-subscription.json",
+  "title": "WebhookSubscription",
+  "type": "object",
+  "description": "A webhook subscription receives event callbacks from iTwin Platform resources.",
+  "required": [
+    "id",
+    "eventTypes",
+    "deliveryUrl"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "eventTypes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "deliveryUrl": {
+      "type": "string",
+      "format": "uri"
+    },
+    "scope": {
+      "type": "object"
+    },
+    "state": {
+      "type": "string",
+      "enum": [
+        "Active",
+        "Disabled"
+      ]
+    },
+    "createdDateTime": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

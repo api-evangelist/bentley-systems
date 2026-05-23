@@ -1,0 +1,11 @@
+{
+  "id": "task-001",
+  "name": "Pier 2 Foundation Excavation",
+  "description": "Excavate to design depth for Pier 2 foundation.",
+  "plannedStart": "2026-04-01T07:00:00Z",
+  "plannedFinish": "2026-04-08T17:00:00Z",
+  "duration": "P7D",
+  "percentComplete": 0,
+  "wbsCode": "2.1.1",
+  "predecessors": []
+}

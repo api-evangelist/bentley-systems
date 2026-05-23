@@ -1,0 +1,188 @@
+openapi: 3.1.0
+info:
+  title: iTwin P&ID to iTwin API
+  description: Convert Process & Instrumentation Diagrams (P&IDs) into iTwin-compatible intelligent data using AI extraction.
+  version: '1.0'
+  contact:
+    name: Bentley Developer Relations
+    url: https://developer.bentley.com/apis/pnid/
+  license:
+    name: Bentley Developer Portal Terms
+    url: https://developer.bentley.com/legal/
+servers:
+- url: https://api.bentley.com/pnid
+  description: iTwin Platform Production
+externalDocs:
+  description: iTwin P&ID to iTwin API Documentation
+  url: https://developer.bentley.com/apis/pnid/
+tags:
+- name: Jobs
+  description: Jobs resources for the iTwin P&ID to iTwin API.
+- name: Models
+  description: Models resources for the iTwin P&ID to iTwin API.
+- name: Symbols
+  description: Symbols resources for the iTwin P&ID to iTwin API.
+security:
+- OAuth2: []
+paths:
+  /jobs:
+    get:
+      tags:
+      - Jobs
+      summary: Get Jobs
+      operationId: GetJobs
+      responses:
+        '200':
+          description: List of Jobs
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Jobs
+      summary: Create Job
+      operationId: CreateJob
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Job created
+          content:
+            application/json:
+              schema:
+                type: object
+  /jobs/{jobId}:
+    parameters:
+    - name: jobId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Jobs
+      summary: Get Jobs
+      operationId: GetJobs
+      responses:
+        '200':
+          description: List of Jobs
+          content:
+            application/json:
+              schema:
+                type: object
+    patch:
+      tags:
+      - Jobs
+      summary: Update Job
+      operationId: UpdateJob
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Job updated
+    delete:
+      tags:
+      - Jobs
+      summary: Delete Job
+      operationId: DeleteJob
+      responses:
+        '204':
+          description: Job deleted
+  /models:
+    get:
+      tags:
+      - Models
+      summary: Get Models
+      operationId: GetModels
+      responses:
+        '200':
+          description: List of Models
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Models
+      summary: Create Model
+      operationId: CreateModel
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Model created
+          content:
+            application/json:
+              schema:
+                type: object
+  /symbols:
+    get:
+      tags:
+      - Symbols
+      summary: Get Symbols
+      operationId: GetSymbols
+      responses:
+        '200':
+          description: List of Symbols
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Symbols
+      summary: Create Symbol
+      operationId: CreateSymbol
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Symbol created
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: "iTwin Platform OAuth2 \u2014 Bentley IMS"
+      flows:
+        authorizationCode:
+          authorizationUrl: https://ims.bentley.com/connect/authorize
+          tokenUrl: https://ims.bentley.com/connect/token
+          scopes:
+            itwin-platform: Full access to iTwin Platform APIs
+  schemas:
+    Error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+            details:
+              type: array
+              items:
+                type: object

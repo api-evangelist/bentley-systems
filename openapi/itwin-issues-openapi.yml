@@ -1,0 +1,316 @@
+openapi: 3.1.0
+info:
+  title: iTwin Issues API
+  description: "Manage issues \u2014 observations, defects, RFIs, punch-list items \u2014 with attachments, comments, audit\
+    \ trail and workflow."
+  version: '1.0'
+  contact:
+    name: Bentley Developer Relations
+    url: https://developer.bentley.com/apis/issues/
+  license:
+    name: Bentley Developer Portal Terms
+    url: https://developer.bentley.com/legal/
+servers:
+- url: https://api.bentley.com/issues
+  description: iTwin Platform Production
+externalDocs:
+  description: iTwin Issues API Documentation
+  url: https://developer.bentley.com/apis/issues/
+tags:
+- name: Issues
+  description: Issues resources for the iTwin Issues API.
+- name: Attachments
+  description: Attachments resources for the iTwin Issues API.
+- name: Comments
+  description: Comments resources for the iTwin Issues API.
+- name: Audit Trail
+  description: Audit Trail resources for the iTwin Issues API.
+- name: Workflow
+  description: Workflow resources for the iTwin Issues API.
+- name: Forms
+  description: Forms resources for the iTwin Issues API.
+security:
+- OAuth2: []
+paths:
+  /:
+    get:
+      tags:
+      - Issues
+      summary: Get Issues
+      operationId: GetIssues
+      responses:
+        '200':
+          description: List of Issues
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Issues
+      summary: Create Issue
+      operationId: CreateIssue
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Issue created
+          content:
+            application/json:
+              schema:
+                type: object
+  /{issueId}:
+    parameters:
+    - name: issueId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Issues
+      summary: Get Issues
+      operationId: GetIssues
+      responses:
+        '200':
+          description: List of Issues
+          content:
+            application/json:
+              schema:
+                type: object
+    patch:
+      tags:
+      - Issues
+      summary: Update Issue
+      operationId: UpdateIssue
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Issue updated
+    delete:
+      tags:
+      - Issues
+      summary: Delete Issue
+      operationId: DeleteIssue
+      responses:
+        '204':
+          description: Issue deleted
+  /{issueId}/attachments:
+    parameters:
+    - name: issueId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Attachments
+      summary: Get Attachments
+      operationId: GetAttachments
+      responses:
+        '200':
+          description: List of Attachments
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Attachments
+      summary: Create Attachment
+      operationId: CreateAttachment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Attachment created
+          content:
+            application/json:
+              schema:
+                type: object
+  /{issueId}/comments:
+    parameters:
+    - name: issueId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Comments
+      summary: Get Comments
+      operationId: GetComments
+      responses:
+        '200':
+          description: List of Comments
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Comments
+      summary: Create Comment
+      operationId: CreateComment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Comment created
+          content:
+            application/json:
+              schema:
+                type: object
+  /{issueId}/auditTrailEntries:
+    parameters:
+    - name: issueId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Audit Trail
+      summary: Get Audit Trail
+      operationId: GetAuditTrail
+      responses:
+        '200':
+          description: List of Audit Trail
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Audit Trail
+      summary: Create Audit Trail
+      operationId: CreateAuditTrail
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Audit Trail created
+          content:
+            application/json:
+              schema:
+                type: object
+  /{issueId}/workflow:
+    parameters:
+    - name: issueId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Workflow
+      summary: Get Workflow
+      operationId: GetWorkflow
+      responses:
+        '200':
+          description: List of Workflow
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Workflow
+      summary: Create Workflow
+      operationId: CreateWorkflow
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Workflow created
+          content:
+            application/json:
+              schema:
+                type: object
+  /formDefinitions:
+    get:
+      tags:
+      - Forms
+      summary: Get Forms
+      operationId: GetForms
+      responses:
+        '200':
+          description: List of Forms
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Forms
+      summary: Create Form
+      operationId: CreateForm
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Form created
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: "iTwin Platform OAuth2 \u2014 Bentley IMS"
+      flows:
+        authorizationCode:
+          authorizationUrl: https://ims.bentley.com/connect/authorize
+          tokenUrl: https://ims.bentley.com/connect/token
+          scopes:
+            itwin-platform: Full access to iTwin Platform APIs
+  schemas:
+    Error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+            details:
+              type: array
+              items:
+                type: object

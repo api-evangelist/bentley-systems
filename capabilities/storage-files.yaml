@@ -1,0 +1,47 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: "iTwin Storage API \u2014 Files"
+  description: "iTwin Storage API \u2014 Files. Self-contained Naftiko capability covering the Files resource of the iTwin\
+    \ Storage API."
+  tags:
+  - Bentley
+  - iTwin
+  - Files
+  created: '2026-05-23'
+  modified: '2026-05-23'
+binds:
+- namespace: env
+  keys:
+    ITWIN_ACCESS_TOKEN: ITWIN_ACCESS_TOKEN
+capability:
+  consumes:
+  - type: http
+    namespace: storage-files
+    baseUri: https://api.bentley.com/storage
+    description: iTwin Storage API Files capability against the iTwin Platform.
+    resources:
+    - name: files
+      path: /files
+      operations:
+      - name: listFiles
+        method: GET
+        description: List Files via iTwin Storage API
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters: []
+      - name: createFile
+        method: POST
+        description: Create File via iTwin Storage API
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).

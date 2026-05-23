@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-structure.org/schema",
+  "name": "RealityData",
+  "description": "Structural definition of a RealityData asset \u2014 point cloud, mesh, 3D Tiles, or orthophoto.",
+  "fields": [
+    {
+      "name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "name": "displayName",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": true,
+      "description": "Reality data format (RealityMesh3DTiles, OPC, Cesium3DTiles, etc.)"
+    },
+    {
+      "name": "classification",
+      "type": "enum",
+      "values": [
+        "Imagery",
+        "Terrain",
+        "Pinned",
+        "Model",
+        "Undefined"
+      ]
+    },
+    {
+      "name": "size",
+      "type": "long"
+    },
+    {
+      "name": "extent",
+      "type": "object"
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Bentley Systems
+providerId: bentley-systems
+created: '2026-05-23'
+modified: '2026-05-23'
+reconciled: true
+tags:
+  - Infrastructure Engineering
+  - Digital Twin
+  - iTwin
+  - Credits
+description: >-
+  Bentley iTwin Platform uses a credit-based subscription model. Subscription tiers bundle a
+  monthly credit allowance, cloud data storage, and reality data storage. Overage credits are
+  billed at $1.20 each. Service consumption (iModel ingress/egress, storage, visualization,
+  reporting rows, reality modeling jobs) is metered in credits per service-defined unit.
+sources:
+  - https://developer.bentley.com/pricing/
+
+plans:
+  - id: itwin-community
+    name: Community
+    type: free
+    description: >-
+      Free tier for non-commercial use — exploration, evaluation, education, and individual
+      developers. Renews automatically; no annual fees.
+    entries:
+      - label: Monthly credit allowance
+        name: credits_monthly
+        type: included
+        metric: credits
+        limit: 100
+        timeFrame: month
+        unit: 1
+        price: '0'
+        userMultiplied: false
+      - label: Cloud data storage
+        name: storage_cloud
+        type: included
+        metric: gigabytes
+        limit: 10
+        timeFrame: month
+        unit: 1
+        price: '0'
+        userMultiplied: false
+      - label: Reality data storage
+        name: storage_reality
+        type: included
+        metric: gigabytes
+        limit: 250
+        timeFrame: month
+        unit: 1
+        price: '0'
+        userMultiplied: false
+    elements:
+      - name: Non-commercial use only
+      - name: No annual fees, no expiration
+      - name: Auto-renews each year
+      - name: Full API access
+
+  - id: itwin-standard
+    name: Standard
+    type: subscription
+    description: Entry commercial subscription for small teams.
+    entries:
+      - label: Monthly subscription fee
+        name: subscription_fee
+        type: recurring
+        metric: subscription
+        limit: 1
+        timeFrame: month
+        unit: 1
+        price: '199'
+        userMultiplied: false
+      - label: Monthly credit allowance
+        name: credits_monthly
+        type: included
+        metric: credits
+        limit: 200
+        timeFrame: month
+        unit: 1
+        price: '0'
+        userMultiplied: false
+      - label: Cloud data storage
+        name: storage_cloud
+        type: included
+        metric: gigabytes
+        limit: 50
+        timeFrame: month
+        unit: 1
+        price: '0'
+        userMultiplied: false
+      - label: Reality data storage
+        name: storage_reality
+        type: included
+        metric: gigabytes
+        limit: 500
+        timeFrame: month
+        unit: 1
+        price: '0'
+        userMultiplied: false
+      - label: Overage credit
+        name: credit_overage
+        type: metered
+        metric: credits
+        limit: -1
+        timeFrame: usage
+        unit: 1
+        price: '1.20'
+        userMultiplied: false
+    elements:
+      - name: Commercial use
+      - name: Full API access
+      - name: Overage billing at $1.20/credit
+
+  - id: itwin-premium
+    name: Premium
+    type: subscription
+    description: Standard subscription expanded for larger teams and higher service consumption.
+    entries:
+      - label: Monthly subscription fee
+        name: subscription_fee
+        type: recurring
+        metric: subscription
+        limit: 1
+        timeFrame: month
+        unit: 1
+        price: '499'
+        userMultiplied: false
+      - label: Monthly credit allowance
+        name: credits_monthly
+        type: included
+        metric: credits
+        limit: 500
+        timeFrame: month
+        unit: 1
+        price: '0'
+        userMultiplied: false
+      - label: Cloud data storage
+        name: storage_cloud
+        type: included
+        metric: gigabytes
+        limit: 50
+        timeFrame: month
+        unit: 1
+        price: '0'
+        userMultiplied: false
+      - label: Reality data storage
+        name: storage_reality
+        type: included
+        metric: gigabytes
+        limit: 500
+        timeFrame: month
+        unit: 1
+        price: '0'
+        userMultiplied: false
+      - label: Overage credit
+        name: credit_overage
+        type: metered
+        metric: credits
+        limit: -1
+        timeFrame: usage
+        unit: 1
+        price: '1.20'
+        userMultiplied: false
+    elements:
+      - name: Commercial use
+      - name: Higher base credit allowance
+      - name: Overage billing at $1.20/credit
+
+  - id: itwin-enterprise
+    name: Enterprise
+    type: custom
+    description: >-
+      Custom enterprise pricing with flexible credits, storage, and invoicing terms. Required for
+      Reality Modeling service access and high-volume commercial deployments.
+    entries:
+      - label: Subscription fee
+        name: subscription_fee
+        type: custom
+        metric: subscription
+        limit: -1
+        timeFrame: month
+        unit: 1
+        price: custom
+        userMultiplied: false
+      - label: Credits and storage
+        name: credits_custom
+        type: custom
+        metric: credits
+        limit: -1
+        timeFrame: month
+        unit: 1
+        price: custom
+        userMultiplied: false
+    elements:
+      - name: Custom credit and storage allowances
+      - name: Reality Modeling service access
+      - name: Flexible invoicing terms
+      - name: Enterprise support and SLAs
+
+serviceCredits:
+  description: >-
+    iTwin Platform service consumption metered in credits. Indicative rates published on
+    developer.bentley.com/pricing.
+  rates:
+    - service: iModels
+      meter: ingress/egress
+      unit: 2 GB
+      credits: 1
+    - service: Storage
+      meter: stored data
+      unit: 2 GB / month
+      credits: 1
+    - service: Visualization
+      meter: access time
+      unit: 1 hour
+      credits: 1
+    - service: Reporting
+      meter: rows processed
+      unit: 250000 rows
+      credits: 1
+    - service: Reality Modeling
+      meter: input data processed
+      unit: per job
+      credits: variable (up to 6 credits per unit depending on output and scale)

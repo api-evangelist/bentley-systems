@@ -1,0 +1,248 @@
+openapi: 3.1.0
+info:
+  title: iTwin Grouping and Mapping API
+  description: Map iModel elements to logical groups and property mappings used in reporting and analysis.
+  version: '1.0'
+  contact:
+    name: Bentley Developer Relations
+    url: https://developer.bentley.com/apis/grouping-mapping/
+  license:
+    name: Bentley Developer Portal Terms
+    url: https://developer.bentley.com/legal/
+servers:
+- url: https://api.bentley.com/grouping-and-mapping
+  description: iTwin Platform Production
+externalDocs:
+  description: iTwin Grouping and Mapping API Documentation
+  url: https://developer.bentley.com/apis/grouping-mapping/
+tags:
+- name: Mappings
+  description: Mappings resources for the iTwin Grouping and Mapping API.
+- name: Groups
+  description: Groups resources for the iTwin Grouping and Mapping API.
+- name: Properties
+  description: Properties resources for the iTwin Grouping and Mapping API.
+- name: Extractions
+  description: Extractions resources for the iTwin Grouping and Mapping API.
+security:
+- OAuth2: []
+paths:
+  /mappings:
+    get:
+      tags:
+      - Mappings
+      summary: Get Mappings
+      operationId: GetMappings
+      responses:
+        '200':
+          description: List of Mappings
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Mappings
+      summary: Create Mapping
+      operationId: CreateMapping
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Mapping created
+          content:
+            application/json:
+              schema:
+                type: object
+  /mappings/{mappingId}:
+    parameters:
+    - name: mappingId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Mappings
+      summary: Get Mappings
+      operationId: GetMappings
+      responses:
+        '200':
+          description: List of Mappings
+          content:
+            application/json:
+              schema:
+                type: object
+    patch:
+      tags:
+      - Mappings
+      summary: Update Mapping
+      operationId: UpdateMapping
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Mapping updated
+    delete:
+      tags:
+      - Mappings
+      summary: Delete Mapping
+      operationId: DeleteMapping
+      responses:
+        '204':
+          description: Mapping deleted
+  /mappings/{mappingId}/groups:
+    parameters:
+    - name: mappingId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Groups
+      summary: Get Groups
+      operationId: GetGroups
+      responses:
+        '200':
+          description: List of Groups
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Groups
+      summary: Create Group
+      operationId: CreateGroup
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Group created
+          content:
+            application/json:
+              schema:
+                type: object
+  /mappings/{mappingId}/groups/{groupId}/properties:
+    parameters:
+    - name: mappingId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    - name: groupId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Properties
+      summary: Get Properties
+      operationId: GetProperties
+      responses:
+        '200':
+          description: List of Properties
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Properties
+      summary: Create Propertie
+      operationId: CreatePropertie
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Propertie created
+          content:
+            application/json:
+              schema:
+                type: object
+  /mappings/{mappingId}/extractions:
+    parameters:
+    - name: mappingId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Extractions
+      summary: Get Extractions
+      operationId: GetExtractions
+      responses:
+        '200':
+          description: List of Extractions
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Extractions
+      summary: Create Extraction
+      operationId: CreateExtraction
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Extraction created
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: "iTwin Platform OAuth2 \u2014 Bentley IMS"
+      flows:
+        authorizationCode:
+          authorizationUrl: https://ims.bentley.com/connect/authorize
+          tokenUrl: https://ims.bentley.com/connect/token
+          scopes:
+            itwin-platform: Full access to iTwin Platform APIs
+  schemas:
+    Error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+            details:
+              type: array
+              items:
+                type: object

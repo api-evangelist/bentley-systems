@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://developer.bentley.com/schemas/issue.json",
+  "title": "Issue",
+  "type": "object",
+  "description": "An issue raised against a project \u2014 observation, defect, RFI, or punch-list item.",
+  "required": [
+    "id",
+    "type",
+    "state"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "description": "Issue, RFI, Punchlist, Observation, Defect"
+    },
+    "state": {
+      "type": "string",
+      "enum": [
+        "Draft",
+        "Open",
+        "Closed",
+        "Resolved"
+      ]
+    },
+    "createdBy": {
+      "type": "string"
+    },
+    "createdDateTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "modifiedDateTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "dueDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "assignee": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "displayName": {
+          "type": "string"
+        }
+      }
+    },
+    "iTwinId": {
+      "type": "string",
+      "format": "uuid"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "iTwinId": "8a3c8b16-c1b7-4f86-95f5-1a6a23c3a4c9",
+  "name": "I-405 Bridge Structure",
+  "description": "Main structural iModel for the I-405 bridge rehabilitation project.",
+  "extent": {
+    "southWest": {
+      "latitude": 47.6062,
+      "longitude": -122.3321
+    },
+    "northEast": {
+      "latitude": 47.6262,
+      "longitude": -122.3121
+    }
+  }
+}

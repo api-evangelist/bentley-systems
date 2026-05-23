@@ -1,0 +1,18 @@
+{
+  "id": "7c1ef2a3-9bd5-4c1f-8d0e-2a6b8e9c1d4e",
+  "displayName": "I-405 Drone Photogrammetry \u2014 March 2026",
+  "type": "RealityMesh3DTiles",
+  "classification": "Model",
+  "size": 8413294592,
+  "extent": {
+    "southWest": {
+      "latitude": 47.6062,
+      "longitude": -122.3321
+    },
+    "northEast": {
+      "latitude": 47.6262,
+      "longitude": -122.3121
+    }
+  },
+  "createdDateTime": "2026-03-02T08:14:00Z"
+}

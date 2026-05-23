@@ -1,0 +1,13 @@
+{
+  "id": "ABC123abc456def789",
+  "displayName": "Cs1",
+  "description": "Added pier 2 foundation reinforcement geometry.",
+  "index": 12,
+  "parentId": "DEF456def789abc012",
+  "creatorId": "42101fba-847a-4f4e-85a8-a4bed89065e4",
+  "pushDateTime": "2026-03-04T11:42:08Z",
+  "state": "fileUploaded",
+  "containingChanges": 1,
+  "fileSize": 184320,
+  "briefcaseId": 3
+}

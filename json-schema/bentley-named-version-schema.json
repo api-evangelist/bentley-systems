@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://developer.bentley.com/schemas/named-version.json",
+  "title": "NamedVersion",
+  "type": "object",
+  "description": "A NamedVersion pins a named, immutable point in an iModel's changeset history.",
+  "required": [
+    "id",
+    "name",
+    "changesetId"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "changesetId": {
+      "type": "string"
+    },
+    "changesetIndex": {
+      "type": "integer"
+    },
+    "createdDateTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "state": {
+      "type": "string",
+      "enum": [
+        "visible",
+        "hidden"
+      ]
+    }
+  }
+}

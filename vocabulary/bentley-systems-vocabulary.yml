@@ -1,0 +1,191 @@
+name: Bentley iTwin Platform
+description: >-
+  Vocabulary of key terms, concepts, objects, and operations used across Bentley's iTwin Platform.
+  Covers infrastructure digital twins, iModel data management, reality capture, 4D scheduling,
+  reporting, and synchronization.
+version: "1.0"
+created: "2026-05-23"
+modified: "2026-05-23"
+tags:
+  - Infrastructure Engineering
+  - Digital Twin
+  - BIM
+  - iTwin
+  - iModel
+  - Reality Capture
+  - Construction
+
+terms:
+  - term: iTwin
+    definition: >-
+      The top-level digital twin container holding iModels, reality data, schedules, and project
+      context for a single infrastructure asset or endeavor. iTwins are classified as Account,
+      Thing, or Endeavor and can form hierarchies.
+    category: Core Object
+    tags: [iTwin, Container]
+
+  - term: iModel
+    definition: >-
+      A specialized information container for exchanging data associated with the lifecycle of
+      infrastructure assets. Implemented as a distributed relational database derived from BIM
+      authoring and synchronized via changesets.
+    category: Core Object
+    tags: [iModel, BIM, Data Management]
+    sourceQuote: "An iModel is a specialized information container for exchanging data associated with the lifecycle of infrastructure assets."
+
+  - term: Changeset
+    definition: >-
+      An atomic, ordered set of edits pushed against an iModel by an authoring session. Changesets
+      form an append-only timeline that enables versioning, branching, and audit trail across the
+      iModel's lifecycle.
+    category: Core Object
+    tags: [Changeset, Versioning, History]
+
+  - term: Named Version
+    definition: >-
+      A pinned, named, immutable reference to a specific changeset in an iModel's timeline. Used
+      to capture submittals, baselines, and milestones for reporting, sharing, and comparison.
+    category: Core Object
+    tags: [NamedVersion, Milestone, Baseline]
+
+  - term: Briefcase
+    definition: >-
+      A local writable copy of an iModel acquired by an authoring application. Briefcases hold
+      pending edits before they are pushed as a changeset.
+    category: Core Object
+    tags: [Briefcase, Authoring]
+
+  - term: BIS Schema
+    definition: >-
+      Bentley Infrastructure Schema — the canonical EC-schema vocabulary describing all classes,
+      relationships, and properties used in iModels (Roads, Buildings, Plant, Bridge, etc.).
+    category: Schema
+    tags: [BIS, Schema, EC]
+
+  - term: Reality Data
+    definition: >-
+      Captured representation of the as-built world — point clouds, 3D meshes, orthophotos, terrain
+      models — attached to an iTwin for use in design context and visualization.
+    category: Core Object
+    tags: [Reality Capture, Point Cloud, Mesh]
+
+  - term: ContextCapture
+    definition: >-
+      Bentley's reality modeling engine that processes photos and laser scans into 3D meshes,
+      point clouds, and 3D Tiles consumable by iTwin viewers and downstream tools.
+    category: Service
+    tags: [ContextCapture, Reality Modeling, Photogrammetry]
+
+  - term: ProjectWise
+    definition: >-
+      Bentley's project information management system for engineering deliverables. Federated
+      through the iTwin Platform's EDFS API and a primary source for synchronization.
+    category: Product
+    tags: [ProjectWise, Project Delivery, Document Management]
+
+  - term: SYNCHRO
+    definition: >-
+      Bentley's 4D construction modeling and project controls product, surfaced through the iTwin
+      Platform Schedules API for task, resource, and animation management.
+    category: Product
+    tags: [SYNCHRO, 4D, Construction, Scheduling]
+
+  - term: MicroStation
+    definition: >-
+      Bentley's flagship CAD authoring product. MicroStation produces DGN files that synchronize
+      into iModels via the iTwin Synchronization API.
+    category: Product
+    tags: [MicroStation, CAD, DGN]
+
+  - term: OpenRoads / OpenBridge / OpenBuildings
+    definition: >-
+      Bentley's vertical authoring applications for road design, bridge design, and building
+      design respectively. All produce iModel-compatible data.
+    category: Product
+    tags: [OpenRoads, OpenBridge, OpenBuildings, Design]
+
+  - term: AssetWise
+    definition: >-
+      Bentley's asset lifecycle information management platform for operations and maintenance,
+      including AssetWise ALIM and AssetWise 4D Analytics.
+    category: Product
+    tags: [AssetWise, Operations, Asset Performance]
+
+  - term: Saved View
+    definition: >-
+      A persisted iModel viewer state — camera position, display styles, category visibility,
+      model selections — shared across users and embedded in reports and issues.
+    category: Core Object
+    tags: [Saved View, Visualization, Collaboration]
+
+  - term: Clash Detection
+    definition: >-
+      Automated geometric interference checking between sets of iModel elements. Defined via tests
+      that pair element groups, with optional suppression rules for known acceptable conflicts.
+    category: Operation
+    tags: [Clash Detection, Coordination, Validation]
+
+  - term: Issue
+    definition: >-
+      A trackable observation, defect, RFI, or punch-list item raised against project deliverables.
+      Issues support attachments, comments, audit trail, and workflow transitions.
+    category: Core Object
+    tags: [Issues, Collaboration, Quality]
+
+  - term: Mapping (Insights)
+    definition: >-
+      A declarative configuration that maps iModel elements to logical groups and calculated
+      properties, used by the Insights reporting engine to produce tabular reports and dashboards.
+    category: Reporting
+    tags: [Mapping, Reporting, Insights]
+
+  - term: EC3 Integration
+    definition: >-
+      Embodied Carbon in Construction Calculator integration that lets carbon calculation jobs
+      pull EPD data and material definitions for sustainability reporting against iModel takeoffs.
+    category: Integration
+    tags: [EC3, Embodied Carbon, Sustainability]
+
+  - term: Synchronization Connection
+    definition: >-
+      A configured pairing between a source repository (Azure Blob, iTwin Storage, ProjectWise)
+      and a target iModel that defines which files to synchronize and how often.
+    category: Core Object
+    tags: [Synchronization, Connection, Pipeline]
+
+  - term: Connector
+    definition: >-
+      A native-format-to-iModel bridge that translates DGN, DWG, IFC, RVT, SHP, and other source
+      formats into iModel data during synchronization runs.
+    category: Component
+    tags: [Connector, Synchronization]
+
+  - term: Credit
+    definition: >-
+      The iTwin Platform's billing unit. Service consumption (iModel ingress, storage, visualization
+      hours, reporting rows, reality modeling) is charged in credits at $1.20/credit overage.
+    category: Billing
+    tags: [Credit, Pricing, Billing]
+    sourceQuote: "Credits do not roll over at this time and any unused credits will no longer be available."
+
+  - term: Bentley IMS
+    definition: >-
+      Bentley Identity Management Service — the OAuth2 authorization server at ims.bentley.com
+      used for all iTwin Platform API access.
+    category: Authentication
+    tags: [Authentication, OAuth2, IMS]
+
+  - term: 4D Construction Schedule
+    definition: >-
+      A schedule linked to 3D model elements so that planned and actual progress can be animated
+      and validated against the iModel through the Schedules API and SYNCHRO.
+    category: Concept
+    tags: [4D, Construction, Schedule, SYNCHRO]
+
+  - term: Digital Twin
+    definition: >-
+      A continuously updated digital representation of a physical asset that combines design
+      authoring (iModel), reality capture, IoT sensor data, and operational records to mirror
+      real-world state.
+    category: Concept
+    tags: [Digital Twin, iTwin]

@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "bentley": "https://developer.bentley.com/schemas/",
+    "itwin": "https://developer.bentley.com/schemas/itwin/",
+    "imodel": "https://developer.bentley.com/schemas/imodel/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "iTwin": {
+      "@id": "bentley:iTwin",
+      "@context": {
+        "id": {
+          "@id": "bentley:iTwinId",
+          "@type": "xsd:string"
+        },
+        "displayName": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "class": {
+          "@id": "bentley:iTwinClass",
+          "@type": "xsd:string"
+        },
+        "geographicLocation": {
+          "@id": "schema:location",
+          "@type": "xsd:string"
+        },
+        "dataCenterLocation": {
+          "@id": "bentley:dataCenter",
+          "@type": "xsd:string"
+        },
+        "status": {
+          "@id": "schema:status",
+          "@type": "xsd:string"
+        },
+        "createdDateTime": {
+          "@id": "dcterms:created",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+    "iModel": {
+      "@id": "bentley:iModel",
+      "@context": {
+        "id": {
+          "@id": "bentley:iModelId",
+          "@type": "xsd:string"
+        },
+        "displayName": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "description": {
+          "@id": "schema:description",
+          "@type": "xsd:string"
+        },
+        "iTwinId": {
+          "@id": "bentley:iTwinId",
+          "@type": "xsd:string"
+        },
+        "state": {
+          "@id": "bentley:iModelState",
+          "@type": "xsd:string"
+        },
+        "dataCenterLocation": {
+          "@id": "bentley:dataCenter",
+          "@type": "xsd:string"
+        },
+        "createdDateTime": {
+          "@id": "dcterms:created",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+    "Changeset": {
+      "@id": "bentley:Changeset",
+      "@context": {
+        "id": {
+          "@id": "bentley:changesetId",
+          "@type": "xsd:string"
+        },
+        "index": {
+          "@id": "bentley:changesetIndex",
+          "@type": "xsd:integer"
+        },
+        "parentId": {
+          "@id": "bentley:parentChangesetId",
+          "@type": "xsd:string"
+        },
+        "creatorId": {
+          "@id": "schema:creator",
+          "@type": "xsd:string"
+        },
+        "pushDateTime": {
+          "@id": "bentley:pushedAt",
+          "@type": "xsd:dateTime"
+        },
+        "briefcaseId": {
+          "@id": "bentley:briefcaseId",
+          "@type": "xsd:integer"
+        }
+      }
+    },
+    "NamedVersion": {
+      "@id": "bentley:NamedVersion",
+      "@context": {
+        "id": {
+          "@id": "bentley:namedVersionId",
+          "@type": "xsd:string"
+        },
+        "name": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "changesetId": {
+          "@id": "bentley:changesetId",
+          "@type": "xsd:string"
+        },
+        "state": {
+          "@id": "bentley:namedVersionState",
+          "@type": "xsd:string"
+        }
+      }
+    },
+    "RealityData": {
+      "@id": "bentley:RealityData",
+      "@context": {
+        "id": {
+          "@id": "bentley:realityDataId",
+          "@type": "xsd:string"
+        },
+        "displayName": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "type": {
+          "@id": "bentley:realityDataType",
+          "@type": "xsd:string"
+        },
+        "classification": {
+          "@id": "bentley:classification",
+          "@type": "xsd:string"
+        },
+        "size": {
+          "@id": "schema:fileSize",
+          "@type": "xsd:long"
+        }
+      }
+    },
+    "ScheduleTask": {
+      "@id": "bentley:ScheduleTask",
+      "@context": {
+        "id": {
+          "@id": "bentley:taskId",
+          "@type": "xsd:string"
+        },
+        "name": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "plannedStart": {
+          "@id": "schema:startTime",
+          "@type": "xsd:dateTime"
+        },
+        "plannedFinish": {
+          "@id": "schema:endTime",
+          "@type": "xsd:dateTime"
+        },
+        "percentComplete": {
+          "@id": "bentley:percentComplete",
+          "@type": "xsd:decimal"
+        }
+      }
+    },
+    "Issue": {
+      "@id": "bentley:Issue",
+      "@context": {
+        "id": {
+          "@id": "bentley:issueId",
+          "@type": "xsd:string"
+        },
+        "subject": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "description": {
+          "@id": "schema:description",
+          "@type": "xsd:string"
+        },
+        "type": {
+          "@id": "bentley:issueType",
+          "@type": "xsd:string"
+        },
+        "state": {
+          "@id": "bentley:issueState",
+          "@type": "xsd:string"
+        },
+        "createdDateTime": {
+          "@id": "dcterms:created",
+          "@type": "xsd:dateTime"
+        }
+      }
+    }
+  }
+}

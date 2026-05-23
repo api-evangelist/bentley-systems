@@ -1,0 +1,100 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Bentley Systems
+providerId: bentley-systems
+created: '2026-05-23'
+modified: '2026-05-23'
+reconciled: false
+tags:
+  - Rate Limiting
+  - iTwin
+  - Throttling
+description: >-
+  Bentley does not publish granular per-API rate limits on the iTwin Platform developer portal.
+  Throttling is governed at runtime through HTTP 429 responses with Retry-After hints and through
+  the credit metering model that limits service consumption per billing period. Long-running jobs
+  (Reality Modeling, Synchronization, Transformations, Reality Analysis) are queued and progress
+  must be polled via /progress endpoints rather than rate-limited per-second.
+sources:
+  - https://developer.bentley.com/apis/overview/
+  - https://developer.bentley.com/pricing/
+
+headers:
+  retry: Retry-After
+  requestId: X-Correlation-Id
+
+responseCodes:
+  throttled: 429
+  unauthorized: 401
+  forbidden: 403
+  notFound: 404
+
+limits:
+  - name: Default request throttling
+    scope: client
+    metric: requests_per_second
+    limit: unspecified
+    timeFrame: second
+    description: >-
+      Bentley does not publish a fixed per-second cap. Clients should implement exponential
+      backoff on 429 with Retry-After.
+
+  - name: Credit consumption (billing-tied)
+    scope: subscription
+    metric: credits
+    limit: tier-based
+    timeFrame: month
+    description: >-
+      Monthly credit allowance per tier (Community 100, Standard 200, Premium 500, Enterprise
+      custom). Overage billed at $1.20/credit.
+
+  - name: Long-running job queue
+    scope: subscription
+    metric: concurrent_jobs
+    limit: unspecified
+    timeFrame: continuous
+    description: >-
+      Reality Modeling, Reality Analysis, Synchronization, Transformations, and PnID-to-iTwin jobs
+      are queued. No published concurrency cap; subscription tier influences priority.
+
+  - name: Webhook delivery retries
+    scope: subscription
+    metric: retries
+    limit: 5
+    timeFrame: per_event
+    description: >-
+      Webhook deliveries are retried with backoff before being marked failed. Subscription is
+      disabled after sustained delivery failure.
+
+  - name: OAuth token lifetime
+    scope: client
+    metric: seconds
+    limit: 3600
+    timeFrame: token_lifetime
+    description: >-
+      Bentley IMS access tokens are short-lived (typically 1 hour). Use refresh tokens or
+      service-app credentials for long-running automations.
+
+policies:
+  - name: Retry on 429
+    description: >-
+      Honor the Retry-After header. Implement exponential backoff with jitter when no header is
+      present.
+  - name: Correlation IDs
+    description: >-
+      Bentley returns X-Correlation-Id on responses. Capture this for support tickets when
+      reporting throttling, errors, or job failures.
+  - name: Credit-based capacity
+    description: >-
+      Plan service consumption around your credit allowance rather than around per-second limits.
+      Bulk operations (iModel ingress, reality data ingest, visualization-hours, reporting rows)
+      directly consume credits.
+  - name: Long-running jobs poll
+    description: >-
+      For asynchronous endpoints (jobs/{id}/progress) poll on the cadence published in the
+      operation documentation; avoid sub-second polling.
+  - name: Live vs evaluation
+    description: >-
+      Community tier is non-commercial and may receive lower priority in shared job queues than
+      Standard, Premium, and Enterprise tiers.
