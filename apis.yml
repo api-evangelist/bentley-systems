@@ -889,6 +889,8 @@ common:
     url: json-ld/bentley-systems-context.jsonld
     name: Bentley iTwin JSON-LD Context
 
+  - type: LLMsTxt
+    url: https://bentley.com/llms.txt
 maintainers:
   - FN: Kin Lane
     email: info@apievangelist.com
