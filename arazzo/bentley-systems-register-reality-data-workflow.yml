@@ -1,0 +1,78 @@
+arazzo: 1.0.1
+info:
+  title: Bentley Register Reality Data and Grant Write Access
+  summary: Create a reality data record, confirm it, and obtain a write-access container URL for upload.
+  description: >-
+    Reality data — photos, point clouds, meshes, 3D Tiles, and orthophotos — is
+    registered as metadata first, then its bytes are uploaded to a write-access
+    container. This workflow creates the reality data record, reads it back to
+    confirm the registration, and then requests a write-access container URL that
+    a client uses to upload the underlying files. Because the Reality Management
+    spec reuses operationIds across paths, the read and write-access steps are
+    bound by explicit operationPath. Each step spells out its request inline so
+    the flow can be read and executed without opening the underlying OpenAPI
+    description.
+  version: 1.0.0
+sourceDescriptions:
+- name: realityManagementApi
+  url: ../openapi/itwin-reality-management-openapi.yml
+  type: openapi
+workflows:
+- workflowId: register-reality-data
+  summary: Register reality data and obtain a write-access container URL for upload.
+  description: >-
+    Creates a reality data record, reads it back to confirm registration, and
+    requests a write-access container URL for uploading the reality data files.
+  inputs:
+    type: object
+    required:
+    - realityData
+    properties:
+      realityData:
+        type: object
+        description: The reality data creation payload (e.g. iTwinId, displayName, type, classification).
+  steps:
+  - stepId: createRealityData
+    description: >-
+      Register the reality data record with its metadata. The returned id is used
+      for all subsequent access and upload operations.
+    operationId: CreateRealityData
+    requestBody:
+      contentType: application/json
+      payload: $inputs.realityData
+    successCriteria:
+    - condition: $statusCode == 201
+    outputs:
+      realityDataId: $response.body#/realityData/id
+  - stepId: confirmRegistration
+    description: >-
+      Read the reality data record back to confirm the registration succeeded
+      before requesting upload access.
+    operationPath: '{$sourceDescriptions.realityManagementApi.url}#/paths/~1reality-data~1{realityDataId}/get'
+    parameters:
+    - name: realityDataId
+      in: path
+      value: $steps.createRealityData.outputs.realityDataId
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      realityData: $response.body#/realityData
+  - stepId: grantWriteAccess
+    description: >-
+      Request a write-access container URL for the reality data so a client can
+      upload the underlying files.
+    operationPath: '{$sourceDescriptions.realityManagementApi.url}#/paths/~1reality-data~1{realityDataId}~1writeaccess/post'
+    parameters:
+    - name: realityDataId
+      in: path
+      value: $steps.createRealityData.outputs.realityDataId
+    requestBody:
+      contentType: application/json
+      payload: {}
+    successCriteria:
+    - condition: $statusCode == 201
+    outputs:
+      accessUrl: $response.body#/access
+  outputs:
+    realityDataId: $steps.createRealityData.outputs.realityDataId
+    accessUrl: $steps.grantWriteAccess.outputs.accessUrl

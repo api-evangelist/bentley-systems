@@ -1,0 +1,86 @@
+arazzo: 1.0.1
+info:
+  title: Bentley File an Issue With an Attachment and Comment
+  summary: Create an issue, attach supporting media, and post an initial comment.
+  description: >-
+    Field issues — observations, defects, RFIs, and punch-list items — are most
+    useful when they carry evidence and context. This workflow creates an issue,
+    attaches a supporting file (such as a site photo) to it, and posts an initial
+    comment describing the finding. Each step spells out its request inline so the
+    flow can be read and executed without opening the underlying OpenAPI
+    description.
+  version: 1.0.0
+sourceDescriptions:
+- name: issuesApi
+  url: ../openapi/itwin-issues-openapi.yml
+  type: openapi
+workflows:
+- workflowId: file-issue
+  summary: Create an issue, then add an attachment and an initial comment.
+  description: >-
+    Creates an issue, attaches a supporting file to it, and posts an opening
+    comment with context.
+  inputs:
+    type: object
+    required:
+    - issue
+    properties:
+      issue:
+        type: object
+        description: The issue creation payload (e.g. type, subject, description, iTwinId).
+      attachment:
+        type: object
+        description: The attachment metadata payload (e.g. fileName, caption, binaryUrl).
+      commentText:
+        type: string
+        description: The text of the opening comment to post on the issue.
+  steps:
+  - stepId: createIssue
+    description: >-
+      Create the issue. The returned issue id anchors the attachment and comment
+      that follow.
+    operationId: CreateIssue
+    requestBody:
+      contentType: application/json
+      payload: $inputs.issue
+    successCriteria:
+    - condition: $statusCode == 201
+    outputs:
+      issueId: $response.body#/issue/id
+  - stepId: addAttachment
+    description: >-
+      Attach a supporting file to the issue so reviewers can see the evidence
+      behind the report.
+    operationId: CreateAttachment
+    parameters:
+    - name: issueId
+      in: path
+      value: $steps.createIssue.outputs.issueId
+    requestBody:
+      contentType: application/json
+      payload: $inputs.attachment
+    successCriteria:
+    - condition: $statusCode == 201
+    outputs:
+      attachmentId: $response.body#/attachment/id
+  - stepId: addComment
+    description: >-
+      Post an opening comment on the issue describing the finding and any
+      immediate context.
+    operationId: CreateComment
+    parameters:
+    - name: issueId
+      in: path
+      value: $steps.createIssue.outputs.issueId
+    requestBody:
+      contentType: application/json
+      payload:
+        text: $inputs.commentText
+    successCriteria:
+    - condition: $statusCode == 201
+    outputs:
+      commentId: $response.body#/comment/id
+  outputs:
+    issueId: $steps.createIssue.outputs.issueId
+    attachmentId: $steps.addAttachment.outputs.attachmentId
+    commentId: $steps.addComment.outputs.commentId

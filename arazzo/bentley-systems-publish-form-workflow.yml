@@ -1,0 +1,84 @@
+arazzo: 1.0.1
+info:
+  title: Bentley Publish a Form Template and Submit an Instance
+  summary: Create a form template, submit a filled instance against it, and attach supporting media.
+  description: >-
+    Forms drive inspections, checklists, and field data capture. A reusable form
+    template is defined once, then field crews submit instances against it and
+    attach supporting evidence. This workflow creates a form template, submits a
+    filled instance that references the template, and attaches a supporting file
+    to that instance. Each step spells out its request inline so the flow can be
+    read and executed without opening the underlying OpenAPI description.
+  version: 1.0.0
+sourceDescriptions:
+- name: formsApi
+  url: ../openapi/itwin-forms-openapi.yml
+  type: openapi
+workflows:
+- workflowId: publish-form
+  summary: Create a form template, submit an instance against it, and attach a file.
+  description: >-
+    Creates a reusable form template, submits a filled form instance that
+    references that template, and attaches a supporting file to the instance.
+  inputs:
+    type: object
+    required:
+    - template
+    - instance
+    properties:
+      template:
+        type: object
+        description: The form template (definition) payload (e.g. displayName, iTwinId, fields).
+      instance:
+        type: object
+        description: The form instance payload with the captured field values.
+      attachment:
+        type: object
+        description: The attachment metadata payload for the instance (e.g. fileName, caption).
+  steps:
+  - stepId: createTemplate
+    description: >-
+      Create the reusable form template. Its definition id is referenced by the
+      submitted instance.
+    operationId: CreateTemplate
+    requestBody:
+      contentType: application/json
+      payload: $inputs.template
+    successCriteria:
+    - condition: $statusCode == 201
+    outputs:
+      definitionId: $response.body#/formDefinition/id
+  - stepId: submitInstance
+    description: >-
+      Submit a filled form instance against the created template, carrying the
+      template's definition id so the values map to the right schema.
+    operationId: CreateInstance
+    requestBody:
+      contentType: application/json
+      payload:
+        formDefinitionId: $steps.createTemplate.outputs.definitionId
+        instance: $inputs.instance
+    successCriteria:
+    - condition: $statusCode == 201
+    outputs:
+      formId: $response.body#/form/id
+  - stepId: attachToInstance
+    description: >-
+      Attach a supporting file to the submitted form instance so the captured
+      data carries its evidence.
+    operationId: CreateAttachment
+    parameters:
+    - name: formId
+      in: path
+      value: $steps.submitInstance.outputs.formId
+    requestBody:
+      contentType: application/json
+      payload: $inputs.attachment
+    successCriteria:
+    - condition: $statusCode == 201
+    outputs:
+      attachmentId: $response.body#/attachment/id
+  outputs:
+    definitionId: $steps.createTemplate.outputs.definitionId
+    formId: $steps.submitInstance.outputs.formId
+    attachmentId: $steps.attachToInstance.outputs.attachmentId

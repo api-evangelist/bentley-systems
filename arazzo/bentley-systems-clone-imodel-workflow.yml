@@ -1,0 +1,81 @@
+arazzo: 1.0.1
+info:
+  title: Bentley Clone an iModel and Wait for It
+  summary: Kick off an asynchronous iModel clone and poll the target iTwin until the clone is initialized.
+  description: >-
+    Cloning copies an iModel — optionally pinned to a specific changeset — into a
+    target iTwin as a new, independent iModel. The clone runs asynchronously and
+    the API accepts the request with a 202, so this workflow starts the clone and
+    then polls the target iTwin's iModels, matching on the clone name, until the
+    new iModel reports an initialized state. Each step spells out its request
+    inline so the flow can be read and executed without opening the underlying
+    OpenAPI description.
+  version: 1.0.0
+sourceDescriptions:
+- name: imodelsApi
+  url: ../openapi/itwin-imodels-openapi.yml
+  type: openapi
+workflows:
+- workflowId: clone-imodel
+  summary: Start an asynchronous iModel clone and poll the target iTwin until it is ready.
+  description: >-
+    Submits a clone request for a source iModel into a target iTwin and then
+    polls the target iTwin's iModel list, matching on the clone name, until the
+    cloned iModel reports an initialized state.
+  inputs:
+    type: object
+    required:
+    - sourceIModelId
+    - targetITwinId
+    - cloneName
+    properties:
+      sourceIModelId:
+        type: string
+        description: The iModel to clone from.
+      targetITwinId:
+        type: string
+        description: The iTwin that will own the cloned iModel.
+      cloneName:
+        type: string
+        description: The name for the new cloned iModel.
+      changesetId:
+        type: string
+        description: An optional changeset id to pin the clone to a point in history.
+  steps:
+  - stepId: startClone
+    description: >-
+      Submit the clone request. The iModels API accepts the asynchronous clone
+      job with a 202 Accepted response and processes the copy in the background.
+    operationId: CloneIModel
+    parameters:
+    - name: iModelId
+      in: path
+      value: $inputs.sourceIModelId
+    requestBody:
+      contentType: application/json
+      payload:
+        iTwinId: $inputs.targetITwinId
+        name: $inputs.cloneName
+        changesetId: $inputs.changesetId
+    successCriteria:
+    - condition: $statusCode == 202
+  - stepId: pollClone
+    description: >-
+      Poll the iModels in the target iTwin, matching on the clone name, until the
+      cloned iModel appears and reports an initialized state.
+    operationId: GetIModels
+    parameters:
+    - name: iTwinId
+      in: query
+      value: $inputs.targetITwinId
+    successCriteria:
+    - condition: $statusCode == 200
+    - context: $response.body
+      condition: $.iModels[?(@.name == $inputs.cloneName)].state == "initialized"
+      type: jsonpath
+    retryAfter: 10
+    retryLimit: 30
+    outputs:
+      iModels: $response.body#/iModels
+  outputs:
+    clonedIModels: $steps.pollClone.outputs.iModels

@@ -762,6 +762,33 @@ apis:
         type: OpenAPI
 
 common:
+  - type: ArazzoWorkflows
+    url: arazzo/
+    workflows:
+    - url: arazzo/bentley-systems-advance-issue-workflow.yml
+      name: Bentley Advance an Issue Through Its Workflow
+      summary: Read an issue, update its status, record an audit-trail entry, and read back its workflow state.
+    - url: arazzo/bentley-systems-authoring-session-workflow.yml
+      name: Bentley Start an iModel Authoring Session
+      summary: Acquire a briefcase, take element locks, and push a changeset to author an iModel.
+    - url: arazzo/bentley-systems-clone-imodel-workflow.yml
+      name: Bentley Clone an iModel and Wait for It
+      summary: Kick off an asynchronous iModel clone and poll the target iTwin until the clone is initialized.
+    - url: arazzo/bentley-systems-file-issue-workflow.yml
+      name: Bentley File an Issue With an Attachment and Comment
+      summary: Create an issue, attach supporting media, and post an initial comment.
+    - url: arazzo/bentley-systems-provision-imodel-workflow.yml
+      name: Bentley Provision an iModel Inside a New iTwin
+      summary: Create an iTwin project container, provision an iModel inside it, and wait for initialization.
+    - url: arazzo/bentley-systems-publish-form-workflow.yml
+      name: Bentley Publish a Form Template and Submit an Instance
+      summary: Create a form template, submit a filled instance against it, and attach supporting media.
+    - url: arazzo/bentley-systems-register-reality-data-workflow.yml
+      name: Bentley Register Reality Data and Grant Write Access
+      summary: Create a reality data record, confirm it, and obtain a write-access container URL for upload.
+    - url: arazzo/bentley-systems-tag-named-version-workflow.yml
+      name: Bentley Tag a Named Version From the Latest Changeset
+      summary: Resolve the most recent changeset on an iModel and pin a named version to it.
   - type: DeveloperPortal
     url: https://developer.bentley.com
     name: iTwin Platform Developer Portal

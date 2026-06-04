@@ -1,0 +1,80 @@
+arazzo: 1.0.1
+info:
+  title: Bentley Start an iModel Authoring Session
+  summary: Acquire a briefcase, take element locks, and push a changeset to author an iModel.
+  description: >-
+    Authoring an iModel requires a briefcase — a local checkout identity — and
+    element-level locks so concurrent editors do not collide. This workflow
+    acquires a briefcase, takes the requested locks against that briefcase, and
+    then creates a changeset that records the edits made during the session.
+    Each step spells out its request inline so the flow can be read and executed
+    without opening the underlying OpenAPI description.
+  version: 1.0.0
+sourceDescriptions:
+- name: imodelsApi
+  url: ../openapi/itwin-imodels-openapi.yml
+  type: openapi
+workflows:
+- workflowId: authoring-session
+  summary: Acquire a briefcase, lock elements, and push a changeset.
+  description: >-
+    Acquires a briefcase for an iModel, applies element locks for that briefcase,
+    and pushes a changeset that captures the authored modifications.
+  inputs:
+    type: object
+    required:
+    - iModelId
+    - locks
+    properties:
+      iModelId:
+        type: string
+        description: The iModel being authored.
+      locks:
+        type: object
+        description: The lock update payload describing which elements to lock and at what level.
+  steps:
+  - stepId: acquireBriefcase
+    description: >-
+      Acquire a briefcase for the iModel. The briefcase id identifies this
+      authoring session and owns any locks taken during it.
+    operationId: AcquireBriefcase
+    parameters:
+    - name: iModelId
+      in: path
+      value: $inputs.iModelId
+    successCriteria:
+    - condition: $statusCode == 201
+    outputs:
+      briefcaseId: $response.body#/briefcase/briefcaseId
+  - stepId: takeLocks
+    description: >-
+      Apply element locks for the acquired briefcase so the elements about to be
+      edited cannot be modified concurrently by another session.
+    operationId: UpdateLocks
+    parameters:
+    - name: iModelId
+      in: path
+      value: $inputs.iModelId
+    requestBody:
+      contentType: application/json
+      payload: $inputs.locks
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      locks: $response.body#/lock
+  - stepId: pushChangeset
+    description: >-
+      Push a changeset that records the modifications authored during the
+      session under the acquired briefcase.
+    operationId: CreateChangeset
+    parameters:
+    - name: iModelId
+      in: path
+      value: $inputs.iModelId
+    successCriteria:
+    - condition: $statusCode == 201
+    outputs:
+      changesetId: $response.body#/changeset/id
+  outputs:
+    briefcaseId: $steps.acquireBriefcase.outputs.briefcaseId
+    changesetId: $steps.pushChangeset.outputs.changesetId

@@ -1,0 +1,93 @@
+arazzo: 1.0.1
+info:
+  title: Bentley Tag a Named Version From the Latest Changeset
+  summary: Resolve the most recent changeset on an iModel and pin a named version to it.
+  description: >-
+    Named versions pin a stable, citable point in an iModel's changeset history
+    so reviewers, exports, and clash runs can reference a known state. This
+    workflow reads the iModel's changesets, selects the most recent one, creates
+    a named version that points at that changeset, and then reads the created
+    named version back to confirm it is visible. Each step spells out its
+    request inline so the flow can be read and executed without opening the
+    underlying OpenAPI description.
+  version: 1.0.0
+sourceDescriptions:
+- name: imodelsApi
+  url: ../openapi/itwin-imodels-openapi.yml
+  type: openapi
+workflows:
+- workflowId: tag-named-version
+  summary: Create a named version pinned to the latest changeset of an iModel.
+  description: >-
+    Lists the changesets on an iModel, picks the most recent changeset id, and
+    creates a named version that references it, then reads the named version
+    back to verify it.
+  inputs:
+    type: object
+    required:
+    - iModelId
+    - versionName
+    properties:
+      iModelId:
+        type: string
+        description: The iModel to tag a named version on.
+      versionName:
+        type: string
+        description: The name for the new named version (e.g. "Release 2026.1").
+      versionDescription:
+        type: string
+        description: An optional description for the named version.
+  steps:
+  - stepId: listChangesets
+    description: >-
+      Read the iModel's changesets. The most recent changeset becomes the anchor
+      point for the named version.
+    operationId: GetChangesets
+    parameters:
+    - name: iModelId
+      in: path
+      value: $inputs.iModelId
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      latestChangesetId: $response.body#/changesets/0/id
+  - stepId: createNamedVersion
+    description: >-
+      Create a named version that pins the iModel at the latest changeset so it
+      can be cited by downstream consumers.
+    operationId: CreateNamedVersion
+    parameters:
+    - name: iModelId
+      in: path
+      value: $inputs.iModelId
+    requestBody:
+      contentType: application/json
+      payload:
+        name: $inputs.versionName
+        description: $inputs.versionDescription
+        changesetId: $steps.listChangesets.outputs.latestChangesetId
+    successCriteria:
+    - condition: $statusCode == 201
+    outputs:
+      namedVersionId: $response.body#/id
+  - stepId: confirmNamedVersion
+    description: >-
+      Read the created named version back to confirm it is visible and anchored
+      to the expected changeset.
+    operationId: GetNamedVersion
+    parameters:
+    - name: iModelId
+      in: path
+      value: $inputs.iModelId
+    - name: namedVersionId
+      in: path
+      value: $steps.createNamedVersion.outputs.namedVersionId
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      state: $response.body#/state
+      changesetId: $response.body#/changesetId
+  outputs:
+    namedVersionId: $steps.createNamedVersion.outputs.namedVersionId
+    changesetId: $steps.confirmNamedVersion.outputs.changesetId
+    state: $steps.confirmNamedVersion.outputs.state

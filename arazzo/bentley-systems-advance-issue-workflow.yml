@@ -1,0 +1,101 @@
+arazzo: 1.0.1
+info:
+  title: Bentley Advance an Issue Through Its Workflow
+  summary: Read an issue, update its status, record an audit-trail entry, and read back its workflow state.
+  description: >-
+    Issues move through a defined workflow — open, in review, resolved, closed —
+    and every transition should be traceable. This workflow reads the current
+    issue, updates it to a new status, records an audit-trail entry capturing the
+    transition, and reads the issue's workflow state back to confirm the move.
+    Because the Issues spec reuses the GetIssues operationId across the collection
+    and item paths, the read step is bound by explicit operationPath. Each step
+    spells out its request inline so the flow can be read and executed without
+    opening the underlying OpenAPI description.
+  version: 1.0.0
+sourceDescriptions:
+- name: issuesApi
+  url: ../openapi/itwin-issues-openapi.yml
+  type: openapi
+workflows:
+- workflowId: advance-issue
+  summary: Read an issue, change its status, log an audit entry, and confirm workflow state.
+  description: >-
+    Reads a single issue, updates its status, records an audit-trail entry for
+    the transition, and reads the issue's workflow back to confirm the new state.
+  inputs:
+    type: object
+    required:
+    - issueId
+    - status
+    properties:
+      issueId:
+        type: string
+        description: The issue to advance.
+      status:
+        type: string
+        description: The new status to set on the issue (e.g. "Closed").
+      auditEntry:
+        type: object
+        description: The audit-trail entry payload describing the transition.
+  steps:
+  - stepId: readIssue
+    description: >-
+      Read the issue's current state so the transition is applied against a known
+      starting point.
+    operationPath: '{$sourceDescriptions.issuesApi.url}#/paths/~1{issueId}/get'
+    parameters:
+    - name: issueId
+      in: path
+      value: $inputs.issueId
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      currentStatus: $response.body#/issue/status
+  - stepId: updateStatus
+    description: >-
+      Update the issue to its new status. This is the workflow transition itself.
+    operationId: UpdateIssue
+    parameters:
+    - name: issueId
+      in: path
+      value: $inputs.issueId
+    requestBody:
+      contentType: application/json
+      payload:
+        status: $inputs.status
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      newStatus: $response.body#/issue/status
+  - stepId: recordAudit
+    description: >-
+      Record an audit-trail entry capturing the status transition so the change
+      is traceable.
+    operationId: CreateAuditTrail
+    parameters:
+    - name: issueId
+      in: path
+      value: $inputs.issueId
+    requestBody:
+      contentType: application/json
+      payload: $inputs.auditEntry
+    successCriteria:
+    - condition: $statusCode == 201
+    outputs:
+      auditEntryId: $response.body#/auditTrailEntry/id
+  - stepId: confirmWorkflow
+    description: >-
+      Read the issue's workflow state back to confirm the transition was applied.
+    operationId: GetWorkflow
+    parameters:
+    - name: issueId
+      in: path
+      value: $inputs.issueId
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      workflow: $response.body#/workflow
+  outputs:
+    issueId: $inputs.issueId
+    newStatus: $steps.updateStatus.outputs.newStatus
+    auditEntryId: $steps.recordAudit.outputs.auditEntryId

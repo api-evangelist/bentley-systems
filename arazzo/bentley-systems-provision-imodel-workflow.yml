@@ -1,0 +1,92 @@
+arazzo: 1.0.1
+info:
+  title: Bentley Provision an iModel Inside a New iTwin
+  summary: Create an iTwin project container, provision an iModel inside it, and wait for initialization.
+  description: >-
+    The canonical bootstrap flow for the iTwin Platform. It first creates an
+    iTwin — the top-level project container — then creates an iModel inside it,
+    and finally polls the iModel until its state reports initialized so that
+    downstream changeset and named-version operations can safely begin. Each
+    step spells out its request inline so the flow can be read and executed
+    without opening the underlying OpenAPI descriptions.
+  version: 1.0.0
+sourceDescriptions:
+- name: itwinsApi
+  url: ../openapi/itwin-itwins-openapi.yml
+  type: openapi
+- name: imodelsApi
+  url: ../openapi/itwin-imodels-openapi.yml
+  type: openapi
+workflows:
+- workflowId: provision-imodel
+  summary: Create an iTwin, create an iModel inside it, and poll until initialized.
+  description: >-
+    Provisions a fresh iTwin project container, creates an iModel within that
+    iTwin, and then polls the iModel until it reports an initialized state.
+  inputs:
+    type: object
+    required:
+    - itwin
+    - iModelName
+    properties:
+      itwin:
+        type: object
+        description: The iTwin creation payload (e.g. displayName, class, subClass).
+      iModelName:
+        type: string
+        description: The human-readable name for the new iModel.
+      iModelDescription:
+        type: string
+        description: An optional description for the new iModel.
+  steps:
+  - stepId: createItwin
+    description: >-
+      Create the top-level iTwin project container that will own the iModel and
+      its reality data.
+    operationId: CreateiTwin
+    requestBody:
+      contentType: application/json
+      payload: $inputs.itwin
+    successCriteria:
+    - condition: $statusCode == 201
+    outputs:
+      iTwinId: $response.body#/iTwin/id
+  - stepId: createImodel
+    description: >-
+      Create an iModel inside the newly created iTwin. The iTwinId links the
+      iModel to its owning project container.
+    operationId: CreateIModel
+    requestBody:
+      contentType: application/json
+      payload:
+        iTwinId: $steps.createItwin.outputs.iTwinId
+        name: $inputs.iModelName
+        description: $inputs.iModelDescription
+    successCriteria:
+    - condition: $statusCode == 201
+    outputs:
+      iModelId: $response.body#/id
+      state: $response.body#/state
+  - stepId: pollInitialized
+    description: >-
+      Poll the iModel until its state reports initialized. The iModels API
+      provisions storage asynchronously, so the resource may start as
+      notInitialized immediately after creation.
+    operationId: GetIModel
+    parameters:
+    - name: iModelId
+      in: path
+      value: $steps.createImodel.outputs.iModelId
+    successCriteria:
+    - condition: $statusCode == 200
+    - context: $response.body
+      condition: $.state == "initialized"
+      type: jsonpath
+    retryAfter: 5
+    retryLimit: 30
+    outputs:
+      iModelState: $response.body#/state
+  outputs:
+    iTwinId: $steps.createItwin.outputs.iTwinId
+    iModelId: $steps.createImodel.outputs.iModelId
+    iModelState: $steps.pollInitialized.outputs.iModelState
