@@ -1,0 +1,823 @@
+"""
+Bentley Systems iTwin Platform — Conceptual GraphQL Schema
+Covers iModel data management, project administration, access control,
+reality data, issues, views, presentation, and platform identity.
+"""
+
+# ─── Scalars ────────────────────────────────────────────────────────────────
+
+scalar DateTime
+scalar JSON
+scalar URL
+scalar ECInstanceKey
+
+# ─── Enums ──────────────────────────────────────────────────────────────────
+
+enum ProjectStatus {
+  ACTIVE
+  INACTIVE
+  TRIAL
+  DELETED
+}
+
+enum ProjectType {
+  PROJECT
+  ASSET
+  PORTFOLIO
+  REPOSITORY
+  ORGANIZATION
+  STANDARD
+}
+
+enum ChangeType {
+  INSERT
+  UPDATE
+  DELETE
+}
+
+enum ElementType {
+  PHYSICAL_ELEMENT
+  DRAWING_ELEMENT
+  SPATIAL_LOCATION
+  INFORMATION_RECORD
+  DOCUMENT
+  DEFINITION
+  LINK
+}
+
+enum ModelType {
+  PHYSICAL_MODEL
+  DRAWING_MODEL
+  SPATIAL_LOCATION_MODEL
+  DEFINITION_MODEL
+  INFORMATION_RECORD_MODEL
+  DOCUMENT_LIST_MODEL
+}
+
+enum ViewType {
+  SPATIAL_VIEW
+  DRAWING_VIEW
+  SHEET_VIEW
+}
+
+enum IssueStatus {
+  OPEN
+  IN_PROGRESS
+  RESOLVED
+  CLOSED
+  VOID
+}
+
+enum IssueType {
+  OBSERVATION
+  DEFECT
+  RFI
+  PUNCHLIST
+  COORDINATION
+  DESIGN_REVIEW
+}
+
+enum UserRole {
+  OWNER
+  ADMINISTRATOR
+  PROJECT_ADMINISTRATOR
+  CONTRIBUTOR
+  VIEWER
+  CREATOR
+}
+
+# ─── Project / iTwin types ───────────────────────────────────────────────────
+
+type Project {
+  id: ID!
+  displayName: String!
+  number: String
+  type: ProjectType!
+  status: ProjectStatus!
+  details: ProjectDetails
+  iModels: [iModel!]
+  members: [User!]
+  createdDateTime: DateTime!
+  lastModifiedDateTime: DateTime
+}
+
+type ProjectDetails {
+  id: ID!
+  displayName: String!
+  number: String
+  type: ProjectType!
+  status: ProjectStatus!
+  dataCenterLocation: String
+  parentId: ID
+  teamId: ID
+  _links: JSON
+}
+
+# ─── iModel types ───────────────────────────────────────────────────────────
+
+type iModel {
+  id: ID!
+  displayName: String!
+  name: String!
+  description: String
+  state: String
+  createdDateTime: DateTime!
+  lastModifiedDateTime: DateTime
+  iTwinId: ID!
+  details: iModelDetails
+  changesets: [Changeset!]
+  branches: [Branch!]
+  namedVersions: [Tag!]
+  briefcases: [ElementBriefcase!]
+}
+
+type iModelDetails {
+  id: ID!
+  displayName: String!
+  name: String!
+  description: String
+  state: String
+  iTwinId: ID!
+  extent: JSON
+  containersEnabled: Boolean
+  createdDateTime: DateTime!
+  lastModifiedDateTime: DateTime
+  _links: JSON
+}
+
+type iModelChangeset {
+  id: ID!
+  displayName: String
+  description: String
+  pushDateTime: DateTime!
+  state: String
+  parentId: ID
+  fileSize: Int
+  containingChanges: Int
+  iModelId: ID!
+  briefcaseId: Int
+  authorId: ID
+}
+
+# ─── Changeset types ────────────────────────────────────────────────────────
+
+type Changeset {
+  id: ID!
+  displayName: String
+  description: String
+  pushDateTime: DateTime!
+  state: String
+  changeType: ChangeType
+  parentId: ID
+  fileSize: Int
+  iModelId: ID!
+  briefcaseId: Int
+  author: User
+  details: ChangesetDetails
+}
+
+type ChangesetDetails {
+  id: ID!
+  displayName: String
+  description: String
+  pushDateTime: DateTime!
+  state: String
+  parentId: ID
+  fileSize: Int
+  iModelId: ID!
+  briefcaseId: Int
+  synchronizationInfo: JSON
+  _links: JSON
+}
+
+# ─── Branch types ───────────────────────────────────────────────────────────
+
+type Branch {
+  id: ID!
+  displayName: String!
+  description: String
+  parentBranchId: ID
+  iModelId: ID!
+  createdDateTime: DateTime!
+  details: BranchDetails
+  tags: [BranchTag!]
+}
+
+type BranchDetails {
+  id: ID!
+  displayName: String!
+  description: String
+  parentBranchId: ID
+  iModelId: ID!
+  createdDateTime: DateTime!
+  _links: JSON
+}
+
+type BranchTag {
+  id: ID!
+  displayName: String!
+  changesetId: ID!
+  branchId: ID!
+  createdDateTime: DateTime!
+}
+
+# ─── Named Version / Tag types ───────────────────────────────────────────────
+
+type Tag {
+  id: ID!
+  displayName: String!
+  description: String
+  changesetId: ID!
+  changesetIndex: Int
+  iModelId: ID!
+  createdDateTime: DateTime!
+  details: TagDetails
+}
+
+type TagDetails {
+  id: ID!
+  displayName: String!
+  description: String
+  changesetId: ID!
+  changesetIndex: Int
+  iModelId: ID!
+  createdDateTime: DateTime!
+  application: JSON
+  _links: JSON
+}
+
+# ─── Checkpoint types ───────────────────────────────────────────────────────
+
+type Checkpoint {
+  changesetId: ID!
+  changesetIndex: Int!
+  state: String!
+  iModelId: ID!
+  details: CheckpointDetails
+}
+
+type CheckpointDetails {
+  changesetId: ID!
+  changesetIndex: Int!
+  state: String!
+  iModelId: ID!
+  containerAccessInfo: JSON
+  _links: JSON
+}
+
+# ─── Element types ──────────────────────────────────────────────────────────
+
+type Element {
+  id: ID!
+  className: String!
+  modelId: ID!
+  categoryId: ID
+  codeSpec: String
+  codeScope: String
+  codeValue: String
+  userLabel: String
+  federationGuid: String
+  jsonProperties: JSON
+  details: ElementDetails
+}
+
+type ElementDetails {
+  id: ID!
+  className: String!
+  modelId: ID!
+  categoryId: ID
+  parentId: ID
+  codeSpec: String
+  codeScope: String
+  codeValue: String
+  userLabel: String
+  federationGuid: String
+  geometricData: JSON
+  jsonProperties: JSON
+  elementType: ElementType
+}
+
+type ElementCode {
+  spec: String!
+  scope: String!
+  value: String
+}
+
+type ElementLabel {
+  value: String!
+  language: String
+}
+
+type ElementUserLabel {
+  elementId: ID!
+  userLabel: String
+  lastModifiedDateTime: DateTime
+}
+
+type ElementBriefcase {
+  briefcaseId: Int!
+  iModelId: ID!
+  userId: ID
+  acquiredDateTime: DateTime!
+  fileSize: Int
+  deviceName: String
+  state: String
+}
+
+# ─── Schema / Class / Property types ────────────────────────────────────────
+
+type Schema {
+  name: String!
+  alias: String!
+  version: String!
+  description: String
+  label: String
+  iModelId: ID!
+  classes: [Class!]
+  details: SchemaDetails
+}
+
+type SchemaDetails {
+  name: String!
+  alias: String!
+  version: String!
+  description: String
+  label: String
+  iModelId: ID!
+  customAttributes: JSON
+  references: [JSON!]
+}
+
+type Class {
+  name: String!
+  schemaName: String!
+  displayLabel: String
+  description: String
+  baseClass: String
+  type: String
+  properties: [Property!]
+  details: ClassDetails
+}
+
+type ClassDetails {
+  name: String!
+  schemaName: String!
+  displayLabel: String
+  description: String
+  baseClass: String
+  type: String
+  modifier: String
+  customAttributes: JSON
+  mixins: [String!]
+}
+
+type Property {
+  name: String!
+  className: String!
+  schemaName: String!
+  displayLabel: String
+  description: String
+  type: String
+  isReadOnly: Boolean
+  priority: Int
+  details: PropertyDetails
+}
+
+type PropertyDetails {
+  name: String!
+  className: String!
+  schemaName: String!
+  displayLabel: String
+  description: String
+  type: String
+  typeName: String
+  isReadOnly: Boolean
+  priority: Int
+  minValue: JSON
+  maxValue: JSON
+  customAttributes: JSON
+}
+
+# ─── Query / QueryResults types ─────────────────────────────────────────────
+
+type Query {
+  id: ID!
+  displayName: String!
+  description: String
+  ecsql: String!
+  iModelId: ID!
+  createdDateTime: DateTime!
+  details: QueryDetails
+}
+
+type QueryDetails {
+  id: ID!
+  displayName: String!
+  description: String
+  ecsql: String!
+  iModelId: ID!
+  createdDateTime: DateTime!
+  lastModifiedDateTime: DateTime
+  _links: JSON
+}
+
+type QueryResults {
+  rows: [JSON!]!
+  columns: [String!]!
+  rowCount: Int!
+  continuationToken: String
+}
+
+# ─── Ruleset / Presentation types ───────────────────────────────────────────
+
+type Ruleset {
+  id: String!
+  displayLabel: String
+  description: String
+  rules: JSON!
+  supplementationInfo: JSON
+  details: RulesetDetails
+}
+
+type RulesetDetails {
+  id: String!
+  displayLabel: String
+  description: String
+  rules: JSON!
+  version: String
+  supplementationInfo: JSON
+}
+
+type Presentation {
+  nodes: [JSON!]
+  content: JSON
+  distinctValues: JSON
+  details: PresentationDetails
+}
+
+type PresentationDetails {
+  displayType: String!
+  selectClasses: JSON
+  fieldsCount: Int
+  descriptor: JSON
+}
+
+# ─── Category / SubCategory types ───────────────────────────────────────────
+
+type Category {
+  id: ID!
+  displayLabel: String
+  codeValue: String!
+  modelId: ID!
+  isPrivate: Boolean
+  rank: Int
+  subCategories: [SubCategory!]
+}
+
+type SubCategory {
+  id: ID!
+  displayLabel: String
+  codeValue: String!
+  categoryId: ID!
+  isDefault: Boolean
+  isPrivate: Boolean
+  appearance: JSON
+}
+
+# ─── Model types ─────────────────────────────────────────────────────────────
+
+type Model {
+  id: ID!
+  name: String!
+  description: String
+  isPrivate: Boolean
+  isTemplate: Boolean
+  jsonProperties: JSON
+  modelType: ModelType!
+  iModelId: ID!
+  details: ModelDetails
+}
+
+type ModelDetails {
+  id: ID!
+  name: String!
+  description: String
+  isPrivate: Boolean
+  isTemplate: Boolean
+  geometryGuid: String
+  modelType: ModelType!
+  iModelId: ID!
+  jsonProperties: JSON
+  _links: JSON
+}
+
+type PhysicalModel {
+  id: ID!
+  name: String!
+  description: String
+  isPrivate: Boolean
+  modelType: ModelType!
+  geometryGuid: String
+  iModelId: ID!
+  elements: [Element!]
+}
+
+type DrawingModel {
+  id: ID!
+  name: String!
+  description: String
+  isPrivate: Boolean
+  modelType: ModelType!
+  iModelId: ID!
+  elements: [Element!]
+}
+
+# ─── View types ──────────────────────────────────────────────────────────────
+
+type View {
+  id: ID!
+  displayLabel: String
+  className: String!
+  modelId: ID!
+  categorySelector: JSON
+  displayStyle: JSON
+  viewType: ViewType!
+  iModelId: ID!
+  details: ViewDetails
+}
+
+type ViewDetails {
+  id: ID!
+  displayLabel: String
+  className: String!
+  modelId: ID!
+  categorySelector: JSON
+  displayStyle: JSON
+  viewType: ViewType!
+  jsonProperties: JSON
+  iModelId: ID!
+}
+
+type SpatialView {
+  id: ID!
+  displayLabel: String
+  modelSelector: JSON
+  categorySelector: JSON
+  displayStyle: JSON
+  viewFlags: JSON
+  camera: JSON
+  extents: JSON
+  origin: JSON
+  iModelId: ID!
+}
+
+type DrawingView {
+  id: ID!
+  displayLabel: String
+  baseModelId: ID!
+  categorySelector: JSON
+  displayStyle: JSON
+  viewFlags: JSON
+  origin: JSON
+  delta: JSON
+  iModelId: ID!
+}
+
+type Sheet {
+  id: ID!
+  displayLabel: String
+  scale: Float
+  width: Float
+  height: Float
+  sheetTemplate: ID
+  attachments: [JSON!]
+  iModelId: ID!
+  details: SheetDetails
+}
+
+type SheetDetails {
+  id: ID!
+  displayLabel: String
+  scale: Float
+  width: Float
+  height: Float
+  sheetTemplate: ID
+  attachments: [JSON!]
+  iModelId: ID!
+  jsonProperties: JSON
+}
+
+# ─── Issue types ─────────────────────────────────────────────────────────────
+
+type Issue {
+  id: ID!
+  displayName: String!
+  status: IssueStatus!
+  type: IssueType!
+  subject: String
+  description: String
+  assignee: User
+  iTwinId: ID!
+  modelPin: JSON
+  createdDateTime: DateTime!
+  lastModifiedDateTime: DateTime
+  details: IssueDetails
+}
+
+type IssueDetails {
+  id: ID!
+  displayName: String!
+  status: IssueStatus!
+  type: IssueType!
+  subject: String
+  description: String
+  assigneeId: ID
+  iTwinId: ID!
+  modelPin: JSON
+  formId: ID
+  attachments: [JSON!]
+  comments: [JSON!]
+  auditTrail: [JSON!]
+  createdDateTime: DateTime!
+  lastModifiedDateTime: DateTime
+  dueDateTime: DateTime
+  _links: JSON
+}
+
+# ─── User / RBAC / Auth types ───────────────────────────────────────────────
+
+type User {
+  id: ID!
+  email: String!
+  displayName: String!
+  givenName: String
+  surname: String
+  details: UserDetails
+}
+
+type UserDetails {
+  id: ID!
+  email: String!
+  displayName: String!
+  givenName: String
+  surname: String
+  organizationId: ID
+  createdDateTime: DateTime
+  lastModifiedDateTime: DateTime
+  _links: JSON
+}
+
+type RBAC {
+  iTwinId: ID!
+  roles: [RBACDetails!]!
+  members: [User!]
+}
+
+type RBACDetails {
+  id: ID!
+  displayName: String!
+  description: String
+  permissions: [String!]!
+  role: UserRole
+  iTwinId: ID!
+  createdDateTime: DateTime!
+}
+
+type APIKey {
+  id: ID!
+  displayName: String!
+  createdDateTime: DateTime!
+  expiryDateTime: DateTime
+  scopes: [String!]!
+  clientId: ID!
+}
+
+type Token {
+  accessToken: String!
+  tokenType: String!
+  expiresIn: Int!
+  scope: String
+  refreshToken: String
+}
+
+type Webhook {
+  id: ID!
+  displayName: String
+  callbackUrl: URL!
+  scope: String!
+  events: [String!]!
+  active: Boolean!
+  secret: String
+  expirationDateTime: DateTime
+  iTwinId: ID
+  iModelId: ID
+  createdDateTime: DateTime!
+  lastModifiedDateTime: DateTime
+}
+
+# ─── Root types ──────────────────────────────────────────────────────────────
+
+type RootQuery {
+  # Project / iTwin
+  project(id: ID!): Project
+  projects(displayName: String, type: ProjectType, status: ProjectStatus, skip: Int, top: Int): [Project!]!
+
+  # iModel
+  iModel(id: ID!): iModel
+  iModels(iTwinId: ID!, displayName: String, skip: Int, top: Int): [iModel!]!
+
+  # Changesets
+  changeset(iModelId: ID!, changesetId: ID!): Changeset
+  changesets(iModelId: ID!, afterIndex: Int, lastSequentialChangesetIndex: Int, skip: Int, top: Int): [Changeset!]!
+
+  # Branches
+  branch(iModelId: ID!, branchId: ID!): Branch
+  branches(iModelId: ID!, skip: Int, top: Int): [Branch!]!
+
+  # Named Versions / Tags
+  namedVersion(iModelId: ID!, namedVersionId: ID!): Tag
+  namedVersions(iModelId: ID!, name: String, skip: Int, top: Int): [Tag!]!
+
+  # Checkpoints
+  checkpoint(iModelId: ID!, changesetId: ID!): Checkpoint
+
+  # Elements
+  element(iModelId: ID!, changesetId: ID, elementId: ID!): Element
+  elements(iModelId: ID!, changesetId: ID, classNames: [String!], skip: Int, top: Int): [Element!]!
+
+  # Schemas / Classes / Properties
+  schema(iModelId: ID!, changesetId: ID, schemaName: String!): Schema
+  schemas(iModelId: ID!, changesetId: ID): [Schema!]!
+  class(iModelId: ID!, changesetId: ID, schemaName: String!, className: String!): Class
+  property(iModelId: ID!, changesetId: ID, schemaName: String!, className: String!, propertyName: String!): Property
+
+  # ECSQL Queries
+  executeQuery(iModelId: ID!, changesetId: ID, ecsql: String!, bindings: JSON, rowFormat: String, continuationToken: String, top: Int): QueryResults!
+
+  # Categories and SubCategories
+  categories(iModelId: ID!, changesetId: ID, skip: Int, top: Int): [Category!]!
+  category(iModelId: ID!, changesetId: ID, categoryId: ID!): Category
+
+  # Models
+  model(iModelId: ID!, changesetId: ID, modelId: ID!): Model
+  models(iModelId: ID!, changesetId: ID, classNames: [String!], skip: Int, top: Int): [Model!]!
+
+  # Views
+  view(iModelId: ID!, changesetId: ID, viewId: ID!): View
+  views(iModelId: ID!, changesetId: ID, skip: Int, top: Int): [View!]!
+
+  # Issues
+  issue(iTwinId: ID!, issueId: ID!): Issue
+  issues(iTwinId: ID!, type: IssueType, status: IssueStatus, assigneeId: ID, skip: Int, top: Int): [Issue!]!
+
+  # Users
+  user(userId: ID!): User
+  users(skip: Int, top: Int): [User!]!
+
+  # RBAC
+  iTwinRoles(iTwinId: ID!): RBAC!
+  iTwinMembers(iTwinId: ID!, roleId: ID): [User!]!
+
+  # Webhooks
+  webhook(webhookId: ID!): Webhook
+  webhooks(iTwinId: ID, iModelId: ID, skip: Int, top: Int): [Webhook!]!
+}
+
+type Mutation {
+  # Projects
+  createProject(displayName: String!, number: String, type: ProjectType, description: String): Project!
+  updateProject(id: ID!, displayName: String, number: String, status: ProjectStatus): Project!
+  deleteProject(id: ID!): Boolean!
+
+  # iModels
+  createIModel(iTwinId: ID!, displayName: String!, name: String!, description: String): iModel!
+  updateIModel(id: ID!, displayName: String, description: String): iModel!
+  deleteIModel(id: ID!): Boolean!
+  cloneIModel(sourceIModelId: ID!, iTwinId: ID!, displayName: String!, name: String!): iModel!
+
+  # Changesets
+  pushChangeset(iModelId: ID!, description: String!, parentId: ID, synchronizationInfo: JSON): Changeset!
+
+  # Named Versions / Tags
+  createNamedVersion(iModelId: ID!, displayName: String!, changesetId: ID!, description: String): Tag!
+  updateNamedVersion(iModelId: ID!, namedVersionId: ID!, displayName: String, description: String): Tag!
+
+  # Briefcases
+  acquireBriefcase(iModelId: ID!, deviceName: String): ElementBriefcase!
+  releaseBriefcase(iModelId: ID!, briefcaseId: Int!): Boolean!
+
+  # Issues
+  createIssue(iTwinId: ID!, displayName: String!, type: IssueType!, subject: String, description: String, assigneeId: ID): Issue!
+  updateIssue(iTwinId: ID!, issueId: ID!, status: IssueStatus, assigneeId: ID, description: String): Issue!
+  deleteIssue(iTwinId: ID!, issueId: ID!): Boolean!
+
+  # Webhooks
+  createWebhook(callbackUrl: URL!, scope: String!, events: [String!]!, iTwinId: ID, iModelId: ID, displayName: String, secret: String): Webhook!
+  updateWebhook(webhookId: ID!, callbackUrl: URL, events: [String!], active: Boolean): Webhook!
+  deleteWebhook(webhookId: ID!): Boolean!
+}
+
+schema {
+  query: RootQuery
+  mutation: Mutation
+}

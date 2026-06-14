@@ -1,12 +1,13 @@
 aid: bentley-systems
 name: Bentley Systems
-description: >-
-  Bentley Systems (NASDAQ: BSY) is an infrastructure engineering software company providing comprehensive applications
-  and cloud services for the design, construction, and operations of infrastructure across roads, bridges, rail, water,
-  energy, and the built environment. Bentley exposes its developer platform through iTwin — a digital twin platform with
-  30+ REST APIs covering iModel data management, reality capture, project scheduling, reporting, visualization, clash
-  detection, and webhooks. The company reports $1.3 billion in annual revenue, ~5,500 colleagues across 42 countries,
-  and serves 42,000 accounts in 189 countries.
+description: 'Bentley Systems (NASDAQ: BSY) is an infrastructure engineering software
+  company providing comprehensive applications and cloud services for the design,
+  construction, and operations of infrastructure across roads, bridges, rail, water,
+  energy, and the built environment. Bentley exposes its developer platform through
+  iTwin — a digital twin platform with 30+ REST APIs covering iModel data management,
+  reality capture, project scheduling, reporting, visualization, clash detection,
+  and webhooks. The company reports $1.3 billion in annual revenue, ~5,500 colleagues
+  across 42 countries, and serves 42,000 accounts in 189 countries.'
 url: https://github.com/api-evangelist/bentley-systems
 humanURL: https://developer.bentley.com
 baseURL: https://api.bentley.com
@@ -15,835 +16,832 @@ created: '2026-05-23'
 modified: '2026-05-23'
 specificationVersion: '0.18'
 tags:
-  - Infrastructure Engineering
-  - Digital Twin
-  - BIM
-  - CAD
-  - Reality Capture
-  - Construction
-  - Asset Management
-  - Geospatial
-  - iTwin
-  - iModel
+- Infrastructure Engineering
+- Digital Twin
+- BIM
+- CAD
+- Reality Capture
+- Construction
+- Asset Management
+- Geospatial
+- iTwin
+- iModel
 apis:
-  - aid: bentley-systems:itwin-access-control-api
-    name: iTwin Access Control API
-    humanURL: https://developer.bentley.com/apis/access-control-v2/
-    baseURL: https://api.bentley.com/accesscontrol
-    description: >-
-      Manage user permissions, roles, group memberships, owner members, share invitations, and job-based access for
-      iTwin projects. Provides role-based access control across the iTwin Platform with 39 operations covering
-      invitations, group/user membership, share links, and permission discovery.
-    tags:
-      - Access Control
-      - Identity
-      - Permissions
-      - Roles
-      - Groups
-      - Members
-      - Invitations
-      - Administration
-    properties:
-      - url: https://developer.bentley.com/apis/access-control-v2/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/access-control-v2/operations/
-        type: APIReference
-      - url: openapi/itwin-access-control-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-itwins-api
-    name: iTwins API
-    humanURL: https://developer.bentley.com/apis/itwins/
-    baseURL: https://api.bentley.com/itwins
-    description: >-
-      Create, manage, and query iTwin containers — the top-level organizational unit that holds iModels, reality data,
-      schedules, and project context. The iTwins API administers projects, organizations, repositories, and hierarchy
-      across the iTwin Platform.
-    tags:
-      - iTwins
-      - Projects
-      - Organizations
-      - Administration
-      - Hierarchy
-      - Repositories
-    properties:
-      - url: https://developer.bentley.com/apis/itwins/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/itwins/operations/
-        type: APIReference
-      - url: openapi/itwin-itwins-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-users-api
-    name: iTwin Users API
-    humanURL: https://developer.bentley.com/apis/users/
-    baseURL: https://api.bentley.com/users
-    description: >-
-      Read user account profile information for users authorized to the iTwin Platform. Provides identity lookup and
-      profile data used by other iTwin services.
-    tags:
-      - Users
-      - Identity
-      - Profiles
-      - Administration
-    properties:
-      - url: https://developer.bentley.com/apis/users/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/users/operations/
-        type: APIReference
-      - url: openapi/itwin-users-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-imodels-api
-    name: iTwin iModels API
-    humanURL: https://developer.bentley.com/apis/imodels-v2/
-    baseURL: https://api.bentley.com/imodels
-    description: >-
-      Create, clone, fork, query, and manage iModels — Bentley's specialized information containers for the lifecycle of
-      infrastructure assets. Covers changesets, named versions, locks, briefcases, users, baselines, thumbnails, and
-      changesets-extended-data across 51 operations.
-    tags:
-      - iModels
-      - Changesets
-      - Named Versions
-      - Briefcases
-      - Locks
-      - Versioning
-      - Digital Twin
-      - Data Management
-    properties:
-      - url: https://developer.bentley.com/apis/imodels-v2/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/imodels-v2/operations/
-        type: APIReference
-      - url: openapi/itwin-imodels-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-storage-api
-    name: iTwin Storage API
-    humanURL: https://developer.bentley.com/apis/storage/
-    baseURL: https://api.bentley.com/storage
-    description: >-
-      Store and retrieve files inside iTwin containers — folders, files, file versions, and trashed items. Supports
-      upload, copy, lock, and content download operations across 27 endpoints.
-    tags:
-      - Storage
-      - Files
-      - Folders
-      - Uploads
-      - Versions
-      - Content
-    properties:
-      - url: https://developer.bentley.com/apis/storage/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/storage/operations/
-        type: APIReference
-      - url: openapi/itwin-storage-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-webhooks-api
-    name: iTwin Webhooks API
-    humanURL: https://developer.bentley.com/apis/webhooks-v2/
-    baseURL: https://api.bentley.com/webhooks
-    description: >-
-      Subscribe to iTwin Platform events. Create, list, update, and delete webhook subscriptions to receive callbacks
-      when iModels, iTwins, reality data, synchronization jobs, and other resources change state.
-    tags:
-      - Webhooks
-      - Events
-      - Subscriptions
-      - Notifications
-      - EventDriven
-    properties:
-      - url: https://developer.bentley.com/apis/webhooks-v2/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/webhooks-v2/operations/
-        type: APIReference
-      - url: openapi/itwin-webhooks-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-synchronization-api
-    name: iTwin Synchronization API
-    humanURL: https://developer.bentley.com/apis/synchronization/
-    baseURL: https://api.bentley.com/synchronization
-    description: >-
-      Synchronize native design files (DGN, DWG, IFC, SHP, RVT, and more) from Azure Blob Storage, iTwin Storage, or
-      ProjectWise into iModels. Manages connections, source files, runs, and synchronization configurations across 42
-      operations.
-    tags:
-      - Synchronization
-      - Connections
-      - Connectors
-      - Source Files
-      - DGN
-      - IFC
-      - Project Delivery
-    properties:
-      - url: https://developer.bentley.com/apis/synchronization/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/synchronization/operations/
-        type: APIReference
-      - url: openapi/itwin-synchronization-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-reality-management-api
-    name: iTwin Reality Management API
-    humanURL: https://developer.bentley.com/apis/reality-management/
-    baseURL: https://api.bentley.com/reality-management
-    description: >-
-      Organize and manage reality data — photos, point clouds, meshes, 3D Tiles, and orthophotos. Provides metadata
-      management and access control for reality capture deliverables across the iTwin Platform.
-    tags:
-      - Reality Capture
-      - Reality Data
-      - Point Clouds
-      - Meshes
-      - 3D Tiles
-      - Photogrammetry
-    properties:
-      - url: https://developer.bentley.com/apis/reality-management/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/reality-management/operations/
-        type: APIReference
-      - url: openapi/itwin-reality-management-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-reality-modeling-api
-    name: iTwin Reality Modeling API (ContextCapture)
-    humanURL: https://developer.bentley.com/apis/contextcapture/
-    baseURL: https://api.bentley.com/contextcapture
-    description: >-
-      Submit reality modeling jobs that process photos and laser scans into 3D meshes, point clouds, and 3D Tiles using
-      Bentley's ContextCapture engine. Covers workspaces, settings, and job management.
-    tags:
-      - Reality Modeling
-      - ContextCapture
-      - Photogrammetry
-      - 3D Reconstruction
-      - Jobs
-    properties:
-      - url: https://developer.bentley.com/apis/contextcapture/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/contextcapture/operations/
-        type: APIReference
-      - url: openapi/itwin-reality-modeling-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-reality-analysis-api
-    name: iTwin Reality Analysis API
-    humanURL: https://developer.bentley.com/apis/reality-analysis/
-    baseURL: https://api.bentley.com/realitydataanalysis
-    description: >-
-      Run AI-powered analyses against reality data — object detection, segmentation, lines/polygon extraction, change
-      detection — across 19 operations spanning jobs, output results, and detectors.
-    tags:
-      - Reality Analysis
-      - AI
-      - Machine Learning
-      - Object Detection
-      - Change Detection
-      - Reality Capture
-    properties:
-      - url: https://developer.bentley.com/apis/reality-analysis/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/reality-analysis/operations/
-        type: APIReference
-      - url: openapi/itwin-reality-analysis-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-reality-conversion-api
-    name: iTwin Reality Conversion API
-    humanURL: https://developer.bentley.com/apis/realityconversion/
-    baseURL: https://api.bentley.com/realityconversion
-    description: >-
-      Convert reality data formats between point cloud, mesh, and 3D Tile representations. Submit conversion jobs and
-      retrieve outputs.
-    tags:
-      - Reality Conversion
-      - Format Conversion
-      - Point Clouds
-      - Meshes
-      - 3D Tiles
-    properties:
-      - url: https://developer.bentley.com/apis/realityconversion/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/realityconversion/operations/
-        type: APIReference
-      - url: openapi/itwin-reality-conversion-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-schedules-api
-    name: iTwin Schedules API
-    humanURL: https://developer.bentley.com/apis/schedules/
-    baseURL: https://api.bentley.com/schedules
-    description: >-
-      Plan and manage 4D construction schedules. The largest iTwin API surface — 128 operations — covering tasks,
-      resources, calendars, baselines, animations, work breakdown structures, and progress tracking for SYNCHRO-grade
-      project management.
-    tags:
-      - Schedules
-      - Scheduling
-      - Tasks
-      - Resources
-      - 4D Construction
-      - SYNCHRO
-      - Project Management
-      - Gantt
-    properties:
-      - url: https://developer.bentley.com/apis/schedules/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/schedules/operations/
-        type: APIReference
-      - url: openapi/itwin-schedules-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-insights-api
-    name: iTwin Insights API (Reporting)
-    humanURL: https://developer.bentley.com/apis/insights/
-    baseURL: https://api.bentley.com/insights
-    description: >-
-      Build custom reports and dashboards on top of iModel data. Define mappings, groups, properties, and ODATA
-      endpoints to extract structured data for Power BI, Tableau, and custom analytics. 62 operations span reports,
-      mappings, extractions, calculated properties, and ODATA.
-    tags:
-      - Insights
-      - Reporting
-      - Dashboards
-      - ODATA
-      - Analytics
-      - Business Intelligence
-      - Mappings
-    properties:
-      - url: https://developer.bentley.com/apis/insights/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/insights/operations/
-        type: APIReference
-      - url: openapi/itwin-insights-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-carbon-calculation-api
-    name: iTwin Carbon Calculation API
-    humanURL: https://developer.bentley.com/apis/carbon-calculation/
-    baseURL: https://api.bentley.com/carboncalculation
-    description: >-
-      Compute embodied carbon footprint across infrastructure projects using EC3 (Embodied Carbon in Construction
-      Calculator) integrations and iModel quantity takeoffs. 15 operations covering carbon templates, materials, and EPD
-      lookups.
-    tags:
-      - Carbon
-      - Sustainability
-      - EC3
-      - Embodied Carbon
-      - ESG
-      - Quantity Takeoff
-    properties:
-      - url: https://developer.bentley.com/apis/carbon-calculation/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/carbon-calculation/operations/
-        type: APIReference
-      - url: openapi/itwin-carbon-calculation-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-clash-detection-api
-    name: iTwin Clash Detection API
-    humanURL: https://developer.bentley.com/apis/clash-detection-v2/
-    baseURL: https://api.bentley.com/clashdetection
-    description: >-
-      Detect geometry clashes between 3D elements in iModels. Define clash tests, suppression rules, and retrieve clash
-      run results across 20 operations.
-    tags:
-      - Clash Detection
-      - Validation
-      - Quality Assurance
-      - BIM Coordination
-    properties:
-      - url: https://developer.bentley.com/apis/clash-detection-v2/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/clash-detection-v2/operations/
-        type: APIReference
-      - url: openapi/itwin-clash-detection-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-changed-elements-api
-    name: iTwin Changed Elements API
-    humanURL: https://developer.bentley.com/apis/changed-elements-v2/
-    baseURL: https://api.bentley.com/changedelements
-    description: >-
-      Track and query design changes between iModel versions. Enables visual diff workflows and change reporting across
-      project iterations.
-    tags:
-      - Changed Elements
-      - Change Tracking
-      - Versioning
-      - BIM Coordination
-    properties:
-      - url: https://developer.bentley.com/apis/changed-elements-v2/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/changed-elements-v2/operations/
-        type: APIReference
-      - url: openapi/itwin-changed-elements-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-issues-api
-    name: iTwin Issues API
-    humanURL: https://developer.bentley.com/apis/issues-v1/
-    baseURL: https://api.bentley.com/issues
-    description: >-
-      Manage issues raised against project deliverables — observations, defects, RFIs, punch list items. Supports
-      attachments, comments, audit trail, and workflow transitions across 29 operations.
-    tags:
-      - Issues
-      - Issue Tracking
-      - Punchlist
-      - RFI
-      - Collaboration
-      - Project Delivery
-    properties:
-      - url: https://developer.bentley.com/apis/issues-v1/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/issues-v1/operations/
-        type: APIReference
-      - url: openapi/itwin-issues-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-forms-api
-    name: iTwin Forms API
-    humanURL: https://developer.bentley.com/apis/forms-v2/
-    baseURL: https://api.bentley.com/forms
-    description: >-
-      Define and submit forms — field-data capture templates used for inspections, checklists, and project-data
-      collection. 29 operations covering form definitions, instances, and attachments.
-    tags:
-      - Forms
-      - Data Collection
-      - Inspections
-      - Checklists
-      - Field Capture
-    properties:
-      - url: https://developer.bentley.com/apis/forms-v2/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/forms-v2/operations/
-        type: APIReference
-      - url: openapi/itwin-forms-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-library-api
-    name: iTwin Library API
-    humanURL: https://developer.bentley.com/apis/library/
-    baseURL: https://api.bentley.com/library
-    description: >-
-      Manage reusable component libraries — catalogs, components, parameters, and component instances. 60 operations
-      span catalog management, search, ingest, and component definition.
-    tags:
-      - Library
-      - Catalog
-      - Components
-      - Reusable Assets
-      - Parameters
-    properties:
-      - url: https://developer.bentley.com/apis/library/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/library/operations/
-        type: APIReference
-      - url: openapi/itwin-library-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-saved-views-api
-    name: iTwin Saved Views API
-    humanURL: https://developer.bentley.com/apis/savedviews/
-    baseURL: https://api.bentley.com/savedviews
-    description: >-
-      Persist and share saved iModel viewer states — camera positions, display styles, category visibility, model
-      selections, and viewport overrides. 22 operations covering groups, tags, images, and extensions.
-    tags:
-      - Saved Views
-      - Visualization
-      - Camera
-      - Display Styles
-      - Collaboration
-    properties:
-      - url: https://developer.bentley.com/apis/savedviews/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/savedviews/operations/
-        type: APIReference
-      - url: openapi/itwin-saved-views-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-scenes-api
-    name: iTwin Scenes API
-    humanURL: https://developer.bentley.com/apis/scenes/
-    baseURL: https://api.bentley.com/scenes
-    description: >-
-      Configure 3D scenes that compose iModels, reality data, OpenStreetMap, terrain, and overlays into a single viewer
-      experience. 19 operations covering scenes, layers, and scene extensions.
-    tags:
-      - Scenes
-      - Visualization
-      - 3D
-      - Composition
-      - Layers
-    properties:
-      - url: https://developer.bentley.com/apis/scenes/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/scenes/operations/
-        type: APIReference
-      - url: openapi/itwin-scenes-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-named-groups-api
-    name: iTwin Named Groups API
-    humanURL: https://developer.bentley.com/apis/named-groups/
-    baseURL: https://api.bentley.com/namedgroups
-    description: >-
-      Create and manage logical groupings of iTwin elements by query, selection, or hierarchy. Used by reporting,
-      validation, and visualization workflows.
-    tags:
-      - Named Groups
-      - Element Grouping
-      - Queries
-      - Selections
-    properties:
-      - url: https://developer.bentley.com/apis/named-groups/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/named-groups/operations/
-        type: APIReference
-      - url: openapi/itwin-named-groups-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-grouping-mapping-api
-    name: iTwin Grouping and Mapping API
-    humanURL: https://developer.bentley.com/apis/grouping-and-mapping/
-    baseURL: https://api.bentley.com/grouping-and-mapping
-    description: >-
-      Map iModel elements to logical groups and property mappings used in reporting and analysis workflows. Bridges the
-      geometric element world to the tabular reporting world. 24 operations.
-    tags:
-      - Grouping
-      - Mapping
-      - Property Mapping
-      - Reporting
-      - Calculated Properties
-    properties:
-      - url: https://developer.bentley.com/apis/grouping-and-mapping/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/grouping-and-mapping/operations/
-        type: APIReference
-      - url: openapi/itwin-grouping-mapping-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-transformations-api
-    name: iTwin Transformations API
-    humanURL: https://developer.bentley.com/apis/transformations/
-    baseURL: https://api.bentley.com/transformations
-    description: >-
-      Submit and manage transformation jobs that derive new iModels from existing ones — element filtering, schema
-      migration, and data shaping. 22 operations covering transformations and runs.
-    tags:
-      - Transformations
-      - Data Transformation
-      - iModel Filtering
-      - Schema Migration
-      - Jobs
-    properties:
-      - url: https://developer.bentley.com/apis/transformations/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/transformations/operations/
-        type: APIReference
-      - url: openapi/itwin-transformations-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-export-api
-    name: iTwin Export API
-    humanURL: https://developer.bentley.com/apis/export/
-    baseURL: https://api.bentley.com/imodels-export
-    description: >-
-      Export iModel data to web-friendly formats including 3D Tiles, glTF, and tileset bundles. Supports browser-ready
-      visualization pipelines.
-    tags:
-      - Export
-      - 3D Tiles
-      - glTF
-      - Web Visualization
-      - Mesh Export
-    properties:
-      - url: https://developer.bentley.com/apis/export/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/export/operations/
-        type: APIReference
-      - url: openapi/itwin-export-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-mesh-export-api
-    name: iTwin Mesh Export API
-    humanURL: https://developer.bentley.com/apis/mesh-export/
-    baseURL: https://api.bentley.com/mesh-export
-    description: Export 3D mesh geometry from iModels for use in CesiumJS, Three.js, Unity, and Unreal Engine visualizations.
-    tags:
-      - Mesh Export
-      - Geometry
-      - 3D Tiles
-      - glTF
-      - Cesium
-      - Web Visualization
-    properties:
-      - url: https://developer.bentley.com/apis/mesh-export/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/mesh-export/operations/
-        type: APIReference
-      - url: openapi/itwin-mesh-export-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-visualization-api
-    name: iTwin Visualization API
-    humanURL: https://developer.bentley.com/apis/visualization/
-    baseURL: https://api.bentley.com/visualization
-    description: >-
-      Server-side visualization service for rendering iTwins in web browsers without client compute. Supports
-      interactive viewers and image generation.
-    tags:
-      - Visualization
-      - Rendering
-      - Web Visualization
-      - Streaming
-    properties:
-      - url: https://developer.bentley.com/apis/visualization/
-        type: Documentation
-  - aid: bentley-systems:itwin-sensor-data-api
-    name: iTwin Sensor Data API
-    humanURL: https://developer.bentley.com/apis/sensor-data/
-    baseURL: https://api.bentley.com/sensor-data
-    description: >-
-      Ingest, store, and query IoT sensor telemetry associated with iTwin assets. Provides device, sensor, observation,
-      and time-series endpoints.
-    tags:
-      - Sensor Data
-      - IoT
-      - Time Series
-      - Telemetry
-      - Devices
-      - Observations
-    properties:
-      - url: https://developer.bentley.com/apis/sensor-data/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/sensor-data/operations/
-        type: APIReference
-      - url: openapi/itwin-sensor-data-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-cesium-curated-content-api
-    name: iTwin Cesium Curated Content API
-    humanURL: https://developer.bentley.com/apis/cesium-curated-content/
-    baseURL: https://api.bentley.com/curated-content
-    description: >-
-      Access Cesium's curated geospatial content — Cesium World Terrain, Bing Maps imagery, OpenStreetMap buildings —
-      for streaming into iTwin viewers.
-    tags:
-      - Cesium
-      - Curated Content
-      - Geospatial
-      - Imagery
-      - Terrain
-      - Streaming
-    properties:
-      - url: https://developer.bentley.com/apis/cesium-curated-content/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/cesium-curated-content/operations/
-        type: APIReference
-      - url: openapi/itwin-cesium-curated-content-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-geospatial-features-api
-    name: iTwin Geospatial Features API
-    humanURL: https://developer.bentley.com/apis/geospatial-features/
-    baseURL: https://api.bentley.com/geospatial-features
-    description: >-
-      Manage geospatial feature collections — GeoJSON-style points, lines, polygons — associated with iTwins. Supports
-      overlay layers in viewers.
-    tags:
-      - Geospatial
-      - Features
-      - GeoJSON
-      - GIS
-      - Overlays
-    properties:
-      - url: https://developer.bentley.com/apis/geospatial-features/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/geospatial-features/operations/
-        type: APIReference
-      - url: openapi/itwin-geospatial-features-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-edfs-api
-    name: Enterprise Data Federation Service (EDFS) API
-    humanURL: https://developer.bentley.com/apis/edfs/
-    baseURL: https://api.bentley.com/edfs
-    description: >-
-      Federate access to data held in Bentley and third-party repositories — ProjectWise, SharePoint, and external
-      systems — so that iTwin applications can query unified asset metadata. 24 operations across data sources, schemas,
-      queries, and federation policies.
-    tags:
-      - EDFS
-      - Data Federation
-      - ProjectWise
-      - Enterprise Data
-      - Federated Queries
-    properties:
-      - url: https://developer.bentley.com/apis/edfs/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/edfs/operations/
-        type: APIReference
-      - url: openapi/itwin-edfs-openapi.yml
-        type: OpenAPI
-  - aid: bentley-systems:itwin-pnid-api
-    name: iTwin P&ID to iTwin API
-    humanURL: https://developer.bentley.com/apis/pnid-to-itwin-v2/
-    baseURL: https://api.bentley.com/pnid
-    description: >-
-      Convert Process & Instrumentation Diagrams (P&IDs) into iTwin-compatible intelligent data — symbols, lines, and
-      connectivity — using AI extraction. 14 operations covering jobs, outputs, and training.
-    tags:
-      - PnID
-      - Process Diagrams
-      - Plant Engineering
-      - AI Extraction
-      - Symbols
-    properties:
-      - url: https://developer.bentley.com/apis/pnid-to-itwin-v2/
-        type: Documentation
-      - url: https://developer.bentley.com/apis/pnid-to-itwin-v2/operations/
-        type: APIReference
-      - url: openapi/itwin-pnid-openapi.yml
-        type: OpenAPI
+- aid: bentley-systems:itwin-access-control-api
+  name: iTwin Access Control API
+  humanURL: https://developer.bentley.com/apis/access-control-v2/
+  baseURL: https://api.bentley.com/accesscontrol
+  description: Manage user permissions, roles, group memberships, owner members, share
+    invitations, and job-based access for iTwin projects. Provides role-based access
+    control across the iTwin Platform with 39 operations covering invitations, group/user
+    membership, share links, and permission discovery.
+  tags:
+  - Access Control
+  - Identity
+  - Permissions
+  - Roles
+  - Groups
+  - Members
+  - Invitations
+  - Administration
+  properties:
+  - url: https://developer.bentley.com/apis/access-control-v2/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/access-control-v2/operations/
+    type: APIReference
+  - url: openapi/itwin-access-control-openapi.yml
+    type: OpenAPI
+  - url: graphql/bentley-systems-graphql.md
+    type: GraphQL
+- aid: bentley-systems:itwin-itwins-api
+  name: iTwins API
+  humanURL: https://developer.bentley.com/apis/itwins/
+  baseURL: https://api.bentley.com/itwins
+  description: Create, manage, and query iTwin containers — the top-level organizational
+    unit that holds iModels, reality data, schedules, and project context. The iTwins
+    API administers projects, organizations, repositories, and hierarchy across the
+    iTwin Platform.
+  tags:
+  - iTwins
+  - Projects
+  - Organizations
+  - Administration
+  - Hierarchy
+  - Repositories
+  properties:
+  - url: https://developer.bentley.com/apis/itwins/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/itwins/operations/
+    type: APIReference
+  - url: openapi/itwin-itwins-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-users-api
+  name: iTwin Users API
+  humanURL: https://developer.bentley.com/apis/users/
+  baseURL: https://api.bentley.com/users
+  description: Read user account profile information for users authorized to the iTwin
+    Platform. Provides identity lookup and profile data used by other iTwin services.
+  tags:
+  - Users
+  - Identity
+  - Profiles
+  - Administration
+  properties:
+  - url: https://developer.bentley.com/apis/users/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/users/operations/
+    type: APIReference
+  - url: openapi/itwin-users-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-imodels-api
+  name: iTwin iModels API
+  humanURL: https://developer.bentley.com/apis/imodels-v2/
+  baseURL: https://api.bentley.com/imodels
+  description: Create, clone, fork, query, and manage iModels — Bentley's specialized
+    information containers for the lifecycle of infrastructure assets. Covers changesets,
+    named versions, locks, briefcases, users, baselines, thumbnails, and changesets-extended-data
+    across 51 operations.
+  tags:
+  - iModels
+  - Changesets
+  - Named Versions
+  - Briefcases
+  - Locks
+  - Versioning
+  - Digital Twin
+  - Data Management
+  properties:
+  - url: https://developer.bentley.com/apis/imodels-v2/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/imodels-v2/operations/
+    type: APIReference
+  - url: openapi/itwin-imodels-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-storage-api
+  name: iTwin Storage API
+  humanURL: https://developer.bentley.com/apis/storage/
+  baseURL: https://api.bentley.com/storage
+  description: Store and retrieve files inside iTwin containers — folders, files,
+    file versions, and trashed items. Supports upload, copy, lock, and content download
+    operations across 27 endpoints.
+  tags:
+  - Storage
+  - Files
+  - Folders
+  - Uploads
+  - Versions
+  - Content
+  properties:
+  - url: https://developer.bentley.com/apis/storage/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/storage/operations/
+    type: APIReference
+  - url: openapi/itwin-storage-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-webhooks-api
+  name: iTwin Webhooks API
+  humanURL: https://developer.bentley.com/apis/webhooks-v2/
+  baseURL: https://api.bentley.com/webhooks
+  description: Subscribe to iTwin Platform events. Create, list, update, and delete
+    webhook subscriptions to receive callbacks when iModels, iTwins, reality data,
+    synchronization jobs, and other resources change state.
+  tags:
+  - Webhooks
+  - Events
+  - Subscriptions
+  - Notifications
+  - EventDriven
+  properties:
+  - url: https://developer.bentley.com/apis/webhooks-v2/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/webhooks-v2/operations/
+    type: APIReference
+  - url: openapi/itwin-webhooks-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-synchronization-api
+  name: iTwin Synchronization API
+  humanURL: https://developer.bentley.com/apis/synchronization/
+  baseURL: https://api.bentley.com/synchronization
+  description: Synchronize native design files (DGN, DWG, IFC, SHP, RVT, and more)
+    from Azure Blob Storage, iTwin Storage, or ProjectWise into iModels. Manages connections,
+    source files, runs, and synchronization configurations across 42 operations.
+  tags:
+  - Synchronization
+  - Connections
+  - Connectors
+  - Source Files
+  - DGN
+  - IFC
+  - Project Delivery
+  properties:
+  - url: https://developer.bentley.com/apis/synchronization/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/synchronization/operations/
+    type: APIReference
+  - url: openapi/itwin-synchronization-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-reality-management-api
+  name: iTwin Reality Management API
+  humanURL: https://developer.bentley.com/apis/reality-management/
+  baseURL: https://api.bentley.com/reality-management
+  description: Organize and manage reality data — photos, point clouds, meshes, 3D
+    Tiles, and orthophotos. Provides metadata management and access control for reality
+    capture deliverables across the iTwin Platform.
+  tags:
+  - Reality Capture
+  - Reality Data
+  - Point Clouds
+  - Meshes
+  - 3D Tiles
+  - Photogrammetry
+  properties:
+  - url: https://developer.bentley.com/apis/reality-management/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/reality-management/operations/
+    type: APIReference
+  - url: openapi/itwin-reality-management-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-reality-modeling-api
+  name: iTwin Reality Modeling API (ContextCapture)
+  humanURL: https://developer.bentley.com/apis/contextcapture/
+  baseURL: https://api.bentley.com/contextcapture
+  description: Submit reality modeling jobs that process photos and laser scans into
+    3D meshes, point clouds, and 3D Tiles using Bentley's ContextCapture engine. Covers
+    workspaces, settings, and job management.
+  tags:
+  - Reality Modeling
+  - ContextCapture
+  - Photogrammetry
+  - 3D Reconstruction
+  - Jobs
+  properties:
+  - url: https://developer.bentley.com/apis/contextcapture/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/contextcapture/operations/
+    type: APIReference
+  - url: openapi/itwin-reality-modeling-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-reality-analysis-api
+  name: iTwin Reality Analysis API
+  humanURL: https://developer.bentley.com/apis/reality-analysis/
+  baseURL: https://api.bentley.com/realitydataanalysis
+  description: Run AI-powered analyses against reality data — object detection, segmentation,
+    lines/polygon extraction, change detection — across 19 operations spanning jobs,
+    output results, and detectors.
+  tags:
+  - Reality Analysis
+  - AI
+  - Machine Learning
+  - Object Detection
+  - Change Detection
+  - Reality Capture
+  properties:
+  - url: https://developer.bentley.com/apis/reality-analysis/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/reality-analysis/operations/
+    type: APIReference
+  - url: openapi/itwin-reality-analysis-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-reality-conversion-api
+  name: iTwin Reality Conversion API
+  humanURL: https://developer.bentley.com/apis/realityconversion/
+  baseURL: https://api.bentley.com/realityconversion
+  description: Convert reality data formats between point cloud, mesh, and 3D Tile
+    representations. Submit conversion jobs and retrieve outputs.
+  tags:
+  - Reality Conversion
+  - Format Conversion
+  - Point Clouds
+  - Meshes
+  - 3D Tiles
+  properties:
+  - url: https://developer.bentley.com/apis/realityconversion/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/realityconversion/operations/
+    type: APIReference
+  - url: openapi/itwin-reality-conversion-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-schedules-api
+  name: iTwin Schedules API
+  humanURL: https://developer.bentley.com/apis/schedules/
+  baseURL: https://api.bentley.com/schedules
+  description: Plan and manage 4D construction schedules. The largest iTwin API surface
+    — 128 operations — covering tasks, resources, calendars, baselines, animations,
+    work breakdown structures, and progress tracking for SYNCHRO-grade project management.
+  tags:
+  - Schedules
+  - Scheduling
+  - Tasks
+  - Resources
+  - 4D Construction
+  - SYNCHRO
+  - Project Management
+  - Gantt
+  properties:
+  - url: https://developer.bentley.com/apis/schedules/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/schedules/operations/
+    type: APIReference
+  - url: openapi/itwin-schedules-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-insights-api
+  name: iTwin Insights API (Reporting)
+  humanURL: https://developer.bentley.com/apis/insights/
+  baseURL: https://api.bentley.com/insights
+  description: Build custom reports and dashboards on top of iModel data. Define mappings,
+    groups, properties, and ODATA endpoints to extract structured data for Power BI,
+    Tableau, and custom analytics. 62 operations span reports, mappings, extractions,
+    calculated properties, and ODATA.
+  tags:
+  - Insights
+  - Reporting
+  - Dashboards
+  - ODATA
+  - Analytics
+  - Business Intelligence
+  - Mappings
+  properties:
+  - url: https://developer.bentley.com/apis/insights/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/insights/operations/
+    type: APIReference
+  - url: openapi/itwin-insights-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-carbon-calculation-api
+  name: iTwin Carbon Calculation API
+  humanURL: https://developer.bentley.com/apis/carbon-calculation/
+  baseURL: https://api.bentley.com/carboncalculation
+  description: Compute embodied carbon footprint across infrastructure projects using
+    EC3 (Embodied Carbon in Construction Calculator) integrations and iModel quantity
+    takeoffs. 15 operations covering carbon templates, materials, and EPD lookups.
+  tags:
+  - Carbon
+  - Sustainability
+  - EC3
+  - Embodied Carbon
+  - ESG
+  - Quantity Takeoff
+  properties:
+  - url: https://developer.bentley.com/apis/carbon-calculation/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/carbon-calculation/operations/
+    type: APIReference
+  - url: openapi/itwin-carbon-calculation-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-clash-detection-api
+  name: iTwin Clash Detection API
+  humanURL: https://developer.bentley.com/apis/clash-detection-v2/
+  baseURL: https://api.bentley.com/clashdetection
+  description: Detect geometry clashes between 3D elements in iModels. Define clash
+    tests, suppression rules, and retrieve clash run results across 20 operations.
+  tags:
+  - Clash Detection
+  - Validation
+  - Quality Assurance
+  - BIM Coordination
+  properties:
+  - url: https://developer.bentley.com/apis/clash-detection-v2/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/clash-detection-v2/operations/
+    type: APIReference
+  - url: openapi/itwin-clash-detection-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-changed-elements-api
+  name: iTwin Changed Elements API
+  humanURL: https://developer.bentley.com/apis/changed-elements-v2/
+  baseURL: https://api.bentley.com/changedelements
+  description: Track and query design changes between iModel versions. Enables visual
+    diff workflows and change reporting across project iterations.
+  tags:
+  - Changed Elements
+  - Change Tracking
+  - Versioning
+  - BIM Coordination
+  properties:
+  - url: https://developer.bentley.com/apis/changed-elements-v2/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/changed-elements-v2/operations/
+    type: APIReference
+  - url: openapi/itwin-changed-elements-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-issues-api
+  name: iTwin Issues API
+  humanURL: https://developer.bentley.com/apis/issues-v1/
+  baseURL: https://api.bentley.com/issues
+  description: Manage issues raised against project deliverables — observations, defects,
+    RFIs, punch list items. Supports attachments, comments, audit trail, and workflow
+    transitions across 29 operations.
+  tags:
+  - Issues
+  - Issue Tracking
+  - Punchlist
+  - RFI
+  - Collaboration
+  - Project Delivery
+  properties:
+  - url: https://developer.bentley.com/apis/issues-v1/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/issues-v1/operations/
+    type: APIReference
+  - url: openapi/itwin-issues-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-forms-api
+  name: iTwin Forms API
+  humanURL: https://developer.bentley.com/apis/forms-v2/
+  baseURL: https://api.bentley.com/forms
+  description: Define and submit forms — field-data capture templates used for inspections,
+    checklists, and project-data collection. 29 operations covering form definitions,
+    instances, and attachments.
+  tags:
+  - Forms
+  - Data Collection
+  - Inspections
+  - Checklists
+  - Field Capture
+  properties:
+  - url: https://developer.bentley.com/apis/forms-v2/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/forms-v2/operations/
+    type: APIReference
+  - url: openapi/itwin-forms-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-library-api
+  name: iTwin Library API
+  humanURL: https://developer.bentley.com/apis/library/
+  baseURL: https://api.bentley.com/library
+  description: Manage reusable component libraries — catalogs, components, parameters,
+    and component instances. 60 operations span catalog management, search, ingest,
+    and component definition.
+  tags:
+  - Library
+  - Catalog
+  - Components
+  - Reusable Assets
+  - Parameters
+  properties:
+  - url: https://developer.bentley.com/apis/library/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/library/operations/
+    type: APIReference
+  - url: openapi/itwin-library-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-saved-views-api
+  name: iTwin Saved Views API
+  humanURL: https://developer.bentley.com/apis/savedviews/
+  baseURL: https://api.bentley.com/savedviews
+  description: Persist and share saved iModel viewer states — camera positions, display
+    styles, category visibility, model selections, and viewport overrides. 22 operations
+    covering groups, tags, images, and extensions.
+  tags:
+  - Saved Views
+  - Visualization
+  - Camera
+  - Display Styles
+  - Collaboration
+  properties:
+  - url: https://developer.bentley.com/apis/savedviews/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/savedviews/operations/
+    type: APIReference
+  - url: openapi/itwin-saved-views-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-scenes-api
+  name: iTwin Scenes API
+  humanURL: https://developer.bentley.com/apis/scenes/
+  baseURL: https://api.bentley.com/scenes
+  description: Configure 3D scenes that compose iModels, reality data, OpenStreetMap,
+    terrain, and overlays into a single viewer experience. 19 operations covering
+    scenes, layers, and scene extensions.
+  tags:
+  - Scenes
+  - Visualization
+  - 3D
+  - Composition
+  - Layers
+  properties:
+  - url: https://developer.bentley.com/apis/scenes/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/scenes/operations/
+    type: APIReference
+  - url: openapi/itwin-scenes-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-named-groups-api
+  name: iTwin Named Groups API
+  humanURL: https://developer.bentley.com/apis/named-groups/
+  baseURL: https://api.bentley.com/namedgroups
+  description: Create and manage logical groupings of iTwin elements by query, selection,
+    or hierarchy. Used by reporting, validation, and visualization workflows.
+  tags:
+  - Named Groups
+  - Element Grouping
+  - Queries
+  - Selections
+  properties:
+  - url: https://developer.bentley.com/apis/named-groups/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/named-groups/operations/
+    type: APIReference
+  - url: openapi/itwin-named-groups-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-grouping-mapping-api
+  name: iTwin Grouping and Mapping API
+  humanURL: https://developer.bentley.com/apis/grouping-and-mapping/
+  baseURL: https://api.bentley.com/grouping-and-mapping
+  description: Map iModel elements to logical groups and property mappings used in
+    reporting and analysis workflows. Bridges the geometric element world to the tabular
+    reporting world. 24 operations.
+  tags:
+  - Grouping
+  - Mapping
+  - Property Mapping
+  - Reporting
+  - Calculated Properties
+  properties:
+  - url: https://developer.bentley.com/apis/grouping-and-mapping/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/grouping-and-mapping/operations/
+    type: APIReference
+  - url: openapi/itwin-grouping-mapping-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-transformations-api
+  name: iTwin Transformations API
+  humanURL: https://developer.bentley.com/apis/transformations/
+  baseURL: https://api.bentley.com/transformations
+  description: Submit and manage transformation jobs that derive new iModels from
+    existing ones — element filtering, schema migration, and data shaping. 22 operations
+    covering transformations and runs.
+  tags:
+  - Transformations
+  - Data Transformation
+  - iModel Filtering
+  - Schema Migration
+  - Jobs
+  properties:
+  - url: https://developer.bentley.com/apis/transformations/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/transformations/operations/
+    type: APIReference
+  - url: openapi/itwin-transformations-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-export-api
+  name: iTwin Export API
+  humanURL: https://developer.bentley.com/apis/export/
+  baseURL: https://api.bentley.com/imodels-export
+  description: Export iModel data to web-friendly formats including 3D Tiles, glTF,
+    and tileset bundles. Supports browser-ready visualization pipelines.
+  tags:
+  - Export
+  - 3D Tiles
+  - glTF
+  - Web Visualization
+  - Mesh Export
+  properties:
+  - url: https://developer.bentley.com/apis/export/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/export/operations/
+    type: APIReference
+  - url: openapi/itwin-export-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-mesh-export-api
+  name: iTwin Mesh Export API
+  humanURL: https://developer.bentley.com/apis/mesh-export/
+  baseURL: https://api.bentley.com/mesh-export
+  description: Export 3D mesh geometry from iModels for use in CesiumJS, Three.js,
+    Unity, and Unreal Engine visualizations.
+  tags:
+  - Mesh Export
+  - Geometry
+  - 3D Tiles
+  - glTF
+  - Cesium
+  - Web Visualization
+  properties:
+  - url: https://developer.bentley.com/apis/mesh-export/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/mesh-export/operations/
+    type: APIReference
+  - url: openapi/itwin-mesh-export-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-visualization-api
+  name: iTwin Visualization API
+  humanURL: https://developer.bentley.com/apis/visualization/
+  baseURL: https://api.bentley.com/visualization
+  description: Server-side visualization service for rendering iTwins in web browsers
+    without client compute. Supports interactive viewers and image generation.
+  tags:
+  - Visualization
+  - Rendering
+  - Web Visualization
+  - Streaming
+  properties:
+  - url: https://developer.bentley.com/apis/visualization/
+    type: Documentation
+- aid: bentley-systems:itwin-sensor-data-api
+  name: iTwin Sensor Data API
+  humanURL: https://developer.bentley.com/apis/sensor-data/
+  baseURL: https://api.bentley.com/sensor-data
+  description: Ingest, store, and query IoT sensor telemetry associated with iTwin
+    assets. Provides device, sensor, observation, and time-series endpoints.
+  tags:
+  - Sensor Data
+  - IoT
+  - Time Series
+  - Telemetry
+  - Devices
+  - Observations
+  properties:
+  - url: https://developer.bentley.com/apis/sensor-data/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/sensor-data/operations/
+    type: APIReference
+  - url: openapi/itwin-sensor-data-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-cesium-curated-content-api
+  name: iTwin Cesium Curated Content API
+  humanURL: https://developer.bentley.com/apis/cesium-curated-content/
+  baseURL: https://api.bentley.com/curated-content
+  description: Access Cesium's curated geospatial content — Cesium World Terrain,
+    Bing Maps imagery, OpenStreetMap buildings — for streaming into iTwin viewers.
+  tags:
+  - Cesium
+  - Curated Content
+  - Geospatial
+  - Imagery
+  - Terrain
+  - Streaming
+  properties:
+  - url: https://developer.bentley.com/apis/cesium-curated-content/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/cesium-curated-content/operations/
+    type: APIReference
+  - url: openapi/itwin-cesium-curated-content-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-geospatial-features-api
+  name: iTwin Geospatial Features API
+  humanURL: https://developer.bentley.com/apis/geospatial-features/
+  baseURL: https://api.bentley.com/geospatial-features
+  description: Manage geospatial feature collections — GeoJSON-style points, lines,
+    polygons — associated with iTwins. Supports overlay layers in viewers.
+  tags:
+  - Geospatial
+  - Features
+  - GeoJSON
+  - GIS
+  - Overlays
+  properties:
+  - url: https://developer.bentley.com/apis/geospatial-features/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/geospatial-features/operations/
+    type: APIReference
+  - url: openapi/itwin-geospatial-features-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-edfs-api
+  name: Enterprise Data Federation Service (EDFS) API
+  humanURL: https://developer.bentley.com/apis/edfs/
+  baseURL: https://api.bentley.com/edfs
+  description: Federate access to data held in Bentley and third-party repositories
+    — ProjectWise, SharePoint, and external systems — so that iTwin applications can
+    query unified asset metadata. 24 operations across data sources, schemas, queries,
+    and federation policies.
+  tags:
+  - EDFS
+  - Data Federation
+  - ProjectWise
+  - Enterprise Data
+  - Federated Queries
+  properties:
+  - url: https://developer.bentley.com/apis/edfs/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/edfs/operations/
+    type: APIReference
+  - url: openapi/itwin-edfs-openapi.yml
+    type: OpenAPI
+- aid: bentley-systems:itwin-pnid-api
+  name: iTwin P&ID to iTwin API
+  humanURL: https://developer.bentley.com/apis/pnid-to-itwin-v2/
+  baseURL: https://api.bentley.com/pnid
+  description: Convert Process & Instrumentation Diagrams (P&IDs) into iTwin-compatible
+    intelligent data — symbols, lines, and connectivity — using AI extraction. 14
+    operations covering jobs, outputs, and training.
+  tags:
+  - PnID
+  - Process Diagrams
+  - Plant Engineering
+  - AI Extraction
+  - Symbols
+  properties:
+  - url: https://developer.bentley.com/apis/pnid-to-itwin-v2/
+    type: Documentation
+  - url: https://developer.bentley.com/apis/pnid-to-itwin-v2/operations/
+    type: APIReference
+  - url: openapi/itwin-pnid-openapi.yml
+    type: OpenAPI
 common:
-  - type: PostmanWorkspace
-    url: https://www.postman.com/kinlaneapi/bentley-systems/overview
-  - type: ArazzoWorkflows
-    url: arazzo/
-    workflows:
-      - url: arazzo/bentley-systems-advance-issue-workflow.yml
-        name: Bentley Advance an Issue Through Its Workflow
-        summary: Read an issue, update its status, record an audit-trail entry, and read back its workflow state.
-      - url: arazzo/bentley-systems-authoring-session-workflow.yml
-        name: Bentley Start an iModel Authoring Session
-        summary: Acquire a briefcase, take element locks, and push a changeset to author an iModel.
-      - url: arazzo/bentley-systems-clone-imodel-workflow.yml
-        name: Bentley Clone an iModel and Wait for It
-        summary: Kick off an asynchronous iModel clone and poll the target iTwin until the clone is initialized.
-      - url: arazzo/bentley-systems-file-issue-workflow.yml
-        name: Bentley File an Issue With an Attachment and Comment
-        summary: Create an issue, attach supporting media, and post an initial comment.
-      - url: arazzo/bentley-systems-provision-imodel-workflow.yml
-        name: Bentley Provision an iModel Inside a New iTwin
-        summary: Create an iTwin project container, provision an iModel inside it, and wait for initialization.
-      - url: arazzo/bentley-systems-publish-form-workflow.yml
-        name: Bentley Publish a Form Template and Submit an Instance
-        summary: Create a form template, submit a filled instance against it, and attach supporting media.
-      - url: arazzo/bentley-systems-register-reality-data-workflow.yml
-        name: Bentley Register Reality Data and Grant Write Access
-        summary: Create a reality data record, confirm it, and obtain a write-access container URL for upload.
-      - url: arazzo/bentley-systems-tag-named-version-workflow.yml
-        name: Bentley Tag a Named Version From the Latest Changeset
-        summary: Resolve the most recent changeset on an iModel and pin a named version to it.
-  - type: DeveloperPortal
-    url: https://developer.bentley.com
-    name: iTwin Platform Developer Portal
-  - type: Portal
-    url: https://developer.bentley.com
-    name: iTwin Platform Developer Portal
-  - type: Documentation
-    url: https://developer.bentley.com/apis/
-    name: iTwin Platform API Documentation
-  - type: APIReference
-    url: https://developer.bentley.com/apis/
-    name: iTwin Platform API Reference
-  - type: GettingStarted
-    url: https://developer.bentley.com/tutorials/quickstart-web-and-service-apps/
-    name: Quickstart - Web and Service Apps
-  - type: Quickstart
-    url: https://developer.bentley.com/tutorials/quickstart-web-and-service-apps/
-    name: Quickstart - Web and Service Apps
-  - type: Tutorials
-    url: https://developer.bentley.com/tutorials/
-    name: iTwin Platform Tutorials
-  - type: Authentication
-    url: https://developer.bentley.com/apis/overview/authorization/
-    name: iTwin Platform Authorization
-  - type: SignUp
-    url: https://www.bentley.com/forms/register/
-    name: Bentley Account Registration
-  - type: Pricing
-    url: https://developer.bentley.com/pricing/
-    name: iTwin Platform Pricing
-  - type: Plans
-    url: plans/bentley-systems-plans-pricing.yml
-    name: API Commons Plans
-  - type: RateLimits
-    url: rate-limits/bentley-systems-rate-limits.yml
-    name: API Commons Rate Limits
-  - type: FinOps
-    url: finops/bentley-systems-finops.yml
-    name: FinOps Framework
-  - type: StatusPage
-    url: https://status.bentley.com
-    name: Bentley Cloud Services Status
-  - type: ChangeLog
-    url: https://developer.bentley.com/community/
-    name: iTwin Platform Community
-  - type: Compliance
-    url: https://www.bentley.com/legal/data-privacy/
-    name: Bentley Data Privacy and Compliance
-  - type: TermsOfService
-    url: https://developer.bentley.com/legal/
-    name: Developer Portal Legal Terms
-  - type: PrivacyPolicy
-    url: https://www.bentley.com/legal/privacy-policy/
-    name: Bentley Privacy Policy
-  - type: GitHubOrganization
-    url: https://github.com/iTwin
-    name: iTwin GitHub Organization
-  - type: GitHubOrganization
-    url: https://github.com/bentleysystems
-    name: Bentley Systems GitHub Organization
-  - type: SDK
-    url: https://github.com/iTwin/itwinjs-core
-    name: iTwin.js Core SDK (TypeScript)
-  - type: SDK
-    url: https://github.com/iTwin/iTwinUI
-    name: iTwinUI Design System
-  - type: SDK
-    url: https://github.com/iTwin/imodels-clients
-    name: iModels API Clients
-  - type: SDK
-    url: https://github.com/iTwin/mobile-sdk-ios
-    name: iTwin Mobile SDK for iOS (Swift)
-  - type: SDK
-    url: https://github.com/iTwin/mobile-sdk-android
-    name: iTwin Mobile SDK for Android (Kotlin)
-  - type: SDK
-    url: https://github.com/iTwin/viewer
-    name: iTwin Viewer SDK
-  - type: SDK
-    url: https://github.com/iTwin/itwin-unreal-plugin
-    name: iTwin Unreal Engine Plugin
-  - type: SDK
-    url: https://github.com/iTwin/presentation
-    name: iTwin Presentation Library
-  - type: SDK
-    url: https://github.com/iTwin/appui
-    name: iTwin AppUI Framework
-  - type: SDK
-    url: https://github.com/bentleysystems/MicroStationPython
-    name: MicroStation Python SDK
-  - type: SDK
-    url: https://github.com/bentleysystems/openstaadpy
-    name: OpenSTAAD Python SDK
-  - type: SDK
-    url: https://github.com/bentleysystems/openstaad-mcp
-    name: OpenSTAAD MCP Server for AI Agents
-  - type: Sandbox
-    url: https://developer.bentley.com/tutorials/web-application-quick-start/
-    name: iTwin Web Application Quickstart
-  - type: Console
-    url: https://developer.bentley.com/my-apps/
-    name: My Apps Console (App Registration)
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/bentley-systems
-    name: Bentley Systems on LinkedIn
-  - type: YouTube
-    url: https://www.youtube.com/user/BentleySystems
-    name: Bentley Systems YouTube Channel
-  - type: X
-    url: https://twitter.com/BentleySystems
-    name: Bentley Systems on X
-  - type: Blog
-    url: https://blog.bentley.com
-    name: Bentley Blog
-  - type: Support
-    url: https://www.bentley.com/support/
-    name: Bentley Support Portal
-  - type: Community
-    url: https://developer.bentley.com/community/
-    name: iTwin Platform Community
-  - type: VocabularyOfTerms
-    url: vocabulary/bentley-systems-vocabulary.yml
-    name: Bentley iTwin Vocabulary
-  - type: JSONLD
-    url: json-ld/bentley-systems-context.jsonld
-    name: Bentley iTwin JSON-LD Context
-  - type: LLMsTxt
-    url: https://bentley.com/llms.txt
+- type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/bentley-systems/overview
+- type: ArazzoWorkflows
+  url: arazzo/
+  workflows:
+  - url: arazzo/bentley-systems-advance-issue-workflow.yml
+    name: Bentley Advance an Issue Through Its Workflow
+    summary: Read an issue, update its status, record an audit-trail entry, and read
+      back its workflow state.
+  - url: arazzo/bentley-systems-authoring-session-workflow.yml
+    name: Bentley Start an iModel Authoring Session
+    summary: Acquire a briefcase, take element locks, and push a changeset to author
+      an iModel.
+  - url: arazzo/bentley-systems-clone-imodel-workflow.yml
+    name: Bentley Clone an iModel and Wait for It
+    summary: Kick off an asynchronous iModel clone and poll the target iTwin until
+      the clone is initialized.
+  - url: arazzo/bentley-systems-file-issue-workflow.yml
+    name: Bentley File an Issue With an Attachment and Comment
+    summary: Create an issue, attach supporting media, and post an initial comment.
+  - url: arazzo/bentley-systems-provision-imodel-workflow.yml
+    name: Bentley Provision an iModel Inside a New iTwin
+    summary: Create an iTwin project container, provision an iModel inside it, and
+      wait for initialization.
+  - url: arazzo/bentley-systems-publish-form-workflow.yml
+    name: Bentley Publish a Form Template and Submit an Instance
+    summary: Create a form template, submit a filled instance against it, and attach
+      supporting media.
+  - url: arazzo/bentley-systems-register-reality-data-workflow.yml
+    name: Bentley Register Reality Data and Grant Write Access
+    summary: Create a reality data record, confirm it, and obtain a write-access container
+      URL for upload.
+  - url: arazzo/bentley-systems-tag-named-version-workflow.yml
+    name: Bentley Tag a Named Version From the Latest Changeset
+    summary: Resolve the most recent changeset on an iModel and pin a named version
+      to it.
+- type: DeveloperPortal
+  url: https://developer.bentley.com
+  name: iTwin Platform Developer Portal
+- type: Portal
+  url: https://developer.bentley.com
+  name: iTwin Platform Developer Portal
+- type: Documentation
+  url: https://developer.bentley.com/apis/
+  name: iTwin Platform API Documentation
+- type: APIReference
+  url: https://developer.bentley.com/apis/
+  name: iTwin Platform API Reference
+- type: GettingStarted
+  url: https://developer.bentley.com/tutorials/quickstart-web-and-service-apps/
+  name: Quickstart - Web and Service Apps
+- type: Quickstart
+  url: https://developer.bentley.com/tutorials/quickstart-web-and-service-apps/
+  name: Quickstart - Web and Service Apps
+- type: Tutorials
+  url: https://developer.bentley.com/tutorials/
+  name: iTwin Platform Tutorials
+- type: Authentication
+  url: https://developer.bentley.com/apis/overview/authorization/
+  name: iTwin Platform Authorization
+- type: SignUp
+  url: https://www.bentley.com/forms/register/
+  name: Bentley Account Registration
+- type: Pricing
+  url: https://developer.bentley.com/pricing/
+  name: iTwin Platform Pricing
+- type: Plans
+  url: plans/bentley-systems-plans-pricing.yml
+  name: API Commons Plans
+- type: RateLimits
+  url: rate-limits/bentley-systems-rate-limits.yml
+  name: API Commons Rate Limits
+- type: FinOps
+  url: finops/bentley-systems-finops.yml
+  name: FinOps Framework
+- type: StatusPage
+  url: https://status.bentley.com
+  name: Bentley Cloud Services Status
+- type: ChangeLog
+  url: https://developer.bentley.com/community/
+  name: iTwin Platform Community
+- type: Compliance
+  url: https://www.bentley.com/legal/data-privacy/
+  name: Bentley Data Privacy and Compliance
+- type: TermsOfService
+  url: https://developer.bentley.com/legal/
+  name: Developer Portal Legal Terms
+- type: PrivacyPolicy
+  url: https://www.bentley.com/legal/privacy-policy/
+  name: Bentley Privacy Policy
+- type: GitHubOrganization
+  url: https://github.com/iTwin
+  name: iTwin GitHub Organization
+- type: GitHubOrganization
+  url: https://github.com/bentleysystems
+  name: Bentley Systems GitHub Organization
+- type: SDK
+  url: https://github.com/iTwin/itwinjs-core
+  name: iTwin.js Core SDK (TypeScript)
+- type: SDK
+  url: https://github.com/iTwin/iTwinUI
+  name: iTwinUI Design System
+- type: SDK
+  url: https://github.com/iTwin/imodels-clients
+  name: iModels API Clients
+- type: SDK
+  url: https://github.com/iTwin/mobile-sdk-ios
+  name: iTwin Mobile SDK for iOS (Swift)
+- type: SDK
+  url: https://github.com/iTwin/mobile-sdk-android
+  name: iTwin Mobile SDK for Android (Kotlin)
+- type: SDK
+  url: https://github.com/iTwin/viewer
+  name: iTwin Viewer SDK
+- type: SDK
+  url: https://github.com/iTwin/itwin-unreal-plugin
+  name: iTwin Unreal Engine Plugin
+- type: SDK
+  url: https://github.com/iTwin/presentation
+  name: iTwin Presentation Library
+- type: SDK
+  url: https://github.com/iTwin/appui
+  name: iTwin AppUI Framework
+- type: SDK
+  url: https://github.com/bentleysystems/MicroStationPython
+  name: MicroStation Python SDK
+- type: SDK
+  url: https://github.com/bentleysystems/openstaadpy
+  name: OpenSTAAD Python SDK
+- type: SDK
+  url: https://github.com/bentleysystems/openstaad-mcp
+  name: OpenSTAAD MCP Server for AI Agents
+- type: Sandbox
+  url: https://developer.bentley.com/tutorials/web-application-quick-start/
+  name: iTwin Web Application Quickstart
+- type: Console
+  url: https://developer.bentley.com/my-apps/
+  name: My Apps Console (App Registration)
+- type: LinkedIn
+  url: https://www.linkedin.com/company/bentley-systems
+  name: Bentley Systems on LinkedIn
+- type: YouTube
+  url: https://www.youtube.com/user/BentleySystems
+  name: Bentley Systems YouTube Channel
+- type: X
+  url: https://twitter.com/BentleySystems
+  name: Bentley Systems on X
+- type: Blog
+  url: https://blog.bentley.com
+  name: Bentley Blog
+- type: Support
+  url: https://www.bentley.com/support/
+  name: Bentley Support Portal
+- type: Community
+  url: https://developer.bentley.com/community/
+  name: iTwin Platform Community
+- type: VocabularyOfTerms
+  url: vocabulary/bentley-systems-vocabulary.yml
+  name: Bentley iTwin Vocabulary
+- type: JSONLD
+  url: json-ld/bentley-systems-context.jsonld
+  name: Bentley iTwin JSON-LD Context
+- type: LLMsTxt
+  url: https://bentley.com/llms.txt
 maintainers:
-  - FN: Kin Lane
-    email: info@apievangelist.com
-    url: https://apievangelist.com
+- FN: Kin Lane
+  email: info@apievangelist.com
+  url: https://apievangelist.com
