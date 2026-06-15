@@ -1,0 +1,548 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "iTwin Schedules API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://ims.bentley.com/connect/authorize",
+      "accessTokenUrl": "https://ims.bentley.com/connect/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Schedules",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Schedules",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/schedules/"
+          },
+          "docs": "Get Schedules"
+        },
+        {
+          "info": {
+            "name": "Create Schedule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/schedules/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Schedule"
+        },
+        {
+          "info": {
+            "name": "Get Schedules",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/schedules/:scheduleId",
+            "params": [
+              {
+                "name": "scheduleId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Schedules"
+        },
+        {
+          "info": {
+            "name": "Update Schedule",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.bentley.com/schedules/:scheduleId",
+            "params": [
+              {
+                "name": "scheduleId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Schedule"
+        },
+        {
+          "info": {
+            "name": "Delete Schedule",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.bentley.com/schedules/:scheduleId",
+            "params": [
+              {
+                "name": "scheduleId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Schedule"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Tasks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Tasks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/schedules/:scheduleId/tasks",
+            "params": [
+              {
+                "name": "scheduleId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Tasks"
+        },
+        {
+          "info": {
+            "name": "Create Task",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/schedules/:scheduleId/tasks",
+            "params": [
+              {
+                "name": "scheduleId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Task"
+        },
+        {
+          "info": {
+            "name": "Get Tasks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/schedules/:scheduleId/tasks/:taskId",
+            "params": [
+              {
+                "name": "scheduleId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "taskId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Tasks"
+        },
+        {
+          "info": {
+            "name": "Update Task",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.bentley.com/schedules/:scheduleId/tasks/:taskId",
+            "params": [
+              {
+                "name": "scheduleId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "taskId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Task"
+        },
+        {
+          "info": {
+            "name": "Delete Task",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.bentley.com/schedules/:scheduleId/tasks/:taskId",
+            "params": [
+              {
+                "name": "scheduleId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "taskId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Task"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Resources",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Resources",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/schedules/:scheduleId/resources",
+            "params": [
+              {
+                "name": "scheduleId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Resources"
+        },
+        {
+          "info": {
+            "name": "Create Resource",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/schedules/:scheduleId/resources",
+            "params": [
+              {
+                "name": "scheduleId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Resource"
+        },
+        {
+          "info": {
+            "name": "Get Resources",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/schedules/:scheduleId/resources/:resourceId",
+            "params": [
+              {
+                "name": "scheduleId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "resourceId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Resources"
+        },
+        {
+          "info": {
+            "name": "Update Resource",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.bentley.com/schedules/:scheduleId/resources/:resourceId",
+            "params": [
+              {
+                "name": "scheduleId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "resourceId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Resource"
+        },
+        {
+          "info": {
+            "name": "Delete Resource",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.bentley.com/schedules/:scheduleId/resources/:resourceId",
+            "params": [
+              {
+                "name": "scheduleId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "resourceId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Resource"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Calendars",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Calendars",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/schedules/:scheduleId/calendars",
+            "params": [
+              {
+                "name": "scheduleId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Calendars"
+        },
+        {
+          "info": {
+            "name": "Create Calendar",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/schedules/:scheduleId/calendars",
+            "params": [
+              {
+                "name": "scheduleId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Calendar"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Animations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Animations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/schedules/:scheduleId/animations",
+            "params": [
+              {
+                "name": "scheduleId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Animations"
+        },
+        {
+          "info": {
+            "name": "Create Animation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/schedules/:scheduleId/animations",
+            "params": [
+              {
+                "name": "scheduleId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Animation"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Baselines",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Baselines",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/schedules/:scheduleId/baselines",
+            "params": [
+              {
+                "name": "scheduleId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Baselines"
+        },
+        {
+          "info": {
+            "name": "Create Baseline",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/schedules/:scheduleId/baselines",
+            "params": [
+              {
+                "name": "scheduleId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Baseline"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Work Breakdown",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Work Breakdown",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/schedules/:scheduleId/wbs",
+            "params": [
+              {
+                "name": "scheduleId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Work Breakdown"
+        },
+        {
+          "info": {
+            "name": "Create Work Breakdown",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/schedules/:scheduleId/wbs",
+            "params": [
+              {
+                "name": "scheduleId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Work Breakdown"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

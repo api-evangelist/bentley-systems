@@ -1,0 +1,344 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "iTwin Access Control API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://ims.bentley.com/connect/authorize",
+      "accessTokenUrl": "https://ims.bentley.com/connect/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Members",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Members",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/accesscontrol/itwins/:iTwinId/members/users",
+            "params": [
+              {
+                "name": "iTwinId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Members"
+        },
+        {
+          "info": {
+            "name": "Create Member",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/accesscontrol/itwins/:iTwinId/members/users",
+            "params": [
+              {
+                "name": "iTwinId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Member"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Groups",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Groups",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/accesscontrol/itwins/:iTwinId/members/groups",
+            "params": [
+              {
+                "name": "iTwinId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Groups"
+        },
+        {
+          "info": {
+            "name": "Create Group",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/accesscontrol/itwins/:iTwinId/members/groups",
+            "params": [
+              {
+                "name": "iTwinId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Group"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Roles",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Roles",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/accesscontrol/itwins/:iTwinId/roles",
+            "params": [
+              {
+                "name": "iTwinId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Roles"
+        },
+        {
+          "info": {
+            "name": "Create Role",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/accesscontrol/itwins/:iTwinId/roles",
+            "params": [
+              {
+                "name": "iTwinId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Role"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Invitations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Invitations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/accesscontrol/itwins/:iTwinId/invitations",
+            "params": [
+              {
+                "name": "iTwinId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Invitations"
+        },
+        {
+          "info": {
+            "name": "Create Invitation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/accesscontrol/itwins/:iTwinId/invitations",
+            "params": [
+              {
+                "name": "iTwinId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Invitation"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Shares",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Shares",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/accesscontrol/itwins/:iTwinId/shares",
+            "params": [
+              {
+                "name": "iTwinId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Shares"
+        },
+        {
+          "info": {
+            "name": "Create Share",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/accesscontrol/itwins/:iTwinId/shares",
+            "params": [
+              {
+                "name": "iTwinId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Share"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Jobs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Jobs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/accesscontrol/itwins/:iTwinId/jobs",
+            "params": [
+              {
+                "name": "iTwinId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Jobs"
+        },
+        {
+          "info": {
+            "name": "Create Job",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/accesscontrol/itwins/:iTwinId/jobs",
+            "params": [
+              {
+                "name": "iTwinId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Job"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Permissions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Permissions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/accesscontrol/permissions"
+          },
+          "docs": "Get Permissions"
+        },
+        {
+          "info": {
+            "name": "Create Permission",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/accesscontrol/permissions",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Permission"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,863 @@
+{
+  "info": {
+    "_postman_id": "41d641bb-5f7a-451d-b04f-76c00ab94566",
+    "name": "iTwins API",
+    "description": "Create, manage, and query iTwin containers \u2014 the top-level organizational unit for iModels, reality data, and project context.\n\nContact Support:\n Name: Bentley Developer Relations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-06-05T15:05:52.000Z",
+    "updatedAt": "2026-06-05T15:05:53.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-41d641bb-5f7a-451d-b04f-76c00ab94566"
+  },
+  "item": [
+    {
+      "name": "itwins",
+      "item": [
+        {
+          "name": "{iTwinId}",
+          "item": [
+            {
+              "name": "repositories",
+              "item": [
+                {
+                  "name": "Get Repositories",
+                  "id": "e9244f78-4635-4a4d-96f4-76649e6fb4a6",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/itwins/:iTwinId/repositories",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "itwins",
+                        ":iTwinId",
+                        "repositories"
+                      ],
+                      "variable": [
+                        {
+                          "id": "79713393-61cd-4fe1-93d4-cf60d87aaab8",
+                          "key": "iTwinId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "5b29a775-7b87-456e-800f-9e3908078a96",
+                      "name": "List of Repositories",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/itwins/:iTwinId/repositories",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "itwins",
+                            ":iTwinId",
+                            "repositories"
+                          ],
+                          "variable": [
+                            {
+                              "key": "iTwinId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:05:53.000Z",
+                      "updatedAt": "2026-06-05T15:05:53.000Z",
+                      "uid": "35240-5b29a775-7b87-456e-800f-9e3908078a96"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:05:53.000Z",
+                  "updatedAt": "2026-06-05T15:05:53.000Z",
+                  "uid": "35240-e9244f78-4635-4a4d-96f4-76649e6fb4a6"
+                },
+                {
+                  "name": "Create Repositorie",
+                  "id": "bd2cdaa2-a55b-43d7-ade5-3e5346be8bd3",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/itwins/:iTwinId/repositories",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "itwins",
+                        ":iTwinId",
+                        "repositories"
+                      ],
+                      "variable": [
+                        {
+                          "id": "a3bb2cd5-1a00-4864-8dc8-ff90c1c3e06e",
+                          "key": "iTwinId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "1c232fb7-313a-44e9-a0c6-ea2b08f5af49",
+                      "name": "Repositorie created",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/itwins/:iTwinId/repositories",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "itwins",
+                            ":iTwinId",
+                            "repositories"
+                          ],
+                          "variable": [
+                            {
+                              "key": "iTwinId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Created",
+                      "code": 201,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:05:53.000Z",
+                      "updatedAt": "2026-06-05T15:05:53.000Z",
+                      "uid": "35240-1c232fb7-313a-44e9-a0c6-ea2b08f5af49"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:05:53.000Z",
+                  "updatedAt": "2026-06-05T15:05:53.000Z",
+                  "uid": "35240-bd2cdaa2-a55b-43d7-ade5-3e5346be8bd3"
+                }
+              ],
+              "id": "effd6ce0-9024-472a-99e7-a0b37e254e78",
+              "createdAt": "2026-06-05T15:05:53.000Z",
+              "updatedAt": "2026-06-05T15:05:53.000Z",
+              "uid": "35240-effd6ce0-9024-472a-99e7-a0b37e254e78"
+            },
+            {
+              "name": "exports",
+              "item": [
+                {
+                  "name": "Get Exports",
+                  "id": "6f363d08-eafc-4ab8-a8ab-d915ffd8f65d",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/itwins/:iTwinId/exports",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "itwins",
+                        ":iTwinId",
+                        "exports"
+                      ],
+                      "variable": [
+                        {
+                          "id": "31848c16-2f2c-4c68-a6a6-aa293c84b747",
+                          "key": "iTwinId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "18569bee-26c0-4c59-92d4-cfd0ac974679",
+                      "name": "List of Exports",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/itwins/:iTwinId/exports",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "itwins",
+                            ":iTwinId",
+                            "exports"
+                          ],
+                          "variable": [
+                            {
+                              "key": "iTwinId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:05:53.000Z",
+                      "updatedAt": "2026-06-05T15:05:53.000Z",
+                      "uid": "35240-18569bee-26c0-4c59-92d4-cfd0ac974679"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:05:53.000Z",
+                  "updatedAt": "2026-06-05T15:05:53.000Z",
+                  "uid": "35240-6f363d08-eafc-4ab8-a8ab-d915ffd8f65d"
+                },
+                {
+                  "name": "Create Export",
+                  "id": "f8049539-c188-4534-919a-ebb16285a5d9",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/itwins/:iTwinId/exports",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "itwins",
+                        ":iTwinId",
+                        "exports"
+                      ],
+                      "variable": [
+                        {
+                          "id": "1d9b2f69-26f1-457f-8fdf-b7ef3816c0bc",
+                          "key": "iTwinId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "c758a0b8-9b06-4064-8d9a-6eabbf411cd8",
+                      "name": "Export created",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/itwins/:iTwinId/exports",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "itwins",
+                            ":iTwinId",
+                            "exports"
+                          ],
+                          "variable": [
+                            {
+                              "key": "iTwinId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Created",
+                      "code": 201,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:05:53.000Z",
+                      "updatedAt": "2026-06-05T15:05:53.000Z",
+                      "uid": "35240-c758a0b8-9b06-4064-8d9a-6eabbf411cd8"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:05:53.000Z",
+                  "updatedAt": "2026-06-05T15:05:53.000Z",
+                  "uid": "35240-f8049539-c188-4534-919a-ebb16285a5d9"
+                }
+              ],
+              "id": "443cfaa8-dfb8-4edb-a025-3d8cf286cc2d",
+              "createdAt": "2026-06-05T15:05:53.000Z",
+              "updatedAt": "2026-06-05T15:05:53.000Z",
+              "uid": "35240-443cfaa8-dfb8-4edb-a025-3d8cf286cc2d"
+            }
+          ],
+          "id": "f955f88b-1032-4068-a6a0-4ece5f54b0fa",
+          "createdAt": "2026-06-05T15:05:53.000Z",
+          "updatedAt": "2026-06-05T15:05:53.000Z",
+          "uid": "35240-f955f88b-1032-4068-a6a0-4ece5f54b0fa"
+        },
+        {
+          "name": "myitwins",
+          "item": [
+            {
+              "name": "recents",
+              "item": [
+                {
+                  "name": "Get Recents",
+                  "id": "14659ee8-3aec-497f-8ed7-1a439c6e01cc",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/itwins/myitwins/recents",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "itwins",
+                        "myitwins",
+                        "recents"
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "275a1595-20b6-4563-92b5-9e213c509b2c",
+                      "name": "List of Recents",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/itwins/myitwins/recents",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "itwins",
+                            "myitwins",
+                            "recents"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:05:53.000Z",
+                      "updatedAt": "2026-06-05T15:05:53.000Z",
+                      "uid": "35240-275a1595-20b6-4563-92b5-9e213c509b2c"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:05:53.000Z",
+                  "updatedAt": "2026-06-05T15:05:53.000Z",
+                  "uid": "35240-14659ee8-3aec-497f-8ed7-1a439c6e01cc"
+                },
+                {
+                  "name": "Create Recent",
+                  "id": "2dc4c1b7-8e83-44c1-8b14-a09bc70e4a3f",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/itwins/myitwins/recents",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "itwins",
+                        "myitwins",
+                        "recents"
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "be5d3711-94d6-4ccc-993c-1caa718cf4f9",
+                      "name": "Recent created",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/itwins/myitwins/recents",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "itwins",
+                            "myitwins",
+                            "recents"
+                          ]
+                        }
+                      },
+                      "status": "Created",
+                      "code": 201,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:05:53.000Z",
+                      "updatedAt": "2026-06-05T15:05:53.000Z",
+                      "uid": "35240-be5d3711-94d6-4ccc-993c-1caa718cf4f9"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:05:53.000Z",
+                  "updatedAt": "2026-06-05T15:05:53.000Z",
+                  "uid": "35240-2dc4c1b7-8e83-44c1-8b14-a09bc70e4a3f"
+                }
+              ],
+              "id": "7ded152e-ceb3-43d2-814c-464f9fe881a7",
+              "createdAt": "2026-06-05T15:05:53.000Z",
+              "updatedAt": "2026-06-05T15:05:53.000Z",
+              "uid": "35240-7ded152e-ceb3-43d2-814c-464f9fe881a7"
+            }
+          ],
+          "id": "61ec4d43-4ce8-405f-84f7-51ea98006943",
+          "createdAt": "2026-06-05T15:05:53.000Z",
+          "updatedAt": "2026-06-05T15:05:53.000Z",
+          "uid": "35240-61ec4d43-4ce8-405f-84f7-51ea98006943"
+        },
+        {
+          "name": "Get iTwins",
+          "id": "82f29d6d-cb3d-4e4a-851b-160e3fca0af1",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/itwins",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "itwins"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "4044ca68-576f-4f5d-b51f-aab706c3b544",
+              "name": "List of iTwins",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/itwins",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "itwins"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:05:53.000Z",
+              "updatedAt": "2026-06-05T15:05:53.000Z",
+              "uid": "35240-4044ca68-576f-4f5d-b51f-aab706c3b544"
+            }
+          ],
+          "createdAt": "2026-06-05T15:05:53.000Z",
+          "updatedAt": "2026-06-05T15:05:53.000Z",
+          "uid": "35240-82f29d6d-cb3d-4e4a-851b-160e3fca0af1"
+        },
+        {
+          "name": "Create iTwin",
+          "id": "87c5e037-7d0e-4a24-b602-0dfa1470868f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/itwins",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "itwins"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "9b969082-f8be-4ba9-b5a2-2b76685ba923",
+              "name": "iTwin created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/itwins",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "itwins"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:05:53.000Z",
+              "updatedAt": "2026-06-05T15:05:53.000Z",
+              "uid": "35240-9b969082-f8be-4ba9-b5a2-2b76685ba923"
+            }
+          ],
+          "createdAt": "2026-06-05T15:05:53.000Z",
+          "updatedAt": "2026-06-05T15:05:53.000Z",
+          "uid": "35240-87c5e037-7d0e-4a24-b602-0dfa1470868f"
+        }
+      ],
+      "id": "0d7dcb4c-6db4-4ad8-8497-5ecb779b6e24",
+      "createdAt": "2026-06-05T15:05:53.000Z",
+      "updatedAt": "2026-06-05T15:05:53.000Z",
+      "uid": "35240-0d7dcb4c-6db4-4ad8-8497-5ecb779b6e24"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "itwin-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://ims.bentley.com/connect/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://ims.bentley.com/connect/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.bentley.com/itwins"
+    }
+  ]
+}

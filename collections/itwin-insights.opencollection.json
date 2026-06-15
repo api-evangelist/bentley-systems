@@ -1,0 +1,352 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "iTwin Insights API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://ims.bentley.com/connect/authorize",
+      "accessTokenUrl": "https://ims.bentley.com/connect/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Reports",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Reports",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/insights/reporting/reports"
+          },
+          "docs": "Get Reports"
+        },
+        {
+          "info": {
+            "name": "Create Report",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/insights/reporting/reports",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Report"
+        },
+        {
+          "info": {
+            "name": "Get Reports",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/insights/reporting/reports/:reportId",
+            "params": [
+              {
+                "name": "reportId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Reports"
+        },
+        {
+          "info": {
+            "name": "Update Report",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.bentley.com/insights/reporting/reports/:reportId",
+            "params": [
+              {
+                "name": "reportId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Report"
+        },
+        {
+          "info": {
+            "name": "Delete Report",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.bentley.com/insights/reporting/reports/:reportId",
+            "params": [
+              {
+                "name": "reportId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Report"
+        },
+        {
+          "info": {
+            "name": "Get Reports",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/insights/reporting/reports/:reportId/datasources",
+            "params": [
+              {
+                "name": "reportId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Reports"
+        },
+        {
+          "info": {
+            "name": "Create Report",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/insights/reporting/reports/:reportId/datasources",
+            "params": [
+              {
+                "name": "reportId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Report"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Mappings",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Mappings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/insights/reporting/mappings"
+          },
+          "docs": "Get Mappings"
+        },
+        {
+          "info": {
+            "name": "Create Mapping",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/insights/reporting/mappings",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Mapping"
+        },
+        {
+          "info": {
+            "name": "Get Mappings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/insights/reporting/mappings/:mappingId",
+            "params": [
+              {
+                "name": "mappingId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Mappings"
+        },
+        {
+          "info": {
+            "name": "Update Mapping",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.bentley.com/insights/reporting/mappings/:mappingId",
+            "params": [
+              {
+                "name": "mappingId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Mapping"
+        },
+        {
+          "info": {
+            "name": "Delete Mapping",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.bentley.com/insights/reporting/mappings/:mappingId",
+            "params": [
+              {
+                "name": "mappingId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Mapping"
+        },
+        {
+          "info": {
+            "name": "Get Mappings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/insights/reporting/mappings/:mappingId/groups",
+            "params": [
+              {
+                "name": "mappingId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Mappings"
+        },
+        {
+          "info": {
+            "name": "Create Mapping",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/insights/reporting/mappings/:mappingId/groups",
+            "params": [
+              {
+                "name": "mappingId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Mapping"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "ODATA",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get ODATA",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/insights/reporting/odata/:reportId",
+            "params": [
+              {
+                "name": "reportId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get ODATA"
+        },
+        {
+          "info": {
+            "name": "Update ODATA",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.bentley.com/insights/reporting/odata/:reportId",
+            "params": [
+              {
+                "name": "reportId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update ODATA"
+        },
+        {
+          "info": {
+            "name": "Delete ODATA",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.bentley.com/insights/reporting/odata/:reportId",
+            "params": [
+              {
+                "name": "reportId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete ODATA"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

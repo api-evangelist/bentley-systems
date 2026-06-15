@@ -1,0 +1,893 @@
+{
+  "info": {
+    "_postman_id": "a579b1d2-b57a-4f49-9506-9720898f4b28",
+    "name": "iTwin Reality Analysis API",
+    "description": "Run AI-powered analyses against reality data \u2014 object detection, segmentation, line extraction, change detection.\n\nContact Support:\n Name: Bentley Developer Relations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-06-05T15:06:04.000Z",
+    "updatedAt": "2026-06-05T15:06:04.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-a579b1d2-b57a-4f49-9506-9720898f4b28"
+  },
+  "item": [
+    {
+      "name": "jobs",
+      "item": [
+        {
+          "name": "{jobId}",
+          "item": [
+            {
+              "name": "progress",
+              "item": [
+                {
+                  "name": "Get Jobs",
+                  "id": "310eb45e-f74a-403b-8104-403f4c9a1256",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/jobs/:jobId/progress",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "jobs",
+                        ":jobId",
+                        "progress"
+                      ],
+                      "variable": [
+                        {
+                          "id": "a8605e68-6976-4dcd-ac9e-c732a8815a15",
+                          "key": "jobId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "25f1f70f-0981-4e47-aa22-d220b57e2a7e",
+                      "name": "List of Jobs",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/jobs/:jobId/progress",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "jobs",
+                            ":jobId",
+                            "progress"
+                          ],
+                          "variable": [
+                            {
+                              "key": "jobId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:06:04.000Z",
+                      "updatedAt": "2026-06-05T15:06:04.000Z",
+                      "uid": "35240-25f1f70f-0981-4e47-aa22-d220b57e2a7e"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:04.000Z",
+                  "updatedAt": "2026-06-05T15:06:04.000Z",
+                  "uid": "35240-310eb45e-f74a-403b-8104-403f4c9a1256"
+                },
+                {
+                  "name": "Create Job",
+                  "id": "dbc7ab00-592b-447d-b252-53b5fa997346",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/jobs/:jobId/progress",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "jobs",
+                        ":jobId",
+                        "progress"
+                      ],
+                      "variable": [
+                        {
+                          "id": "673a12e5-042c-4f61-b18c-91c0d1998aa0",
+                          "key": "jobId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "62001c59-d4c7-4c17-b750-eee68be58fbd",
+                      "name": "Job created",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/jobs/:jobId/progress",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "jobs",
+                            ":jobId",
+                            "progress"
+                          ],
+                          "variable": [
+                            {
+                              "key": "jobId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Created",
+                      "code": 201,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:06:04.000Z",
+                      "updatedAt": "2026-06-05T15:06:04.000Z",
+                      "uid": "35240-62001c59-d4c7-4c17-b750-eee68be58fbd"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:04.000Z",
+                  "updatedAt": "2026-06-05T15:06:04.000Z",
+                  "uid": "35240-dbc7ab00-592b-447d-b252-53b5fa997346"
+                }
+              ],
+              "id": "afbed795-0a9c-4898-acc5-b6a6c6d9fb8e",
+              "createdAt": "2026-06-05T15:06:04.000Z",
+              "updatedAt": "2026-06-05T15:06:04.000Z",
+              "uid": "35240-afbed795-0a9c-4898-acc5-b6a6c6d9fb8e"
+            },
+            {
+              "name": "Get Jobs",
+              "id": "3de9ff13-3e80-4954-bab5-0cbdf8e1fbd6",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/jobs/:jobId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "jobs",
+                    ":jobId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "721f4c91-9aad-4dd0-b814-54c61dec6683",
+                      "key": "jobId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "f63c7624-8803-43af-a4d3-22fbbf1a6dda",
+                  "name": "List of Jobs",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/jobs/:jobId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "jobs",
+                        ":jobId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "jobId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:04.000Z",
+                  "updatedAt": "2026-06-05T15:06:04.000Z",
+                  "uid": "35240-f63c7624-8803-43af-a4d3-22fbbf1a6dda"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:04.000Z",
+              "updatedAt": "2026-06-05T15:06:04.000Z",
+              "uid": "35240-3de9ff13-3e80-4954-bab5-0cbdf8e1fbd6"
+            },
+            {
+              "name": "Update Job",
+              "id": "d9eb4877-ea7f-4037-873e-baee416b8bc1",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/jobs/:jobId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "jobs",
+                    ":jobId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "32ae58bf-6d3a-4781-a373-2a644c042f31",
+                      "key": "jobId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "00d3465f-cd43-4a10-8942-c5d9aa63e145",
+                  "name": "Job updated",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/jobs/:jobId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "jobs",
+                        ":jobId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "jobId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-06-05T15:06:04.000Z",
+                  "updatedAt": "2026-06-05T15:06:04.000Z",
+                  "uid": "35240-00d3465f-cd43-4a10-8942-c5d9aa63e145"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:04.000Z",
+              "updatedAt": "2026-06-05T15:06:04.000Z",
+              "uid": "35240-d9eb4877-ea7f-4037-873e-baee416b8bc1"
+            },
+            {
+              "name": "Delete Job",
+              "id": "324804d5-9728-4b2f-b277-1c2a26d60a42",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/jobs/:jobId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "jobs",
+                    ":jobId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "2c5975ff-3789-4519-8929-cc753665f448",
+                      "key": "jobId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "a022cb6e-7387-4dea-ab50-4157674e1e64",
+                  "name": "Job deleted",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/jobs/:jobId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "jobs",
+                        ":jobId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "jobId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-06-05T15:06:04.000Z",
+                  "updatedAt": "2026-06-05T15:06:04.000Z",
+                  "uid": "35240-a022cb6e-7387-4dea-ab50-4157674e1e64"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:04.000Z",
+              "updatedAt": "2026-06-05T15:06:04.000Z",
+              "uid": "35240-324804d5-9728-4b2f-b277-1c2a26d60a42"
+            }
+          ],
+          "id": "c6b90978-f808-4aed-b71f-11f68cd2c13c",
+          "createdAt": "2026-06-05T15:06:04.000Z",
+          "updatedAt": "2026-06-05T15:06:04.000Z",
+          "uid": "35240-c6b90978-f808-4aed-b71f-11f68cd2c13c"
+        },
+        {
+          "name": "Get Jobs",
+          "id": "4467a9f6-bf2a-41ae-a709-1401e0fb9e32",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/jobs",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "jobs"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "bde59e7b-fdf1-411d-86c3-9be039355cf5",
+              "name": "List of Jobs",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/jobs",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "jobs"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:04.000Z",
+              "updatedAt": "2026-06-05T15:06:04.000Z",
+              "uid": "35240-bde59e7b-fdf1-411d-86c3-9be039355cf5"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:04.000Z",
+          "updatedAt": "2026-06-05T15:06:04.000Z",
+          "uid": "35240-4467a9f6-bf2a-41ae-a709-1401e0fb9e32"
+        },
+        {
+          "name": "Create Job",
+          "id": "0d08f282-0b4b-47ac-93ab-df634a4a5d9e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/jobs",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "jobs"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "ae28317f-491d-4b8b-beea-cb8a28cc93ee",
+              "name": "Job created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/jobs",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "jobs"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:04.000Z",
+              "updatedAt": "2026-06-05T15:06:04.000Z",
+              "uid": "35240-ae28317f-491d-4b8b-beea-cb8a28cc93ee"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:04.000Z",
+          "updatedAt": "2026-06-05T15:06:04.000Z",
+          "uid": "35240-0d08f282-0b4b-47ac-93ab-df634a4a5d9e"
+        }
+      ],
+      "id": "1293d148-7389-44ce-928e-3ab429af52d9",
+      "createdAt": "2026-06-05T15:06:04.000Z",
+      "updatedAt": "2026-06-05T15:06:04.000Z",
+      "uid": "35240-1293d148-7389-44ce-928e-3ab429af52d9"
+    },
+    {
+      "name": "detectors",
+      "item": [
+        {
+          "name": "Get Detectors",
+          "id": "f40c03ee-5448-4ae9-bd2f-754a90e9c0e3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/detectors",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "detectors"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "f8128303-c9ce-4b75-ad94-4fc17d48a65c",
+              "name": "List of Detectors",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/detectors",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "detectors"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:04.000Z",
+              "updatedAt": "2026-06-05T15:06:04.000Z",
+              "uid": "35240-f8128303-c9ce-4b75-ad94-4fc17d48a65c"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:04.000Z",
+          "updatedAt": "2026-06-05T15:06:04.000Z",
+          "uid": "35240-f40c03ee-5448-4ae9-bd2f-754a90e9c0e3"
+        },
+        {
+          "name": "Create Detector",
+          "id": "04551021-04c9-460e-ad3f-052163143a0f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/detectors",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "detectors"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "443ddde2-e721-4ce3-a4c8-45033a583b5a",
+              "name": "Detector created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/detectors",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "detectors"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:04.000Z",
+              "updatedAt": "2026-06-05T15:06:04.000Z",
+              "uid": "35240-443ddde2-e721-4ce3-a4c8-45033a583b5a"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:04.000Z",
+          "updatedAt": "2026-06-05T15:06:04.000Z",
+          "uid": "35240-04551021-04c9-460e-ad3f-052163143a0f"
+        }
+      ],
+      "id": "bca3e089-d0bc-4193-ab81-b0e97213e5fe",
+      "createdAt": "2026-06-05T15:06:04.000Z",
+      "updatedAt": "2026-06-05T15:06:04.000Z",
+      "uid": "35240-bca3e089-d0bc-4193-ab81-b0e97213e5fe"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "itwin-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://ims.bentley.com/connect/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://ims.bentley.com/connect/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.bentley.com/realitydataanalysis"
+    }
+  ]
+}

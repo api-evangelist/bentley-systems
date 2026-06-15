@@ -1,0 +1,114 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "iTwin Named Groups API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://ims.bentley.com/connect/authorize",
+      "accessTokenUrl": "https://ims.bentley.com/connect/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Named Groups",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Named Groups",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/namedgroups/"
+          },
+          "docs": "Get Named Groups"
+        },
+        {
+          "info": {
+            "name": "Create Named Group",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/namedgroups/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Named Group"
+        },
+        {
+          "info": {
+            "name": "Get Named Groups",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/namedgroups/:groupId",
+            "params": [
+              {
+                "name": "groupId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Named Groups"
+        },
+        {
+          "info": {
+            "name": "Update Named Group",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.bentley.com/namedgroups/:groupId",
+            "params": [
+              {
+                "name": "groupId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Named Group"
+        },
+        {
+          "info": {
+            "name": "Delete Named Group",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.bentley.com/namedgroups/:groupId",
+            "params": [
+              {
+                "name": "groupId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Named Group"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

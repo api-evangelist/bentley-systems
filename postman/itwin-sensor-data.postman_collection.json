@@ -1,0 +1,588 @@
+{
+  "info": {
+    "_postman_id": "2f3ae2ec-f8ee-4838-af4b-6db1405d72e0",
+    "name": "iTwin Sensor Data API",
+    "description": "Ingest, store, and query IoT sensor telemetry associated with iTwin assets.\n\nContact Support:\n Name: Bentley Developer Relations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-06-05T15:06:47.000Z",
+    "updatedAt": "2026-06-05T15:06:48.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-2f3ae2ec-f8ee-4838-af4b-6db1405d72e0"
+  },
+  "item": [
+    {
+      "name": "devices",
+      "item": [
+        {
+          "name": "Get Devices",
+          "id": "1cadfe2a-133b-464d-8d91-9c2f1be9409f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/devices",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "devices"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "42c3a8d1-cc07-4460-ba89-6416f5372af7",
+              "name": "List of Devices",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/devices",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "devices"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:48.000Z",
+              "updatedAt": "2026-06-05T15:06:48.000Z",
+              "uid": "35240-42c3a8d1-cc07-4460-ba89-6416f5372af7"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:48.000Z",
+          "updatedAt": "2026-06-05T15:06:48.000Z",
+          "uid": "35240-1cadfe2a-133b-464d-8d91-9c2f1be9409f"
+        },
+        {
+          "name": "Create Device",
+          "id": "668f3970-9b47-426d-8b29-4fd958d24e6d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/devices",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "devices"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "e009bd13-e52f-4f5d-adb2-0d20c919aef6",
+              "name": "Device created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/devices",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "devices"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:48.000Z",
+              "updatedAt": "2026-06-05T15:06:48.000Z",
+              "uid": "35240-e009bd13-e52f-4f5d-adb2-0d20c919aef6"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:48.000Z",
+          "updatedAt": "2026-06-05T15:06:48.000Z",
+          "uid": "35240-668f3970-9b47-426d-8b29-4fd958d24e6d"
+        }
+      ],
+      "id": "c0bcb500-e5f4-436b-882f-faa9da6105cc",
+      "createdAt": "2026-06-05T15:06:48.000Z",
+      "updatedAt": "2026-06-05T15:06:48.000Z",
+      "uid": "35240-c0bcb500-e5f4-436b-882f-faa9da6105cc"
+    },
+    {
+      "name": "sensors",
+      "item": [
+        {
+          "name": "Get Sensors",
+          "id": "50eb81c8-7132-4267-bfea-dc02c10166de",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/sensors",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "sensors"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "2f1edbd3-cd51-4c24-a144-2f2d6334b683",
+              "name": "List of Sensors",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/sensors",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "sensors"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:48.000Z",
+              "updatedAt": "2026-06-05T15:06:48.000Z",
+              "uid": "35240-2f1edbd3-cd51-4c24-a144-2f2d6334b683"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:48.000Z",
+          "updatedAt": "2026-06-05T15:06:48.000Z",
+          "uid": "35240-50eb81c8-7132-4267-bfea-dc02c10166de"
+        },
+        {
+          "name": "Create Sensor",
+          "id": "6f6dcf0d-d42e-42da-ad3f-f5453113143f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/sensors",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "sensors"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "87ed5a20-422f-4b15-b283-5ef7f37d60bf",
+              "name": "Sensor created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/sensors",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "sensors"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:48.000Z",
+              "updatedAt": "2026-06-05T15:06:48.000Z",
+              "uid": "35240-87ed5a20-422f-4b15-b283-5ef7f37d60bf"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:48.000Z",
+          "updatedAt": "2026-06-05T15:06:48.000Z",
+          "uid": "35240-6f6dcf0d-d42e-42da-ad3f-f5453113143f"
+        }
+      ],
+      "id": "6ba81c9a-c0b7-48c1-bdd8-66247011e6a5",
+      "createdAt": "2026-06-05T15:06:48.000Z",
+      "updatedAt": "2026-06-05T15:06:48.000Z",
+      "uid": "35240-6ba81c9a-c0b7-48c1-bdd8-66247011e6a5"
+    },
+    {
+      "name": "observations",
+      "item": [
+        {
+          "name": "Get Observations",
+          "id": "b6f97992-c823-401f-9889-02ba120254d8",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/observations",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "observations"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "a2da4d69-8844-4d38-9e6e-c18b84d85372",
+              "name": "List of Observations",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/observations",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "observations"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:48.000Z",
+              "updatedAt": "2026-06-05T15:06:48.000Z",
+              "uid": "35240-a2da4d69-8844-4d38-9e6e-c18b84d85372"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:48.000Z",
+          "updatedAt": "2026-06-05T15:06:48.000Z",
+          "uid": "35240-b6f97992-c823-401f-9889-02ba120254d8"
+        },
+        {
+          "name": "Create Observation",
+          "id": "186b3baf-ac8b-4155-8af1-63077e92ee54",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/observations",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "observations"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "dae65b2e-fb50-428e-9c5a-e9d64691119b",
+              "name": "Observation created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/observations",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "observations"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:48.000Z",
+              "updatedAt": "2026-06-05T15:06:48.000Z",
+              "uid": "35240-dae65b2e-fb50-428e-9c5a-e9d64691119b"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:48.000Z",
+          "updatedAt": "2026-06-05T15:06:48.000Z",
+          "uid": "35240-186b3baf-ac8b-4155-8af1-63077e92ee54"
+        }
+      ],
+      "id": "9fb6a251-c724-46ee-8015-3fdc9032b7d0",
+      "createdAt": "2026-06-05T15:06:48.000Z",
+      "updatedAt": "2026-06-05T15:06:48.000Z",
+      "uid": "35240-9fb6a251-c724-46ee-8015-3fdc9032b7d0"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "itwin-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://ims.bentley.com/connect/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://ims.bentley.com/connect/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.bentley.com/sensor-data"
+    }
+  ]
+}

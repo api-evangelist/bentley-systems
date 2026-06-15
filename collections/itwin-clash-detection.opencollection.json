@@ -1,0 +1,240 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "iTwin Clash Detection API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://ims.bentley.com/connect/authorize",
+      "accessTokenUrl": "https://ims.bentley.com/connect/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Tests",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Tests",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/clashdetection/tests"
+          },
+          "docs": "Get Tests"
+        },
+        {
+          "info": {
+            "name": "Create Test",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/clashdetection/tests",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Test"
+        },
+        {
+          "info": {
+            "name": "Get Tests",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/clashdetection/tests/:testId",
+            "params": [
+              {
+                "name": "testId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Tests"
+        },
+        {
+          "info": {
+            "name": "Update Test",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.bentley.com/clashdetection/tests/:testId",
+            "params": [
+              {
+                "name": "testId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Test"
+        },
+        {
+          "info": {
+            "name": "Delete Test",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.bentley.com/clashdetection/tests/:testId",
+            "params": [
+              {
+                "name": "testId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Test"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Runs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Runs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/clashdetection/runs"
+          },
+          "docs": "Get Runs"
+        },
+        {
+          "info": {
+            "name": "Create Run",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/clashdetection/runs",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Run"
+        },
+        {
+          "info": {
+            "name": "Get Runs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/clashdetection/runs/:runId",
+            "params": [
+              {
+                "name": "runId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Runs"
+        },
+        {
+          "info": {
+            "name": "Update Run",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.bentley.com/clashdetection/runs/:runId",
+            "params": [
+              {
+                "name": "runId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Run"
+        },
+        {
+          "info": {
+            "name": "Delete Run",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.bentley.com/clashdetection/runs/:runId",
+            "params": [
+              {
+                "name": "runId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Run"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Suppression Rules",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Suppression Rules",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/clashdetection/suppression-rules"
+          },
+          "docs": "Get Suppression Rules"
+        },
+        {
+          "info": {
+            "name": "Create Suppression Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/clashdetection/suppression-rules",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Suppression Rule"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

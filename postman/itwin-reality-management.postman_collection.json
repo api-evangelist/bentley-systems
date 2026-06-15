@@ -1,0 +1,927 @@
+{
+  "info": {
+    "_postman_id": "8c57c149-2644-4de4-865b-d527dbfacccf",
+    "name": "iTwin Reality Management API",
+    "description": "Organize and manage reality data \u2014 photos, point clouds, meshes, 3D Tiles, and orthophotos.\n\nContact Support:\n Name: Bentley Developer Relations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-06-05T15:06:00.000Z",
+    "updatedAt": "2026-06-05T15:06:00.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-8c57c149-2644-4de4-865b-d527dbfacccf"
+  },
+  "item": [
+    {
+      "name": "reality-data",
+      "item": [
+        {
+          "name": "{realityDataId}",
+          "item": [
+            {
+              "name": "readaccess",
+              "item": [
+                {
+                  "name": "Get Access",
+                  "id": "d7db1026-b2ed-42d5-8f9c-ecab95e0cfc6",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/reality-data/:realityDataId/readaccess",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "reality-data",
+                        ":realityDataId",
+                        "readaccess"
+                      ],
+                      "variable": [
+                        {
+                          "id": "999c32ed-e1d4-40bd-bdc7-2f4a3152c425",
+                          "key": "realityDataId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "f3d88d8a-a124-4cb5-9cd3-31b89c803721",
+                      "name": "List of Access",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/reality-data/:realityDataId/readaccess",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "reality-data",
+                            ":realityDataId",
+                            "readaccess"
+                          ],
+                          "variable": [
+                            {
+                              "key": "realityDataId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:06:00.000Z",
+                      "updatedAt": "2026-06-05T15:06:00.000Z",
+                      "uid": "35240-f3d88d8a-a124-4cb5-9cd3-31b89c803721"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:00.000Z",
+                  "updatedAt": "2026-06-05T15:06:00.000Z",
+                  "uid": "35240-d7db1026-b2ed-42d5-8f9c-ecab95e0cfc6"
+                },
+                {
+                  "name": "Create Acce",
+                  "id": "05b7240b-07b2-42b6-be95-b8101c86ad5e",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/reality-data/:realityDataId/readaccess",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "reality-data",
+                        ":realityDataId",
+                        "readaccess"
+                      ],
+                      "variable": [
+                        {
+                          "id": "456c6ea3-57e6-4cd4-a104-20f51519117a",
+                          "key": "realityDataId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "b94fd938-524e-4b99-8a65-60c0e70a2be0",
+                      "name": "Acce created",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/reality-data/:realityDataId/readaccess",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "reality-data",
+                            ":realityDataId",
+                            "readaccess"
+                          ],
+                          "variable": [
+                            {
+                              "key": "realityDataId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Created",
+                      "code": 201,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:06:00.000Z",
+                      "updatedAt": "2026-06-05T15:06:00.000Z",
+                      "uid": "35240-b94fd938-524e-4b99-8a65-60c0e70a2be0"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:00.000Z",
+                  "updatedAt": "2026-06-05T15:06:00.000Z",
+                  "uid": "35240-05b7240b-07b2-42b6-be95-b8101c86ad5e"
+                }
+              ],
+              "id": "f30b4f55-ad0d-4b08-8242-cfb2547bae63",
+              "createdAt": "2026-06-05T15:06:00.000Z",
+              "updatedAt": "2026-06-05T15:06:00.000Z",
+              "uid": "35240-f30b4f55-ad0d-4b08-8242-cfb2547bae63"
+            },
+            {
+              "name": "writeaccess",
+              "item": [
+                {
+                  "name": "Get Access",
+                  "id": "191fb485-fdd9-4153-8ef4-0f7545de81c7",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/reality-data/:realityDataId/writeaccess",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "reality-data",
+                        ":realityDataId",
+                        "writeaccess"
+                      ],
+                      "variable": [
+                        {
+                          "id": "40bb6615-e82d-40e6-98e2-f4d09ccd7de2",
+                          "key": "realityDataId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "a6b21cb3-75e5-4781-95b7-9f1e40e1e314",
+                      "name": "List of Access",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/reality-data/:realityDataId/writeaccess",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "reality-data",
+                            ":realityDataId",
+                            "writeaccess"
+                          ],
+                          "variable": [
+                            {
+                              "key": "realityDataId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:06:00.000Z",
+                      "updatedAt": "2026-06-05T15:06:00.000Z",
+                      "uid": "35240-a6b21cb3-75e5-4781-95b7-9f1e40e1e314"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:00.000Z",
+                  "updatedAt": "2026-06-05T15:06:00.000Z",
+                  "uid": "35240-191fb485-fdd9-4153-8ef4-0f7545de81c7"
+                },
+                {
+                  "name": "Create Acce",
+                  "id": "4415c229-f130-41a3-865e-639757f86c81",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/reality-data/:realityDataId/writeaccess",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "reality-data",
+                        ":realityDataId",
+                        "writeaccess"
+                      ],
+                      "variable": [
+                        {
+                          "id": "3e39d5f2-acbd-4ab1-90c3-ba77dfeb994f",
+                          "key": "realityDataId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "c150dde2-9977-44d7-a75d-3c1f14e38155",
+                      "name": "Acce created",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/reality-data/:realityDataId/writeaccess",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "reality-data",
+                            ":realityDataId",
+                            "writeaccess"
+                          ],
+                          "variable": [
+                            {
+                              "key": "realityDataId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Created",
+                      "code": 201,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:06:00.000Z",
+                      "updatedAt": "2026-06-05T15:06:00.000Z",
+                      "uid": "35240-c150dde2-9977-44d7-a75d-3c1f14e38155"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:00.000Z",
+                  "updatedAt": "2026-06-05T15:06:00.000Z",
+                  "uid": "35240-4415c229-f130-41a3-865e-639757f86c81"
+                }
+              ],
+              "id": "d313f6ec-9491-449f-b254-112daca85881",
+              "createdAt": "2026-06-05T15:06:00.000Z",
+              "updatedAt": "2026-06-05T15:06:00.000Z",
+              "uid": "35240-d313f6ec-9491-449f-b254-112daca85881"
+            },
+            {
+              "name": "Get Reality Data",
+              "id": "5a58f933-4187-4c11-95dc-5266ea86b8c7",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/reality-data/:realityDataId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "reality-data",
+                    ":realityDataId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "8a4fe099-aad3-472b-b0bc-807db425cb22",
+                      "key": "realityDataId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "88498317-1f13-4ba9-b34e-93245e3b919d",
+                  "name": "List of Reality Data",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/reality-data/:realityDataId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "reality-data",
+                        ":realityDataId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "realityDataId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:00.000Z",
+                  "updatedAt": "2026-06-05T15:06:00.000Z",
+                  "uid": "35240-88498317-1f13-4ba9-b34e-93245e3b919d"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:00.000Z",
+              "updatedAt": "2026-06-05T15:06:00.000Z",
+              "uid": "35240-5a58f933-4187-4c11-95dc-5266ea86b8c7"
+            },
+            {
+              "name": "Update Reality Data",
+              "id": "c922512e-f793-451b-90cd-2837d11b074c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/reality-data/:realityDataId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "reality-data",
+                    ":realityDataId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "3a4962fe-001f-4a66-9648-dbafda821da4",
+                      "key": "realityDataId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "2d25c920-2c13-4f43-9f31-735a0297e5cc",
+                  "name": "Reality Data updated",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/reality-data/:realityDataId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "reality-data",
+                        ":realityDataId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "realityDataId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-06-05T15:06:00.000Z",
+                  "updatedAt": "2026-06-05T15:06:00.000Z",
+                  "uid": "35240-2d25c920-2c13-4f43-9f31-735a0297e5cc"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:00.000Z",
+              "updatedAt": "2026-06-05T15:06:00.000Z",
+              "uid": "35240-c922512e-f793-451b-90cd-2837d11b074c"
+            },
+            {
+              "name": "Delete Reality Data",
+              "id": "04d29e0d-910c-444c-a0de-155e62dea78e",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/reality-data/:realityDataId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "reality-data",
+                    ":realityDataId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "1802415c-a119-4610-9c0e-53c6ac9c29fc",
+                      "key": "realityDataId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "86101cf7-a975-4de3-a871-7bd49543fd7e",
+                  "name": "Reality Data deleted",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/reality-data/:realityDataId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "reality-data",
+                        ":realityDataId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "realityDataId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-06-05T15:06:00.000Z",
+                  "updatedAt": "2026-06-05T15:06:00.000Z",
+                  "uid": "35240-86101cf7-a975-4de3-a871-7bd49543fd7e"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:00.000Z",
+              "updatedAt": "2026-06-05T15:06:00.000Z",
+              "uid": "35240-04d29e0d-910c-444c-a0de-155e62dea78e"
+            }
+          ],
+          "id": "7062c444-54cb-43b8-a574-326e3bce666b",
+          "createdAt": "2026-06-05T15:06:00.000Z",
+          "updatedAt": "2026-06-05T15:06:00.000Z",
+          "uid": "35240-7062c444-54cb-43b8-a574-326e3bce666b"
+        },
+        {
+          "name": "Get Reality Data",
+          "id": "37db7491-1d00-4afd-a626-87358b16ca7e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/reality-data",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "reality-data"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "d6c8ae62-14e7-43cb-8356-4d7f8e44808a",
+              "name": "List of Reality Data",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/reality-data",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "reality-data"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:00.000Z",
+              "updatedAt": "2026-06-05T15:06:00.000Z",
+              "uid": "35240-d6c8ae62-14e7-43cb-8356-4d7f8e44808a"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:00.000Z",
+          "updatedAt": "2026-06-05T15:06:00.000Z",
+          "uid": "35240-37db7491-1d00-4afd-a626-87358b16ca7e"
+        },
+        {
+          "name": "Create Reality Data",
+          "id": "7d5dd1a9-3677-461d-901d-5a250a80f484",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/reality-data",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "reality-data"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "6df09f9f-bbe1-41b8-b6b6-b1a432c1760c",
+              "name": "Reality Data created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/reality-data",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "reality-data"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:00.000Z",
+              "updatedAt": "2026-06-05T15:06:00.000Z",
+              "uid": "35240-6df09f9f-bbe1-41b8-b6b6-b1a432c1760c"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:00.000Z",
+          "updatedAt": "2026-06-05T15:06:00.000Z",
+          "uid": "35240-7d5dd1a9-3677-461d-901d-5a250a80f484"
+        }
+      ],
+      "id": "c1e0df12-8158-4142-a7c2-e3c8c9bbc42c",
+      "createdAt": "2026-06-05T15:06:00.000Z",
+      "updatedAt": "2026-06-05T15:06:00.000Z",
+      "uid": "35240-c1e0df12-8158-4142-a7c2-e3c8c9bbc42c"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "itwin-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://ims.bentley.com/connect/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://ims.bentley.com/connect/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.bentley.com/reality-management"
+    }
+  ]
+}

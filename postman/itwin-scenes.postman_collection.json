@@ -1,0 +1,1217 @@
+{
+  "info": {
+    "_postman_id": "98a11f39-112b-413d-a44a-c4172c1855d9",
+    "name": "iTwin Scenes API",
+    "description": "Configure 3D scenes that compose iModels, reality data, OpenStreetMap, and terrain into a viewer experience.\n\nContact Support:\n Name: Bentley Developer Relations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-06-05T15:06:30.000Z",
+    "updatedAt": "2026-06-05T15:06:30.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-98a11f39-112b-413d-a44a-c4172c1855d9"
+  },
+  "item": [
+    {
+      "name": "/",
+      "item": [
+        {
+          "name": "Get Scenes",
+          "id": "3a32bf6b-c95a-43f3-8be7-ad781aa86b93",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "ff38609c-abea-47db-ad5e-215a2e957d89",
+              "name": "List of Scenes",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:31.000Z",
+              "updatedAt": "2026-06-05T15:06:31.000Z",
+              "uid": "35240-ff38609c-abea-47db-ad5e-215a2e957d89"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:31.000Z",
+          "updatedAt": "2026-06-05T15:06:31.000Z",
+          "uid": "35240-3a32bf6b-c95a-43f3-8be7-ad781aa86b93"
+        },
+        {
+          "name": "Create Scene",
+          "id": "7e825d55-da58-483b-a908-e622bbfa5919",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "700b2c32-6784-4093-89ad-63232a0bd311",
+              "name": "Scene created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:31.000Z",
+              "updatedAt": "2026-06-05T15:06:31.000Z",
+              "uid": "35240-700b2c32-6784-4093-89ad-63232a0bd311"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:31.000Z",
+          "updatedAt": "2026-06-05T15:06:31.000Z",
+          "uid": "35240-7e825d55-da58-483b-a908-e622bbfa5919"
+        }
+      ],
+      "id": "5b1634b0-9325-460e-842f-cf4fb1db6764",
+      "createdAt": "2026-06-05T15:06:31.000Z",
+      "updatedAt": "2026-06-05T15:06:31.000Z",
+      "uid": "35240-5b1634b0-9325-460e-842f-cf4fb1db6764"
+    },
+    {
+      "name": "{sceneId}",
+      "item": [
+        {
+          "name": "layers",
+          "item": [
+            {
+              "name": "{layerId}",
+              "item": [
+                {
+                  "name": "Get Layers",
+                  "id": "eceecf7c-df3a-4a65-9111-d1466a7fa795",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/:sceneId/layers/:layerId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":sceneId",
+                        "layers",
+                        ":layerId"
+                      ],
+                      "variable": [
+                        {
+                          "id": "f478e3dc-b274-4338-876b-fc540bd6c664",
+                          "key": "sceneId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        },
+                        {
+                          "id": "aba6e8b5-e764-4f6e-9ef2-3452946ad609",
+                          "key": "layerId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "2594dd1a-1379-4441-be8d-a2a864318da4",
+                      "name": "List of Layers",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/:sceneId/layers/:layerId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            ":sceneId",
+                            "layers",
+                            ":layerId"
+                          ],
+                          "variable": [
+                            {
+                              "key": "sceneId"
+                            },
+                            {
+                              "key": "layerId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:06:31.000Z",
+                      "updatedAt": "2026-06-05T15:06:31.000Z",
+                      "uid": "35240-2594dd1a-1379-4441-be8d-a2a864318da4"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:31.000Z",
+                  "updatedAt": "2026-06-05T15:06:31.000Z",
+                  "uid": "35240-eceecf7c-df3a-4a65-9111-d1466a7fa795"
+                },
+                {
+                  "name": "Update Layer",
+                  "id": "383d1ae1-f69b-43ed-84db-14f2da18258e",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/:sceneId/layers/:layerId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":sceneId",
+                        "layers",
+                        ":layerId"
+                      ],
+                      "variable": [
+                        {
+                          "id": "ae651dea-29bc-4270-8673-2f6cc08cd8f8",
+                          "key": "sceneId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        },
+                        {
+                          "id": "2c5d857c-89af-4545-a4b1-12b65fb7de9e",
+                          "key": "layerId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "d9a4ec8c-080f-4fdb-8a01-094cbb6776cf",
+                      "name": "Layer updated",
+                      "originalRequest": {
+                        "method": "PATCH",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/:sceneId/layers/:layerId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            ":sceneId",
+                            "layers",
+                            ":layerId"
+                          ],
+                          "variable": [
+                            {
+                              "key": "sceneId"
+                            },
+                            {
+                              "key": "layerId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-06-05T15:06:31.000Z",
+                      "updatedAt": "2026-06-05T15:06:31.000Z",
+                      "uid": "35240-d9a4ec8c-080f-4fdb-8a01-094cbb6776cf"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:31.000Z",
+                  "updatedAt": "2026-06-05T15:06:31.000Z",
+                  "uid": "35240-383d1ae1-f69b-43ed-84db-14f2da18258e"
+                },
+                {
+                  "name": "Delete Layer",
+                  "id": "61a2e468-146d-440d-85f5-3859381bd176",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/:sceneId/layers/:layerId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":sceneId",
+                        "layers",
+                        ":layerId"
+                      ],
+                      "variable": [
+                        {
+                          "id": "b1f865ce-2ec0-48ae-887a-3afd738cda51",
+                          "key": "sceneId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        },
+                        {
+                          "id": "ef1b9840-f6cd-4a9a-b995-ddc132a986b3",
+                          "key": "layerId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "37d8f2ab-941e-42a6-a0a2-ed875c8a67af",
+                      "name": "Layer deleted",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/:sceneId/layers/:layerId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            ":sceneId",
+                            "layers",
+                            ":layerId"
+                          ],
+                          "variable": [
+                            {
+                              "key": "sceneId"
+                            },
+                            {
+                              "key": "layerId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "No Content",
+                      "code": 204,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-06-05T15:06:31.000Z",
+                      "updatedAt": "2026-06-05T15:06:31.000Z",
+                      "uid": "35240-37d8f2ab-941e-42a6-a0a2-ed875c8a67af"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:31.000Z",
+                  "updatedAt": "2026-06-05T15:06:31.000Z",
+                  "uid": "35240-61a2e468-146d-440d-85f5-3859381bd176"
+                }
+              ],
+              "id": "a8f3ee7c-f7ea-4829-a03f-e5af1263b1c4",
+              "createdAt": "2026-06-05T15:06:31.000Z",
+              "updatedAt": "2026-06-05T15:06:31.000Z",
+              "uid": "35240-a8f3ee7c-f7ea-4829-a03f-e5af1263b1c4"
+            },
+            {
+              "name": "Get Layers",
+              "id": "edef4064-48f7-4d89-99b0-c35eb667cfdb",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:sceneId/layers",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":sceneId",
+                    "layers"
+                  ],
+                  "variable": [
+                    {
+                      "id": "490f0a68-2052-4a8c-aa98-0db5e6ea7706",
+                      "key": "sceneId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "c8e2e4d8-3e06-4c6c-b30e-c8645a6a5bf0",
+                  "name": "List of Layers",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/:sceneId/layers",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":sceneId",
+                        "layers"
+                      ],
+                      "variable": [
+                        {
+                          "key": "sceneId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:31.000Z",
+                  "updatedAt": "2026-06-05T15:06:31.000Z",
+                  "uid": "35240-c8e2e4d8-3e06-4c6c-b30e-c8645a6a5bf0"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:31.000Z",
+              "updatedAt": "2026-06-05T15:06:31.000Z",
+              "uid": "35240-edef4064-48f7-4d89-99b0-c35eb667cfdb"
+            },
+            {
+              "name": "Create Layer",
+              "id": "6f57d984-32b3-4f7c-8faa-6b1b81822ca0",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/:sceneId/layers",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":sceneId",
+                    "layers"
+                  ],
+                  "variable": [
+                    {
+                      "id": "e893ee09-707a-4720-9eb4-14af58d36080",
+                      "key": "sceneId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "25de9089-0860-45a5-9a2c-1c97bde5fc6d",
+                  "name": "Layer created",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/:sceneId/layers",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":sceneId",
+                        "layers"
+                      ],
+                      "variable": [
+                        {
+                          "key": "sceneId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:31.000Z",
+                  "updatedAt": "2026-06-05T15:06:31.000Z",
+                  "uid": "35240-25de9089-0860-45a5-9a2c-1c97bde5fc6d"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:31.000Z",
+              "updatedAt": "2026-06-05T15:06:31.000Z",
+              "uid": "35240-6f57d984-32b3-4f7c-8faa-6b1b81822ca0"
+            }
+          ],
+          "id": "6512a32c-11cc-41ab-b5d7-0713ca5ee0dd",
+          "createdAt": "2026-06-05T15:06:31.000Z",
+          "updatedAt": "2026-06-05T15:06:31.000Z",
+          "uid": "35240-6512a32c-11cc-41ab-b5d7-0713ca5ee0dd"
+        },
+        {
+          "name": "extensions",
+          "item": [
+            {
+              "name": "Get Extensions",
+              "id": "0c4fc2eb-2804-4b6c-a44b-8ac4dfb29316",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:sceneId/extensions",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":sceneId",
+                    "extensions"
+                  ],
+                  "variable": [
+                    {
+                      "id": "1cb042b3-f5a7-482e-bce4-00f00b436c6f",
+                      "key": "sceneId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "b952af5e-dca2-4ee4-a81f-4f7a145ac1f3",
+                  "name": "List of Extensions",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/:sceneId/extensions",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":sceneId",
+                        "extensions"
+                      ],
+                      "variable": [
+                        {
+                          "key": "sceneId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:31.000Z",
+                  "updatedAt": "2026-06-05T15:06:31.000Z",
+                  "uid": "35240-b952af5e-dca2-4ee4-a81f-4f7a145ac1f3"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:31.000Z",
+              "updatedAt": "2026-06-05T15:06:31.000Z",
+              "uid": "35240-0c4fc2eb-2804-4b6c-a44b-8ac4dfb29316"
+            },
+            {
+              "name": "Create Extension",
+              "id": "9e39a14e-5ba3-4e00-94b0-8aa680091126",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/:sceneId/extensions",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":sceneId",
+                    "extensions"
+                  ],
+                  "variable": [
+                    {
+                      "id": "93a4623e-e89f-4b5d-848f-72522d56f2a2",
+                      "key": "sceneId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "b964f08d-081f-46b1-9d89-d51a621091cc",
+                  "name": "Extension created",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/:sceneId/extensions",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":sceneId",
+                        "extensions"
+                      ],
+                      "variable": [
+                        {
+                          "key": "sceneId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:31.000Z",
+                  "updatedAt": "2026-06-05T15:06:31.000Z",
+                  "uid": "35240-b964f08d-081f-46b1-9d89-d51a621091cc"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:31.000Z",
+              "updatedAt": "2026-06-05T15:06:31.000Z",
+              "uid": "35240-9e39a14e-5ba3-4e00-94b0-8aa680091126"
+            }
+          ],
+          "id": "ee703f1a-3ef9-48ed-bb5b-f1b37b46b916",
+          "createdAt": "2026-06-05T15:06:31.000Z",
+          "updatedAt": "2026-06-05T15:06:31.000Z",
+          "uid": "35240-ee703f1a-3ef9-48ed-bb5b-f1b37b46b916"
+        },
+        {
+          "name": "Get Scenes",
+          "id": "239c5885-5269-48b8-8598-2165c76dde4c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/:sceneId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ":sceneId"
+              ],
+              "variable": [
+                {
+                  "id": "a6baf19d-9138-470a-8282-41f3fe72e176",
+                  "key": "sceneId",
+                  "value": "<uuid>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "29c2784f-a4d1-4160-87d4-7d27890f0899",
+              "name": "List of Scenes",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:sceneId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":sceneId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "sceneId"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:31.000Z",
+              "updatedAt": "2026-06-05T15:06:31.000Z",
+              "uid": "35240-29c2784f-a4d1-4160-87d4-7d27890f0899"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:31.000Z",
+          "updatedAt": "2026-06-05T15:06:31.000Z",
+          "uid": "35240-239c5885-5269-48b8-8598-2165c76dde4c"
+        },
+        {
+          "name": "Update Scene",
+          "id": "501879a3-3abb-4346-8a8d-4ef65432d21d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/:sceneId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ":sceneId"
+              ],
+              "variable": [
+                {
+                  "id": "e7f5e70e-e4c9-4298-a97f-3911170f9a1e",
+                  "key": "sceneId",
+                  "value": "<uuid>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "ee2c11e0-9220-4bea-8ffc-7c0a0d38d224",
+              "name": "Scene updated",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/:sceneId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":sceneId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "sceneId"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-06-05T15:06:31.000Z",
+              "updatedAt": "2026-06-05T15:06:31.000Z",
+              "uid": "35240-ee2c11e0-9220-4bea-8ffc-7c0a0d38d224"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:31.000Z",
+          "updatedAt": "2026-06-05T15:06:31.000Z",
+          "uid": "35240-501879a3-3abb-4346-8a8d-4ef65432d21d"
+        },
+        {
+          "name": "Delete Scene",
+          "id": "8a7a4cf1-da4d-4228-8d94-744ac2cb3d5e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/:sceneId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ":sceneId"
+              ],
+              "variable": [
+                {
+                  "id": "cf4a881c-d8d6-454d-9abe-d89a1b584d5a",
+                  "key": "sceneId",
+                  "value": "<uuid>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "c9ef5711-2ddd-4b21-b62c-af9317487d5d",
+              "name": "Scene deleted",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:sceneId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":sceneId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "sceneId"
+                    }
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-06-05T15:06:31.000Z",
+              "updatedAt": "2026-06-05T15:06:31.000Z",
+              "uid": "35240-c9ef5711-2ddd-4b21-b62c-af9317487d5d"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:31.000Z",
+          "updatedAt": "2026-06-05T15:06:31.000Z",
+          "uid": "35240-8a7a4cf1-da4d-4228-8d94-744ac2cb3d5e"
+        }
+      ],
+      "id": "43f872f2-1434-4966-91a2-9549cf74d767",
+      "createdAt": "2026-06-05T15:06:31.000Z",
+      "updatedAt": "2026-06-05T15:06:31.000Z",
+      "uid": "35240-43f872f2-1434-4966-91a2-9549cf74d767"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "itwin-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://ims.bentley.com/connect/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://ims.bentley.com/connect/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.bentley.com/scenes"
+    }
+  ]
+}

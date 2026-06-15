@@ -1,0 +1,1384 @@
+{
+  "info": {
+    "_postman_id": "c7e88bc5-0cd4-443a-bae5-9b2a57aa4b26",
+    "name": "iTwin Storage API",
+    "description": "Store and retrieve files inside iTwin containers \u2014 folders, files, file versions, and trashed items.\n\nContact Support:\n Name: Bentley Developer Relations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-06-05T15:05:56.000Z",
+    "updatedAt": "2026-06-05T15:05:56.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-c7e88bc5-0cd4-443a-bae5-9b2a57aa4b26"
+  },
+  "item": [
+    {
+      "name": "folders",
+      "item": [
+        {
+          "name": "{folderId}",
+          "item": [
+            {
+              "name": "folders",
+              "item": [
+                {
+                  "name": "Get Folders",
+                  "id": "eb4cfe62-de57-49bc-a5f4-60d49a478a34",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/folders/:folderId/folders",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "folders",
+                        ":folderId",
+                        "folders"
+                      ],
+                      "variable": [
+                        {
+                          "id": "396a0637-6187-4575-bdcd-b191ae32f307",
+                          "key": "folderId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "875aa3cf-4074-40ac-9854-004674400b3e",
+                      "name": "List of Folders",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/folders/:folderId/folders",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "folders",
+                            ":folderId",
+                            "folders"
+                          ],
+                          "variable": [
+                            {
+                              "key": "folderId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:05:57.000Z",
+                      "updatedAt": "2026-06-05T15:05:57.000Z",
+                      "uid": "35240-875aa3cf-4074-40ac-9854-004674400b3e"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:05:57.000Z",
+                  "updatedAt": "2026-06-05T15:05:57.000Z",
+                  "uid": "35240-eb4cfe62-de57-49bc-a5f4-60d49a478a34"
+                },
+                {
+                  "name": "Create Folder",
+                  "id": "1bee387a-0752-4f8a-8649-beb06955b802",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/folders/:folderId/folders",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "folders",
+                        ":folderId",
+                        "folders"
+                      ],
+                      "variable": [
+                        {
+                          "id": "c7a927e3-14f2-4bb4-9e3c-2d6b45b28e67",
+                          "key": "folderId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "616b69c7-7324-430b-92ed-780936f48c4f",
+                      "name": "Folder created",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/folders/:folderId/folders",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "folders",
+                            ":folderId",
+                            "folders"
+                          ],
+                          "variable": [
+                            {
+                              "key": "folderId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Created",
+                      "code": 201,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:05:57.000Z",
+                      "updatedAt": "2026-06-05T15:05:57.000Z",
+                      "uid": "35240-616b69c7-7324-430b-92ed-780936f48c4f"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:05:57.000Z",
+                  "updatedAt": "2026-06-05T15:05:57.000Z",
+                  "uid": "35240-1bee387a-0752-4f8a-8649-beb06955b802"
+                }
+              ],
+              "id": "a23de223-8b28-4be6-96c4-575f94d88244",
+              "createdAt": "2026-06-05T15:05:57.000Z",
+              "updatedAt": "2026-06-05T15:05:57.000Z",
+              "uid": "35240-a23de223-8b28-4be6-96c4-575f94d88244"
+            },
+            {
+              "name": "files",
+              "item": [
+                {
+                  "name": "Get Files",
+                  "id": "2c72069c-1543-4478-8afd-9893bec6b219",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/folders/:folderId/files",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "folders",
+                        ":folderId",
+                        "files"
+                      ],
+                      "variable": [
+                        {
+                          "id": "c433d2cc-3018-49b7-a278-0710f66164b9",
+                          "key": "folderId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "d6a0ef55-e46d-4daa-bdbe-778da4f4ab6c",
+                      "name": "List of Files",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/folders/:folderId/files",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "folders",
+                            ":folderId",
+                            "files"
+                          ],
+                          "variable": [
+                            {
+                              "key": "folderId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:05:57.000Z",
+                      "updatedAt": "2026-06-05T15:05:57.000Z",
+                      "uid": "35240-d6a0ef55-e46d-4daa-bdbe-778da4f4ab6c"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:05:57.000Z",
+                  "updatedAt": "2026-06-05T15:05:57.000Z",
+                  "uid": "35240-2c72069c-1543-4478-8afd-9893bec6b219"
+                },
+                {
+                  "name": "Create File",
+                  "id": "31a4d385-12c5-4705-9091-0b6b7cfe17fe",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/folders/:folderId/files",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "folders",
+                        ":folderId",
+                        "files"
+                      ],
+                      "variable": [
+                        {
+                          "id": "22608478-0fe9-42b9-9ca4-8d5397df810f",
+                          "key": "folderId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "a8770665-d569-4aef-8bb3-a226b2e27b32",
+                      "name": "File created",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/folders/:folderId/files",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "folders",
+                            ":folderId",
+                            "files"
+                          ],
+                          "variable": [
+                            {
+                              "key": "folderId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Created",
+                      "code": 201,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:05:57.000Z",
+                      "updatedAt": "2026-06-05T15:05:57.000Z",
+                      "uid": "35240-a8770665-d569-4aef-8bb3-a226b2e27b32"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:05:57.000Z",
+                  "updatedAt": "2026-06-05T15:05:57.000Z",
+                  "uid": "35240-31a4d385-12c5-4705-9091-0b6b7cfe17fe"
+                }
+              ],
+              "id": "952a6476-4658-42ca-9dc5-9a0a2efd44bd",
+              "createdAt": "2026-06-05T15:05:57.000Z",
+              "updatedAt": "2026-06-05T15:05:57.000Z",
+              "uid": "35240-952a6476-4658-42ca-9dc5-9a0a2efd44bd"
+            }
+          ],
+          "id": "522d1090-3e00-4803-939b-f03f88b3951b",
+          "createdAt": "2026-06-05T15:05:57.000Z",
+          "updatedAt": "2026-06-05T15:05:57.000Z",
+          "uid": "35240-522d1090-3e00-4803-939b-f03f88b3951b"
+        }
+      ],
+      "id": "89558efc-f0f2-46d5-bc3c-a1aa9d86fda8",
+      "createdAt": "2026-06-05T15:05:57.000Z",
+      "updatedAt": "2026-06-05T15:05:57.000Z",
+      "uid": "35240-89558efc-f0f2-46d5-bc3c-a1aa9d86fda8"
+    },
+    {
+      "name": "files",
+      "item": [
+        {
+          "name": "{fileId}",
+          "item": [
+            {
+              "name": "versions",
+              "item": [
+                {
+                  "name": "Get Versions",
+                  "id": "ef10986b-420c-4049-8855-debfd409b546",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/files/:fileId/versions",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "files",
+                        ":fileId",
+                        "versions"
+                      ],
+                      "variable": [
+                        {
+                          "id": "28b02a8e-7fa9-48be-ada0-77f5d8bcfd2d",
+                          "key": "fileId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "226a4159-f2ac-48c6-91c5-09bb109a3bf0",
+                      "name": "List of Versions",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/files/:fileId/versions",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "files",
+                            ":fileId",
+                            "versions"
+                          ],
+                          "variable": [
+                            {
+                              "key": "fileId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:05:57.000Z",
+                      "updatedAt": "2026-06-05T15:05:57.000Z",
+                      "uid": "35240-226a4159-f2ac-48c6-91c5-09bb109a3bf0"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:05:57.000Z",
+                  "updatedAt": "2026-06-05T15:05:57.000Z",
+                  "uid": "35240-ef10986b-420c-4049-8855-debfd409b546"
+                },
+                {
+                  "name": "Create Version",
+                  "id": "2a3d820c-df94-4d4f-bcc4-dbb3d888c3f9",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/files/:fileId/versions",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "files",
+                        ":fileId",
+                        "versions"
+                      ],
+                      "variable": [
+                        {
+                          "id": "575c9d9f-50da-46ac-a7ef-f1eb8f527269",
+                          "key": "fileId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "08d41861-4ce5-477f-b323-2f1e654dc50f",
+                      "name": "Version created",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/files/:fileId/versions",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "files",
+                            ":fileId",
+                            "versions"
+                          ],
+                          "variable": [
+                            {
+                              "key": "fileId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Created",
+                      "code": 201,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:05:57.000Z",
+                      "updatedAt": "2026-06-05T15:05:57.000Z",
+                      "uid": "35240-08d41861-4ce5-477f-b323-2f1e654dc50f"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:05:57.000Z",
+                  "updatedAt": "2026-06-05T15:05:57.000Z",
+                  "uid": "35240-2a3d820c-df94-4d4f-bcc4-dbb3d888c3f9"
+                }
+              ],
+              "id": "05fb7fa3-157a-49dc-b019-4815bf56f662",
+              "createdAt": "2026-06-05T15:05:57.000Z",
+              "updatedAt": "2026-06-05T15:05:57.000Z",
+              "uid": "35240-05fb7fa3-157a-49dc-b019-4815bf56f662"
+            },
+            {
+              "name": "content",
+              "item": [
+                {
+                  "name": "Get Content",
+                  "id": "a135dcbb-0b8f-48e2-b7fb-cea18ed52238",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/files/:fileId/content",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "files",
+                        ":fileId",
+                        "content"
+                      ],
+                      "variable": [
+                        {
+                          "id": "3061812c-3263-4817-a2fc-0da9308c756c",
+                          "key": "fileId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "bb5eacf9-e9f6-4fd2-86cc-98db170812a3",
+                      "name": "List of Content",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/files/:fileId/content",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "files",
+                            ":fileId",
+                            "content"
+                          ],
+                          "variable": [
+                            {
+                              "key": "fileId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:05:57.000Z",
+                      "updatedAt": "2026-06-05T15:05:57.000Z",
+                      "uid": "35240-bb5eacf9-e9f6-4fd2-86cc-98db170812a3"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:05:57.000Z",
+                  "updatedAt": "2026-06-05T15:05:57.000Z",
+                  "uid": "35240-a135dcbb-0b8f-48e2-b7fb-cea18ed52238"
+                },
+                {
+                  "name": "Create Content",
+                  "id": "382f52ea-d1f5-439e-82d7-cfc06e01acc7",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/files/:fileId/content",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "files",
+                        ":fileId",
+                        "content"
+                      ],
+                      "variable": [
+                        {
+                          "id": "f3a6dbc8-52af-439f-a802-eb520b538c88",
+                          "key": "fileId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "c8609165-3cf0-4145-a847-5a82706a8833",
+                      "name": "Content created",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/files/:fileId/content",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "files",
+                            ":fileId",
+                            "content"
+                          ],
+                          "variable": [
+                            {
+                              "key": "fileId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Created",
+                      "code": 201,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:05:57.000Z",
+                      "updatedAt": "2026-06-05T15:05:57.000Z",
+                      "uid": "35240-c8609165-3cf0-4145-a847-5a82706a8833"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:05:57.000Z",
+                  "updatedAt": "2026-06-05T15:05:57.000Z",
+                  "uid": "35240-382f52ea-d1f5-439e-82d7-cfc06e01acc7"
+                }
+              ],
+              "id": "cb3749bc-b77b-4cdf-8227-cbae30ac6a4c",
+              "createdAt": "2026-06-05T15:05:57.000Z",
+              "updatedAt": "2026-06-05T15:05:57.000Z",
+              "uid": "35240-cb3749bc-b77b-4cdf-8227-cbae30ac6a4c"
+            },
+            {
+              "name": "Get Files",
+              "id": "048dd61d-0ddf-41cf-9136-0b49e60c3ba0",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/files/:fileId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "files",
+                    ":fileId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "215ade7d-ba52-440a-b1c1-2a97a4e5b793",
+                      "key": "fileId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "31ee99c0-8b14-461f-8ebe-fffb95fca939",
+                  "name": "List of Files",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/files/:fileId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "files",
+                        ":fileId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "fileId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:05:57.000Z",
+                  "updatedAt": "2026-06-05T15:05:57.000Z",
+                  "uid": "35240-31ee99c0-8b14-461f-8ebe-fffb95fca939"
+                }
+              ],
+              "createdAt": "2026-06-05T15:05:57.000Z",
+              "updatedAt": "2026-06-05T15:05:57.000Z",
+              "uid": "35240-048dd61d-0ddf-41cf-9136-0b49e60c3ba0"
+            },
+            {
+              "name": "Update File",
+              "id": "d1708011-652c-4135-800f-c447920bc6f2",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/files/:fileId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "files",
+                    ":fileId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "b7526bdf-b65d-45f8-8b37-44c133819aac",
+                      "key": "fileId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "9fd74d0d-0c1b-41a9-b07a-a5ffa302afce",
+                  "name": "File updated",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/files/:fileId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "files",
+                        ":fileId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "fileId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-06-05T15:05:57.000Z",
+                  "updatedAt": "2026-06-05T15:05:57.000Z",
+                  "uid": "35240-9fd74d0d-0c1b-41a9-b07a-a5ffa302afce"
+                }
+              ],
+              "createdAt": "2026-06-05T15:05:57.000Z",
+              "updatedAt": "2026-06-05T15:05:57.000Z",
+              "uid": "35240-d1708011-652c-4135-800f-c447920bc6f2"
+            },
+            {
+              "name": "Delete File",
+              "id": "56ae71cf-6178-4b2e-9900-6f84702c6731",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/files/:fileId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "files",
+                    ":fileId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "6565e705-6db3-42f5-8ae6-b07bd568697d",
+                      "key": "fileId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "3d03fe8e-4007-4fa3-a20d-d70ee791109d",
+                  "name": "File deleted",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/files/:fileId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "files",
+                        ":fileId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "fileId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-06-05T15:05:57.000Z",
+                  "updatedAt": "2026-06-05T15:05:57.000Z",
+                  "uid": "35240-3d03fe8e-4007-4fa3-a20d-d70ee791109d"
+                }
+              ],
+              "createdAt": "2026-06-05T15:05:57.000Z",
+              "updatedAt": "2026-06-05T15:05:57.000Z",
+              "uid": "35240-56ae71cf-6178-4b2e-9900-6f84702c6731"
+            }
+          ],
+          "id": "be2d6cb0-5553-4d97-b7cc-444fc5c1658b",
+          "createdAt": "2026-06-05T15:05:57.000Z",
+          "updatedAt": "2026-06-05T15:05:57.000Z",
+          "uid": "35240-be2d6cb0-5553-4d97-b7cc-444fc5c1658b"
+        }
+      ],
+      "id": "7d9e94f2-29ab-4dcf-934d-82602b66c35a",
+      "createdAt": "2026-06-05T15:05:57.000Z",
+      "updatedAt": "2026-06-05T15:05:57.000Z",
+      "uid": "35240-7d9e94f2-29ab-4dcf-934d-82602b66c35a"
+    },
+    {
+      "name": "recyclebin",
+      "item": [
+        {
+          "name": "Get Trash",
+          "id": "d9ca7dc5-0a4b-4dbf-b850-3d0b352c1a00",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/recyclebin",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "recyclebin"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "fc267edd-9654-4637-880c-3c719b3b56e7",
+              "name": "List of Trash",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/recyclebin",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "recyclebin"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:05:57.000Z",
+              "updatedAt": "2026-06-05T15:05:57.000Z",
+              "uid": "35240-fc267edd-9654-4637-880c-3c719b3b56e7"
+            }
+          ],
+          "createdAt": "2026-06-05T15:05:57.000Z",
+          "updatedAt": "2026-06-05T15:05:57.000Z",
+          "uid": "35240-d9ca7dc5-0a4b-4dbf-b850-3d0b352c1a00"
+        },
+        {
+          "name": "Create Trash",
+          "id": "3aacbba9-a794-464d-a3f8-5b7cfeed3460",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/recyclebin",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "recyclebin"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "2e0f091c-142c-4208-ba5a-4438bacf27a7",
+              "name": "Trash created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/recyclebin",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "recyclebin"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:05:57.000Z",
+              "updatedAt": "2026-06-05T15:05:57.000Z",
+              "uid": "35240-2e0f091c-142c-4208-ba5a-4438bacf27a7"
+            }
+          ],
+          "createdAt": "2026-06-05T15:05:57.000Z",
+          "updatedAt": "2026-06-05T15:05:57.000Z",
+          "uid": "35240-3aacbba9-a794-464d-a3f8-5b7cfeed3460"
+        }
+      ],
+      "id": "cd3464b9-21cc-4908-88d0-c50ff7219d14",
+      "createdAt": "2026-06-05T15:05:57.000Z",
+      "updatedAt": "2026-06-05T15:05:57.000Z",
+      "uid": "35240-cd3464b9-21cc-4908-88d0-c50ff7219d14"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "itwin-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://ims.bentley.com/connect/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://ims.bentley.com/connect/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.bentley.com/storage"
+    }
+  ]
+}

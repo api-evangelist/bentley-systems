@@ -1,0 +1,1702 @@
+{
+  "info": {
+    "_postman_id": "6bcd10eb-1c94-49ce-8b09-260af4604c68",
+    "name": "iTwin Insights API",
+    "description": "Build custom reports and dashboards on iModel data \u2014 mappings, groups, properties, and OData endpoints.\n\nContact Support:\n Name: Bentley Developer Relations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-06-05T15:06:07.000Z",
+    "updatedAt": "2026-06-05T15:06:08.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-6bcd10eb-1c94-49ce-8b09-260af4604c68"
+  },
+  "item": [
+    {
+      "name": "reporting",
+      "item": [
+        {
+          "name": "reports",
+          "item": [
+            {
+              "name": "{reportId}",
+              "item": [
+                {
+                  "name": "datasources",
+                  "item": [
+                    {
+                      "name": "Get Reports",
+                      "id": "92f9fd97-ee89-4e51-8964-40261ca8a325",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/reporting/reports/:reportId/datasources",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "reporting",
+                            "reports",
+                            ":reportId",
+                            "datasources"
+                          ],
+                          "variable": [
+                            {
+                              "id": "ea31a5b5-e9e8-47a7-b36b-1e183125b88d",
+                              "key": "reportId",
+                              "value": "<uuid>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "id": "4799fffa-9376-4b7b-9887-357bbdc9eb48",
+                          "name": "List of Reports",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: oauth2",
+                                "key": "Authorization",
+                                "value": "<token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/reporting/reports/:reportId/datasources",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "reporting",
+                                "reports",
+                                ":reportId",
+                                "datasources"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "reportId"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{}",
+                          "createdAt": "2026-06-05T15:06:08.000Z",
+                          "updatedAt": "2026-06-05T15:06:08.000Z",
+                          "uid": "35240-4799fffa-9376-4b7b-9887-357bbdc9eb48"
+                        }
+                      ],
+                      "createdAt": "2026-06-05T15:06:08.000Z",
+                      "updatedAt": "2026-06-05T15:06:08.000Z",
+                      "uid": "35240-92f9fd97-ee89-4e51-8964-40261ca8a325"
+                    },
+                    {
+                      "name": "Create Report",
+                      "id": "e13ab1b5-432f-4007-bc51-6b0e831f87bc",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/reporting/reports/:reportId/datasources",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "reporting",
+                            "reports",
+                            ":reportId",
+                            "datasources"
+                          ],
+                          "variable": [
+                            {
+                              "id": "a92d52ca-ac6e-47e6-9ff9-0a2aec877d70",
+                              "key": "reportId",
+                              "value": "<uuid>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "id": "18f14ed7-5f65-411b-8284-c83b8e6a4e7d",
+                          "name": "Report created",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: oauth2",
+                                "key": "Authorization",
+                                "value": "<token>"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/reporting/reports/:reportId/datasources",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "reporting",
+                                "reports",
+                                ":reportId",
+                                "datasources"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "reportId"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Created",
+                          "code": 201,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{}",
+                          "createdAt": "2026-06-05T15:06:08.000Z",
+                          "updatedAt": "2026-06-05T15:06:08.000Z",
+                          "uid": "35240-18f14ed7-5f65-411b-8284-c83b8e6a4e7d"
+                        }
+                      ],
+                      "createdAt": "2026-06-05T15:06:08.000Z",
+                      "updatedAt": "2026-06-05T15:06:08.000Z",
+                      "uid": "35240-e13ab1b5-432f-4007-bc51-6b0e831f87bc"
+                    }
+                  ],
+                  "id": "230b7f18-5441-49ce-a7c5-8f77e90345f1",
+                  "createdAt": "2026-06-05T15:06:08.000Z",
+                  "updatedAt": "2026-06-05T15:06:08.000Z",
+                  "uid": "35240-230b7f18-5441-49ce-a7c5-8f77e90345f1"
+                },
+                {
+                  "name": "Get Reports",
+                  "id": "e3b6e64b-fa0b-4ccf-b6a4-a2174af7efdf",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/reporting/reports/:reportId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "reporting",
+                        "reports",
+                        ":reportId"
+                      ],
+                      "variable": [
+                        {
+                          "id": "c120297e-1322-4cad-80be-dbd3b8346985",
+                          "key": "reportId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "a0ab4633-7405-48cf-9277-28383edbf017",
+                      "name": "List of Reports",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/reporting/reports/:reportId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "reporting",
+                            "reports",
+                            ":reportId"
+                          ],
+                          "variable": [
+                            {
+                              "key": "reportId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:06:08.000Z",
+                      "updatedAt": "2026-06-05T15:06:08.000Z",
+                      "uid": "35240-a0ab4633-7405-48cf-9277-28383edbf017"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:08.000Z",
+                  "updatedAt": "2026-06-05T15:06:08.000Z",
+                  "uid": "35240-e3b6e64b-fa0b-4ccf-b6a4-a2174af7efdf"
+                },
+                {
+                  "name": "Update Report",
+                  "id": "d3d0af08-f797-4689-a5ed-e15f29bb26c6",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/reporting/reports/:reportId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "reporting",
+                        "reports",
+                        ":reportId"
+                      ],
+                      "variable": [
+                        {
+                          "id": "89e6c345-6966-4356-9ef7-d02b21fb58b0",
+                          "key": "reportId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "5c4863a6-359e-48ba-bf62-76003af4913c",
+                      "name": "Report updated",
+                      "originalRequest": {
+                        "method": "PATCH",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/reporting/reports/:reportId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "reporting",
+                            "reports",
+                            ":reportId"
+                          ],
+                          "variable": [
+                            {
+                              "key": "reportId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-06-05T15:06:08.000Z",
+                      "updatedAt": "2026-06-05T15:06:08.000Z",
+                      "uid": "35240-5c4863a6-359e-48ba-bf62-76003af4913c"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:08.000Z",
+                  "updatedAt": "2026-06-05T15:06:08.000Z",
+                  "uid": "35240-d3d0af08-f797-4689-a5ed-e15f29bb26c6"
+                },
+                {
+                  "name": "Delete Report",
+                  "id": "8307a834-1f29-47db-902b-52b0074ff2d8",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/reporting/reports/:reportId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "reporting",
+                        "reports",
+                        ":reportId"
+                      ],
+                      "variable": [
+                        {
+                          "id": "7615e687-dde5-4867-ae0d-de3756338f22",
+                          "key": "reportId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "8d0c057c-751c-4bbe-ba2d-e40cf8727f17",
+                      "name": "Report deleted",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/reporting/reports/:reportId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "reporting",
+                            "reports",
+                            ":reportId"
+                          ],
+                          "variable": [
+                            {
+                              "key": "reportId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "No Content",
+                      "code": 204,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-06-05T15:06:08.000Z",
+                      "updatedAt": "2026-06-05T15:06:08.000Z",
+                      "uid": "35240-8d0c057c-751c-4bbe-ba2d-e40cf8727f17"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:08.000Z",
+                  "updatedAt": "2026-06-05T15:06:08.000Z",
+                  "uid": "35240-8307a834-1f29-47db-902b-52b0074ff2d8"
+                }
+              ],
+              "id": "17d93c83-c052-452d-a55e-d42aeb24ffdb",
+              "createdAt": "2026-06-05T15:06:08.000Z",
+              "updatedAt": "2026-06-05T15:06:08.000Z",
+              "uid": "35240-17d93c83-c052-452d-a55e-d42aeb24ffdb"
+            },
+            {
+              "name": "Get Reports",
+              "id": "faa630e4-8715-4854-ac5b-98737d814a6e",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/reporting/reports",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "reporting",
+                    "reports"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "513c0f80-c5da-4585-8cff-2418b0e34079",
+                  "name": "List of Reports",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/reporting/reports",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "reporting",
+                        "reports"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:08.000Z",
+                  "updatedAt": "2026-06-05T15:06:08.000Z",
+                  "uid": "35240-513c0f80-c5da-4585-8cff-2418b0e34079"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:08.000Z",
+              "updatedAt": "2026-06-05T15:06:08.000Z",
+              "uid": "35240-faa630e4-8715-4854-ac5b-98737d814a6e"
+            },
+            {
+              "name": "Create Report",
+              "id": "564efb74-d10a-4f4d-8710-6914511a61cf",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/reporting/reports",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "reporting",
+                    "reports"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "4667ee79-d814-4ae1-84d5-6d644d0bc31d",
+                  "name": "Report created",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/reporting/reports",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "reporting",
+                        "reports"
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:08.000Z",
+                  "updatedAt": "2026-06-05T15:06:08.000Z",
+                  "uid": "35240-4667ee79-d814-4ae1-84d5-6d644d0bc31d"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:08.000Z",
+              "updatedAt": "2026-06-05T15:06:08.000Z",
+              "uid": "35240-564efb74-d10a-4f4d-8710-6914511a61cf"
+            }
+          ],
+          "id": "9ddcc083-3ea9-4223-baf6-22c8ec55a21c",
+          "createdAt": "2026-06-05T15:06:08.000Z",
+          "updatedAt": "2026-06-05T15:06:08.000Z",
+          "uid": "35240-9ddcc083-3ea9-4223-baf6-22c8ec55a21c"
+        },
+        {
+          "name": "mappings",
+          "item": [
+            {
+              "name": "{mappingId}",
+              "item": [
+                {
+                  "name": "groups",
+                  "item": [
+                    {
+                      "name": "Get Mappings",
+                      "id": "0db10d0d-4a01-471e-a6b4-facb9d061640",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/reporting/mappings/:mappingId/groups",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "reporting",
+                            "mappings",
+                            ":mappingId",
+                            "groups"
+                          ],
+                          "variable": [
+                            {
+                              "id": "b13bd84d-0779-40e7-ab6a-28f007b7f1cd",
+                              "key": "mappingId",
+                              "value": "<uuid>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "id": "c1a7d892-f72b-4326-bf1b-54a42f7689dc",
+                          "name": "List of Mappings",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: oauth2",
+                                "key": "Authorization",
+                                "value": "<token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/reporting/mappings/:mappingId/groups",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "reporting",
+                                "mappings",
+                                ":mappingId",
+                                "groups"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "mappingId"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{}",
+                          "createdAt": "2026-06-05T15:06:08.000Z",
+                          "updatedAt": "2026-06-05T15:06:08.000Z",
+                          "uid": "35240-c1a7d892-f72b-4326-bf1b-54a42f7689dc"
+                        }
+                      ],
+                      "createdAt": "2026-06-05T15:06:08.000Z",
+                      "updatedAt": "2026-06-05T15:06:08.000Z",
+                      "uid": "35240-0db10d0d-4a01-471e-a6b4-facb9d061640"
+                    },
+                    {
+                      "name": "Create Mapping",
+                      "id": "8f1344f4-36f1-40f6-a918-347891436100",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/reporting/mappings/:mappingId/groups",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "reporting",
+                            "mappings",
+                            ":mappingId",
+                            "groups"
+                          ],
+                          "variable": [
+                            {
+                              "id": "4ba4d7c5-a3b4-4d1d-b2e4-eb0d824b1d76",
+                              "key": "mappingId",
+                              "value": "<uuid>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "id": "54ac9137-e6ee-4923-9d45-190e8370df7b",
+                          "name": "Mapping created",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: oauth2",
+                                "key": "Authorization",
+                                "value": "<token>"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/reporting/mappings/:mappingId/groups",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "reporting",
+                                "mappings",
+                                ":mappingId",
+                                "groups"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "mappingId"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Created",
+                          "code": 201,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{}",
+                          "createdAt": "2026-06-05T15:06:08.000Z",
+                          "updatedAt": "2026-06-05T15:06:08.000Z",
+                          "uid": "35240-54ac9137-e6ee-4923-9d45-190e8370df7b"
+                        }
+                      ],
+                      "createdAt": "2026-06-05T15:06:08.000Z",
+                      "updatedAt": "2026-06-05T15:06:08.000Z",
+                      "uid": "35240-8f1344f4-36f1-40f6-a918-347891436100"
+                    }
+                  ],
+                  "id": "6c6380e5-e79a-4b0c-ac83-40084c9ecdf5",
+                  "createdAt": "2026-06-05T15:06:08.000Z",
+                  "updatedAt": "2026-06-05T15:06:08.000Z",
+                  "uid": "35240-6c6380e5-e79a-4b0c-ac83-40084c9ecdf5"
+                },
+                {
+                  "name": "Get Mappings",
+                  "id": "ce0269b3-f9a5-4cf2-ae61-b088e5be28dc",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/reporting/mappings/:mappingId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "reporting",
+                        "mappings",
+                        ":mappingId"
+                      ],
+                      "variable": [
+                        {
+                          "id": "359310c6-1a06-4c7d-970c-236276532ec1",
+                          "key": "mappingId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "b2182201-426d-4a64-a59b-e81262a78880",
+                      "name": "List of Mappings",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/reporting/mappings/:mappingId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "reporting",
+                            "mappings",
+                            ":mappingId"
+                          ],
+                          "variable": [
+                            {
+                              "key": "mappingId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:06:08.000Z",
+                      "updatedAt": "2026-06-05T15:06:08.000Z",
+                      "uid": "35240-b2182201-426d-4a64-a59b-e81262a78880"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:08.000Z",
+                  "updatedAt": "2026-06-05T15:06:08.000Z",
+                  "uid": "35240-ce0269b3-f9a5-4cf2-ae61-b088e5be28dc"
+                },
+                {
+                  "name": "Update Mapping",
+                  "id": "a1dd9ef4-85e5-4462-afb1-ac216d1bc5ab",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/reporting/mappings/:mappingId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "reporting",
+                        "mappings",
+                        ":mappingId"
+                      ],
+                      "variable": [
+                        {
+                          "id": "7a57b580-6758-474d-aa6e-8f366cbc3f39",
+                          "key": "mappingId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "fdea59a4-b652-4afd-919d-037372d39076",
+                      "name": "Mapping updated",
+                      "originalRequest": {
+                        "method": "PATCH",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/reporting/mappings/:mappingId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "reporting",
+                            "mappings",
+                            ":mappingId"
+                          ],
+                          "variable": [
+                            {
+                              "key": "mappingId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-06-05T15:06:08.000Z",
+                      "updatedAt": "2026-06-05T15:06:08.000Z",
+                      "uid": "35240-fdea59a4-b652-4afd-919d-037372d39076"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:08.000Z",
+                  "updatedAt": "2026-06-05T15:06:08.000Z",
+                  "uid": "35240-a1dd9ef4-85e5-4462-afb1-ac216d1bc5ab"
+                },
+                {
+                  "name": "Delete Mapping",
+                  "id": "d380e9ec-c2d2-43d0-9614-0298cc34a78e",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/reporting/mappings/:mappingId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "reporting",
+                        "mappings",
+                        ":mappingId"
+                      ],
+                      "variable": [
+                        {
+                          "id": "01c1320b-2246-47ef-87ce-0cb19cb3806d",
+                          "key": "mappingId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "051a9e9f-b502-48e6-bddd-e494010cf168",
+                      "name": "Mapping deleted",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/reporting/mappings/:mappingId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "reporting",
+                            "mappings",
+                            ":mappingId"
+                          ],
+                          "variable": [
+                            {
+                              "key": "mappingId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "No Content",
+                      "code": 204,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-06-05T15:06:08.000Z",
+                      "updatedAt": "2026-06-05T15:06:08.000Z",
+                      "uid": "35240-051a9e9f-b502-48e6-bddd-e494010cf168"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:08.000Z",
+                  "updatedAt": "2026-06-05T15:06:08.000Z",
+                  "uid": "35240-d380e9ec-c2d2-43d0-9614-0298cc34a78e"
+                }
+              ],
+              "id": "39e27d40-6078-464d-bdf0-59bedd5c80b1",
+              "createdAt": "2026-06-05T15:06:08.000Z",
+              "updatedAt": "2026-06-05T15:06:08.000Z",
+              "uid": "35240-39e27d40-6078-464d-bdf0-59bedd5c80b1"
+            },
+            {
+              "name": "Get Mappings",
+              "id": "6e3da14e-f886-44a7-b564-f562e5291b01",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/reporting/mappings",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "reporting",
+                    "mappings"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "8b385366-f575-462e-b233-d84fc1d8c7ec",
+                  "name": "List of Mappings",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/reporting/mappings",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "reporting",
+                        "mappings"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:08.000Z",
+                  "updatedAt": "2026-06-05T15:06:08.000Z",
+                  "uid": "35240-8b385366-f575-462e-b233-d84fc1d8c7ec"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:08.000Z",
+              "updatedAt": "2026-06-05T15:06:08.000Z",
+              "uid": "35240-6e3da14e-f886-44a7-b564-f562e5291b01"
+            },
+            {
+              "name": "Create Mapping",
+              "id": "71c1b626-a3d6-429d-9b63-c7ecf569805b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/reporting/mappings",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "reporting",
+                    "mappings"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "dbc8b1d5-52a6-4ca1-a517-92ece50a398a",
+                  "name": "Mapping created",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/reporting/mappings",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "reporting",
+                        "mappings"
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:08.000Z",
+                  "updatedAt": "2026-06-05T15:06:08.000Z",
+                  "uid": "35240-dbc8b1d5-52a6-4ca1-a517-92ece50a398a"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:08.000Z",
+              "updatedAt": "2026-06-05T15:06:08.000Z",
+              "uid": "35240-71c1b626-a3d6-429d-9b63-c7ecf569805b"
+            }
+          ],
+          "id": "447440df-5f37-4e91-9f30-565671125869",
+          "createdAt": "2026-06-05T15:06:08.000Z",
+          "updatedAt": "2026-06-05T15:06:08.000Z",
+          "uid": "35240-447440df-5f37-4e91-9f30-565671125869"
+        },
+        {
+          "name": "odata",
+          "item": [
+            {
+              "name": "{reportId}",
+              "item": [
+                {
+                  "name": "Get ODATA",
+                  "id": "ed0ee5db-ea9b-4fdb-b0aa-6bb98e428d4e",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/reporting/odata/:reportId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "reporting",
+                        "odata",
+                        ":reportId"
+                      ],
+                      "variable": [
+                        {
+                          "id": "6306545d-6777-40c3-b314-341419344d2a",
+                          "key": "reportId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "64b9dbde-f5c7-43a8-8fc4-a019f0fb4123",
+                      "name": "List of ODATA",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/reporting/odata/:reportId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "reporting",
+                            "odata",
+                            ":reportId"
+                          ],
+                          "variable": [
+                            {
+                              "key": "reportId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:06:08.000Z",
+                      "updatedAt": "2026-06-05T15:06:08.000Z",
+                      "uid": "35240-64b9dbde-f5c7-43a8-8fc4-a019f0fb4123"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:08.000Z",
+                  "updatedAt": "2026-06-05T15:06:08.000Z",
+                  "uid": "35240-ed0ee5db-ea9b-4fdb-b0aa-6bb98e428d4e"
+                },
+                {
+                  "name": "Update ODATA",
+                  "id": "24c74244-5350-4e10-9fee-6dd679bf8e8c",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/reporting/odata/:reportId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "reporting",
+                        "odata",
+                        ":reportId"
+                      ],
+                      "variable": [
+                        {
+                          "id": "7a297e78-25d1-4c47-94f2-281cf07043f5",
+                          "key": "reportId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "307b3ad5-2ba3-439a-8da9-9dfc3a5cab3b",
+                      "name": "ODATA updated",
+                      "originalRequest": {
+                        "method": "PATCH",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/reporting/odata/:reportId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "reporting",
+                            "odata",
+                            ":reportId"
+                          ],
+                          "variable": [
+                            {
+                              "key": "reportId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-06-05T15:06:08.000Z",
+                      "updatedAt": "2026-06-05T15:06:08.000Z",
+                      "uid": "35240-307b3ad5-2ba3-439a-8da9-9dfc3a5cab3b"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:08.000Z",
+                  "updatedAt": "2026-06-05T15:06:08.000Z",
+                  "uid": "35240-24c74244-5350-4e10-9fee-6dd679bf8e8c"
+                },
+                {
+                  "name": "Delete ODATA",
+                  "id": "106278fd-0f6f-4efb-9539-674b07728865",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/reporting/odata/:reportId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "reporting",
+                        "odata",
+                        ":reportId"
+                      ],
+                      "variable": [
+                        {
+                          "id": "59b6b794-3805-4d44-b48c-868eb40db9a4",
+                          "key": "reportId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "5fd48aa9-5ecd-4c0c-9c85-cf86648263ba",
+                      "name": "ODATA deleted",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/reporting/odata/:reportId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "reporting",
+                            "odata",
+                            ":reportId"
+                          ],
+                          "variable": [
+                            {
+                              "key": "reportId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "No Content",
+                      "code": 204,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-06-05T15:06:08.000Z",
+                      "updatedAt": "2026-06-05T15:06:08.000Z",
+                      "uid": "35240-5fd48aa9-5ecd-4c0c-9c85-cf86648263ba"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:08.000Z",
+                  "updatedAt": "2026-06-05T15:06:08.000Z",
+                  "uid": "35240-106278fd-0f6f-4efb-9539-674b07728865"
+                }
+              ],
+              "id": "e8c9f4d1-0fe1-468d-a24b-52c76159a626",
+              "createdAt": "2026-06-05T15:06:08.000Z",
+              "updatedAt": "2026-06-05T15:06:08.000Z",
+              "uid": "35240-e8c9f4d1-0fe1-468d-a24b-52c76159a626"
+            }
+          ],
+          "id": "971febda-6676-4d2a-9500-bb45cbf0d49c",
+          "createdAt": "2026-06-05T15:06:08.000Z",
+          "updatedAt": "2026-06-05T15:06:08.000Z",
+          "uid": "35240-971febda-6676-4d2a-9500-bb45cbf0d49c"
+        }
+      ],
+      "id": "7ac55f2f-56bf-425d-bcf2-94bbbba76fd9",
+      "createdAt": "2026-06-05T15:06:08.000Z",
+      "updatedAt": "2026-06-05T15:06:08.000Z",
+      "uid": "35240-7ac55f2f-56bf-425d-bcf2-94bbbba76fd9"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "itwin-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://ims.bentley.com/connect/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://ims.bentley.com/connect/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.bentley.com/insights"
+    }
+  ]
+}

@@ -1,0 +1,1131 @@
+{
+  "info": {
+    "_postman_id": "0198d286-329a-4fa6-8eef-35980091aac4",
+    "name": "iTwin Synchronization API",
+    "description": "Synchronize native design files (DGN, DWG, IFC, RVT) from Azure Blob, iTwin Storage, or ProjectWise into iModels.\n\nContact Support:\n Name: Bentley Developer Relations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-06-05T15:05:58.000Z",
+    "updatedAt": "2026-06-05T15:05:59.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-0198d286-329a-4fa6-8eef-35980091aac4"
+  },
+  "item": [
+    {
+      "name": "imodels",
+      "item": [
+        {
+          "name": "{iModelId}",
+          "item": [
+            {
+              "name": "storageConnections",
+              "item": [
+                {
+                  "name": "{connectionId}",
+                  "item": [
+                    {
+                      "name": "sourcefiles",
+                      "item": [
+                        {
+                          "name": "Get Source Files",
+                          "id": "6ec33c10-293a-4bd4-8e81-d57ab25e06a9",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/imodels/:iModelId/storageConnections/:connectionId/sourcefiles",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "imodels",
+                                ":iModelId",
+                                "storageConnections",
+                                ":connectionId",
+                                "sourcefiles"
+                              ],
+                              "variable": [
+                                {
+                                  "id": "b86eca6f-9d2e-4693-af7a-2a393f8135d5",
+                                  "key": "iModelId",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                },
+                                {
+                                  "id": "48ce9561-454c-4d9f-8793-5b7be00de57b",
+                                  "key": "connectionId",
+                                  "value": "<uuid>",
+                                  "description": "(Required) "
+                                }
+                              ]
+                            }
+                          },
+                          "response": [
+                            {
+                              "id": "ab048633-bc66-4ef6-a202-b31a430b0df9",
+                              "name": "List of Source Files",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: oauth2",
+                                    "key": "Authorization",
+                                    "value": "<token>"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/imodels/:iModelId/storageConnections/:connectionId/sourcefiles",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "imodels",
+                                    ":iModelId",
+                                    "storageConnections",
+                                    ":connectionId",
+                                    "sourcefiles"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "iModelId"
+                                    },
+                                    {
+                                      "key": "connectionId"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{}",
+                              "createdAt": "2026-06-05T15:05:59.000Z",
+                              "updatedAt": "2026-06-05T15:05:59.000Z",
+                              "uid": "35240-ab048633-bc66-4ef6-a202-b31a430b0df9"
+                            }
+                          ],
+                          "createdAt": "2026-06-05T15:05:59.000Z",
+                          "updatedAt": "2026-06-05T15:05:59.000Z",
+                          "uid": "35240-6ec33c10-293a-4bd4-8e81-d57ab25e06a9"
+                        },
+                        {
+                          "name": "Create Source File",
+                          "id": "4e5a8432-63cf-4dc2-9e57-31b72608143d",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/imodels/:iModelId/storageConnections/:connectionId/sourcefiles",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "imodels",
+                                ":iModelId",
+                                "storageConnections",
+                                ":connectionId",
+                                "sourcefiles"
+                              ],
+                              "variable": [
+                                {
+                                  "id": "0028f9a4-cebd-430e-8f97-5d0ba5cc9b66",
+                                  "key": "iModelId",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                },
+                                {
+                                  "id": "f8eb514b-70bb-4ee7-a6db-3ba0112bf8e8",
+                                  "key": "connectionId",
+                                  "value": "<uuid>",
+                                  "description": "(Required) "
+                                }
+                              ]
+                            }
+                          },
+                          "response": [
+                            {
+                              "id": "86b0f32a-6cc4-46d5-9a21-62bd47b4922c",
+                              "name": "Source File created",
+                              "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: oauth2",
+                                    "key": "Authorization",
+                                    "value": "<token>"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/imodels/:iModelId/storageConnections/:connectionId/sourcefiles",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "imodels",
+                                    ":iModelId",
+                                    "storageConnections",
+                                    ":connectionId",
+                                    "sourcefiles"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "iModelId"
+                                    },
+                                    {
+                                      "key": "connectionId"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "Created",
+                              "code": 201,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{}",
+                              "createdAt": "2026-06-05T15:05:59.000Z",
+                              "updatedAt": "2026-06-05T15:05:59.000Z",
+                              "uid": "35240-86b0f32a-6cc4-46d5-9a21-62bd47b4922c"
+                            }
+                          ],
+                          "createdAt": "2026-06-05T15:05:59.000Z",
+                          "updatedAt": "2026-06-05T15:05:59.000Z",
+                          "uid": "35240-4e5a8432-63cf-4dc2-9e57-31b72608143d"
+                        }
+                      ],
+                      "id": "d85f1fa3-b88f-47ae-92a0-ce7ff72fe71d",
+                      "createdAt": "2026-06-05T15:05:59.000Z",
+                      "updatedAt": "2026-06-05T15:05:59.000Z",
+                      "uid": "35240-d85f1fa3-b88f-47ae-92a0-ce7ff72fe71d"
+                    },
+                    {
+                      "name": "run",
+                      "item": [
+                        {
+                          "name": "Get Runs",
+                          "id": "069646a5-bc89-4c7e-bf0e-d8036d9d8e16",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/imodels/:iModelId/storageConnections/:connectionId/run",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "imodels",
+                                ":iModelId",
+                                "storageConnections",
+                                ":connectionId",
+                                "run"
+                              ],
+                              "variable": [
+                                {
+                                  "id": "05dc28d2-33ff-47e1-90bc-caa3af438bea",
+                                  "key": "iModelId",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                },
+                                {
+                                  "id": "ea57fb43-755e-45b3-87f4-9246ffab2117",
+                                  "key": "connectionId",
+                                  "value": "<uuid>",
+                                  "description": "(Required) "
+                                }
+                              ]
+                            }
+                          },
+                          "response": [
+                            {
+                              "id": "8d1310fa-189a-44c8-95a2-4d8fadde07bf",
+                              "name": "List of Runs",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: oauth2",
+                                    "key": "Authorization",
+                                    "value": "<token>"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/imodels/:iModelId/storageConnections/:connectionId/run",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "imodels",
+                                    ":iModelId",
+                                    "storageConnections",
+                                    ":connectionId",
+                                    "run"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "iModelId"
+                                    },
+                                    {
+                                      "key": "connectionId"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{}",
+                              "createdAt": "2026-06-05T15:05:59.000Z",
+                              "updatedAt": "2026-06-05T15:05:59.000Z",
+                              "uid": "35240-8d1310fa-189a-44c8-95a2-4d8fadde07bf"
+                            }
+                          ],
+                          "createdAt": "2026-06-05T15:05:59.000Z",
+                          "updatedAt": "2026-06-05T15:05:59.000Z",
+                          "uid": "35240-069646a5-bc89-4c7e-bf0e-d8036d9d8e16"
+                        },
+                        {
+                          "name": "Create Run",
+                          "id": "ced6ac98-39d6-4850-9336-388544949a2b",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/imodels/:iModelId/storageConnections/:connectionId/run",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "imodels",
+                                ":iModelId",
+                                "storageConnections",
+                                ":connectionId",
+                                "run"
+                              ],
+                              "variable": [
+                                {
+                                  "id": "43a52794-7b21-4d40-b2b3-21f4537229a4",
+                                  "key": "iModelId",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                },
+                                {
+                                  "id": "b94382b3-fab4-4cc0-aa66-505c7a4a253d",
+                                  "key": "connectionId",
+                                  "value": "<uuid>",
+                                  "description": "(Required) "
+                                }
+                              ]
+                            }
+                          },
+                          "response": [
+                            {
+                              "id": "f87136e6-524b-4fa7-9ccd-81e29b419985",
+                              "name": "Run created",
+                              "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: oauth2",
+                                    "key": "Authorization",
+                                    "value": "<token>"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/imodels/:iModelId/storageConnections/:connectionId/run",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "imodels",
+                                    ":iModelId",
+                                    "storageConnections",
+                                    ":connectionId",
+                                    "run"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "iModelId"
+                                    },
+                                    {
+                                      "key": "connectionId"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "Created",
+                              "code": 201,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{}",
+                              "createdAt": "2026-06-05T15:05:59.000Z",
+                              "updatedAt": "2026-06-05T15:05:59.000Z",
+                              "uid": "35240-f87136e6-524b-4fa7-9ccd-81e29b419985"
+                            }
+                          ],
+                          "createdAt": "2026-06-05T15:05:59.000Z",
+                          "updatedAt": "2026-06-05T15:05:59.000Z",
+                          "uid": "35240-ced6ac98-39d6-4850-9336-388544949a2b"
+                        }
+                      ],
+                      "id": "69c071ca-f52a-42dc-9875-f8e87718306e",
+                      "createdAt": "2026-06-05T15:05:59.000Z",
+                      "updatedAt": "2026-06-05T15:05:59.000Z",
+                      "uid": "35240-69c071ca-f52a-42dc-9875-f8e87718306e"
+                    }
+                  ],
+                  "id": "910d9baf-a9e0-4b41-92cd-42ca425bece8",
+                  "createdAt": "2026-06-05T15:05:59.000Z",
+                  "updatedAt": "2026-06-05T15:05:59.000Z",
+                  "uid": "35240-910d9baf-a9e0-4b41-92cd-42ca425bece8"
+                },
+                {
+                  "name": "Get Connections",
+                  "id": "23d7b33b-e5a0-4f30-9047-c1f6f5c74141",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/imodels/:iModelId/storageConnections",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "imodels",
+                        ":iModelId",
+                        "storageConnections"
+                      ],
+                      "variable": [
+                        {
+                          "id": "181847af-b5de-4003-9659-dc3d1822a41a",
+                          "key": "iModelId",
+                          "value": "<string>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "ded8be72-3994-47ab-8748-3338a6904c71",
+                      "name": "List of Connections",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/imodels/:iModelId/storageConnections",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "imodels",
+                            ":iModelId",
+                            "storageConnections"
+                          ],
+                          "variable": [
+                            {
+                              "key": "iModelId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:05:59.000Z",
+                      "updatedAt": "2026-06-05T15:05:59.000Z",
+                      "uid": "35240-ded8be72-3994-47ab-8748-3338a6904c71"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:05:59.000Z",
+                  "updatedAt": "2026-06-05T15:05:59.000Z",
+                  "uid": "35240-23d7b33b-e5a0-4f30-9047-c1f6f5c74141"
+                },
+                {
+                  "name": "Create Connection",
+                  "id": "e403f095-e35c-41ac-ada8-b88cd7f34e2e",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/imodels/:iModelId/storageConnections",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "imodels",
+                        ":iModelId",
+                        "storageConnections"
+                      ],
+                      "variable": [
+                        {
+                          "id": "83878809-e09a-4589-9abf-81ab6081a9a5",
+                          "key": "iModelId",
+                          "value": "<string>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "36f782a6-5b44-4b9d-8707-afb9c57ca27c",
+                      "name": "Connection created",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/imodels/:iModelId/storageConnections",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "imodels",
+                            ":iModelId",
+                            "storageConnections"
+                          ],
+                          "variable": [
+                            {
+                              "key": "iModelId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Created",
+                      "code": 201,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:05:59.000Z",
+                      "updatedAt": "2026-06-05T15:05:59.000Z",
+                      "uid": "35240-36f782a6-5b44-4b9d-8707-afb9c57ca27c"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:05:59.000Z",
+                  "updatedAt": "2026-06-05T15:05:59.000Z",
+                  "uid": "35240-e403f095-e35c-41ac-ada8-b88cd7f34e2e"
+                }
+              ],
+              "id": "5acb8d6a-5fe0-4e07-bc90-9d718f32164f",
+              "createdAt": "2026-06-05T15:05:59.000Z",
+              "updatedAt": "2026-06-05T15:05:59.000Z",
+              "uid": "35240-5acb8d6a-5fe0-4e07-bc90-9d718f32164f"
+            }
+          ],
+          "id": "611fff26-5eca-4d1e-b52d-4da231375b87",
+          "createdAt": "2026-06-05T15:05:59.000Z",
+          "updatedAt": "2026-06-05T15:05:59.000Z",
+          "uid": "35240-611fff26-5eca-4d1e-b52d-4da231375b87"
+        }
+      ],
+      "id": "b960d2d4-6fa3-4040-a04c-440e95da0c42",
+      "createdAt": "2026-06-05T15:05:59.000Z",
+      "updatedAt": "2026-06-05T15:05:59.000Z",
+      "uid": "35240-b960d2d4-6fa3-4040-a04c-440e95da0c42"
+    },
+    {
+      "name": "connectors",
+      "item": [
+        {
+          "name": "Get Connectors",
+          "id": "6f7b33f6-7264-40ef-894f-e4430da28eab",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/connectors",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "connectors"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "22f74d2a-552d-4246-a905-be6404927e1f",
+              "name": "List of Connectors",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/connectors",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "connectors"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:05:59.000Z",
+              "updatedAt": "2026-06-05T15:05:59.000Z",
+              "uid": "35240-22f74d2a-552d-4246-a905-be6404927e1f"
+            }
+          ],
+          "createdAt": "2026-06-05T15:05:59.000Z",
+          "updatedAt": "2026-06-05T15:05:59.000Z",
+          "uid": "35240-6f7b33f6-7264-40ef-894f-e4430da28eab"
+        },
+        {
+          "name": "Create Connector",
+          "id": "67cee466-69cc-4c97-8a11-a1e868f36876",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/connectors",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "connectors"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "de353fd7-80ae-42b3-bae2-3d85c6b48f35",
+              "name": "Connector created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/connectors",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "connectors"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:05:59.000Z",
+              "updatedAt": "2026-06-05T15:05:59.000Z",
+              "uid": "35240-de353fd7-80ae-42b3-bae2-3d85c6b48f35"
+            }
+          ],
+          "createdAt": "2026-06-05T15:05:59.000Z",
+          "updatedAt": "2026-06-05T15:05:59.000Z",
+          "uid": "35240-67cee466-69cc-4c97-8a11-a1e868f36876"
+        }
+      ],
+      "id": "41c55b8a-822e-4a97-8614-db7400002f5c",
+      "createdAt": "2026-06-05T15:05:59.000Z",
+      "updatedAt": "2026-06-05T15:05:59.000Z",
+      "uid": "35240-41c55b8a-822e-4a97-8614-db7400002f5c"
+    },
+    {
+      "name": "authorization-information",
+      "item": [
+        {
+          "name": "Get Authorization",
+          "id": "a7358f15-7351-47c5-9d49-19cf8d031eed",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/authorization-information",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "authorization-information"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "c209c942-70f1-4ac7-8a6f-7a383e5d97ea",
+              "name": "List of Authorization",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/authorization-information",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "authorization-information"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:05:59.000Z",
+              "updatedAt": "2026-06-05T15:05:59.000Z",
+              "uid": "35240-c209c942-70f1-4ac7-8a6f-7a383e5d97ea"
+            }
+          ],
+          "createdAt": "2026-06-05T15:05:59.000Z",
+          "updatedAt": "2026-06-05T15:05:59.000Z",
+          "uid": "35240-a7358f15-7351-47c5-9d49-19cf8d031eed"
+        },
+        {
+          "name": "Create Authorization",
+          "id": "e815433c-564b-4b47-8a47-5a10236f081a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/authorization-information",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "authorization-information"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "574561f1-878c-4070-bb27-3d17dd736a22",
+              "name": "Authorization created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/authorization-information",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "authorization-information"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:05:59.000Z",
+              "updatedAt": "2026-06-05T15:05:59.000Z",
+              "uid": "35240-574561f1-878c-4070-bb27-3d17dd736a22"
+            }
+          ],
+          "createdAt": "2026-06-05T15:05:59.000Z",
+          "updatedAt": "2026-06-05T15:05:59.000Z",
+          "uid": "35240-e815433c-564b-4b47-8a47-5a10236f081a"
+        }
+      ],
+      "id": "63db1c8c-dc9b-495f-b411-bd63c1400922",
+      "createdAt": "2026-06-05T15:05:59.000Z",
+      "updatedAt": "2026-06-05T15:05:59.000Z",
+      "uid": "35240-63db1c8c-dc9b-495f-b411-bd63c1400922"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "itwin-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://ims.bentley.com/connect/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://ims.bentley.com/connect/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.bentley.com/synchronization"
+    }
+  ]
+}

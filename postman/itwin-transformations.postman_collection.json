@@ -1,0 +1,982 @@
+{
+  "info": {
+    "_postman_id": "48dd0098-970b-4b74-b8ec-605181da82f5",
+    "name": "iTwin Transformations API",
+    "description": "Submit and manage transformation jobs that derive new iModels from existing ones.\n\nContact Support:\n Name: Bentley Developer Relations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-06-05T15:06:44.000Z",
+    "updatedAt": "2026-06-05T15:06:45.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-48dd0098-970b-4b74-b8ec-605181da82f5"
+  },
+  "item": [
+    {
+      "name": "/",
+      "item": [
+        {
+          "name": "Get Transformations",
+          "id": "e16260af-4134-423e-9d1a-027d6af74409",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "27cab542-abbb-4ca8-9e2d-204ecb38a451",
+              "name": "List of Transformations",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:45.000Z",
+              "updatedAt": "2026-06-05T15:06:45.000Z",
+              "uid": "35240-27cab542-abbb-4ca8-9e2d-204ecb38a451"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:45.000Z",
+          "updatedAt": "2026-06-05T15:06:45.000Z",
+          "uid": "35240-e16260af-4134-423e-9d1a-027d6af74409"
+        },
+        {
+          "name": "Create Transformation",
+          "id": "1cd12c4a-9a2a-4da6-a99d-947043714c2a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "33c26111-75fc-492d-ab16-e035aa3572f0",
+              "name": "Transformation created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:45.000Z",
+              "updatedAt": "2026-06-05T15:06:45.000Z",
+              "uid": "35240-33c26111-75fc-492d-ab16-e035aa3572f0"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:45.000Z",
+          "updatedAt": "2026-06-05T15:06:45.000Z",
+          "uid": "35240-1cd12c4a-9a2a-4da6-a99d-947043714c2a"
+        }
+      ],
+      "id": "ff6edc7b-7069-490e-9621-b890c58ca4e0",
+      "createdAt": "2026-06-05T15:06:45.000Z",
+      "updatedAt": "2026-06-05T15:06:45.000Z",
+      "uid": "35240-ff6edc7b-7069-490e-9621-b890c58ca4e0"
+    },
+    {
+      "name": "{transformationId}",
+      "item": [
+        {
+          "name": "run",
+          "item": [
+            {
+              "name": "Get Runs",
+              "id": "585a861c-7cbe-45a7-815a-30546d32cbd9",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:transformationId/run",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":transformationId",
+                    "run"
+                  ],
+                  "variable": [
+                    {
+                      "id": "67aafba0-cdf5-4537-8790-4166b2813cdd",
+                      "key": "transformationId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "9b70a88d-822e-4a73-a3bf-12a2121ce614",
+                  "name": "List of Runs",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/:transformationId/run",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":transformationId",
+                        "run"
+                      ],
+                      "variable": [
+                        {
+                          "key": "transformationId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:45.000Z",
+                  "updatedAt": "2026-06-05T15:06:45.000Z",
+                  "uid": "35240-9b70a88d-822e-4a73-a3bf-12a2121ce614"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:45.000Z",
+              "updatedAt": "2026-06-05T15:06:45.000Z",
+              "uid": "35240-585a861c-7cbe-45a7-815a-30546d32cbd9"
+            },
+            {
+              "name": "Create Run",
+              "id": "d04a1e54-aea3-497f-ad2a-0803ffb9df75",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/:transformationId/run",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":transformationId",
+                    "run"
+                  ],
+                  "variable": [
+                    {
+                      "id": "db611061-0acc-40df-85de-4d54c2d9c84a",
+                      "key": "transformationId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "e5356100-0377-41ea-a128-1979949a46bb",
+                  "name": "Run created",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/:transformationId/run",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":transformationId",
+                        "run"
+                      ],
+                      "variable": [
+                        {
+                          "key": "transformationId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:45.000Z",
+                  "updatedAt": "2026-06-05T15:06:45.000Z",
+                  "uid": "35240-e5356100-0377-41ea-a128-1979949a46bb"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:45.000Z",
+              "updatedAt": "2026-06-05T15:06:45.000Z",
+              "uid": "35240-d04a1e54-aea3-497f-ad2a-0803ffb9df75"
+            }
+          ],
+          "id": "77fb5094-a363-4411-9470-b6f1070fa824",
+          "createdAt": "2026-06-05T15:06:45.000Z",
+          "updatedAt": "2026-06-05T15:06:45.000Z",
+          "uid": "35240-77fb5094-a363-4411-9470-b6f1070fa824"
+        },
+        {
+          "name": "Get Transformations",
+          "id": "d999a15b-ad9f-4e11-aab3-dbda835eabf4",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/:transformationId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ":transformationId"
+              ],
+              "variable": [
+                {
+                  "id": "ca673d5b-5b3d-4682-b18e-06b1833dff9a",
+                  "key": "transformationId",
+                  "value": "<uuid>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "094c81cb-b005-4f35-8e98-ac85d18c2317",
+              "name": "List of Transformations",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:transformationId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":transformationId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "transformationId"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:45.000Z",
+              "updatedAt": "2026-06-05T15:06:45.000Z",
+              "uid": "35240-094c81cb-b005-4f35-8e98-ac85d18c2317"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:45.000Z",
+          "updatedAt": "2026-06-05T15:06:45.000Z",
+          "uid": "35240-d999a15b-ad9f-4e11-aab3-dbda835eabf4"
+        },
+        {
+          "name": "Update Transformation",
+          "id": "56d0a3eb-601e-4cd8-9420-78a1a2ce1bcc",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/:transformationId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ":transformationId"
+              ],
+              "variable": [
+                {
+                  "id": "c6d33724-0397-4b13-8d1e-555bec02ac8d",
+                  "key": "transformationId",
+                  "value": "<uuid>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "9b6f89bf-c156-4019-a826-8567503452cf",
+              "name": "Transformation updated",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/:transformationId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":transformationId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "transformationId"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-06-05T15:06:45.000Z",
+              "updatedAt": "2026-06-05T15:06:45.000Z",
+              "uid": "35240-9b6f89bf-c156-4019-a826-8567503452cf"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:45.000Z",
+          "updatedAt": "2026-06-05T15:06:45.000Z",
+          "uid": "35240-56d0a3eb-601e-4cd8-9420-78a1a2ce1bcc"
+        },
+        {
+          "name": "Delete Transformation",
+          "id": "cc2dd593-e627-438f-83a7-c015a37f3f6a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/:transformationId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ":transformationId"
+              ],
+              "variable": [
+                {
+                  "id": "9be887d6-f420-455a-bd04-aebf723db045",
+                  "key": "transformationId",
+                  "value": "<uuid>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "a22fd4dd-4820-4775-b757-fc6dc2129b28",
+              "name": "Transformation deleted",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:transformationId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":transformationId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "transformationId"
+                    }
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-06-05T15:06:45.000Z",
+              "updatedAt": "2026-06-05T15:06:45.000Z",
+              "uid": "35240-a22fd4dd-4820-4775-b757-fc6dc2129b28"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:45.000Z",
+          "updatedAt": "2026-06-05T15:06:45.000Z",
+          "uid": "35240-cc2dd593-e627-438f-83a7-c015a37f3f6a"
+        }
+      ],
+      "id": "efa146e0-d047-4dfd-8099-68f5e202c54d",
+      "createdAt": "2026-06-05T15:06:45.000Z",
+      "updatedAt": "2026-06-05T15:06:45.000Z",
+      "uid": "35240-efa146e0-d047-4dfd-8099-68f5e202c54d"
+    },
+    {
+      "name": "runs",
+      "item": [
+        {
+          "name": "{runId}",
+          "item": [
+            {
+              "name": "Get Runs",
+              "id": "b416841d-cae8-4aed-b3e0-a5ca4c30e650",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/runs/:runId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "runs",
+                    ":runId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "eab0a955-4481-4d97-af2e-7cc269448708",
+                      "key": "runId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "9b04403f-67fb-479b-97cc-76234410dd03",
+                  "name": "List of Runs",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/runs/:runId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "runs",
+                        ":runId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "runId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:45.000Z",
+                  "updatedAt": "2026-06-05T15:06:45.000Z",
+                  "uid": "35240-9b04403f-67fb-479b-97cc-76234410dd03"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:45.000Z",
+              "updatedAt": "2026-06-05T15:06:45.000Z",
+              "uid": "35240-b416841d-cae8-4aed-b3e0-a5ca4c30e650"
+            },
+            {
+              "name": "Update Run",
+              "id": "4ce8c072-0670-45be-bd52-4468682aeb28",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/runs/:runId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "runs",
+                    ":runId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "85698125-72db-45b0-b6f0-11c995096a37",
+                      "key": "runId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "a1453116-4759-4a58-9556-8fda923cfceb",
+                  "name": "Run updated",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/runs/:runId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "runs",
+                        ":runId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "runId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-06-05T15:06:45.000Z",
+                  "updatedAt": "2026-06-05T15:06:45.000Z",
+                  "uid": "35240-a1453116-4759-4a58-9556-8fda923cfceb"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:45.000Z",
+              "updatedAt": "2026-06-05T15:06:45.000Z",
+              "uid": "35240-4ce8c072-0670-45be-bd52-4468682aeb28"
+            },
+            {
+              "name": "Delete Run",
+              "id": "2b0db066-288f-4ef0-8b14-cbc683002fb0",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/runs/:runId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "runs",
+                    ":runId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "a2aed868-de01-41dd-b39b-fbe93b71d4a3",
+                      "key": "runId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "c1026861-f75a-4a4f-b8d8-664548183eee",
+                  "name": "Run deleted",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/runs/:runId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "runs",
+                        ":runId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "runId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-06-05T15:06:45.000Z",
+                  "updatedAt": "2026-06-05T15:06:45.000Z",
+                  "uid": "35240-c1026861-f75a-4a4f-b8d8-664548183eee"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:45.000Z",
+              "updatedAt": "2026-06-05T15:06:45.000Z",
+              "uid": "35240-2b0db066-288f-4ef0-8b14-cbc683002fb0"
+            }
+          ],
+          "id": "e32953b0-f1c5-4cd7-b2d8-9c0b633d69f0",
+          "createdAt": "2026-06-05T15:06:45.000Z",
+          "updatedAt": "2026-06-05T15:06:45.000Z",
+          "uid": "35240-e32953b0-f1c5-4cd7-b2d8-9c0b633d69f0"
+        }
+      ],
+      "id": "d299015a-187c-4af9-bfa5-5f8a6a08805c",
+      "createdAt": "2026-06-05T15:06:45.000Z",
+      "updatedAt": "2026-06-05T15:06:45.000Z",
+      "uid": "35240-d299015a-187c-4af9-bfa5-5f8a6a08805c"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "itwin-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://ims.bentley.com/connect/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://ims.bentley.com/connect/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.bentley.com/transformations"
+    }
+  ]
+}

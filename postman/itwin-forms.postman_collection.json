@@ -1,0 +1,1164 @@
+{
+  "info": {
+    "_postman_id": "c28c0e2c-222c-41eb-8d87-f85ce6b35f0b",
+    "name": "iTwin Forms API",
+    "description": "Define and submit form templates and instances used for inspections, checklists, and field data capture.\n\nContact Support:\n Name: Bentley Developer Relations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-06-05T15:06:15.000Z",
+    "updatedAt": "2026-06-05T15:06:15.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-c28c0e2c-222c-41eb-8d87-f85ce6b35f0b"
+  },
+  "item": [
+    {
+      "name": "formDefinitions",
+      "item": [
+        {
+          "name": "{definitionId}",
+          "item": [
+            {
+              "name": "Get Templates",
+              "id": "aa403399-12a5-4f3d-bb25-5fb2cc63b6ea",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/formDefinitions/:definitionId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "formDefinitions",
+                    ":definitionId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "f88037d4-1d84-4ac5-82eb-922ff873c9cd",
+                      "key": "definitionId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "d450b549-66c6-499e-aaf0-8ef52ccbbd4c",
+                  "name": "List of Templates",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/formDefinitions/:definitionId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "formDefinitions",
+                        ":definitionId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "definitionId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:15.000Z",
+                  "updatedAt": "2026-06-05T15:06:15.000Z",
+                  "uid": "35240-d450b549-66c6-499e-aaf0-8ef52ccbbd4c"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:15.000Z",
+              "updatedAt": "2026-06-05T15:06:15.000Z",
+              "uid": "35240-aa403399-12a5-4f3d-bb25-5fb2cc63b6ea"
+            },
+            {
+              "name": "Update Template",
+              "id": "6a962acb-3fd2-4d48-9365-4f348521c32b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/formDefinitions/:definitionId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "formDefinitions",
+                    ":definitionId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "55131d62-d19a-4433-b68b-fe83986b790b",
+                      "key": "definitionId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "bba661d2-059e-4601-afce-407955367afd",
+                  "name": "Template updated",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/formDefinitions/:definitionId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "formDefinitions",
+                        ":definitionId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "definitionId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-06-05T15:06:15.000Z",
+                  "updatedAt": "2026-06-05T15:06:15.000Z",
+                  "uid": "35240-bba661d2-059e-4601-afce-407955367afd"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:15.000Z",
+              "updatedAt": "2026-06-05T15:06:15.000Z",
+              "uid": "35240-6a962acb-3fd2-4d48-9365-4f348521c32b"
+            },
+            {
+              "name": "Delete Template",
+              "id": "75128bb0-c51b-40a8-aabd-3c6464386909",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/formDefinitions/:definitionId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "formDefinitions",
+                    ":definitionId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "59c3f754-7baa-42a4-b6cb-3a210245914b",
+                      "key": "definitionId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "c7845e9b-807c-4848-997d-03ee11f2462d",
+                  "name": "Template deleted",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/formDefinitions/:definitionId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "formDefinitions",
+                        ":definitionId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "definitionId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-06-05T15:06:15.000Z",
+                  "updatedAt": "2026-06-05T15:06:15.000Z",
+                  "uid": "35240-c7845e9b-807c-4848-997d-03ee11f2462d"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:15.000Z",
+              "updatedAt": "2026-06-05T15:06:15.000Z",
+              "uid": "35240-75128bb0-c51b-40a8-aabd-3c6464386909"
+            }
+          ],
+          "id": "6787d949-6dae-4fc8-a0a8-f2a8223e3ec3",
+          "createdAt": "2026-06-05T15:06:15.000Z",
+          "updatedAt": "2026-06-05T15:06:15.000Z",
+          "uid": "35240-6787d949-6dae-4fc8-a0a8-f2a8223e3ec3"
+        },
+        {
+          "name": "Get Templates",
+          "id": "6e61b8d2-e804-498f-929f-86f9aa34cad3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/formDefinitions",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "formDefinitions"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "85d3ce7b-401f-4fec-a35d-f5b6e5b57c27",
+              "name": "List of Templates",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/formDefinitions",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "formDefinitions"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:15.000Z",
+              "updatedAt": "2026-06-05T15:06:15.000Z",
+              "uid": "35240-85d3ce7b-401f-4fec-a35d-f5b6e5b57c27"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:15.000Z",
+          "updatedAt": "2026-06-05T15:06:15.000Z",
+          "uid": "35240-6e61b8d2-e804-498f-929f-86f9aa34cad3"
+        },
+        {
+          "name": "Create Template",
+          "id": "c09f1873-d37b-4df8-9596-97f2d405c32f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/formDefinitions",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "formDefinitions"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "2bff3449-16a7-4441-9940-4fb2981d3d73",
+              "name": "Template created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/formDefinitions",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "formDefinitions"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:15.000Z",
+              "updatedAt": "2026-06-05T15:06:15.000Z",
+              "uid": "35240-2bff3449-16a7-4441-9940-4fb2981d3d73"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:15.000Z",
+          "updatedAt": "2026-06-05T15:06:15.000Z",
+          "uid": "35240-c09f1873-d37b-4df8-9596-97f2d405c32f"
+        }
+      ],
+      "id": "3fc782b7-9b80-45e9-b458-4ca7349acfb8",
+      "createdAt": "2026-06-05T15:06:15.000Z",
+      "updatedAt": "2026-06-05T15:06:15.000Z",
+      "uid": "35240-3fc782b7-9b80-45e9-b458-4ca7349acfb8"
+    },
+    {
+      "name": "forms",
+      "item": [
+        {
+          "name": "{formId}",
+          "item": [
+            {
+              "name": "attachments",
+              "item": [
+                {
+                  "name": "Get Attachments",
+                  "id": "272ad1c9-13f6-4752-8920-8aa2e557ec3b",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/forms/:formId/attachments",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "forms",
+                        ":formId",
+                        "attachments"
+                      ],
+                      "variable": [
+                        {
+                          "id": "5df22c5d-1929-4e80-a4cc-5d22ed9b21db",
+                          "key": "formId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "f74258a2-8e2f-4d94-806b-2b0971b5c861",
+                      "name": "List of Attachments",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/forms/:formId/attachments",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "forms",
+                            ":formId",
+                            "attachments"
+                          ],
+                          "variable": [
+                            {
+                              "key": "formId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:06:15.000Z",
+                      "updatedAt": "2026-06-05T15:06:15.000Z",
+                      "uid": "35240-f74258a2-8e2f-4d94-806b-2b0971b5c861"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:15.000Z",
+                  "updatedAt": "2026-06-05T15:06:15.000Z",
+                  "uid": "35240-272ad1c9-13f6-4752-8920-8aa2e557ec3b"
+                },
+                {
+                  "name": "Create Attachment",
+                  "id": "4a60b91a-3d38-42b9-aa5a-97ab6311279b",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/forms/:formId/attachments",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "forms",
+                        ":formId",
+                        "attachments"
+                      ],
+                      "variable": [
+                        {
+                          "id": "ebe82787-ade2-483f-9d17-9e05bca71ac5",
+                          "key": "formId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "a9b1a92b-b769-4b33-9751-2fb7ca235321",
+                      "name": "Attachment created",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/forms/:formId/attachments",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "forms",
+                            ":formId",
+                            "attachments"
+                          ],
+                          "variable": [
+                            {
+                              "key": "formId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Created",
+                      "code": 201,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:06:15.000Z",
+                      "updatedAt": "2026-06-05T15:06:15.000Z",
+                      "uid": "35240-a9b1a92b-b769-4b33-9751-2fb7ca235321"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:15.000Z",
+                  "updatedAt": "2026-06-05T15:06:15.000Z",
+                  "uid": "35240-4a60b91a-3d38-42b9-aa5a-97ab6311279b"
+                }
+              ],
+              "id": "51c38e0b-5394-4a4f-a61b-b3537dbdbf84",
+              "createdAt": "2026-06-05T15:06:15.000Z",
+              "updatedAt": "2026-06-05T15:06:15.000Z",
+              "uid": "35240-51c38e0b-5394-4a4f-a61b-b3537dbdbf84"
+            },
+            {
+              "name": "Get Instances",
+              "id": "8643279c-cb19-42fc-8ba6-9c4df4fd8b11",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/forms/:formId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "forms",
+                    ":formId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "eebc5516-9c8f-4fdf-abdc-9fee92277dac",
+                      "key": "formId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "66753ac4-2eb2-4728-ad24-91f389062b6a",
+                  "name": "List of Instances",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/forms/:formId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "forms",
+                        ":formId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "formId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:15.000Z",
+                  "updatedAt": "2026-06-05T15:06:15.000Z",
+                  "uid": "35240-66753ac4-2eb2-4728-ad24-91f389062b6a"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:15.000Z",
+              "updatedAt": "2026-06-05T15:06:15.000Z",
+              "uid": "35240-8643279c-cb19-42fc-8ba6-9c4df4fd8b11"
+            },
+            {
+              "name": "Update Instance",
+              "id": "74eecccd-798a-4bdd-a265-b8510891b77d",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/forms/:formId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "forms",
+                    ":formId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "6d75751e-f586-4b4b-bda5-b53c9b69f570",
+                      "key": "formId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "875168d5-b1ec-4520-a0b8-575cd432f63e",
+                  "name": "Instance updated",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/forms/:formId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "forms",
+                        ":formId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "formId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-06-05T15:06:15.000Z",
+                  "updatedAt": "2026-06-05T15:06:15.000Z",
+                  "uid": "35240-875168d5-b1ec-4520-a0b8-575cd432f63e"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:15.000Z",
+              "updatedAt": "2026-06-05T15:06:15.000Z",
+              "uid": "35240-74eecccd-798a-4bdd-a265-b8510891b77d"
+            },
+            {
+              "name": "Delete Instance",
+              "id": "404b7c28-6b18-42b1-b276-87a4997e5ba0",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/forms/:formId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "forms",
+                    ":formId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "170cfb30-5cd5-45a2-8131-cdffbd6be5f2",
+                      "key": "formId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "1b2b6e6d-16e1-474c-8fe7-c3148e32d6e2",
+                  "name": "Instance deleted",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/forms/:formId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "forms",
+                        ":formId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "formId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-06-05T15:06:15.000Z",
+                  "updatedAt": "2026-06-05T15:06:15.000Z",
+                  "uid": "35240-1b2b6e6d-16e1-474c-8fe7-c3148e32d6e2"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:15.000Z",
+              "updatedAt": "2026-06-05T15:06:15.000Z",
+              "uid": "35240-404b7c28-6b18-42b1-b276-87a4997e5ba0"
+            }
+          ],
+          "id": "da961f56-dbf8-4288-9396-e4dda199758b",
+          "createdAt": "2026-06-05T15:06:15.000Z",
+          "updatedAt": "2026-06-05T15:06:15.000Z",
+          "uid": "35240-da961f56-dbf8-4288-9396-e4dda199758b"
+        },
+        {
+          "name": "Get Instances",
+          "id": "f41cd940-8652-4d1f-a8b1-1f993f50cf15",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/forms",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "forms"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "b156a3c0-8ae0-4058-bcc6-b28c43f5888a",
+              "name": "List of Instances",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/forms",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "forms"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:15.000Z",
+              "updatedAt": "2026-06-05T15:06:15.000Z",
+              "uid": "35240-b156a3c0-8ae0-4058-bcc6-b28c43f5888a"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:15.000Z",
+          "updatedAt": "2026-06-05T15:06:15.000Z",
+          "uid": "35240-f41cd940-8652-4d1f-a8b1-1f993f50cf15"
+        },
+        {
+          "name": "Create Instance",
+          "id": "73ec77cb-b1a7-42ed-a621-14bfe310f76e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/forms",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "forms"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "747575a7-4387-4db3-b9c4-2342e907fd53",
+              "name": "Instance created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/forms",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "forms"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:15.000Z",
+              "updatedAt": "2026-06-05T15:06:15.000Z",
+              "uid": "35240-747575a7-4387-4db3-b9c4-2342e907fd53"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:15.000Z",
+          "updatedAt": "2026-06-05T15:06:15.000Z",
+          "uid": "35240-73ec77cb-b1a7-42ed-a621-14bfe310f76e"
+        }
+      ],
+      "id": "f37dfb4e-770c-4d81-a84e-23fdb0741611",
+      "createdAt": "2026-06-05T15:06:15.000Z",
+      "updatedAt": "2026-06-05T15:06:15.000Z",
+      "uid": "35240-f37dfb4e-770c-4d81-a84e-23fdb0741611"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "itwin-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://ims.bentley.com/connect/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://ims.bentley.com/connect/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.bentley.com/forms"
+    }
+  ]
+}

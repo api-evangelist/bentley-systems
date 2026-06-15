@@ -1,0 +1,114 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "iTwin Export API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://ims.bentley.com/connect/authorize",
+      "accessTokenUrl": "https://ims.bentley.com/connect/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Export",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Export",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/imodels-export/exports"
+          },
+          "docs": "Get Export"
+        },
+        {
+          "info": {
+            "name": "Create Export",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/imodels-export/exports",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Export"
+        },
+        {
+          "info": {
+            "name": "Get Export",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/imodels-export/exports/:exportId",
+            "params": [
+              {
+                "name": "exportId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Export"
+        },
+        {
+          "info": {
+            "name": "Update Export",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.bentley.com/imodels-export/exports/:exportId",
+            "params": [
+              {
+                "name": "exportId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Export"
+        },
+        {
+          "info": {
+            "name": "Delete Export",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.bentley.com/imodels-export/exports/:exportId",
+            "params": [
+              {
+                "name": "exportId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Export"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,1365 @@
+{
+  "info": {
+    "_postman_id": "f88d424a-b84b-4db4-97e9-47944ffbee1f",
+    "name": "iTwin Saved Views API",
+    "description": "Persist and share saved iModel viewer states \u2014 camera positions, display styles, category visibility.\n\nContact Support:\n Name: Bentley Developer Relations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-06-05T15:06:27.000Z",
+    "updatedAt": "2026-06-05T15:06:28.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-f88d424a-b84b-4db4-97e9-47944ffbee1f"
+  },
+  "item": [
+    {
+      "name": "/",
+      "item": [
+        {
+          "name": "Get Saved Views",
+          "id": "a0e30682-b8e0-4ff0-8c56-4203ca4a2c33",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "e309d714-3579-4dd5-abef-1971fb0fb15b",
+              "name": "List of Saved Views",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:28.000Z",
+              "updatedAt": "2026-06-05T15:06:28.000Z",
+              "uid": "35240-e309d714-3579-4dd5-abef-1971fb0fb15b"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:28.000Z",
+          "updatedAt": "2026-06-05T15:06:28.000Z",
+          "uid": "35240-a0e30682-b8e0-4ff0-8c56-4203ca4a2c33"
+        },
+        {
+          "name": "Create Saved View",
+          "id": "342cb60f-6d92-4c15-b030-950c519bc92e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "bacdbd86-7c69-4d8e-b9cd-9da093baf3a8",
+              "name": "Saved View created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:28.000Z",
+              "updatedAt": "2026-06-05T15:06:28.000Z",
+              "uid": "35240-bacdbd86-7c69-4d8e-b9cd-9da093baf3a8"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:28.000Z",
+          "updatedAt": "2026-06-05T15:06:28.000Z",
+          "uid": "35240-342cb60f-6d92-4c15-b030-950c519bc92e"
+        }
+      ],
+      "id": "24023ab2-9081-402b-a579-414e911125aa",
+      "createdAt": "2026-06-05T15:06:28.000Z",
+      "updatedAt": "2026-06-05T15:06:28.000Z",
+      "uid": "35240-24023ab2-9081-402b-a579-414e911125aa"
+    },
+    {
+      "name": "{savedViewId}",
+      "item": [
+        {
+          "name": "image",
+          "item": [
+            {
+              "name": "Get Images",
+              "id": "21d92124-25aa-4a41-afa4-f6d8e530231f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:savedViewId/image",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":savedViewId",
+                    "image"
+                  ],
+                  "variable": [
+                    {
+                      "id": "ccf1798c-cdc3-40ad-8c45-c2ed481129aa",
+                      "key": "savedViewId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "f264a169-fee0-4421-8744-a20c0fa1bf63",
+                  "name": "List of Images",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/:savedViewId/image",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":savedViewId",
+                        "image"
+                      ],
+                      "variable": [
+                        {
+                          "key": "savedViewId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:28.000Z",
+                  "updatedAt": "2026-06-05T15:06:28.000Z",
+                  "uid": "35240-f264a169-fee0-4421-8744-a20c0fa1bf63"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:28.000Z",
+              "updatedAt": "2026-06-05T15:06:28.000Z",
+              "uid": "35240-21d92124-25aa-4a41-afa4-f6d8e530231f"
+            },
+            {
+              "name": "Create Image",
+              "id": "caea5337-46b1-446d-b233-06713d32a900",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/:savedViewId/image",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":savedViewId",
+                    "image"
+                  ],
+                  "variable": [
+                    {
+                      "id": "5f3e2e6a-dc93-47a4-9ba8-e8c9293e8b7f",
+                      "key": "savedViewId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "6da78df4-65e2-44f0-a609-2c0a3ae23e76",
+                  "name": "Image created",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/:savedViewId/image",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":savedViewId",
+                        "image"
+                      ],
+                      "variable": [
+                        {
+                          "key": "savedViewId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:28.000Z",
+                  "updatedAt": "2026-06-05T15:06:28.000Z",
+                  "uid": "35240-6da78df4-65e2-44f0-a609-2c0a3ae23e76"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:28.000Z",
+              "updatedAt": "2026-06-05T15:06:28.000Z",
+              "uid": "35240-caea5337-46b1-446d-b233-06713d32a900"
+            }
+          ],
+          "id": "3f987393-1af9-4f88-a197-d20b7389494e",
+          "createdAt": "2026-06-05T15:06:28.000Z",
+          "updatedAt": "2026-06-05T15:06:28.000Z",
+          "uid": "35240-3f987393-1af9-4f88-a197-d20b7389494e"
+        },
+        {
+          "name": "tags",
+          "item": [
+            {
+              "name": "Get Tags",
+              "id": "f355412b-ec86-40d3-9a7e-62d843f65852",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:savedViewId/tags",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":savedViewId",
+                    "tags"
+                  ],
+                  "variable": [
+                    {
+                      "id": "76789398-aaf0-4568-b96b-393772b85da6",
+                      "key": "savedViewId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "50856ff1-b452-4f29-bd37-668a8c4a66da",
+                  "name": "List of Tags",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/:savedViewId/tags",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":savedViewId",
+                        "tags"
+                      ],
+                      "variable": [
+                        {
+                          "key": "savedViewId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:28.000Z",
+                  "updatedAt": "2026-06-05T15:06:28.000Z",
+                  "uid": "35240-50856ff1-b452-4f29-bd37-668a8c4a66da"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:28.000Z",
+              "updatedAt": "2026-06-05T15:06:28.000Z",
+              "uid": "35240-f355412b-ec86-40d3-9a7e-62d843f65852"
+            },
+            {
+              "name": "Create Tag",
+              "id": "7415bde1-37ad-4fc5-8998-e624f87cb47c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/:savedViewId/tags",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":savedViewId",
+                    "tags"
+                  ],
+                  "variable": [
+                    {
+                      "id": "e1c6b912-fcdc-4ede-8992-b5046970acd4",
+                      "key": "savedViewId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "3e8b79ac-2c97-421a-88d4-05b8768b4c93",
+                  "name": "Tag created",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/:savedViewId/tags",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":savedViewId",
+                        "tags"
+                      ],
+                      "variable": [
+                        {
+                          "key": "savedViewId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:28.000Z",
+                  "updatedAt": "2026-06-05T15:06:28.000Z",
+                  "uid": "35240-3e8b79ac-2c97-421a-88d4-05b8768b4c93"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:28.000Z",
+              "updatedAt": "2026-06-05T15:06:28.000Z",
+              "uid": "35240-7415bde1-37ad-4fc5-8998-e624f87cb47c"
+            }
+          ],
+          "id": "520892e2-4392-42ce-bcd5-fce9eeeb8512",
+          "createdAt": "2026-06-05T15:06:28.000Z",
+          "updatedAt": "2026-06-05T15:06:28.000Z",
+          "uid": "35240-520892e2-4392-42ce-bcd5-fce9eeeb8512"
+        },
+        {
+          "name": "Get Saved Views",
+          "id": "5466a93d-0a41-4bfd-a1e0-7ef2ae1618e7",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/:savedViewId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ":savedViewId"
+              ],
+              "variable": [
+                {
+                  "id": "d70858cf-632e-4599-aa94-cfa97b376f7e",
+                  "key": "savedViewId",
+                  "value": "<uuid>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "bcb2b78f-9a00-4def-a104-473808e5f9a0",
+              "name": "List of Saved Views",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:savedViewId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":savedViewId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "savedViewId"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:28.000Z",
+              "updatedAt": "2026-06-05T15:06:28.000Z",
+              "uid": "35240-bcb2b78f-9a00-4def-a104-473808e5f9a0"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:28.000Z",
+          "updatedAt": "2026-06-05T15:06:28.000Z",
+          "uid": "35240-5466a93d-0a41-4bfd-a1e0-7ef2ae1618e7"
+        },
+        {
+          "name": "Update Saved View",
+          "id": "f3dc33b9-bfd6-4ca4-8396-2128c110ac0f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/:savedViewId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ":savedViewId"
+              ],
+              "variable": [
+                {
+                  "id": "42dfbbd5-d235-40db-a735-08236c6de49f",
+                  "key": "savedViewId",
+                  "value": "<uuid>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "8e805a34-1604-41a7-8a54-59c660fc5479",
+              "name": "Saved View updated",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/:savedViewId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":savedViewId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "savedViewId"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-06-05T15:06:28.000Z",
+              "updatedAt": "2026-06-05T15:06:28.000Z",
+              "uid": "35240-8e805a34-1604-41a7-8a54-59c660fc5479"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:28.000Z",
+          "updatedAt": "2026-06-05T15:06:28.000Z",
+          "uid": "35240-f3dc33b9-bfd6-4ca4-8396-2128c110ac0f"
+        },
+        {
+          "name": "Delete Saved View",
+          "id": "94d6c917-02db-44ea-931c-8647fbc7696a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/:savedViewId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ":savedViewId"
+              ],
+              "variable": [
+                {
+                  "id": "b7775e9f-d421-43f7-80df-a98e4dcde862",
+                  "key": "savedViewId",
+                  "value": "<uuid>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "36446a0c-4f33-4ce8-ae17-7a74840fe7d6",
+              "name": "Saved View deleted",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:savedViewId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":savedViewId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "savedViewId"
+                    }
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-06-05T15:06:28.000Z",
+              "updatedAt": "2026-06-05T15:06:28.000Z",
+              "uid": "35240-36446a0c-4f33-4ce8-ae17-7a74840fe7d6"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:28.000Z",
+          "updatedAt": "2026-06-05T15:06:28.000Z",
+          "uid": "35240-94d6c917-02db-44ea-931c-8647fbc7696a"
+        }
+      ],
+      "id": "762fc95d-6a52-484f-85d1-dd235633df50",
+      "createdAt": "2026-06-05T15:06:28.000Z",
+      "updatedAt": "2026-06-05T15:06:28.000Z",
+      "uid": "35240-762fc95d-6a52-484f-85d1-dd235633df50"
+    },
+    {
+      "name": "groups",
+      "item": [
+        {
+          "name": "{groupId}",
+          "item": [
+            {
+              "name": "Get Groups",
+              "id": "d42e5ff1-30f7-4b6d-9c4f-a4b0a559d1b6",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/groups/:groupId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "groups",
+                    ":groupId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "1d523d4e-1172-47ac-8d50-09da2aaae87f",
+                      "key": "groupId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "d5cf0beb-508b-49be-b80c-ef708eee86d8",
+                  "name": "List of Groups",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/groups/:groupId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "groups",
+                        ":groupId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "groupId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:28.000Z",
+                  "updatedAt": "2026-06-05T15:06:28.000Z",
+                  "uid": "35240-d5cf0beb-508b-49be-b80c-ef708eee86d8"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:28.000Z",
+              "updatedAt": "2026-06-05T15:06:28.000Z",
+              "uid": "35240-d42e5ff1-30f7-4b6d-9c4f-a4b0a559d1b6"
+            },
+            {
+              "name": "Update Group",
+              "id": "9139aa15-111f-4ebf-8404-59643515b147",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/groups/:groupId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "groups",
+                    ":groupId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "feb6cfc7-4b6d-453a-a33b-64f6d449766e",
+                      "key": "groupId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "8eff3c2a-7c34-4450-a84a-dbb124407d7e",
+                  "name": "Group updated",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/groups/:groupId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "groups",
+                        ":groupId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "groupId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-06-05T15:06:28.000Z",
+                  "updatedAt": "2026-06-05T15:06:28.000Z",
+                  "uid": "35240-8eff3c2a-7c34-4450-a84a-dbb124407d7e"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:28.000Z",
+              "updatedAt": "2026-06-05T15:06:28.000Z",
+              "uid": "35240-9139aa15-111f-4ebf-8404-59643515b147"
+            },
+            {
+              "name": "Delete Group",
+              "id": "624c6e4c-ff6e-4d2c-be5e-9c3cf2432e8c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/groups/:groupId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "groups",
+                    ":groupId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "bd61600c-75b8-42e8-b9aa-a4813c84be42",
+                      "key": "groupId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "2a11915b-1138-43e1-a90c-75235be82b6c",
+                  "name": "Group deleted",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/groups/:groupId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "groups",
+                        ":groupId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "groupId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-06-05T15:06:28.000Z",
+                  "updatedAt": "2026-06-05T15:06:28.000Z",
+                  "uid": "35240-2a11915b-1138-43e1-a90c-75235be82b6c"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:28.000Z",
+              "updatedAt": "2026-06-05T15:06:28.000Z",
+              "uid": "35240-624c6e4c-ff6e-4d2c-be5e-9c3cf2432e8c"
+            }
+          ],
+          "id": "9751fcd8-2aac-4c8b-b834-20705aa8277b",
+          "createdAt": "2026-06-05T15:06:28.000Z",
+          "updatedAt": "2026-06-05T15:06:28.000Z",
+          "uid": "35240-9751fcd8-2aac-4c8b-b834-20705aa8277b"
+        },
+        {
+          "name": "Get Groups",
+          "id": "0e93e231-5a8a-4d62-a372-ff191917cb9f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/groups",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "groups"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "e35624c5-d40b-4e1d-8559-5061f6fb6e9a",
+              "name": "List of Groups",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/groups",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "groups"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:28.000Z",
+              "updatedAt": "2026-06-05T15:06:28.000Z",
+              "uid": "35240-e35624c5-d40b-4e1d-8559-5061f6fb6e9a"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:28.000Z",
+          "updatedAt": "2026-06-05T15:06:28.000Z",
+          "uid": "35240-0e93e231-5a8a-4d62-a372-ff191917cb9f"
+        },
+        {
+          "name": "Create Group",
+          "id": "8a8e7488-1fc0-4239-9f0c-d4c94752a1d4",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/groups",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "groups"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "77ee810f-319d-4d7b-9304-9dab6569d34f",
+              "name": "Group created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/groups",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "groups"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:28.000Z",
+              "updatedAt": "2026-06-05T15:06:28.000Z",
+              "uid": "35240-77ee810f-319d-4d7b-9304-9dab6569d34f"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:28.000Z",
+          "updatedAt": "2026-06-05T15:06:28.000Z",
+          "uid": "35240-8a8e7488-1fc0-4239-9f0c-d4c94752a1d4"
+        }
+      ],
+      "id": "b70c027f-185e-43e7-b697-880ebd8bdd4f",
+      "createdAt": "2026-06-05T15:06:28.000Z",
+      "updatedAt": "2026-06-05T15:06:28.000Z",
+      "uid": "35240-b70c027f-185e-43e7-b697-880ebd8bdd4f"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "itwin-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://ims.bentley.com/connect/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://ims.bentley.com/connect/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.bentley.com/savedviews"
+    }
+  ]
+}

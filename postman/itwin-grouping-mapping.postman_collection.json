@@ -1,0 +1,1177 @@
+{
+  "info": {
+    "_postman_id": "bfcd8fe4-335d-4571-9a60-e9362125d175",
+    "name": "iTwin Grouping and Mapping API",
+    "description": "Map iModel elements to logical groups and property mappings used in reporting and analysis.\n\nContact Support:\n Name: Bentley Developer Relations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-06-05T15:06:43.000Z",
+    "updatedAt": "2026-06-05T15:06:43.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-bfcd8fe4-335d-4571-9a60-e9362125d175"
+  },
+  "item": [
+    {
+      "name": "mappings",
+      "item": [
+        {
+          "name": "{mappingId}",
+          "item": [
+            {
+              "name": "groups",
+              "item": [
+                {
+                  "name": "{groupId}",
+                  "item": [
+                    {
+                      "name": "properties",
+                      "item": [
+                        {
+                          "name": "Get Properties",
+                          "id": "b4725090-9969-4713-8540-e5ae381c2350",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/mappings/:mappingId/groups/:groupId/properties",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "mappings",
+                                ":mappingId",
+                                "groups",
+                                ":groupId",
+                                "properties"
+                              ],
+                              "variable": [
+                                {
+                                  "id": "db5f3f57-aca3-447e-aa4d-444d834d1805",
+                                  "key": "mappingId",
+                                  "value": "<uuid>",
+                                  "description": "(Required) "
+                                },
+                                {
+                                  "id": "618c8e6a-8f4a-48fa-87a9-161fb496280a",
+                                  "key": "groupId",
+                                  "value": "<uuid>",
+                                  "description": "(Required) "
+                                }
+                              ]
+                            }
+                          },
+                          "response": [
+                            {
+                              "id": "343ba1a4-b059-4dab-8b53-8f197f53f583",
+                              "name": "List of Properties",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: oauth2",
+                                    "key": "Authorization",
+                                    "value": "<token>"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/mappings/:mappingId/groups/:groupId/properties",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "mappings",
+                                    ":mappingId",
+                                    "groups",
+                                    ":groupId",
+                                    "properties"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "mappingId"
+                                    },
+                                    {
+                                      "key": "groupId"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{}",
+                              "createdAt": "2026-06-05T15:06:43.000Z",
+                              "updatedAt": "2026-06-05T15:06:43.000Z",
+                              "uid": "35240-343ba1a4-b059-4dab-8b53-8f197f53f583"
+                            }
+                          ],
+                          "createdAt": "2026-06-05T15:06:43.000Z",
+                          "updatedAt": "2026-06-05T15:06:43.000Z",
+                          "uid": "35240-b4725090-9969-4713-8540-e5ae381c2350"
+                        },
+                        {
+                          "name": "Create Propertie",
+                          "id": "4395aad9-35ff-4260-b5c2-25a34ee8d4a5",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/mappings/:mappingId/groups/:groupId/properties",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "mappings",
+                                ":mappingId",
+                                "groups",
+                                ":groupId",
+                                "properties"
+                              ],
+                              "variable": [
+                                {
+                                  "id": "3ca71932-f27d-45c9-8ccc-7edb156c4b70",
+                                  "key": "mappingId",
+                                  "value": "<uuid>",
+                                  "description": "(Required) "
+                                },
+                                {
+                                  "id": "cfda6cf6-805b-4466-b446-3fd70a485bef",
+                                  "key": "groupId",
+                                  "value": "<uuid>",
+                                  "description": "(Required) "
+                                }
+                              ]
+                            }
+                          },
+                          "response": [
+                            {
+                              "id": "17bca01b-c997-4a27-aaea-3e649812359f",
+                              "name": "Propertie created",
+                              "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: oauth2",
+                                    "key": "Authorization",
+                                    "value": "<token>"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/mappings/:mappingId/groups/:groupId/properties",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "mappings",
+                                    ":mappingId",
+                                    "groups",
+                                    ":groupId",
+                                    "properties"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "mappingId"
+                                    },
+                                    {
+                                      "key": "groupId"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "Created",
+                              "code": 201,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{}",
+                              "createdAt": "2026-06-05T15:06:43.000Z",
+                              "updatedAt": "2026-06-05T15:06:43.000Z",
+                              "uid": "35240-17bca01b-c997-4a27-aaea-3e649812359f"
+                            }
+                          ],
+                          "createdAt": "2026-06-05T15:06:43.000Z",
+                          "updatedAt": "2026-06-05T15:06:43.000Z",
+                          "uid": "35240-4395aad9-35ff-4260-b5c2-25a34ee8d4a5"
+                        }
+                      ],
+                      "id": "21dbf533-79ac-41f3-9130-b656b0f3c7a7",
+                      "createdAt": "2026-06-05T15:06:43.000Z",
+                      "updatedAt": "2026-06-05T15:06:43.000Z",
+                      "uid": "35240-21dbf533-79ac-41f3-9130-b656b0f3c7a7"
+                    }
+                  ],
+                  "id": "5098a8fa-e59b-491e-b1eb-609f69e19b9e",
+                  "createdAt": "2026-06-05T15:06:43.000Z",
+                  "updatedAt": "2026-06-05T15:06:43.000Z",
+                  "uid": "35240-5098a8fa-e59b-491e-b1eb-609f69e19b9e"
+                },
+                {
+                  "name": "Get Groups",
+                  "id": "5e5e3dd1-cd32-41fe-8813-b2f0926bed9e",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/mappings/:mappingId/groups",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "mappings",
+                        ":mappingId",
+                        "groups"
+                      ],
+                      "variable": [
+                        {
+                          "id": "28dd26e7-aa6e-47e5-a5d9-68ab99f11225",
+                          "key": "mappingId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "e31ed492-f804-464a-a914-6ffb01923660",
+                      "name": "List of Groups",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/mappings/:mappingId/groups",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "mappings",
+                            ":mappingId",
+                            "groups"
+                          ],
+                          "variable": [
+                            {
+                              "key": "mappingId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:06:43.000Z",
+                      "updatedAt": "2026-06-05T15:06:43.000Z",
+                      "uid": "35240-e31ed492-f804-464a-a914-6ffb01923660"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:43.000Z",
+                  "updatedAt": "2026-06-05T15:06:43.000Z",
+                  "uid": "35240-5e5e3dd1-cd32-41fe-8813-b2f0926bed9e"
+                },
+                {
+                  "name": "Create Group",
+                  "id": "ec65b2b2-30fe-43c4-88d7-ad752bb31858",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/mappings/:mappingId/groups",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "mappings",
+                        ":mappingId",
+                        "groups"
+                      ],
+                      "variable": [
+                        {
+                          "id": "e2f3f13a-5bf9-47af-978d-86e5867e5fbc",
+                          "key": "mappingId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "21f9176f-7ccd-45a9-b606-7fbaaab6c6ea",
+                      "name": "Group created",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/mappings/:mappingId/groups",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "mappings",
+                            ":mappingId",
+                            "groups"
+                          ],
+                          "variable": [
+                            {
+                              "key": "mappingId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Created",
+                      "code": 201,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:06:43.000Z",
+                      "updatedAt": "2026-06-05T15:06:43.000Z",
+                      "uid": "35240-21f9176f-7ccd-45a9-b606-7fbaaab6c6ea"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:43.000Z",
+                  "updatedAt": "2026-06-05T15:06:43.000Z",
+                  "uid": "35240-ec65b2b2-30fe-43c4-88d7-ad752bb31858"
+                }
+              ],
+              "id": "2566ab94-c3c7-4184-95bf-2f3a85af2b6f",
+              "createdAt": "2026-06-05T15:06:43.000Z",
+              "updatedAt": "2026-06-05T15:06:43.000Z",
+              "uid": "35240-2566ab94-c3c7-4184-95bf-2f3a85af2b6f"
+            },
+            {
+              "name": "extractions",
+              "item": [
+                {
+                  "name": "Get Extractions",
+                  "id": "3c11aea4-1bf4-4b86-8155-93e76d120271",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/mappings/:mappingId/extractions",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "mappings",
+                        ":mappingId",
+                        "extractions"
+                      ],
+                      "variable": [
+                        {
+                          "id": "c18c5d84-25dc-430e-8d60-6f4dddbff1ed",
+                          "key": "mappingId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "a8a795af-e7d8-4133-82e9-a0fc29b308b2",
+                      "name": "List of Extractions",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/mappings/:mappingId/extractions",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "mappings",
+                            ":mappingId",
+                            "extractions"
+                          ],
+                          "variable": [
+                            {
+                              "key": "mappingId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:06:43.000Z",
+                      "updatedAt": "2026-06-05T15:06:43.000Z",
+                      "uid": "35240-a8a795af-e7d8-4133-82e9-a0fc29b308b2"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:43.000Z",
+                  "updatedAt": "2026-06-05T15:06:43.000Z",
+                  "uid": "35240-3c11aea4-1bf4-4b86-8155-93e76d120271"
+                },
+                {
+                  "name": "Create Extraction",
+                  "id": "dbb280b9-8d7b-41ba-8bb5-3edf74f33efe",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/mappings/:mappingId/extractions",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "mappings",
+                        ":mappingId",
+                        "extractions"
+                      ],
+                      "variable": [
+                        {
+                          "id": "86cc5f36-12f3-4be3-9ba3-5125ed76c338",
+                          "key": "mappingId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "c3bd8814-58bf-40e7-812a-e92b401a9b2c",
+                      "name": "Extraction created",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/mappings/:mappingId/extractions",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "mappings",
+                            ":mappingId",
+                            "extractions"
+                          ],
+                          "variable": [
+                            {
+                              "key": "mappingId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Created",
+                      "code": 201,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:06:43.000Z",
+                      "updatedAt": "2026-06-05T15:06:43.000Z",
+                      "uid": "35240-c3bd8814-58bf-40e7-812a-e92b401a9b2c"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:43.000Z",
+                  "updatedAt": "2026-06-05T15:06:43.000Z",
+                  "uid": "35240-dbb280b9-8d7b-41ba-8bb5-3edf74f33efe"
+                }
+              ],
+              "id": "a6d1af45-7ab6-4a55-bb4a-865e6bd55766",
+              "createdAt": "2026-06-05T15:06:43.000Z",
+              "updatedAt": "2026-06-05T15:06:43.000Z",
+              "uid": "35240-a6d1af45-7ab6-4a55-bb4a-865e6bd55766"
+            },
+            {
+              "name": "Get Mappings",
+              "id": "25cc8d56-a9f5-4ca9-a3d3-46b3ebea4435",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/mappings/:mappingId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "mappings",
+                    ":mappingId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "38d25d0a-ae71-42d5-998b-507f8d01313b",
+                      "key": "mappingId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "7340a16d-7e9d-440f-ad1e-ece42ae4530e",
+                  "name": "List of Mappings",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/mappings/:mappingId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "mappings",
+                        ":mappingId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "mappingId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:43.000Z",
+                  "updatedAt": "2026-06-05T15:06:43.000Z",
+                  "uid": "35240-7340a16d-7e9d-440f-ad1e-ece42ae4530e"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:43.000Z",
+              "updatedAt": "2026-06-05T15:06:43.000Z",
+              "uid": "35240-25cc8d56-a9f5-4ca9-a3d3-46b3ebea4435"
+            },
+            {
+              "name": "Update Mapping",
+              "id": "d379251b-68b7-47ee-9424-9a87dd5ce841",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/mappings/:mappingId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "mappings",
+                    ":mappingId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "8ab728da-5a61-4fbb-9ba8-5d5715a3876d",
+                      "key": "mappingId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "e3a1f693-70a7-4d01-a030-954668c6bfb1",
+                  "name": "Mapping updated",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/mappings/:mappingId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "mappings",
+                        ":mappingId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "mappingId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-06-05T15:06:43.000Z",
+                  "updatedAt": "2026-06-05T15:06:43.000Z",
+                  "uid": "35240-e3a1f693-70a7-4d01-a030-954668c6bfb1"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:43.000Z",
+              "updatedAt": "2026-06-05T15:06:43.000Z",
+              "uid": "35240-d379251b-68b7-47ee-9424-9a87dd5ce841"
+            },
+            {
+              "name": "Delete Mapping",
+              "id": "adea80b7-e754-4bd1-a235-33a3ad097163",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/mappings/:mappingId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "mappings",
+                    ":mappingId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "20bb7f3f-b171-42fb-aaf7-a0ae9c13757b",
+                      "key": "mappingId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "94890623-0de5-4dd4-9310-a74b4ccbaa01",
+                  "name": "Mapping deleted",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/mappings/:mappingId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "mappings",
+                        ":mappingId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "mappingId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-06-05T15:06:43.000Z",
+                  "updatedAt": "2026-06-05T15:06:43.000Z",
+                  "uid": "35240-94890623-0de5-4dd4-9310-a74b4ccbaa01"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:43.000Z",
+              "updatedAt": "2026-06-05T15:06:43.000Z",
+              "uid": "35240-adea80b7-e754-4bd1-a235-33a3ad097163"
+            }
+          ],
+          "id": "39b926af-bb75-4181-8f91-52e1b83254d3",
+          "createdAt": "2026-06-05T15:06:43.000Z",
+          "updatedAt": "2026-06-05T15:06:43.000Z",
+          "uid": "35240-39b926af-bb75-4181-8f91-52e1b83254d3"
+        },
+        {
+          "name": "Get Mappings",
+          "id": "91499672-1435-42cd-bf68-07f529d7cb5c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/mappings",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "mappings"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "483f3cad-4dc7-4744-a06b-e034e570301d",
+              "name": "List of Mappings",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/mappings",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "mappings"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:43.000Z",
+              "updatedAt": "2026-06-05T15:06:43.000Z",
+              "uid": "35240-483f3cad-4dc7-4744-a06b-e034e570301d"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:43.000Z",
+          "updatedAt": "2026-06-05T15:06:43.000Z",
+          "uid": "35240-91499672-1435-42cd-bf68-07f529d7cb5c"
+        },
+        {
+          "name": "Create Mapping",
+          "id": "549833da-93d9-43b9-b1bd-f42bf228d6cb",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/mappings",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "mappings"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "4dc31354-aa6c-41fc-bb81-d48aa68aa62a",
+              "name": "Mapping created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/mappings",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "mappings"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:43.000Z",
+              "updatedAt": "2026-06-05T15:06:43.000Z",
+              "uid": "35240-4dc31354-aa6c-41fc-bb81-d48aa68aa62a"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:43.000Z",
+          "updatedAt": "2026-06-05T15:06:43.000Z",
+          "uid": "35240-549833da-93d9-43b9-b1bd-f42bf228d6cb"
+        }
+      ],
+      "id": "260483c2-fd3c-4995-8be7-10f66019412c",
+      "createdAt": "2026-06-05T15:06:43.000Z",
+      "updatedAt": "2026-06-05T15:06:43.000Z",
+      "uid": "35240-260483c2-fd3c-4995-8be7-10f66019412c"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "itwin-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://ims.bentley.com/connect/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://ims.bentley.com/connect/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.bentley.com/grouping-and-mapping"
+    }
+  ]
+}

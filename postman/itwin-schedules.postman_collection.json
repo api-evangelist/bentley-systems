@@ -1,0 +1,2365 @@
+{
+  "info": {
+    "_postman_id": "5b69ca73-94ea-4269-9397-76aa676c23cc",
+    "name": "iTwin Schedules API",
+    "description": "Plan and manage 4D construction schedules \u2014 tasks, resources, calendars, baselines, animations, and work breakdown.\n\nContact Support:\n Name: Bentley Developer Relations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-06-05T15:06:06.000Z",
+    "updatedAt": "2026-06-05T15:06:06.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-5b69ca73-94ea-4269-9397-76aa676c23cc"
+  },
+  "item": [
+    {
+      "name": "/",
+      "item": [
+        {
+          "name": "Get Schedules",
+          "id": "e9d8bbd8-4dbb-4f21-9029-93164544d7bf",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "dfa36dcb-0c41-465c-834a-ed3c659ac9c6",
+              "name": "List of Schedules",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:07.000Z",
+              "updatedAt": "2026-06-05T15:06:07.000Z",
+              "uid": "35240-dfa36dcb-0c41-465c-834a-ed3c659ac9c6"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:07.000Z",
+          "updatedAt": "2026-06-05T15:06:07.000Z",
+          "uid": "35240-e9d8bbd8-4dbb-4f21-9029-93164544d7bf"
+        },
+        {
+          "name": "Create Schedule",
+          "id": "cdaf1406-fedc-4111-bfb9-742f9427fb48",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "ea4648eb-47c7-4e0c-a789-69d8e72ddd69",
+              "name": "Schedule created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:07.000Z",
+              "updatedAt": "2026-06-05T15:06:07.000Z",
+              "uid": "35240-ea4648eb-47c7-4e0c-a789-69d8e72ddd69"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:07.000Z",
+          "updatedAt": "2026-06-05T15:06:07.000Z",
+          "uid": "35240-cdaf1406-fedc-4111-bfb9-742f9427fb48"
+        }
+      ],
+      "id": "420b9c5c-623b-4fbc-adff-868be7262aac",
+      "createdAt": "2026-06-05T15:06:07.000Z",
+      "updatedAt": "2026-06-05T15:06:07.000Z",
+      "uid": "35240-420b9c5c-623b-4fbc-adff-868be7262aac"
+    },
+    {
+      "name": "{scheduleId}",
+      "item": [
+        {
+          "name": "tasks",
+          "item": [
+            {
+              "name": "{taskId}",
+              "item": [
+                {
+                  "name": "Get Tasks",
+                  "id": "3e03de98-4523-4694-9fb4-b26d614c86fa",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/:scheduleId/tasks/:taskId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":scheduleId",
+                        "tasks",
+                        ":taskId"
+                      ],
+                      "variable": [
+                        {
+                          "id": "7c672a57-a702-405a-b5cf-f8e5f495cc41",
+                          "key": "scheduleId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        },
+                        {
+                          "id": "a4e68b90-9c8a-4f01-b3a2-40889af9960f",
+                          "key": "taskId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "94912e98-5c08-411d-96f5-b907bdd19638",
+                      "name": "List of Tasks",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/:scheduleId/tasks/:taskId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            ":scheduleId",
+                            "tasks",
+                            ":taskId"
+                          ],
+                          "variable": [
+                            {
+                              "key": "scheduleId"
+                            },
+                            {
+                              "key": "taskId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:06:07.000Z",
+                      "updatedAt": "2026-06-05T15:06:07.000Z",
+                      "uid": "35240-94912e98-5c08-411d-96f5-b907bdd19638"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:07.000Z",
+                  "updatedAt": "2026-06-05T15:06:07.000Z",
+                  "uid": "35240-3e03de98-4523-4694-9fb4-b26d614c86fa"
+                },
+                {
+                  "name": "Update Task",
+                  "id": "1a6e0d01-b681-4743-af7b-0f89d266eb6f",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/:scheduleId/tasks/:taskId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":scheduleId",
+                        "tasks",
+                        ":taskId"
+                      ],
+                      "variable": [
+                        {
+                          "id": "d10389f3-d457-4d40-b5e7-8cb8b8a0afee",
+                          "key": "scheduleId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        },
+                        {
+                          "id": "31069280-34cc-4c6e-ae5f-0e7446c84f8f",
+                          "key": "taskId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "5814004b-57b6-4f52-be73-a7b1aff18a27",
+                      "name": "Task updated",
+                      "originalRequest": {
+                        "method": "PATCH",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/:scheduleId/tasks/:taskId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            ":scheduleId",
+                            "tasks",
+                            ":taskId"
+                          ],
+                          "variable": [
+                            {
+                              "key": "scheduleId"
+                            },
+                            {
+                              "key": "taskId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-06-05T15:06:07.000Z",
+                      "updatedAt": "2026-06-05T15:06:07.000Z",
+                      "uid": "35240-5814004b-57b6-4f52-be73-a7b1aff18a27"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:07.000Z",
+                  "updatedAt": "2026-06-05T15:06:07.000Z",
+                  "uid": "35240-1a6e0d01-b681-4743-af7b-0f89d266eb6f"
+                },
+                {
+                  "name": "Delete Task",
+                  "id": "4eb06d9a-0572-4b55-9b84-e592cf1b43b3",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/:scheduleId/tasks/:taskId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":scheduleId",
+                        "tasks",
+                        ":taskId"
+                      ],
+                      "variable": [
+                        {
+                          "id": "72d77b2d-c293-4712-a953-11347383e1a1",
+                          "key": "scheduleId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        },
+                        {
+                          "id": "e38b3a31-2fe6-4aab-b675-f7aee5025a34",
+                          "key": "taskId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "a463529b-5fc2-4ac9-aa2f-b86b656286b4",
+                      "name": "Task deleted",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/:scheduleId/tasks/:taskId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            ":scheduleId",
+                            "tasks",
+                            ":taskId"
+                          ],
+                          "variable": [
+                            {
+                              "key": "scheduleId"
+                            },
+                            {
+                              "key": "taskId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "No Content",
+                      "code": 204,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-06-05T15:06:07.000Z",
+                      "updatedAt": "2026-06-05T15:06:07.000Z",
+                      "uid": "35240-a463529b-5fc2-4ac9-aa2f-b86b656286b4"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:07.000Z",
+                  "updatedAt": "2026-06-05T15:06:07.000Z",
+                  "uid": "35240-4eb06d9a-0572-4b55-9b84-e592cf1b43b3"
+                }
+              ],
+              "id": "5e4632ab-8ff5-4ba3-9a84-a85a5457350b",
+              "createdAt": "2026-06-05T15:06:07.000Z",
+              "updatedAt": "2026-06-05T15:06:07.000Z",
+              "uid": "35240-5e4632ab-8ff5-4ba3-9a84-a85a5457350b"
+            },
+            {
+              "name": "Get Tasks",
+              "id": "730f6496-dae7-4319-bcee-3e60a6ed7ccd",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:scheduleId/tasks",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":scheduleId",
+                    "tasks"
+                  ],
+                  "variable": [
+                    {
+                      "id": "b2ddcd48-5dc7-4d8e-86db-bccf108cbf59",
+                      "key": "scheduleId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "bbb46b9d-5fd0-4017-81eb-0090c3a50d5d",
+                  "name": "List of Tasks",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/:scheduleId/tasks",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":scheduleId",
+                        "tasks"
+                      ],
+                      "variable": [
+                        {
+                          "key": "scheduleId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:07.000Z",
+                  "updatedAt": "2026-06-05T15:06:07.000Z",
+                  "uid": "35240-bbb46b9d-5fd0-4017-81eb-0090c3a50d5d"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:07.000Z",
+              "updatedAt": "2026-06-05T15:06:07.000Z",
+              "uid": "35240-730f6496-dae7-4319-bcee-3e60a6ed7ccd"
+            },
+            {
+              "name": "Create Task",
+              "id": "5059d57c-1053-42d9-b83a-0fdb5306bb0b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/:scheduleId/tasks",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":scheduleId",
+                    "tasks"
+                  ],
+                  "variable": [
+                    {
+                      "id": "4ff8467e-f55e-4262-986c-e55fdb5b0a2a",
+                      "key": "scheduleId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "77a8f94d-a439-4547-bbd9-1d3deff063b2",
+                  "name": "Task created",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/:scheduleId/tasks",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":scheduleId",
+                        "tasks"
+                      ],
+                      "variable": [
+                        {
+                          "key": "scheduleId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:07.000Z",
+                  "updatedAt": "2026-06-05T15:06:07.000Z",
+                  "uid": "35240-77a8f94d-a439-4547-bbd9-1d3deff063b2"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:07.000Z",
+              "updatedAt": "2026-06-05T15:06:07.000Z",
+              "uid": "35240-5059d57c-1053-42d9-b83a-0fdb5306bb0b"
+            }
+          ],
+          "id": "290e3adb-97e4-4c22-b82a-1a01650294bb",
+          "createdAt": "2026-06-05T15:06:07.000Z",
+          "updatedAt": "2026-06-05T15:06:07.000Z",
+          "uid": "35240-290e3adb-97e4-4c22-b82a-1a01650294bb"
+        },
+        {
+          "name": "resources",
+          "item": [
+            {
+              "name": "{resourceId}",
+              "item": [
+                {
+                  "name": "Get Resources",
+                  "id": "f0ffe540-72c4-4bba-9ab8-bb482fec5618",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/:scheduleId/resources/:resourceId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":scheduleId",
+                        "resources",
+                        ":resourceId"
+                      ],
+                      "variable": [
+                        {
+                          "id": "698fc16c-ad7e-47ee-b557-32fc01ea44e9",
+                          "key": "scheduleId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        },
+                        {
+                          "id": "094e9f44-191b-4b4f-b587-a2c2e2ff040e",
+                          "key": "resourceId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "d3a2c083-92cd-4152-bfc1-7fd2f8030ebd",
+                      "name": "List of Resources",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/:scheduleId/resources/:resourceId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            ":scheduleId",
+                            "resources",
+                            ":resourceId"
+                          ],
+                          "variable": [
+                            {
+                              "key": "scheduleId"
+                            },
+                            {
+                              "key": "resourceId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:06:07.000Z",
+                      "updatedAt": "2026-06-05T15:06:07.000Z",
+                      "uid": "35240-d3a2c083-92cd-4152-bfc1-7fd2f8030ebd"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:07.000Z",
+                  "updatedAt": "2026-06-05T15:06:07.000Z",
+                  "uid": "35240-f0ffe540-72c4-4bba-9ab8-bb482fec5618"
+                },
+                {
+                  "name": "Update Resource",
+                  "id": "b18596c1-ae81-41e9-b0d1-595f4af80984",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/:scheduleId/resources/:resourceId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":scheduleId",
+                        "resources",
+                        ":resourceId"
+                      ],
+                      "variable": [
+                        {
+                          "id": "d73605d6-2428-401d-b927-f7983714ecf8",
+                          "key": "scheduleId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        },
+                        {
+                          "id": "e1d66671-9da0-45d3-8023-84b51b3f7727",
+                          "key": "resourceId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "5518eeea-3d0e-4d93-b182-da9ebd7fd612",
+                      "name": "Resource updated",
+                      "originalRequest": {
+                        "method": "PATCH",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/:scheduleId/resources/:resourceId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            ":scheduleId",
+                            "resources",
+                            ":resourceId"
+                          ],
+                          "variable": [
+                            {
+                              "key": "scheduleId"
+                            },
+                            {
+                              "key": "resourceId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-06-05T15:06:07.000Z",
+                      "updatedAt": "2026-06-05T15:06:07.000Z",
+                      "uid": "35240-5518eeea-3d0e-4d93-b182-da9ebd7fd612"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:07.000Z",
+                  "updatedAt": "2026-06-05T15:06:07.000Z",
+                  "uid": "35240-b18596c1-ae81-41e9-b0d1-595f4af80984"
+                },
+                {
+                  "name": "Delete Resource",
+                  "id": "f68deafb-f646-471c-8c8d-6c2293158e74",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/:scheduleId/resources/:resourceId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":scheduleId",
+                        "resources",
+                        ":resourceId"
+                      ],
+                      "variable": [
+                        {
+                          "id": "fcf5a20e-b516-4c35-994d-74dc1a0c5786",
+                          "key": "scheduleId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        },
+                        {
+                          "id": "07c4bc3b-a6fb-49f6-8795-8c97ce713fc2",
+                          "key": "resourceId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "a2b5f5e7-82b1-4b39-bd97-88f6cc412788",
+                      "name": "Resource deleted",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/:scheduleId/resources/:resourceId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            ":scheduleId",
+                            "resources",
+                            ":resourceId"
+                          ],
+                          "variable": [
+                            {
+                              "key": "scheduleId"
+                            },
+                            {
+                              "key": "resourceId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "No Content",
+                      "code": 204,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-06-05T15:06:07.000Z",
+                      "updatedAt": "2026-06-05T15:06:07.000Z",
+                      "uid": "35240-a2b5f5e7-82b1-4b39-bd97-88f6cc412788"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:07.000Z",
+                  "updatedAt": "2026-06-05T15:06:07.000Z",
+                  "uid": "35240-f68deafb-f646-471c-8c8d-6c2293158e74"
+                }
+              ],
+              "id": "28757382-8093-4ae3-b5f7-27d4070b35b6",
+              "createdAt": "2026-06-05T15:06:07.000Z",
+              "updatedAt": "2026-06-05T15:06:07.000Z",
+              "uid": "35240-28757382-8093-4ae3-b5f7-27d4070b35b6"
+            },
+            {
+              "name": "Get Resources",
+              "id": "6ed20096-42bc-4558-8e34-ec00c4b7b5eb",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:scheduleId/resources",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":scheduleId",
+                    "resources"
+                  ],
+                  "variable": [
+                    {
+                      "id": "c1a6e625-0cf5-451a-9d9c-4c5bfe113e7a",
+                      "key": "scheduleId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "66bfdfe6-8198-42e3-b7a3-415ce602cd7e",
+                  "name": "List of Resources",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/:scheduleId/resources",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":scheduleId",
+                        "resources"
+                      ],
+                      "variable": [
+                        {
+                          "key": "scheduleId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:07.000Z",
+                  "updatedAt": "2026-06-05T15:06:07.000Z",
+                  "uid": "35240-66bfdfe6-8198-42e3-b7a3-415ce602cd7e"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:07.000Z",
+              "updatedAt": "2026-06-05T15:06:07.000Z",
+              "uid": "35240-6ed20096-42bc-4558-8e34-ec00c4b7b5eb"
+            },
+            {
+              "name": "Create Resource",
+              "id": "22102ce7-60a8-43c8-961b-93d839b1eb78",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/:scheduleId/resources",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":scheduleId",
+                    "resources"
+                  ],
+                  "variable": [
+                    {
+                      "id": "0346932d-13dd-42de-b15d-8fe7badef3ba",
+                      "key": "scheduleId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "377c2899-d562-4c8e-bd68-aadab8200ccf",
+                  "name": "Resource created",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/:scheduleId/resources",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":scheduleId",
+                        "resources"
+                      ],
+                      "variable": [
+                        {
+                          "key": "scheduleId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:07.000Z",
+                  "updatedAt": "2026-06-05T15:06:07.000Z",
+                  "uid": "35240-377c2899-d562-4c8e-bd68-aadab8200ccf"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:07.000Z",
+              "updatedAt": "2026-06-05T15:06:07.000Z",
+              "uid": "35240-22102ce7-60a8-43c8-961b-93d839b1eb78"
+            }
+          ],
+          "id": "fbeb21be-e2f7-41b2-b0d8-ee95f534e686",
+          "createdAt": "2026-06-05T15:06:07.000Z",
+          "updatedAt": "2026-06-05T15:06:07.000Z",
+          "uid": "35240-fbeb21be-e2f7-41b2-b0d8-ee95f534e686"
+        },
+        {
+          "name": "calendars",
+          "item": [
+            {
+              "name": "Get Calendars",
+              "id": "031a8f1a-4bbd-4b96-9eff-648010cd78aa",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:scheduleId/calendars",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":scheduleId",
+                    "calendars"
+                  ],
+                  "variable": [
+                    {
+                      "id": "37ca3b55-df4c-4aa9-83ed-ff57d5a1830a",
+                      "key": "scheduleId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "3f547a00-9860-4095-b9eb-cd73dc97528f",
+                  "name": "List of Calendars",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/:scheduleId/calendars",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":scheduleId",
+                        "calendars"
+                      ],
+                      "variable": [
+                        {
+                          "key": "scheduleId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:07.000Z",
+                  "updatedAt": "2026-06-05T15:06:07.000Z",
+                  "uid": "35240-3f547a00-9860-4095-b9eb-cd73dc97528f"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:07.000Z",
+              "updatedAt": "2026-06-05T15:06:07.000Z",
+              "uid": "35240-031a8f1a-4bbd-4b96-9eff-648010cd78aa"
+            },
+            {
+              "name": "Create Calendar",
+              "id": "d6718254-0353-4e4e-b557-5c6035e22b09",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/:scheduleId/calendars",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":scheduleId",
+                    "calendars"
+                  ],
+                  "variable": [
+                    {
+                      "id": "01d2ba2c-c0df-453a-8af8-dc3032d47ff8",
+                      "key": "scheduleId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "c0adf204-da30-4a54-a438-22b6c7a45508",
+                  "name": "Calendar created",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/:scheduleId/calendars",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":scheduleId",
+                        "calendars"
+                      ],
+                      "variable": [
+                        {
+                          "key": "scheduleId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:07.000Z",
+                  "updatedAt": "2026-06-05T15:06:07.000Z",
+                  "uid": "35240-c0adf204-da30-4a54-a438-22b6c7a45508"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:07.000Z",
+              "updatedAt": "2026-06-05T15:06:07.000Z",
+              "uid": "35240-d6718254-0353-4e4e-b557-5c6035e22b09"
+            }
+          ],
+          "id": "935fcff3-f881-4da0-b975-1d63161b7af3",
+          "createdAt": "2026-06-05T15:06:07.000Z",
+          "updatedAt": "2026-06-05T15:06:07.000Z",
+          "uid": "35240-935fcff3-f881-4da0-b975-1d63161b7af3"
+        },
+        {
+          "name": "animations",
+          "item": [
+            {
+              "name": "Get Animations",
+              "id": "2a45f884-6d5d-414d-abbe-92b5d81f8ce6",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:scheduleId/animations",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":scheduleId",
+                    "animations"
+                  ],
+                  "variable": [
+                    {
+                      "id": "5c7fbead-7d25-4d3f-b5e8-89665ce558ed",
+                      "key": "scheduleId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "e76153c9-e2e4-484a-a6ee-3009b41be695",
+                  "name": "List of Animations",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/:scheduleId/animations",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":scheduleId",
+                        "animations"
+                      ],
+                      "variable": [
+                        {
+                          "key": "scheduleId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:07.000Z",
+                  "updatedAt": "2026-06-05T15:06:07.000Z",
+                  "uid": "35240-e76153c9-e2e4-484a-a6ee-3009b41be695"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:07.000Z",
+              "updatedAt": "2026-06-05T15:06:07.000Z",
+              "uid": "35240-2a45f884-6d5d-414d-abbe-92b5d81f8ce6"
+            },
+            {
+              "name": "Create Animation",
+              "id": "f30c4c34-e031-4d95-9948-7ef63e1eef47",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/:scheduleId/animations",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":scheduleId",
+                    "animations"
+                  ],
+                  "variable": [
+                    {
+                      "id": "1a6dfc14-8f89-437d-8990-ae1b4db8424d",
+                      "key": "scheduleId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "63aca856-e598-49a2-9f07-b8b28c59f42d",
+                  "name": "Animation created",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/:scheduleId/animations",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":scheduleId",
+                        "animations"
+                      ],
+                      "variable": [
+                        {
+                          "key": "scheduleId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:07.000Z",
+                  "updatedAt": "2026-06-05T15:06:07.000Z",
+                  "uid": "35240-63aca856-e598-49a2-9f07-b8b28c59f42d"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:07.000Z",
+              "updatedAt": "2026-06-05T15:06:07.000Z",
+              "uid": "35240-f30c4c34-e031-4d95-9948-7ef63e1eef47"
+            }
+          ],
+          "id": "e414d05e-32a2-4972-a24f-be4dcc4595dc",
+          "createdAt": "2026-06-05T15:06:07.000Z",
+          "updatedAt": "2026-06-05T15:06:07.000Z",
+          "uid": "35240-e414d05e-32a2-4972-a24f-be4dcc4595dc"
+        },
+        {
+          "name": "baselines",
+          "item": [
+            {
+              "name": "Get Baselines",
+              "id": "17e50045-6dc7-4e07-9969-17bb146a30b8",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:scheduleId/baselines",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":scheduleId",
+                    "baselines"
+                  ],
+                  "variable": [
+                    {
+                      "id": "d5ce17b6-49af-4969-9a15-d909d7342ef0",
+                      "key": "scheduleId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "6514b80b-9237-4c0d-9092-d89db87952b1",
+                  "name": "List of Baselines",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/:scheduleId/baselines",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":scheduleId",
+                        "baselines"
+                      ],
+                      "variable": [
+                        {
+                          "key": "scheduleId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:07.000Z",
+                  "updatedAt": "2026-06-05T15:06:07.000Z",
+                  "uid": "35240-6514b80b-9237-4c0d-9092-d89db87952b1"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:07.000Z",
+              "updatedAt": "2026-06-05T15:06:07.000Z",
+              "uid": "35240-17e50045-6dc7-4e07-9969-17bb146a30b8"
+            },
+            {
+              "name": "Create Baseline",
+              "id": "cb19c045-7cd8-47d8-bd41-9bf0df36494a",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/:scheduleId/baselines",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":scheduleId",
+                    "baselines"
+                  ],
+                  "variable": [
+                    {
+                      "id": "fbdf22c0-5808-4a11-931e-6ea35bcf7585",
+                      "key": "scheduleId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "d8a6c03f-89c4-41cc-8c7c-328249bf9490",
+                  "name": "Baseline created",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/:scheduleId/baselines",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":scheduleId",
+                        "baselines"
+                      ],
+                      "variable": [
+                        {
+                          "key": "scheduleId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:07.000Z",
+                  "updatedAt": "2026-06-05T15:06:07.000Z",
+                  "uid": "35240-d8a6c03f-89c4-41cc-8c7c-328249bf9490"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:07.000Z",
+              "updatedAt": "2026-06-05T15:06:07.000Z",
+              "uid": "35240-cb19c045-7cd8-47d8-bd41-9bf0df36494a"
+            }
+          ],
+          "id": "9bd766e4-0bdf-4e4f-92de-e2ca9c838058",
+          "createdAt": "2026-06-05T15:06:07.000Z",
+          "updatedAt": "2026-06-05T15:06:07.000Z",
+          "uid": "35240-9bd766e4-0bdf-4e4f-92de-e2ca9c838058"
+        },
+        {
+          "name": "wbs",
+          "item": [
+            {
+              "name": "Get Work Breakdown",
+              "id": "bf6a538f-d564-43ec-a763-16b9792db616",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:scheduleId/wbs",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":scheduleId",
+                    "wbs"
+                  ],
+                  "variable": [
+                    {
+                      "id": "a2395724-3fd1-44d1-a5f7-c7e102b5d1b1",
+                      "key": "scheduleId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "ad37a927-6104-451f-8de5-3e5fc9ac3ff7",
+                  "name": "List of Work Breakdown",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/:scheduleId/wbs",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":scheduleId",
+                        "wbs"
+                      ],
+                      "variable": [
+                        {
+                          "key": "scheduleId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:07.000Z",
+                  "updatedAt": "2026-06-05T15:06:07.000Z",
+                  "uid": "35240-ad37a927-6104-451f-8de5-3e5fc9ac3ff7"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:07.000Z",
+              "updatedAt": "2026-06-05T15:06:07.000Z",
+              "uid": "35240-bf6a538f-d564-43ec-a763-16b9792db616"
+            },
+            {
+              "name": "Create Work Breakdown",
+              "id": "1e8d363d-4ea3-4db0-95ce-1d95493df6dc",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/:scheduleId/wbs",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":scheduleId",
+                    "wbs"
+                  ],
+                  "variable": [
+                    {
+                      "id": "729b3372-e4ae-458b-bb99-198a024d9c3e",
+                      "key": "scheduleId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "0b4542f8-dd4c-4166-8ab4-b8db3120b20b",
+                  "name": "Work Breakdown created",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/:scheduleId/wbs",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":scheduleId",
+                        "wbs"
+                      ],
+                      "variable": [
+                        {
+                          "key": "scheduleId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:07.000Z",
+                  "updatedAt": "2026-06-05T15:06:07.000Z",
+                  "uid": "35240-0b4542f8-dd4c-4166-8ab4-b8db3120b20b"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:07.000Z",
+              "updatedAt": "2026-06-05T15:06:07.000Z",
+              "uid": "35240-1e8d363d-4ea3-4db0-95ce-1d95493df6dc"
+            }
+          ],
+          "id": "8f18b639-56ef-4071-a367-5fd30251dca1",
+          "createdAt": "2026-06-05T15:06:07.000Z",
+          "updatedAt": "2026-06-05T15:06:07.000Z",
+          "uid": "35240-8f18b639-56ef-4071-a367-5fd30251dca1"
+        },
+        {
+          "name": "Get Schedules",
+          "id": "b1e5ec98-dc37-40a2-93c0-38e571145298",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/:scheduleId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ":scheduleId"
+              ],
+              "variable": [
+                {
+                  "id": "21bd315a-5784-4ce5-8bc2-5bf141c3cc35",
+                  "key": "scheduleId",
+                  "value": "<uuid>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "da571551-d292-4d10-87a4-f3fd797a6b93",
+              "name": "List of Schedules",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:scheduleId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":scheduleId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "scheduleId"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:07.000Z",
+              "updatedAt": "2026-06-05T15:06:07.000Z",
+              "uid": "35240-da571551-d292-4d10-87a4-f3fd797a6b93"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:07.000Z",
+          "updatedAt": "2026-06-05T15:06:07.000Z",
+          "uid": "35240-b1e5ec98-dc37-40a2-93c0-38e571145298"
+        },
+        {
+          "name": "Update Schedule",
+          "id": "7920c9f6-eed3-4d43-843c-032b0c6a9e4c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/:scheduleId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ":scheduleId"
+              ],
+              "variable": [
+                {
+                  "id": "50edc152-8d33-4265-9516-01d2be0d703a",
+                  "key": "scheduleId",
+                  "value": "<uuid>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "7f0d2745-2d1b-45d0-a51b-f14c3da89dae",
+              "name": "Schedule updated",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/:scheduleId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":scheduleId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "scheduleId"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-06-05T15:06:07.000Z",
+              "updatedAt": "2026-06-05T15:06:07.000Z",
+              "uid": "35240-7f0d2745-2d1b-45d0-a51b-f14c3da89dae"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:07.000Z",
+          "updatedAt": "2026-06-05T15:06:07.000Z",
+          "uid": "35240-7920c9f6-eed3-4d43-843c-032b0c6a9e4c"
+        },
+        {
+          "name": "Delete Schedule",
+          "id": "c8dbd4c3-9b94-4926-949a-c2fe1410365b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/:scheduleId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ":scheduleId"
+              ],
+              "variable": [
+                {
+                  "id": "1834feff-28df-47da-a791-71a5d69bda69",
+                  "key": "scheduleId",
+                  "value": "<uuid>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "0019e241-32ff-4fbb-8a8a-958bdbb124c7",
+              "name": "Schedule deleted",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:scheduleId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":scheduleId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "scheduleId"
+                    }
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-06-05T15:06:07.000Z",
+              "updatedAt": "2026-06-05T15:06:07.000Z",
+              "uid": "35240-0019e241-32ff-4fbb-8a8a-958bdbb124c7"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:07.000Z",
+          "updatedAt": "2026-06-05T15:06:07.000Z",
+          "uid": "35240-c8dbd4c3-9b94-4926-949a-c2fe1410365b"
+        }
+      ],
+      "id": "2d009bea-e9c3-4420-a4a8-efa0f8f13db8",
+      "createdAt": "2026-06-05T15:06:07.000Z",
+      "updatedAt": "2026-06-05T15:06:07.000Z",
+      "uid": "35240-2d009bea-e9c3-4420-a4a8-efa0f8f13db8"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "itwin-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://ims.bentley.com/connect/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://ims.bentley.com/connect/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.bentley.com/schedules"
+    }
+  ]
+}

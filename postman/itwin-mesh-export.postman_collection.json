@@ -1,0 +1,491 @@
+{
+  "info": {
+    "_postman_id": "15a55c09-0de8-4e68-9e8f-da712675f414",
+    "name": "iTwin Mesh Export API",
+    "description": "Export 3D mesh geometry from iModels for use in CesiumJS, Three.js, Unity, and Unreal Engine.\n\nContact Support:\n Name: Bentley Developer Relations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-06-05T15:06:46.000Z",
+    "updatedAt": "2026-06-05T15:06:47.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-15a55c09-0de8-4e68-9e8f-da712675f414"
+  },
+  "item": [
+    {
+      "name": "/",
+      "item": [
+        {
+          "name": "Get Mesh Export",
+          "id": "10db3bad-1adb-4235-8524-9c018393b838",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "0ff9bf2d-776e-4bdf-8b86-ee2bc63e62fd",
+              "name": "List of Mesh Export",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:47.000Z",
+              "updatedAt": "2026-06-05T15:06:47.000Z",
+              "uid": "35240-0ff9bf2d-776e-4bdf-8b86-ee2bc63e62fd"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:47.000Z",
+          "updatedAt": "2026-06-05T15:06:47.000Z",
+          "uid": "35240-10db3bad-1adb-4235-8524-9c018393b838"
+        },
+        {
+          "name": "Create Mesh Export",
+          "id": "a799d868-67ab-489c-aa2b-d6ac161ad8b3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "1c2e30b4-dd63-44d4-83ab-4fd2f39a29d2",
+              "name": "Mesh Export created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:47.000Z",
+              "updatedAt": "2026-06-05T15:06:47.000Z",
+              "uid": "35240-1c2e30b4-dd63-44d4-83ab-4fd2f39a29d2"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:47.000Z",
+          "updatedAt": "2026-06-05T15:06:47.000Z",
+          "uid": "35240-a799d868-67ab-489c-aa2b-d6ac161ad8b3"
+        }
+      ],
+      "id": "4329dc1e-20c0-4d9a-ba24-02fed1a25a59",
+      "createdAt": "2026-06-05T15:06:47.000Z",
+      "updatedAt": "2026-06-05T15:06:47.000Z",
+      "uid": "35240-4329dc1e-20c0-4d9a-ba24-02fed1a25a59"
+    },
+    {
+      "name": "{exportId}",
+      "item": [
+        {
+          "name": "Get Mesh Export",
+          "id": "b258d91a-70a2-4d22-afb3-c9936346674c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/:exportId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ":exportId"
+              ],
+              "variable": [
+                {
+                  "id": "bd7c7e01-a142-427b-9f79-86bbbb5e415a",
+                  "key": "exportId",
+                  "value": "<uuid>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "bd66cdfa-63d4-478d-b1b0-72f5506dc18b",
+              "name": "List of Mesh Export",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:exportId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":exportId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "exportId"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:47.000Z",
+              "updatedAt": "2026-06-05T15:06:47.000Z",
+              "uid": "35240-bd66cdfa-63d4-478d-b1b0-72f5506dc18b"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:47.000Z",
+          "updatedAt": "2026-06-05T15:06:47.000Z",
+          "uid": "35240-b258d91a-70a2-4d22-afb3-c9936346674c"
+        },
+        {
+          "name": "Update Mesh Export",
+          "id": "74124c9b-712b-4e2f-86f7-83914e9bf705",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/:exportId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ":exportId"
+              ],
+              "variable": [
+                {
+                  "id": "7d316b4d-b516-40cc-8eb3-d711735b34cd",
+                  "key": "exportId",
+                  "value": "<uuid>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "42dc50e0-30b9-4e70-9363-4c646c5bbb17",
+              "name": "Mesh Export updated",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/:exportId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":exportId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "exportId"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-06-05T15:06:47.000Z",
+              "updatedAt": "2026-06-05T15:06:47.000Z",
+              "uid": "35240-42dc50e0-30b9-4e70-9363-4c646c5bbb17"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:47.000Z",
+          "updatedAt": "2026-06-05T15:06:47.000Z",
+          "uid": "35240-74124c9b-712b-4e2f-86f7-83914e9bf705"
+        },
+        {
+          "name": "Delete Mesh Export",
+          "id": "3442e20c-0a36-40e8-a57a-8d0386d0dc4a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/:exportId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ":exportId"
+              ],
+              "variable": [
+                {
+                  "id": "17751f4a-f54f-4e58-9c0f-97e4747782b3",
+                  "key": "exportId",
+                  "value": "<uuid>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "f2815d03-b1d6-4842-832d-309e054ef797",
+              "name": "Mesh Export deleted",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:exportId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":exportId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "exportId"
+                    }
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-06-05T15:06:47.000Z",
+              "updatedAt": "2026-06-05T15:06:47.000Z",
+              "uid": "35240-f2815d03-b1d6-4842-832d-309e054ef797"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:47.000Z",
+          "updatedAt": "2026-06-05T15:06:47.000Z",
+          "uid": "35240-3442e20c-0a36-40e8-a57a-8d0386d0dc4a"
+        }
+      ],
+      "id": "d9f7da92-2f23-45ff-881e-e085b5b41ecb",
+      "createdAt": "2026-06-05T15:06:47.000Z",
+      "updatedAt": "2026-06-05T15:06:47.000Z",
+      "uid": "35240-d9f7da92-2f23-45ff-881e-e085b5b41ecb"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "itwin-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://ims.bentley.com/connect/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://ims.bentley.com/connect/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.bentley.com/mesh-export"
+    }
+  ]
+}

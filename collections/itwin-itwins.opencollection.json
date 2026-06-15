@@ -1,0 +1,186 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "iTwins API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://ims.bentley.com/connect/authorize",
+      "accessTokenUrl": "https://ims.bentley.com/connect/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "iTwins",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get iTwins",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/itwins/itwins"
+          },
+          "docs": "Get iTwins"
+        },
+        {
+          "info": {
+            "name": "Create iTwin",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/itwins/itwins",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create iTwin"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Repositories",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Repositories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/itwins/itwins/:iTwinId/repositories",
+            "params": [
+              {
+                "name": "iTwinId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Repositories"
+        },
+        {
+          "info": {
+            "name": "Create Repositorie",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/itwins/itwins/:iTwinId/repositories",
+            "params": [
+              {
+                "name": "iTwinId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Repositorie"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Exports",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Exports",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/itwins/itwins/:iTwinId/exports",
+            "params": [
+              {
+                "name": "iTwinId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Exports"
+        },
+        {
+          "info": {
+            "name": "Create Export",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/itwins/itwins/:iTwinId/exports",
+            "params": [
+              {
+                "name": "iTwinId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Export"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Recents",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Recents",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/itwins/itwins/myitwins/recents"
+          },
+          "docs": "Get Recents"
+        },
+        {
+          "info": {
+            "name": "Create Recent",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/itwins/itwins/myitwins/recents",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Recent"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,491 @@
+{
+  "info": {
+    "_postman_id": "55f410b7-250e-4165-a407-14daeb02712c",
+    "name": "iTwin Named Groups API",
+    "description": "Create and manage logical groupings of iTwin elements by query, selection, or hierarchy.\n\nContact Support:\n Name: Bentley Developer Relations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-06-05T15:06:41.000Z",
+    "updatedAt": "2026-06-05T15:06:41.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-55f410b7-250e-4165-a407-14daeb02712c"
+  },
+  "item": [
+    {
+      "name": "/",
+      "item": [
+        {
+          "name": "Get Named Groups",
+          "id": "ae77dffc-5086-4c5e-bf4b-bd88a49557e5",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "2eae9afd-3845-4b32-8ed6-28277c96b6c4",
+              "name": "List of Named Groups",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:41.000Z",
+              "updatedAt": "2026-06-05T15:06:41.000Z",
+              "uid": "35240-2eae9afd-3845-4b32-8ed6-28277c96b6c4"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:41.000Z",
+          "updatedAt": "2026-06-05T15:06:41.000Z",
+          "uid": "35240-ae77dffc-5086-4c5e-bf4b-bd88a49557e5"
+        },
+        {
+          "name": "Create Named Group",
+          "id": "db6bb299-8709-4769-a513-adac1a44b769",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "e7880c63-e5a6-4a5f-ba89-ca4a15aee2b6",
+              "name": "Named Group created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:41.000Z",
+              "updatedAt": "2026-06-05T15:06:41.000Z",
+              "uid": "35240-e7880c63-e5a6-4a5f-ba89-ca4a15aee2b6"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:41.000Z",
+          "updatedAt": "2026-06-05T15:06:41.000Z",
+          "uid": "35240-db6bb299-8709-4769-a513-adac1a44b769"
+        }
+      ],
+      "id": "7a218c4d-49bc-4c84-8416-a17c94b27434",
+      "createdAt": "2026-06-05T15:06:41.000Z",
+      "updatedAt": "2026-06-05T15:06:41.000Z",
+      "uid": "35240-7a218c4d-49bc-4c84-8416-a17c94b27434"
+    },
+    {
+      "name": "{groupId}",
+      "item": [
+        {
+          "name": "Get Named Groups",
+          "id": "68dea073-d4bf-4c0a-9968-f3ea3ba092a2",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/:groupId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ":groupId"
+              ],
+              "variable": [
+                {
+                  "id": "149a5828-79ad-41e6-8cbf-a27f5ff5cbc1",
+                  "key": "groupId",
+                  "value": "<uuid>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "fd68996d-69c2-466a-9a9e-16831bf06685",
+              "name": "List of Named Groups",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:groupId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":groupId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "groupId"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:41.000Z",
+              "updatedAt": "2026-06-05T15:06:41.000Z",
+              "uid": "35240-fd68996d-69c2-466a-9a9e-16831bf06685"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:41.000Z",
+          "updatedAt": "2026-06-05T15:06:41.000Z",
+          "uid": "35240-68dea073-d4bf-4c0a-9968-f3ea3ba092a2"
+        },
+        {
+          "name": "Update Named Group",
+          "id": "29c3b2c5-1c9d-4190-841d-fbccf902f159",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/:groupId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ":groupId"
+              ],
+              "variable": [
+                {
+                  "id": "5be0708f-df67-4779-987d-2865da182644",
+                  "key": "groupId",
+                  "value": "<uuid>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "35207985-b8b6-4847-8cac-2bc4f74e643d",
+              "name": "Named Group updated",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/:groupId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":groupId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "groupId"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-06-05T15:06:41.000Z",
+              "updatedAt": "2026-06-05T15:06:41.000Z",
+              "uid": "35240-35207985-b8b6-4847-8cac-2bc4f74e643d"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:41.000Z",
+          "updatedAt": "2026-06-05T15:06:41.000Z",
+          "uid": "35240-29c3b2c5-1c9d-4190-841d-fbccf902f159"
+        },
+        {
+          "name": "Delete Named Group",
+          "id": "3d3a8ca2-ebd4-41d3-8918-a763b34ea3c6",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/:groupId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ":groupId"
+              ],
+              "variable": [
+                {
+                  "id": "201e0b4c-da34-438f-9167-98ee61f3ab5e",
+                  "key": "groupId",
+                  "value": "<uuid>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "bf3c25c0-6c03-4733-abf9-17afd9043de7",
+              "name": "Named Group deleted",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:groupId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":groupId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "groupId"
+                    }
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-06-05T15:06:41.000Z",
+              "updatedAt": "2026-06-05T15:06:41.000Z",
+              "uid": "35240-bf3c25c0-6c03-4733-abf9-17afd9043de7"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:41.000Z",
+          "updatedAt": "2026-06-05T15:06:41.000Z",
+          "uid": "35240-3d3a8ca2-ebd4-41d3-8918-a763b34ea3c6"
+        }
+      ],
+      "id": "ea6083e0-2c35-438e-b080-6427d48bbbd9",
+      "createdAt": "2026-06-05T15:06:41.000Z",
+      "updatedAt": "2026-06-05T15:06:41.000Z",
+      "uid": "35240-ea6083e0-2c35-438e-b080-6427d48bbbd9"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "itwin-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://ims.bentley.com/connect/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://ims.bentley.com/connect/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.bentley.com/namedgroups"
+    }
+  ]
+}

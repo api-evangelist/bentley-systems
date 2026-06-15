@@ -1,0 +1,407 @@
+{
+  "info": {
+    "_postman_id": "0bc37fb4-8c06-4693-b16e-12bb0bfe8cca",
+    "name": "iTwin Changed Elements API",
+    "description": "Track and query design changes between iModel versions for visual diff workflows.\n\nContact Support:\n Name: Bentley Developer Relations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-06-05T15:06:13.000Z",
+    "updatedAt": "2026-06-05T15:06:13.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-0bc37fb4-8c06-4693-b16e-12bb0bfe8cca"
+  },
+  "item": [
+    {
+      "name": "comparison",
+      "item": [
+        {
+          "name": "Get Comparisons",
+          "id": "a322dbc2-a716-41ba-9c72-16f98a4d9741",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/comparison",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "comparison"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "51c46150-6bed-441d-a194-be37abf83bbf",
+              "name": "List of Comparisons",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/comparison",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "comparison"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:13.000Z",
+              "updatedAt": "2026-06-05T15:06:13.000Z",
+              "uid": "35240-51c46150-6bed-441d-a194-be37abf83bbf"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:13.000Z",
+          "updatedAt": "2026-06-05T15:06:13.000Z",
+          "uid": "35240-a322dbc2-a716-41ba-9c72-16f98a4d9741"
+        },
+        {
+          "name": "Create Comparison",
+          "id": "30f482a2-14ee-4a08-8f8d-686b1806e814",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/comparison",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "comparison"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "42698695-164d-493c-95c9-1e800338cb46",
+              "name": "Comparison created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/comparison",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "comparison"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:13.000Z",
+              "updatedAt": "2026-06-05T15:06:13.000Z",
+              "uid": "35240-42698695-164d-493c-95c9-1e800338cb46"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:13.000Z",
+          "updatedAt": "2026-06-05T15:06:13.000Z",
+          "uid": "35240-30f482a2-14ee-4a08-8f8d-686b1806e814"
+        }
+      ],
+      "id": "aa11e840-3e7d-487b-a013-23a9ba74189d",
+      "createdAt": "2026-06-05T15:06:13.000Z",
+      "updatedAt": "2026-06-05T15:06:13.000Z",
+      "uid": "35240-aa11e840-3e7d-487b-a013-23a9ba74189d"
+    },
+    {
+      "name": "tracking",
+      "item": [
+        {
+          "name": "Get Change Tracking",
+          "id": "046083f5-ab3d-4f9c-967c-e28278b5dcbe",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/tracking",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "tracking"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "45645640-eaaf-4dc6-be8e-033449125d02",
+              "name": "List of Change Tracking",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/tracking",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "tracking"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:13.000Z",
+              "updatedAt": "2026-06-05T15:06:13.000Z",
+              "uid": "35240-45645640-eaaf-4dc6-be8e-033449125d02"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:13.000Z",
+          "updatedAt": "2026-06-05T15:06:13.000Z",
+          "uid": "35240-046083f5-ab3d-4f9c-967c-e28278b5dcbe"
+        },
+        {
+          "name": "Create Change Tracking",
+          "id": "ad936769-7d31-4cc1-871c-71cdd39e1bed",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/tracking",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "tracking"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "9a5dc149-dbb7-4f41-9e04-1446ba18efe1",
+              "name": "Change Tracking created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/tracking",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "tracking"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:13.000Z",
+              "updatedAt": "2026-06-05T15:06:13.000Z",
+              "uid": "35240-9a5dc149-dbb7-4f41-9e04-1446ba18efe1"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:13.000Z",
+          "updatedAt": "2026-06-05T15:06:13.000Z",
+          "uid": "35240-ad936769-7d31-4cc1-871c-71cdd39e1bed"
+        }
+      ],
+      "id": "47c92077-8530-487e-92d0-002f291be455",
+      "createdAt": "2026-06-05T15:06:13.000Z",
+      "updatedAt": "2026-06-05T15:06:13.000Z",
+      "uid": "35240-47c92077-8530-487e-92d0-002f291be455"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "itwin-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://ims.bentley.com/connect/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://ims.bentley.com/connect/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.bentley.com/changedelements"
+    }
+  ]
+}

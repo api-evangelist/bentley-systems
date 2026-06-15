@@ -1,0 +1,497 @@
+{
+  "info": {
+    "_postman_id": "fe59eada-6c5a-44fe-9b35-395b87d189c4",
+    "name": "iTwin Geospatial Features API",
+    "description": "Manage geospatial feature collections \u2014 GeoJSON-style points, lines, polygons.\n\nContact Support:\n Name: Bentley Developer Relations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-06-05T15:06:56.000Z",
+    "updatedAt": "2026-06-05T15:06:56.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-fe59eada-6c5a-44fe-9b35-395b87d189c4"
+  },
+  "item": [
+    {
+      "name": "collections",
+      "item": [
+        {
+          "name": "{collectionId}",
+          "item": [
+            {
+              "name": "Get Features",
+              "id": "8011ef3d-3a5f-4799-8971-7f2b96225200",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/collections/:collectionId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "collections",
+                    ":collectionId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "fabd67a5-06c4-4dcb-9a46-bf8a98a110c2",
+                      "key": "collectionId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "6d5d8aea-e396-4cc3-9ae0-6130e5e427f1",
+                  "name": "List of Features",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/collections/:collectionId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "collections",
+                        ":collectionId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "collectionId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:56.000Z",
+                  "updatedAt": "2026-06-05T15:06:56.000Z",
+                  "uid": "35240-6d5d8aea-e396-4cc3-9ae0-6130e5e427f1"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:56.000Z",
+              "updatedAt": "2026-06-05T15:06:56.000Z",
+              "uid": "35240-8011ef3d-3a5f-4799-8971-7f2b96225200"
+            },
+            {
+              "name": "Update Feature",
+              "id": "4c722f51-3f60-4702-8e1f-d86f77e5ab39",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/collections/:collectionId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "collections",
+                    ":collectionId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "60afeed0-01f4-4f88-b115-a9aadb368d68",
+                      "key": "collectionId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "89ecac63-0d84-4c07-a164-5f208ded89c5",
+                  "name": "Feature updated",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/collections/:collectionId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "collections",
+                        ":collectionId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "collectionId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-06-05T15:06:56.000Z",
+                  "updatedAt": "2026-06-05T15:06:56.000Z",
+                  "uid": "35240-89ecac63-0d84-4c07-a164-5f208ded89c5"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:56.000Z",
+              "updatedAt": "2026-06-05T15:06:56.000Z",
+              "uid": "35240-4c722f51-3f60-4702-8e1f-d86f77e5ab39"
+            },
+            {
+              "name": "Delete Feature",
+              "id": "6e01d530-dc8d-4d18-9c6e-b306655b1311",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/collections/:collectionId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "collections",
+                    ":collectionId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "b8ec4bd3-dc02-4215-9ba2-12b69ab2c196",
+                      "key": "collectionId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "a5340182-3748-4d64-8d1b-3793ee919e88",
+                  "name": "Feature deleted",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/collections/:collectionId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "collections",
+                        ":collectionId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "collectionId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-06-05T15:06:56.000Z",
+                  "updatedAt": "2026-06-05T15:06:56.000Z",
+                  "uid": "35240-a5340182-3748-4d64-8d1b-3793ee919e88"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:56.000Z",
+              "updatedAt": "2026-06-05T15:06:56.000Z",
+              "uid": "35240-6e01d530-dc8d-4d18-9c6e-b306655b1311"
+            }
+          ],
+          "id": "c15beacd-7515-40fc-a6cc-9b065efbc8f2",
+          "createdAt": "2026-06-05T15:06:56.000Z",
+          "updatedAt": "2026-06-05T15:06:56.000Z",
+          "uid": "35240-c15beacd-7515-40fc-a6cc-9b065efbc8f2"
+        },
+        {
+          "name": "Get Features",
+          "id": "edfb704a-e6c5-4bae-b982-757e8ed3a7e5",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/collections",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "collections"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "6a2eed97-ccdf-4570-99e0-c9db99c8087c",
+              "name": "List of Features",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/collections",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "collections"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:56.000Z",
+              "updatedAt": "2026-06-05T15:06:56.000Z",
+              "uid": "35240-6a2eed97-ccdf-4570-99e0-c9db99c8087c"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:56.000Z",
+          "updatedAt": "2026-06-05T15:06:56.000Z",
+          "uid": "35240-edfb704a-e6c5-4bae-b982-757e8ed3a7e5"
+        },
+        {
+          "name": "Create Feature",
+          "id": "c24b31b6-42b9-452e-ad85-482a378ae31c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/collections",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "collections"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "9331a787-5fbe-4141-95f0-a5622039453b",
+              "name": "Feature created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/collections",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "collections"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:56.000Z",
+              "updatedAt": "2026-06-05T15:06:56.000Z",
+              "uid": "35240-9331a787-5fbe-4141-95f0-a5622039453b"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:56.000Z",
+          "updatedAt": "2026-06-05T15:06:56.000Z",
+          "uid": "35240-c24b31b6-42b9-452e-ad85-482a378ae31c"
+        }
+      ],
+      "id": "1034ddb6-3c8e-443d-9326-b208fec5644e",
+      "createdAt": "2026-06-05T15:06:56.000Z",
+      "updatedAt": "2026-06-05T15:06:56.000Z",
+      "uid": "35240-1034ddb6-3c8e-443d-9326-b208fec5644e"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "itwin-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://ims.bentley.com/connect/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://ims.bentley.com/connect/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.bentley.com/geospatial-features"
+    }
+  ]
+}

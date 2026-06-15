@@ -1,0 +1,283 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "iTwin Scenes API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://ims.bentley.com/connect/authorize",
+      "accessTokenUrl": "https://ims.bentley.com/connect/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Scenes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Scenes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/scenes/"
+          },
+          "docs": "Get Scenes"
+        },
+        {
+          "info": {
+            "name": "Create Scene",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/scenes/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Scene"
+        },
+        {
+          "info": {
+            "name": "Get Scenes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/scenes/:sceneId",
+            "params": [
+              {
+                "name": "sceneId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Scenes"
+        },
+        {
+          "info": {
+            "name": "Update Scene",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.bentley.com/scenes/:sceneId",
+            "params": [
+              {
+                "name": "sceneId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Scene"
+        },
+        {
+          "info": {
+            "name": "Delete Scene",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.bentley.com/scenes/:sceneId",
+            "params": [
+              {
+                "name": "sceneId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Scene"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Layers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Layers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/scenes/:sceneId/layers",
+            "params": [
+              {
+                "name": "sceneId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Layers"
+        },
+        {
+          "info": {
+            "name": "Create Layer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/scenes/:sceneId/layers",
+            "params": [
+              {
+                "name": "sceneId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Layer"
+        },
+        {
+          "info": {
+            "name": "Get Layers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/scenes/:sceneId/layers/:layerId",
+            "params": [
+              {
+                "name": "sceneId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "layerId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Layers"
+        },
+        {
+          "info": {
+            "name": "Update Layer",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.bentley.com/scenes/:sceneId/layers/:layerId",
+            "params": [
+              {
+                "name": "sceneId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "layerId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Layer"
+        },
+        {
+          "info": {
+            "name": "Delete Layer",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.bentley.com/scenes/:sceneId/layers/:layerId",
+            "params": [
+              {
+                "name": "sceneId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "layerId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Layer"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Extensions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Extensions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/scenes/:sceneId/extensions",
+            "params": [
+              {
+                "name": "sceneId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Extensions"
+        },
+        {
+          "info": {
+            "name": "Create Extension",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/scenes/:sceneId/extensions",
+            "params": [
+              {
+                "name": "sceneId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Extension"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

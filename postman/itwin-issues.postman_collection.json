@@ -1,0 +1,1516 @@
+{
+  "info": {
+    "_postman_id": "73b9fd91-6340-4a42-ad39-7d5982f64efb",
+    "name": "iTwin Issues API",
+    "description": "Manage issues \u2014 observations, defects, RFIs, punch-list items \u2014 with attachments, comments, audit trail and workflow.\n\nContact Support:\n Name: Bentley Developer Relations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-06-05T15:06:14.000Z",
+    "updatedAt": "2026-06-05T15:06:14.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-73b9fd91-6340-4a42-ad39-7d5982f64efb"
+  },
+  "item": [
+    {
+      "name": "/",
+      "item": [
+        {
+          "name": "Get Issues",
+          "id": "0c060fc7-f211-4ec3-a1ed-2eb36e66f154",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "184ee68c-ab85-4767-93fa-fa9a2dabbb36",
+              "name": "List of Issues",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:14.000Z",
+              "updatedAt": "2026-06-05T15:06:14.000Z",
+              "uid": "35240-184ee68c-ab85-4767-93fa-fa9a2dabbb36"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:14.000Z",
+          "updatedAt": "2026-06-05T15:06:14.000Z",
+          "uid": "35240-0c060fc7-f211-4ec3-a1ed-2eb36e66f154"
+        },
+        {
+          "name": "Create Issue",
+          "id": "6df0cf7f-6ade-4356-b5be-4a817b9091bb",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "4bc94783-0457-48ad-95f1-427a4e392c30",
+              "name": "Issue created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:14.000Z",
+              "updatedAt": "2026-06-05T15:06:14.000Z",
+              "uid": "35240-4bc94783-0457-48ad-95f1-427a4e392c30"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:14.000Z",
+          "updatedAt": "2026-06-05T15:06:14.000Z",
+          "uid": "35240-6df0cf7f-6ade-4356-b5be-4a817b9091bb"
+        }
+      ],
+      "id": "69afbd55-05e6-4744-8fec-5ae3d513edee",
+      "createdAt": "2026-06-05T15:06:14.000Z",
+      "updatedAt": "2026-06-05T15:06:14.000Z",
+      "uid": "35240-69afbd55-05e6-4744-8fec-5ae3d513edee"
+    },
+    {
+      "name": "{issueId}",
+      "item": [
+        {
+          "name": "attachments",
+          "item": [
+            {
+              "name": "Get Attachments",
+              "id": "5134eac4-4387-4fb1-bbd7-aab948cf9571",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:issueId/attachments",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":issueId",
+                    "attachments"
+                  ],
+                  "variable": [
+                    {
+                      "id": "35f911d5-29dd-41f3-bf3d-6ee7646678dc",
+                      "key": "issueId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "75d598d6-a186-4728-8fb4-537177c4eb48",
+                  "name": "List of Attachments",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/:issueId/attachments",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":issueId",
+                        "attachments"
+                      ],
+                      "variable": [
+                        {
+                          "key": "issueId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:14.000Z",
+                  "updatedAt": "2026-06-05T15:06:14.000Z",
+                  "uid": "35240-75d598d6-a186-4728-8fb4-537177c4eb48"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:14.000Z",
+              "updatedAt": "2026-06-05T15:06:14.000Z",
+              "uid": "35240-5134eac4-4387-4fb1-bbd7-aab948cf9571"
+            },
+            {
+              "name": "Create Attachment",
+              "id": "7704ce24-1d6f-4c9b-aa78-c2a23cab7422",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/:issueId/attachments",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":issueId",
+                    "attachments"
+                  ],
+                  "variable": [
+                    {
+                      "id": "5eab3a4e-e90b-4690-b547-b54d37e8865a",
+                      "key": "issueId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "328d4a84-48ce-4916-9a15-df502562a625",
+                  "name": "Attachment created",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/:issueId/attachments",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":issueId",
+                        "attachments"
+                      ],
+                      "variable": [
+                        {
+                          "key": "issueId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:14.000Z",
+                  "updatedAt": "2026-06-05T15:06:14.000Z",
+                  "uid": "35240-328d4a84-48ce-4916-9a15-df502562a625"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:14.000Z",
+              "updatedAt": "2026-06-05T15:06:14.000Z",
+              "uid": "35240-7704ce24-1d6f-4c9b-aa78-c2a23cab7422"
+            }
+          ],
+          "id": "5631bd6a-7d80-4b22-aab0-6c3dbc38ab2d",
+          "createdAt": "2026-06-05T15:06:14.000Z",
+          "updatedAt": "2026-06-05T15:06:14.000Z",
+          "uid": "35240-5631bd6a-7d80-4b22-aab0-6c3dbc38ab2d"
+        },
+        {
+          "name": "comments",
+          "item": [
+            {
+              "name": "Get Comments",
+              "id": "d957677c-6dc1-4563-b64e-1e8f8e2a414b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:issueId/comments",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":issueId",
+                    "comments"
+                  ],
+                  "variable": [
+                    {
+                      "id": "d4237420-d846-4e7d-848c-a69ae70761cd",
+                      "key": "issueId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "dd722df1-3db9-434c-8f03-94e86aaf4759",
+                  "name": "List of Comments",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/:issueId/comments",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":issueId",
+                        "comments"
+                      ],
+                      "variable": [
+                        {
+                          "key": "issueId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:14.000Z",
+                  "updatedAt": "2026-06-05T15:06:14.000Z",
+                  "uid": "35240-dd722df1-3db9-434c-8f03-94e86aaf4759"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:14.000Z",
+              "updatedAt": "2026-06-05T15:06:14.000Z",
+              "uid": "35240-d957677c-6dc1-4563-b64e-1e8f8e2a414b"
+            },
+            {
+              "name": "Create Comment",
+              "id": "1e83c3e8-38cd-471d-b0f2-45ffe0ae7905",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/:issueId/comments",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":issueId",
+                    "comments"
+                  ],
+                  "variable": [
+                    {
+                      "id": "f3e6e14b-f5c7-4801-b233-475d7fb2ac8b",
+                      "key": "issueId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "9f4c7094-4c86-4065-acd0-6df323f6a54c",
+                  "name": "Comment created",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/:issueId/comments",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":issueId",
+                        "comments"
+                      ],
+                      "variable": [
+                        {
+                          "key": "issueId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:14.000Z",
+                  "updatedAt": "2026-06-05T15:06:14.000Z",
+                  "uid": "35240-9f4c7094-4c86-4065-acd0-6df323f6a54c"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:14.000Z",
+              "updatedAt": "2026-06-05T15:06:14.000Z",
+              "uid": "35240-1e83c3e8-38cd-471d-b0f2-45ffe0ae7905"
+            }
+          ],
+          "id": "e15c3161-fa53-4a9f-acd6-2bbe02e9215d",
+          "createdAt": "2026-06-05T15:06:14.000Z",
+          "updatedAt": "2026-06-05T15:06:14.000Z",
+          "uid": "35240-e15c3161-fa53-4a9f-acd6-2bbe02e9215d"
+        },
+        {
+          "name": "auditTrailEntries",
+          "item": [
+            {
+              "name": "Get Audit Trail",
+              "id": "b1fd6411-0c4f-4eb8-a3fa-3620499a5a6f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:issueId/auditTrailEntries",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":issueId",
+                    "auditTrailEntries"
+                  ],
+                  "variable": [
+                    {
+                      "id": "38395423-2839-4049-b735-8a61d2afe48a",
+                      "key": "issueId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "ecdbb554-aee4-4ffa-afb1-9752419e92e1",
+                  "name": "List of Audit Trail",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/:issueId/auditTrailEntries",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":issueId",
+                        "auditTrailEntries"
+                      ],
+                      "variable": [
+                        {
+                          "key": "issueId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:14.000Z",
+                  "updatedAt": "2026-06-05T15:06:14.000Z",
+                  "uid": "35240-ecdbb554-aee4-4ffa-afb1-9752419e92e1"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:14.000Z",
+              "updatedAt": "2026-06-05T15:06:14.000Z",
+              "uid": "35240-b1fd6411-0c4f-4eb8-a3fa-3620499a5a6f"
+            },
+            {
+              "name": "Create Audit Trail",
+              "id": "ccb1ec26-d592-4453-b588-999e472d27b6",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/:issueId/auditTrailEntries",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":issueId",
+                    "auditTrailEntries"
+                  ],
+                  "variable": [
+                    {
+                      "id": "102ab408-0dee-4e46-a10e-a682ec914f76",
+                      "key": "issueId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "4a854755-4afe-460f-acfa-766216f9c727",
+                  "name": "Audit Trail created",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/:issueId/auditTrailEntries",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":issueId",
+                        "auditTrailEntries"
+                      ],
+                      "variable": [
+                        {
+                          "key": "issueId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:14.000Z",
+                  "updatedAt": "2026-06-05T15:06:14.000Z",
+                  "uid": "35240-4a854755-4afe-460f-acfa-766216f9c727"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:14.000Z",
+              "updatedAt": "2026-06-05T15:06:14.000Z",
+              "uid": "35240-ccb1ec26-d592-4453-b588-999e472d27b6"
+            }
+          ],
+          "id": "129bc268-6fba-4661-b991-24c72124396a",
+          "createdAt": "2026-06-05T15:06:14.000Z",
+          "updatedAt": "2026-06-05T15:06:14.000Z",
+          "uid": "35240-129bc268-6fba-4661-b991-24c72124396a"
+        },
+        {
+          "name": "workflow",
+          "item": [
+            {
+              "name": "Get Workflow",
+              "id": "af166e48-2991-430e-b8ba-8b2451a210cd",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:issueId/workflow",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":issueId",
+                    "workflow"
+                  ],
+                  "variable": [
+                    {
+                      "id": "1c87e22c-60b2-43fb-911b-cbc4d6e9b41a",
+                      "key": "issueId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "6a89a29a-e37b-4ce3-a827-ebe853b5627b",
+                  "name": "List of Workflow",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/:issueId/workflow",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":issueId",
+                        "workflow"
+                      ],
+                      "variable": [
+                        {
+                          "key": "issueId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:14.000Z",
+                  "updatedAt": "2026-06-05T15:06:14.000Z",
+                  "uid": "35240-6a89a29a-e37b-4ce3-a827-ebe853b5627b"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:14.000Z",
+              "updatedAt": "2026-06-05T15:06:14.000Z",
+              "uid": "35240-af166e48-2991-430e-b8ba-8b2451a210cd"
+            },
+            {
+              "name": "Create Workflow",
+              "id": "24ce3d40-14e5-49fd-8189-1fcba23187f0",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/:issueId/workflow",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":issueId",
+                    "workflow"
+                  ],
+                  "variable": [
+                    {
+                      "id": "d38b091d-19e1-4e0a-a125-4d557dd4018d",
+                      "key": "issueId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "a7aa9b1f-684c-475c-a7a3-ee838ca7e8bd",
+                  "name": "Workflow created",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/:issueId/workflow",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":issueId",
+                        "workflow"
+                      ],
+                      "variable": [
+                        {
+                          "key": "issueId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:14.000Z",
+                  "updatedAt": "2026-06-05T15:06:14.000Z",
+                  "uid": "35240-a7aa9b1f-684c-475c-a7a3-ee838ca7e8bd"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:14.000Z",
+              "updatedAt": "2026-06-05T15:06:14.000Z",
+              "uid": "35240-24ce3d40-14e5-49fd-8189-1fcba23187f0"
+            }
+          ],
+          "id": "68895f72-0dd4-41de-8417-8063585ef2cc",
+          "createdAt": "2026-06-05T15:06:14.000Z",
+          "updatedAt": "2026-06-05T15:06:14.000Z",
+          "uid": "35240-68895f72-0dd4-41de-8417-8063585ef2cc"
+        },
+        {
+          "name": "Get Issues",
+          "id": "cbab6e26-235a-4abd-92ed-37709efabafd",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/:issueId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ":issueId"
+              ],
+              "variable": [
+                {
+                  "id": "42ca5de1-b409-45a7-a5c1-938041c575cf",
+                  "key": "issueId",
+                  "value": "<uuid>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "1eed303d-468f-4c72-8eec-55c5d0db1379",
+              "name": "List of Issues",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:issueId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":issueId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "issueId"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:14.000Z",
+              "updatedAt": "2026-06-05T15:06:14.000Z",
+              "uid": "35240-1eed303d-468f-4c72-8eec-55c5d0db1379"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:14.000Z",
+          "updatedAt": "2026-06-05T15:06:14.000Z",
+          "uid": "35240-cbab6e26-235a-4abd-92ed-37709efabafd"
+        },
+        {
+          "name": "Update Issue",
+          "id": "510d88a8-5dc9-4e1d-a40f-1364bf1dc9d5",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/:issueId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ":issueId"
+              ],
+              "variable": [
+                {
+                  "id": "c0de209f-34fc-4463-8e98-2a02d506594b",
+                  "key": "issueId",
+                  "value": "<uuid>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "90733144-bad2-40f1-a9b3-0ca590ba8808",
+              "name": "Issue updated",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/:issueId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":issueId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "issueId"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-06-05T15:06:14.000Z",
+              "updatedAt": "2026-06-05T15:06:14.000Z",
+              "uid": "35240-90733144-bad2-40f1-a9b3-0ca590ba8808"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:14.000Z",
+          "updatedAt": "2026-06-05T15:06:14.000Z",
+          "uid": "35240-510d88a8-5dc9-4e1d-a40f-1364bf1dc9d5"
+        },
+        {
+          "name": "Delete Issue",
+          "id": "b963c38a-a002-49f7-8fdb-acb603b3b694",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/:issueId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ":issueId"
+              ],
+              "variable": [
+                {
+                  "id": "cbec7005-313f-4863-9d86-836d61740da9",
+                  "key": "issueId",
+                  "value": "<uuid>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "2db8eec8-15a7-4230-8917-280d1035a8bc",
+              "name": "Issue deleted",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:issueId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":issueId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "issueId"
+                    }
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-06-05T15:06:14.000Z",
+              "updatedAt": "2026-06-05T15:06:14.000Z",
+              "uid": "35240-2db8eec8-15a7-4230-8917-280d1035a8bc"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:14.000Z",
+          "updatedAt": "2026-06-05T15:06:14.000Z",
+          "uid": "35240-b963c38a-a002-49f7-8fdb-acb603b3b694"
+        }
+      ],
+      "id": "9e49ec50-07b4-42fe-a5f5-77716a8ab648",
+      "createdAt": "2026-06-05T15:06:14.000Z",
+      "updatedAt": "2026-06-05T15:06:14.000Z",
+      "uid": "35240-9e49ec50-07b4-42fe-a5f5-77716a8ab648"
+    },
+    {
+      "name": "formDefinitions",
+      "item": [
+        {
+          "name": "Get Forms",
+          "id": "14c55ae1-7ab0-4c25-ba64-3d3d010e1242",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/formDefinitions",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "formDefinitions"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "49f6dec0-3a28-4bbc-b1aa-09f3fc032bc0",
+              "name": "List of Forms",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/formDefinitions",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "formDefinitions"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:14.000Z",
+              "updatedAt": "2026-06-05T15:06:14.000Z",
+              "uid": "35240-49f6dec0-3a28-4bbc-b1aa-09f3fc032bc0"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:14.000Z",
+          "updatedAt": "2026-06-05T15:06:14.000Z",
+          "uid": "35240-14c55ae1-7ab0-4c25-ba64-3d3d010e1242"
+        },
+        {
+          "name": "Create Form",
+          "id": "eecd9115-4c4b-4b77-9234-66672d6de2bd",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/formDefinitions",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "formDefinitions"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "4940fc74-4132-4c3e-84cb-c396b61fe10e",
+              "name": "Form created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/formDefinitions",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "formDefinitions"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:14.000Z",
+              "updatedAt": "2026-06-05T15:06:14.000Z",
+              "uid": "35240-4940fc74-4132-4c3e-84cb-c396b61fe10e"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:14.000Z",
+          "updatedAt": "2026-06-05T15:06:14.000Z",
+          "uid": "35240-eecd9115-4c4b-4b77-9234-66672d6de2bd"
+        }
+      ],
+      "id": "28a5a893-cc7e-4832-bee3-24ebebf13526",
+      "createdAt": "2026-06-05T15:06:14.000Z",
+      "updatedAt": "2026-06-05T15:06:14.000Z",
+      "uid": "35240-28a5a893-cc7e-4832-bee3-24ebebf13526"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "itwin-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://ims.bentley.com/connect/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://ims.bentley.com/connect/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.bentley.com/issues"
+    }
+  ]
+}

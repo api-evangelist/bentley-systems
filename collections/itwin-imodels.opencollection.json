@@ -1,0 +1,502 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "iTwin iModels API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://ims.bentley.com/connect/authorize",
+      "accessTokenUrl": "https://ims.bentley.com/connect/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "iModels",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get iModels",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/imodels/",
+            "params": [
+              {
+                "name": "iTwinId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get iModels"
+        },
+        {
+          "info": {
+            "name": "Create iModel",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/imodels/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create iModel"
+        },
+        {
+          "info": {
+            "name": "Get iModel",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/imodels/:iModelId",
+            "params": [
+              {
+                "name": "iModelId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get iModel"
+        },
+        {
+          "info": {
+            "name": "Update iModel",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.bentley.com/imodels/:iModelId",
+            "params": [
+              {
+                "name": "iModelId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update iModel"
+        },
+        {
+          "info": {
+            "name": "Delete iModel",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.bentley.com/imodels/:iModelId",
+            "params": [
+              {
+                "name": "iModelId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete iModel"
+        },
+        {
+          "info": {
+            "name": "Clone iModel",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/imodels/:iModelId/clone",
+            "params": [
+              {
+                "name": "iModelId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Clone iModel"
+        },
+        {
+          "info": {
+            "name": "Fork iModel",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/imodels/:iModelId/fork",
+            "params": [
+              {
+                "name": "iModelId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Fork iModel"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Changesets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Changesets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/imodels/:iModelId/changesets",
+            "params": [
+              {
+                "name": "iModelId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Changesets"
+        },
+        {
+          "info": {
+            "name": "Create Changeset",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/imodels/:iModelId/changesets",
+            "params": [
+              {
+                "name": "iModelId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create Changeset"
+        },
+        {
+          "info": {
+            "name": "Get Changeset",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/imodels/:iModelId/changesets/:changesetId",
+            "params": [
+              {
+                "name": "iModelId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "changesetId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Changeset"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Named Versions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Named Versions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/imodels/:iModelId/namedversions",
+            "params": [
+              {
+                "name": "iModelId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Named Versions"
+        },
+        {
+          "info": {
+            "name": "Create Named Version",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/imodels/:iModelId/namedversions",
+            "params": [
+              {
+                "name": "iModelId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Named Version"
+        },
+        {
+          "info": {
+            "name": "Get Named Version",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/imodels/:iModelId/namedversions/:namedVersionId",
+            "params": [
+              {
+                "name": "iModelId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "namedVersionId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Named Version"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Briefcases",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Briefcases",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/imodels/:iModelId/briefcases",
+            "params": [
+              {
+                "name": "iModelId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Briefcases"
+        },
+        {
+          "info": {
+            "name": "Acquire Briefcase",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/imodels/:iModelId/briefcases",
+            "params": [
+              {
+                "name": "iModelId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Acquire Briefcase"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Locks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Locks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/imodels/:iModelId/locks",
+            "params": [
+              {
+                "name": "iModelId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Locks"
+        },
+        {
+          "info": {
+            "name": "Update Locks",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.bentley.com/imodels/:iModelId/locks",
+            "params": [
+              {
+                "name": "iModelId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update Locks"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Users",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get IModel Users",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/imodels/:iModelId/users",
+            "params": [
+              {
+                "name": "iModelId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get IModel Users"
+        },
+        {
+          "info": {
+            "name": "Get IModel User",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/imodels/:iModelId/users/:userId",
+            "params": [
+              {
+                "name": "iModelId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "userId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get IModel User"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Thumbnails",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Thumbnail",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/imodels/:iModelId/thumbnail",
+            "params": [
+              {
+                "name": "iModelId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Thumbnail"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Baselines",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Baseline File",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/imodels/:iModelId/baselinefile",
+            "params": [
+              {
+                "name": "iModelId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Baseline File"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

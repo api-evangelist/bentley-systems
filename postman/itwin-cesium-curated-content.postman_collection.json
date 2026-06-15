@@ -1,0 +1,226 @@
+{
+  "info": {
+    "_postman_id": "f9fba1e3-f9c1-4bee-87e8-567215462cd8",
+    "name": "iTwin Cesium Curated Content API",
+    "description": "Access Cesium's curated geospatial content \u2014 World Terrain, Bing Maps imagery, OSM buildings.\n\nContact Support:\n Name: Bentley Developer Relations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-06-05T15:06:53.000Z",
+    "updatedAt": "2026-06-05T15:06:53.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-f9fba1e3-f9c1-4bee-87e8-567215462cd8"
+  },
+  "item": [
+    {
+      "name": "cesium",
+      "item": [
+        {
+          "name": "Get Cesium",
+          "id": "afcc6885-fa84-47cd-a15a-b2d648cd4f75",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/cesium",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "cesium"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "ab660644-1240-489f-9978-a9fa4d2dd725",
+              "name": "List of Cesium",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/cesium",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "cesium"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:53.000Z",
+              "updatedAt": "2026-06-05T15:06:53.000Z",
+              "uid": "35240-ab660644-1240-489f-9978-a9fa4d2dd725"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:53.000Z",
+          "updatedAt": "2026-06-05T15:06:53.000Z",
+          "uid": "35240-afcc6885-fa84-47cd-a15a-b2d648cd4f75"
+        },
+        {
+          "name": "Create Cesium",
+          "id": "f3d4dfaa-1974-4cb1-9573-13514574a836",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/cesium",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "cesium"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "317bdc80-f056-48f0-881f-97e2cf689375",
+              "name": "Cesium created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/cesium",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "cesium"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:53.000Z",
+              "updatedAt": "2026-06-05T15:06:53.000Z",
+              "uid": "35240-317bdc80-f056-48f0-881f-97e2cf689375"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:53.000Z",
+          "updatedAt": "2026-06-05T15:06:53.000Z",
+          "uid": "35240-f3d4dfaa-1974-4cb1-9573-13514574a836"
+        }
+      ],
+      "id": "815a3c95-d798-4885-a73f-19cfe2a7c14d",
+      "createdAt": "2026-06-05T15:06:53.000Z",
+      "updatedAt": "2026-06-05T15:06:53.000Z",
+      "uid": "35240-815a3c95-d798-4885-a73f-19cfe2a7c14d"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "itwin-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://ims.bentley.com/connect/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://ims.bentley.com/connect/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.bentley.com/curated-content"
+    }
+  ]
+}

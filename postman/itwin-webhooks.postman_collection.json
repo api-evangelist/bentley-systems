@@ -1,0 +1,672 @@
+{
+  "info": {
+    "_postman_id": "78f89dc5-26a7-4a13-9240-aa109a560fe0",
+    "name": "iTwin Webhooks API",
+    "description": "Subscribe to iTwin Platform events. Create, list, update, and delete webhook subscriptions.\n\nContact Support:\n Name: Bentley Developer Relations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-06-05T15:05:57.000Z",
+    "updatedAt": "2026-06-05T15:05:58.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-78f89dc5-26a7-4a13-9240-aa109a560fe0"
+  },
+  "item": [
+    {
+      "name": "/",
+      "item": [
+        {
+          "name": "Get Webhooks",
+          "id": "dd6327a6-dae6-492b-8075-13cdad64e258",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "fa653b92-f42e-4cae-aeb6-70dca0615518",
+              "name": "List of Webhooks",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:05:58.000Z",
+              "updatedAt": "2026-06-05T15:05:58.000Z",
+              "uid": "35240-fa653b92-f42e-4cae-aeb6-70dca0615518"
+            }
+          ],
+          "createdAt": "2026-06-05T15:05:58.000Z",
+          "updatedAt": "2026-06-05T15:05:58.000Z",
+          "uid": "35240-dd6327a6-dae6-492b-8075-13cdad64e258"
+        },
+        {
+          "name": "Create Webhook",
+          "id": "f049b8a3-b5ff-420b-aff2-c082f7d8d7fb",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "a1fd15a0-3b2e-4f03-b066-dd629b180d5a",
+              "name": "Webhook created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:05:58.000Z",
+              "updatedAt": "2026-06-05T15:05:58.000Z",
+              "uid": "35240-a1fd15a0-3b2e-4f03-b066-dd629b180d5a"
+            }
+          ],
+          "createdAt": "2026-06-05T15:05:58.000Z",
+          "updatedAt": "2026-06-05T15:05:58.000Z",
+          "uid": "35240-f049b8a3-b5ff-420b-aff2-c082f7d8d7fb"
+        }
+      ],
+      "id": "2c5c06b3-86bd-4b35-9dbc-6c70b4e2fd61",
+      "createdAt": "2026-06-05T15:05:58.000Z",
+      "updatedAt": "2026-06-05T15:05:58.000Z",
+      "uid": "35240-2c5c06b3-86bd-4b35-9dbc-6c70b4e2fd61"
+    },
+    {
+      "name": "{subscriptionId}",
+      "item": [
+        {
+          "name": "Get Webhooks",
+          "id": "dd155097-f4ab-40cd-808d-2908db73b0d7",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/:subscriptionId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ":subscriptionId"
+              ],
+              "variable": [
+                {
+                  "id": "b5d6cd66-1348-4533-a626-1c433862fdb7",
+                  "key": "subscriptionId",
+                  "value": "<uuid>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "0cbffffe-1294-412b-890d-0d852722024e",
+              "name": "List of Webhooks",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:subscriptionId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":subscriptionId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "subscriptionId"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:05:58.000Z",
+              "updatedAt": "2026-06-05T15:05:58.000Z",
+              "uid": "35240-0cbffffe-1294-412b-890d-0d852722024e"
+            }
+          ],
+          "createdAt": "2026-06-05T15:05:58.000Z",
+          "updatedAt": "2026-06-05T15:05:58.000Z",
+          "uid": "35240-dd155097-f4ab-40cd-808d-2908db73b0d7"
+        },
+        {
+          "name": "Update Webhook",
+          "id": "d823f0a2-124e-466b-a0dc-ad717b5039c1",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/:subscriptionId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ":subscriptionId"
+              ],
+              "variable": [
+                {
+                  "id": "cc71e64e-ccbd-4a60-9327-19deb4dd20c2",
+                  "key": "subscriptionId",
+                  "value": "<uuid>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "48eafc75-9e7e-4a33-b5c9-bdcdd1026378",
+              "name": "Webhook updated",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/:subscriptionId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":subscriptionId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "subscriptionId"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-06-05T15:05:58.000Z",
+              "updatedAt": "2026-06-05T15:05:58.000Z",
+              "uid": "35240-48eafc75-9e7e-4a33-b5c9-bdcdd1026378"
+            }
+          ],
+          "createdAt": "2026-06-05T15:05:58.000Z",
+          "updatedAt": "2026-06-05T15:05:58.000Z",
+          "uid": "35240-d823f0a2-124e-466b-a0dc-ad717b5039c1"
+        },
+        {
+          "name": "Delete Webhook",
+          "id": "e50c4dcf-6d7a-40f6-ab18-0ad070062e7b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/:subscriptionId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ":subscriptionId"
+              ],
+              "variable": [
+                {
+                  "id": "d663c590-506c-426c-abe0-4bd5bfbe6826",
+                  "key": "subscriptionId",
+                  "value": "<uuid>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "01dfa231-fad1-46e3-a630-301739c8186f",
+              "name": "Webhook deleted",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:subscriptionId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":subscriptionId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "subscriptionId"
+                    }
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-06-05T15:05:58.000Z",
+              "updatedAt": "2026-06-05T15:05:58.000Z",
+              "uid": "35240-01dfa231-fad1-46e3-a630-301739c8186f"
+            }
+          ],
+          "createdAt": "2026-06-05T15:05:58.000Z",
+          "updatedAt": "2026-06-05T15:05:58.000Z",
+          "uid": "35240-e50c4dcf-6d7a-40f6-ab18-0ad070062e7b"
+        }
+      ],
+      "id": "116f92c9-d0ab-48bb-b7e3-b1b92d84c4af",
+      "createdAt": "2026-06-05T15:05:58.000Z",
+      "updatedAt": "2026-06-05T15:05:58.000Z",
+      "uid": "35240-116f92c9-d0ab-48bb-b7e3-b1b92d84c4af"
+    },
+    {
+      "name": "event-types",
+      "item": [
+        {
+          "name": "Get Events",
+          "id": "ac9f1203-d401-4548-ae1c-202c1758988e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/event-types",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "event-types"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "3416dc90-67b3-42a9-a564-16694af174ac",
+              "name": "List of Events",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/event-types",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "event-types"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:05:58.000Z",
+              "updatedAt": "2026-06-05T15:05:58.000Z",
+              "uid": "35240-3416dc90-67b3-42a9-a564-16694af174ac"
+            }
+          ],
+          "createdAt": "2026-06-05T15:05:58.000Z",
+          "updatedAt": "2026-06-05T15:05:58.000Z",
+          "uid": "35240-ac9f1203-d401-4548-ae1c-202c1758988e"
+        },
+        {
+          "name": "Create Event",
+          "id": "c7ecc428-09c5-4bcf-8773-7f60b02786c5",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/event-types",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "event-types"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "6bbd1334-4ba1-4749-8405-356c9d53188b",
+              "name": "Event created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/event-types",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "event-types"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:05:58.000Z",
+              "updatedAt": "2026-06-05T15:05:58.000Z",
+              "uid": "35240-6bbd1334-4ba1-4749-8405-356c9d53188b"
+            }
+          ],
+          "createdAt": "2026-06-05T15:05:58.000Z",
+          "updatedAt": "2026-06-05T15:05:58.000Z",
+          "uid": "35240-c7ecc428-09c5-4bcf-8773-7f60b02786c5"
+        }
+      ],
+      "id": "e85e2dcc-a7f0-48cf-850a-cc177ad99aca",
+      "createdAt": "2026-06-05T15:05:58.000Z",
+      "updatedAt": "2026-06-05T15:05:58.000Z",
+      "uid": "35240-e85e2dcc-a7f0-48cf-850a-cc177ad99aca"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "itwin-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://ims.bentley.com/connect/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://ims.bentley.com/connect/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.bentley.com/webhooks"
+    }
+  ]
+}

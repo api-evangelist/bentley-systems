@@ -1,0 +1,389 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "iTwin Library API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://ims.bentley.com/connect/authorize",
+      "accessTokenUrl": "https://ims.bentley.com/connect/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Catalog",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Catalog",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/library/catalogs"
+          },
+          "docs": "Get Catalog"
+        },
+        {
+          "info": {
+            "name": "Create Catalog",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/library/catalogs",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Catalog"
+        },
+        {
+          "info": {
+            "name": "Get Catalog",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/library/catalogs/:catalogId",
+            "params": [
+              {
+                "name": "catalogId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Catalog"
+        },
+        {
+          "info": {
+            "name": "Update Catalog",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.bentley.com/library/catalogs/:catalogId",
+            "params": [
+              {
+                "name": "catalogId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Catalog"
+        },
+        {
+          "info": {
+            "name": "Delete Catalog",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.bentley.com/library/catalogs/:catalogId",
+            "params": [
+              {
+                "name": "catalogId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Catalog"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Components",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Components",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/library/catalogs/:catalogId/components",
+            "params": [
+              {
+                "name": "catalogId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Components"
+        },
+        {
+          "info": {
+            "name": "Create Component",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/library/catalogs/:catalogId/components",
+            "params": [
+              {
+                "name": "catalogId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Component"
+        },
+        {
+          "info": {
+            "name": "Get Components",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/library/catalogs/:catalogId/components/:componentId",
+            "params": [
+              {
+                "name": "catalogId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "componentId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Components"
+        },
+        {
+          "info": {
+            "name": "Update Component",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.bentley.com/library/catalogs/:catalogId/components/:componentId",
+            "params": [
+              {
+                "name": "catalogId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "componentId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Component"
+        },
+        {
+          "info": {
+            "name": "Delete Component",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.bentley.com/library/catalogs/:catalogId/components/:componentId",
+            "params": [
+              {
+                "name": "catalogId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "componentId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Component"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Parameters",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Parameters",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/library/catalogs/:catalogId/components/:componentId/parameters",
+            "params": [
+              {
+                "name": "catalogId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "componentId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Parameters"
+        },
+        {
+          "info": {
+            "name": "Create Parameter",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/library/catalogs/:catalogId/components/:componentId/parameters",
+            "params": [
+              {
+                "name": "catalogId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "componentId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Parameter"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Categories",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Categories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/library/catalogs/:catalogId/categories",
+            "params": [
+              {
+                "name": "catalogId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Categories"
+        },
+        {
+          "info": {
+            "name": "Create Categorie",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/library/catalogs/:catalogId/categories",
+            "params": [
+              {
+                "name": "catalogId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Categorie"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Tags",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Tags",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/library/catalogs/:catalogId/tags",
+            "params": [
+              {
+                "name": "catalogId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Tags"
+        },
+        {
+          "info": {
+            "name": "Create Tag",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/library/catalogs/:catalogId/tags",
+            "params": [
+              {
+                "name": "catalogId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Tag"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

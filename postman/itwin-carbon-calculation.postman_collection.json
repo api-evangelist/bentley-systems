@@ -1,0 +1,979 @@
+{
+  "info": {
+    "_postman_id": "c933df02-a9d7-4d45-a8e5-c7ce40a79e1b",
+    "name": "iTwin Carbon Calculation API",
+    "description": "Compute embodied carbon footprint using EC3 integrations and iModel quantity takeoffs.\n\nContact Support:\n Name: Bentley Developer Relations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-06-05T15:06:09.000Z",
+    "updatedAt": "2026-06-05T15:06:09.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-c933df02-a9d7-4d45-a8e5-c7ce40a79e1b"
+  },
+  "item": [
+    {
+      "name": "ec3",
+      "item": [
+        {
+          "name": "configurations",
+          "item": [
+            {
+              "name": "Get Configurations",
+              "id": "bebd1c68-6581-4ed8-abbf-412df252f4d3",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/ec3/configurations",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "ec3",
+                    "configurations"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "ad5eb07e-f31b-4d6d-b923-97c7dca49783",
+                  "name": "List of Configurations",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/ec3/configurations",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "ec3",
+                        "configurations"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:09.000Z",
+                  "updatedAt": "2026-06-05T15:06:09.000Z",
+                  "uid": "35240-ad5eb07e-f31b-4d6d-b923-97c7dca49783"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:09.000Z",
+              "updatedAt": "2026-06-05T15:06:09.000Z",
+              "uid": "35240-bebd1c68-6581-4ed8-abbf-412df252f4d3"
+            },
+            {
+              "name": "Create Configuration",
+              "id": "6a8ad88a-853a-4fd7-9051-3212eb0d12dd",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/ec3/configurations",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "ec3",
+                    "configurations"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "34af8ba5-fdb8-4732-9e2f-a40c246bf782",
+                  "name": "Configuration created",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/ec3/configurations",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "ec3",
+                        "configurations"
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:09.000Z",
+                  "updatedAt": "2026-06-05T15:06:09.000Z",
+                  "uid": "35240-34af8ba5-fdb8-4732-9e2f-a40c246bf782"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:09.000Z",
+              "updatedAt": "2026-06-05T15:06:09.000Z",
+              "uid": "35240-6a8ad88a-853a-4fd7-9051-3212eb0d12dd"
+            }
+          ],
+          "id": "526129f3-30df-4852-a5a5-dc3d0a5c7698",
+          "createdAt": "2026-06-05T15:06:09.000Z",
+          "updatedAt": "2026-06-05T15:06:09.000Z",
+          "uid": "35240-526129f3-30df-4852-a5a5-dc3d0a5c7698"
+        },
+        {
+          "name": "reports",
+          "item": [
+            {
+              "name": "Get Reports",
+              "id": "5de920ee-a74b-4231-ae56-968153bf4112",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/ec3/reports",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "ec3",
+                    "reports"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "b3122dd8-df7f-48d4-8a91-9f240cd9ac76",
+                  "name": "List of Reports",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/ec3/reports",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "ec3",
+                        "reports"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:09.000Z",
+                  "updatedAt": "2026-06-05T15:06:09.000Z",
+                  "uid": "35240-b3122dd8-df7f-48d4-8a91-9f240cd9ac76"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:09.000Z",
+              "updatedAt": "2026-06-05T15:06:09.000Z",
+              "uid": "35240-5de920ee-a74b-4231-ae56-968153bf4112"
+            },
+            {
+              "name": "Create Report",
+              "id": "0509dfc8-9917-4782-8d00-f078e0152a0e",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/ec3/reports",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "ec3",
+                    "reports"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "2eebe464-3cec-4ec1-8251-b60d0bb2375d",
+                  "name": "Report created",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/ec3/reports",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "ec3",
+                        "reports"
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:09.000Z",
+                  "updatedAt": "2026-06-05T15:06:09.000Z",
+                  "uid": "35240-2eebe464-3cec-4ec1-8251-b60d0bb2375d"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:09.000Z",
+              "updatedAt": "2026-06-05T15:06:09.000Z",
+              "uid": "35240-0509dfc8-9917-4782-8d00-f078e0152a0e"
+            }
+          ],
+          "id": "b8bfd414-a3e2-433f-ae2e-514628b20c6b",
+          "createdAt": "2026-06-05T15:06:09.000Z",
+          "updatedAt": "2026-06-05T15:06:09.000Z",
+          "uid": "35240-b8bfd414-a3e2-433f-ae2e-514628b20c6b"
+        },
+        {
+          "name": "jobs",
+          "item": [
+            {
+              "name": "Get Jobs",
+              "id": "7b596fef-4b24-4d33-87bf-ea3be12b103b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/ec3/jobs",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "ec3",
+                    "jobs"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "917989fa-669a-427a-9b59-b1dccc83db6d",
+                  "name": "List of Jobs",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/ec3/jobs",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "ec3",
+                        "jobs"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:09.000Z",
+                  "updatedAt": "2026-06-05T15:06:09.000Z",
+                  "uid": "35240-917989fa-669a-427a-9b59-b1dccc83db6d"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:09.000Z",
+              "updatedAt": "2026-06-05T15:06:09.000Z",
+              "uid": "35240-7b596fef-4b24-4d33-87bf-ea3be12b103b"
+            },
+            {
+              "name": "Create Job",
+              "id": "5f559aaa-16ad-4f61-a2b2-eed4395c3604",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/ec3/jobs",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "ec3",
+                    "jobs"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "342e597a-718a-4b41-8de5-2e726799271c",
+                  "name": "Job created",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/ec3/jobs",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "ec3",
+                        "jobs"
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:09.000Z",
+                  "updatedAt": "2026-06-05T15:06:09.000Z",
+                  "uid": "35240-342e597a-718a-4b41-8de5-2e726799271c"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:09.000Z",
+              "updatedAt": "2026-06-05T15:06:09.000Z",
+              "uid": "35240-5f559aaa-16ad-4f61-a2b2-eed4395c3604"
+            }
+          ],
+          "id": "0910ffde-91c2-492b-baee-c84556188cb5",
+          "createdAt": "2026-06-05T15:06:09.000Z",
+          "updatedAt": "2026-06-05T15:06:09.000Z",
+          "uid": "35240-0910ffde-91c2-492b-baee-c84556188cb5"
+        },
+        {
+          "name": "templates",
+          "item": [
+            {
+              "name": "Get Templates",
+              "id": "d011c53e-5f84-4c43-bb59-fe7085c6772c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/ec3/templates",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "ec3",
+                    "templates"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "b46f1212-9ed3-4e59-bd3e-47ae91959fb4",
+                  "name": "List of Templates",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/ec3/templates",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "ec3",
+                        "templates"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:09.000Z",
+                  "updatedAt": "2026-06-05T15:06:09.000Z",
+                  "uid": "35240-b46f1212-9ed3-4e59-bd3e-47ae91959fb4"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:09.000Z",
+              "updatedAt": "2026-06-05T15:06:09.000Z",
+              "uid": "35240-d011c53e-5f84-4c43-bb59-fe7085c6772c"
+            },
+            {
+              "name": "Create Template",
+              "id": "75e7cf22-990e-4b1a-b8ba-816d048365bc",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/ec3/templates",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "ec3",
+                    "templates"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "6db264bf-3b29-4ef0-8860-56cf9a79c6b4",
+                  "name": "Template created",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/ec3/templates",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "ec3",
+                        "templates"
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:09.000Z",
+                  "updatedAt": "2026-06-05T15:06:09.000Z",
+                  "uid": "35240-6db264bf-3b29-4ef0-8860-56cf9a79c6b4"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:09.000Z",
+              "updatedAt": "2026-06-05T15:06:09.000Z",
+              "uid": "35240-75e7cf22-990e-4b1a-b8ba-816d048365bc"
+            }
+          ],
+          "id": "242041f9-b359-437f-84c3-87811cb0b855",
+          "createdAt": "2026-06-05T15:06:09.000Z",
+          "updatedAt": "2026-06-05T15:06:09.000Z",
+          "uid": "35240-242041f9-b359-437f-84c3-87811cb0b855"
+        },
+        {
+          "name": "materials",
+          "item": [
+            {
+              "name": "Get Materials",
+              "id": "6b97a5ac-1195-4767-9b3b-f7af40b39d2d",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/ec3/materials",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "ec3",
+                    "materials"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "b941545a-58f7-4ef1-9bf8-b64abfcff03d",
+                  "name": "List of Materials",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/ec3/materials",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "ec3",
+                        "materials"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:09.000Z",
+                  "updatedAt": "2026-06-05T15:06:09.000Z",
+                  "uid": "35240-b941545a-58f7-4ef1-9bf8-b64abfcff03d"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:09.000Z",
+              "updatedAt": "2026-06-05T15:06:09.000Z",
+              "uid": "35240-6b97a5ac-1195-4767-9b3b-f7af40b39d2d"
+            },
+            {
+              "name": "Create Material",
+              "id": "5ca186c1-fe44-49e2-8528-5be67dabb2a8",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/ec3/materials",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "ec3",
+                    "materials"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "dfab7c15-7429-4b4a-8c86-139107a7644d",
+                  "name": "Material created",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/ec3/materials",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "ec3",
+                        "materials"
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:09.000Z",
+                  "updatedAt": "2026-06-05T15:06:09.000Z",
+                  "uid": "35240-dfab7c15-7429-4b4a-8c86-139107a7644d"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:09.000Z",
+              "updatedAt": "2026-06-05T15:06:09.000Z",
+              "uid": "35240-5ca186c1-fe44-49e2-8528-5be67dabb2a8"
+            }
+          ],
+          "id": "d1b78b72-1c63-48ed-a0fd-3b24f1d3324f",
+          "createdAt": "2026-06-05T15:06:09.000Z",
+          "updatedAt": "2026-06-05T15:06:09.000Z",
+          "uid": "35240-d1b78b72-1c63-48ed-a0fd-3b24f1d3324f"
+        }
+      ],
+      "id": "6a78bffc-a836-4c61-9e72-c70a483bce23",
+      "createdAt": "2026-06-05T15:06:09.000Z",
+      "updatedAt": "2026-06-05T15:06:09.000Z",
+      "uid": "35240-6a78bffc-a836-4c61-9e72-c70a483bce23"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "itwin-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://ims.bentley.com/connect/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://ims.bentley.com/connect/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.bentley.com/carboncalculation"
+    }
+  ]
+}

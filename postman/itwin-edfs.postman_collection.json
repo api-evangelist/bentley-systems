@@ -1,0 +1,1040 @@
+{
+  "info": {
+    "_postman_id": "65d41162-a3be-49a9-a366-01c0b00b5ac5",
+    "name": "Enterprise Data Federation Service (EDFS) API",
+    "description": "Federate access to data held in Bentley and third-party repositories \u2014 ProjectWise, SharePoint, external systems.\n\nContact Support:\n Name: Bentley Developer Relations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-06-05T15:06:57.000Z",
+    "updatedAt": "2026-06-05T15:06:57.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-65d41162-a3be-49a9-a366-01c0b00b5ac5"
+  },
+  "item": [
+    {
+      "name": "sources",
+      "item": [
+        {
+          "name": "{sourceId}",
+          "item": [
+            {
+              "name": "Get Sources",
+              "id": "ce807bbf-af22-4027-90eb-984ed4c0ffa5",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/sources/:sourceId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "sources",
+                    ":sourceId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "3aa1979b-95d9-489d-963c-53ed806d4cde",
+                      "key": "sourceId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "c7a5e38d-52d0-4308-a0e4-d821e864a360",
+                  "name": "List of Sources",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/sources/:sourceId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "sources",
+                        ":sourceId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "sourceId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:58.000Z",
+                  "updatedAt": "2026-06-05T15:06:58.000Z",
+                  "uid": "35240-c7a5e38d-52d0-4308-a0e4-d821e864a360"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:58.000Z",
+              "updatedAt": "2026-06-05T15:06:58.000Z",
+              "uid": "35240-ce807bbf-af22-4027-90eb-984ed4c0ffa5"
+            },
+            {
+              "name": "Update Source",
+              "id": "93ed12f6-d0a5-486c-aa9d-f0376a1330a2",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/sources/:sourceId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "sources",
+                    ":sourceId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "d1e733c4-36cf-4161-a5db-222d4786b95a",
+                      "key": "sourceId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "a761845c-4e1b-4d42-b4dc-c85a59d62f91",
+                  "name": "Source updated",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/sources/:sourceId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "sources",
+                        ":sourceId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "sourceId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-06-05T15:06:58.000Z",
+                  "updatedAt": "2026-06-05T15:06:58.000Z",
+                  "uid": "35240-a761845c-4e1b-4d42-b4dc-c85a59d62f91"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:58.000Z",
+              "updatedAt": "2026-06-05T15:06:58.000Z",
+              "uid": "35240-93ed12f6-d0a5-486c-aa9d-f0376a1330a2"
+            },
+            {
+              "name": "Delete Source",
+              "id": "33236b75-2ebb-4b06-b9cf-f7fba630cd6b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/sources/:sourceId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "sources",
+                    ":sourceId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "06a1053f-b2fc-473b-a552-89c8a8af9895",
+                      "key": "sourceId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "3dbe4d96-b44e-43bf-af8f-65f550a680d4",
+                  "name": "Source deleted",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/sources/:sourceId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "sources",
+                        ":sourceId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "sourceId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-06-05T15:06:58.000Z",
+                  "updatedAt": "2026-06-05T15:06:58.000Z",
+                  "uid": "35240-3dbe4d96-b44e-43bf-af8f-65f550a680d4"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:58.000Z",
+              "updatedAt": "2026-06-05T15:06:58.000Z",
+              "uid": "35240-33236b75-2ebb-4b06-b9cf-f7fba630cd6b"
+            }
+          ],
+          "id": "4bab1d22-8c93-45b3-8ce2-6f890d3f6c38",
+          "createdAt": "2026-06-05T15:06:58.000Z",
+          "updatedAt": "2026-06-05T15:06:58.000Z",
+          "uid": "35240-4bab1d22-8c93-45b3-8ce2-6f890d3f6c38"
+        },
+        {
+          "name": "Get Sources",
+          "id": "b511587d-ed56-4bee-9f34-ad0ea50e3e8c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/sources",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "sources"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "20db20d3-c1ab-4b80-94ca-9be160c91f8e",
+              "name": "List of Sources",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/sources",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "sources"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:58.000Z",
+              "updatedAt": "2026-06-05T15:06:58.000Z",
+              "uid": "35240-20db20d3-c1ab-4b80-94ca-9be160c91f8e"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:58.000Z",
+          "updatedAt": "2026-06-05T15:06:58.000Z",
+          "uid": "35240-b511587d-ed56-4bee-9f34-ad0ea50e3e8c"
+        },
+        {
+          "name": "Create Source",
+          "id": "ebe469ef-e7fc-44bf-9ac2-38237308b059",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/sources",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "sources"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "795b6fc6-8cce-4e47-9f7d-9d7e791ab84b",
+              "name": "Source created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/sources",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "sources"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:58.000Z",
+              "updatedAt": "2026-06-05T15:06:58.000Z",
+              "uid": "35240-795b6fc6-8cce-4e47-9f7d-9d7e791ab84b"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:58.000Z",
+          "updatedAt": "2026-06-05T15:06:58.000Z",
+          "uid": "35240-ebe469ef-e7fc-44bf-9ac2-38237308b059"
+        }
+      ],
+      "id": "43afd5bb-cf0c-405b-8035-a1bfccffb7ad",
+      "createdAt": "2026-06-05T15:06:58.000Z",
+      "updatedAt": "2026-06-05T15:06:58.000Z",
+      "uid": "35240-43afd5bb-cf0c-405b-8035-a1bfccffb7ad"
+    },
+    {
+      "name": "schemas",
+      "item": [
+        {
+          "name": "Get Schemas",
+          "id": "731b6ed4-a239-47ab-af43-c294367c212c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/schemas",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "schemas"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "2a5e064b-1bb5-40ca-a041-d530dd43206a",
+              "name": "List of Schemas",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/schemas",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "schemas"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:58.000Z",
+              "updatedAt": "2026-06-05T15:06:58.000Z",
+              "uid": "35240-2a5e064b-1bb5-40ca-a041-d530dd43206a"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:58.000Z",
+          "updatedAt": "2026-06-05T15:06:58.000Z",
+          "uid": "35240-731b6ed4-a239-47ab-af43-c294367c212c"
+        },
+        {
+          "name": "Create Schema",
+          "id": "14400b78-7876-4a64-aa20-0251106f2ffc",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/schemas",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "schemas"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "fbe9b3ac-5f1d-4ea8-9d75-fe45bb189ef2",
+              "name": "Schema created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/schemas",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "schemas"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:58.000Z",
+              "updatedAt": "2026-06-05T15:06:58.000Z",
+              "uid": "35240-fbe9b3ac-5f1d-4ea8-9d75-fe45bb189ef2"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:58.000Z",
+          "updatedAt": "2026-06-05T15:06:58.000Z",
+          "uid": "35240-14400b78-7876-4a64-aa20-0251106f2ffc"
+        }
+      ],
+      "id": "15e70651-f3ba-4f6e-8e68-132e887707bf",
+      "createdAt": "2026-06-05T15:06:58.000Z",
+      "updatedAt": "2026-06-05T15:06:58.000Z",
+      "uid": "35240-15e70651-f3ba-4f6e-8e68-132e887707bf"
+    },
+    {
+      "name": "queries",
+      "item": [
+        {
+          "name": "Get Queries",
+          "id": "1a3e1cac-8e67-4738-9b8f-7ad084e8ad81",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/queries",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "queries"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "d9ff7cf0-e086-4094-92e6-e1f06bec5baf",
+              "name": "List of Queries",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/queries",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "queries"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:58.000Z",
+              "updatedAt": "2026-06-05T15:06:58.000Z",
+              "uid": "35240-d9ff7cf0-e086-4094-92e6-e1f06bec5baf"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:58.000Z",
+          "updatedAt": "2026-06-05T15:06:58.000Z",
+          "uid": "35240-1a3e1cac-8e67-4738-9b8f-7ad084e8ad81"
+        },
+        {
+          "name": "Create Querie",
+          "id": "43bc1f0e-5251-47da-8a47-8c2485460969",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/queries",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "queries"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "25b29477-035f-474d-8e69-8f6169a6823d",
+              "name": "Querie created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/queries",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "queries"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:58.000Z",
+              "updatedAt": "2026-06-05T15:06:58.000Z",
+              "uid": "35240-25b29477-035f-474d-8e69-8f6169a6823d"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:58.000Z",
+          "updatedAt": "2026-06-05T15:06:58.000Z",
+          "uid": "35240-43bc1f0e-5251-47da-8a47-8c2485460969"
+        }
+      ],
+      "id": "088382da-9c72-4517-973a-31967aa01143",
+      "createdAt": "2026-06-05T15:06:58.000Z",
+      "updatedAt": "2026-06-05T15:06:58.000Z",
+      "uid": "35240-088382da-9c72-4517-973a-31967aa01143"
+    },
+    {
+      "name": "policies",
+      "item": [
+        {
+          "name": "Get Policies",
+          "id": "8120b4f3-f7f0-4c9b-a6ec-391512fd4f76",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/policies",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "policies"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "232e6ae3-8d8f-423d-8ec5-b6012da51cdb",
+              "name": "List of Policies",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/policies",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "policies"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:58.000Z",
+              "updatedAt": "2026-06-05T15:06:58.000Z",
+              "uid": "35240-232e6ae3-8d8f-423d-8ec5-b6012da51cdb"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:58.000Z",
+          "updatedAt": "2026-06-05T15:06:58.000Z",
+          "uid": "35240-8120b4f3-f7f0-4c9b-a6ec-391512fd4f76"
+        },
+        {
+          "name": "Create Policie",
+          "id": "73d7bb2d-6db5-4d27-b9c1-d38061247219",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/policies",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "policies"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "aaa00ecd-4dc2-4f70-8a90-995fb055f234",
+              "name": "Policie created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/policies",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "policies"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:58.000Z",
+              "updatedAt": "2026-06-05T15:06:58.000Z",
+              "uid": "35240-aaa00ecd-4dc2-4f70-8a90-995fb055f234"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:58.000Z",
+          "updatedAt": "2026-06-05T15:06:58.000Z",
+          "uid": "35240-73d7bb2d-6db5-4d27-b9c1-d38061247219"
+        }
+      ],
+      "id": "4f58ae4a-32b5-4666-9f5b-f3d85bc0a4c5",
+      "createdAt": "2026-06-05T15:06:58.000Z",
+      "updatedAt": "2026-06-05T15:06:58.000Z",
+      "uid": "35240-4f58ae4a-32b5-4666-9f5b-f3d85bc0a4c5"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "itwin-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://ims.bentley.com/connect/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://ims.bentley.com/connect/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.bentley.com/edfs"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "iTwin Mesh Export API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://ims.bentley.com/connect/authorize",
+      "accessTokenUrl": "https://ims.bentley.com/connect/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Mesh Export",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Mesh Export",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/mesh-export/"
+          },
+          "docs": "Get Mesh Export"
+        },
+        {
+          "info": {
+            "name": "Create Mesh Export",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/mesh-export/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Mesh Export"
+        },
+        {
+          "info": {
+            "name": "Get Mesh Export",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/mesh-export/:exportId",
+            "params": [
+              {
+                "name": "exportId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Mesh Export"
+        },
+        {
+          "info": {
+            "name": "Update Mesh Export",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.bentley.com/mesh-export/:exportId",
+            "params": [
+              {
+                "name": "exportId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Mesh Export"
+        },
+        {
+          "info": {
+            "name": "Delete Mesh Export",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.bentley.com/mesh-export/:exportId",
+            "params": [
+              {
+                "name": "exportId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Mesh Export"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

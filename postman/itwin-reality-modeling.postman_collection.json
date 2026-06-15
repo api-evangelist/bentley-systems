@@ -1,0 +1,949 @@
+{
+  "info": {
+    "_postman_id": "64842ad4-fbf2-4fa2-ae76-fbef5161852b",
+    "name": "iTwin Reality Modeling API",
+    "description": "Submit reality modeling jobs that process photos and laser scans into 3D meshes using ContextCapture.\n\nContact Support:\n Name: Bentley Developer Relations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-06-05T15:06:01.000Z",
+    "updatedAt": "2026-06-05T15:06:01.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-64842ad4-fbf2-4fa2-ae76-fbef5161852b"
+  },
+  "item": [
+    {
+      "name": "jobs",
+      "item": [
+        {
+          "name": "{jobId}",
+          "item": [
+            {
+              "name": "Get Jobs",
+              "id": "23ebf622-dce8-4797-8f27-8b7b8ca4ae6f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/jobs/:jobId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "jobs",
+                    ":jobId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "252780fc-1390-444b-a96b-52ba552e0489",
+                      "key": "jobId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "2d301bce-3861-4555-8d15-9bb8a0d3883b",
+                  "name": "List of Jobs",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/jobs/:jobId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "jobs",
+                        ":jobId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "jobId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:01.000Z",
+                  "updatedAt": "2026-06-05T15:06:01.000Z",
+                  "uid": "35240-2d301bce-3861-4555-8d15-9bb8a0d3883b"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:01.000Z",
+              "updatedAt": "2026-06-05T15:06:01.000Z",
+              "uid": "35240-23ebf622-dce8-4797-8f27-8b7b8ca4ae6f"
+            },
+            {
+              "name": "Update Job",
+              "id": "0a6c4c95-918d-434c-91bf-8db79b1f7f6c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/jobs/:jobId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "jobs",
+                    ":jobId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "93ed89ee-30f4-4223-9938-e006fa43e626",
+                      "key": "jobId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "3aac0e5a-2855-438f-9f54-d24919f1cb9b",
+                  "name": "Job updated",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/jobs/:jobId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "jobs",
+                        ":jobId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "jobId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-06-05T15:06:01.000Z",
+                  "updatedAt": "2026-06-05T15:06:01.000Z",
+                  "uid": "35240-3aac0e5a-2855-438f-9f54-d24919f1cb9b"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:01.000Z",
+              "updatedAt": "2026-06-05T15:06:01.000Z",
+              "uid": "35240-0a6c4c95-918d-434c-91bf-8db79b1f7f6c"
+            },
+            {
+              "name": "Delete Job",
+              "id": "5e2d5206-b2a9-434e-83c2-83eca028a766",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/jobs/:jobId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "jobs",
+                    ":jobId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "d8a348e5-ec20-40bf-aa4d-31a0ab122b68",
+                      "key": "jobId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "8ca3336d-63a9-4e2b-a831-a02b28359072",
+                  "name": "Job deleted",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/jobs/:jobId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "jobs",
+                        ":jobId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "jobId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-06-05T15:06:01.000Z",
+                  "updatedAt": "2026-06-05T15:06:01.000Z",
+                  "uid": "35240-8ca3336d-63a9-4e2b-a831-a02b28359072"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:01.000Z",
+              "updatedAt": "2026-06-05T15:06:01.000Z",
+              "uid": "35240-5e2d5206-b2a9-434e-83c2-83eca028a766"
+            }
+          ],
+          "id": "374fe0ae-adec-4672-aec6-fe781169e17f",
+          "createdAt": "2026-06-05T15:06:01.000Z",
+          "updatedAt": "2026-06-05T15:06:01.000Z",
+          "uid": "35240-374fe0ae-adec-4672-aec6-fe781169e17f"
+        },
+        {
+          "name": "Get Jobs",
+          "id": "e0871e8b-77eb-47a9-8a46-60fabb9f8038",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/jobs",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "jobs"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "b755b4b5-14bb-4614-b97f-1ccc81a14361",
+              "name": "List of Jobs",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/jobs",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "jobs"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:01.000Z",
+              "updatedAt": "2026-06-05T15:06:01.000Z",
+              "uid": "35240-b755b4b5-14bb-4614-b97f-1ccc81a14361"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:01.000Z",
+          "updatedAt": "2026-06-05T15:06:01.000Z",
+          "uid": "35240-e0871e8b-77eb-47a9-8a46-60fabb9f8038"
+        },
+        {
+          "name": "Create Job",
+          "id": "60893aad-c2fa-4673-86d3-359cae9f4447",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/jobs",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "jobs"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "b43cb6b3-9cbf-4260-abde-5387761a6fe5",
+              "name": "Job created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/jobs",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "jobs"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:01.000Z",
+              "updatedAt": "2026-06-05T15:06:01.000Z",
+              "uid": "35240-b43cb6b3-9cbf-4260-abde-5387761a6fe5"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:01.000Z",
+          "updatedAt": "2026-06-05T15:06:01.000Z",
+          "uid": "35240-60893aad-c2fa-4673-86d3-359cae9f4447"
+        }
+      ],
+      "id": "2eb72147-02e4-43f3-b47e-240aa0d216bd",
+      "createdAt": "2026-06-05T15:06:01.000Z",
+      "updatedAt": "2026-06-05T15:06:01.000Z",
+      "uid": "35240-2eb72147-02e4-43f3-b47e-240aa0d216bd"
+    },
+    {
+      "name": "workspaces",
+      "item": [
+        {
+          "name": "{workspaceId}",
+          "item": [
+            {
+              "name": "Get Workspaces",
+              "id": "beee2e31-6ea6-4033-a926-1017677bc389",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/workspaces/:workspaceId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "workspaces",
+                    ":workspaceId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "57318993-75b0-4e3f-829e-898a3a872fb8",
+                      "key": "workspaceId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "9cdeceb8-6ebe-450f-97a0-23e19b549900",
+                  "name": "List of Workspaces",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/workspaces/:workspaceId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "workspaces",
+                        ":workspaceId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "workspaceId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:01.000Z",
+                  "updatedAt": "2026-06-05T15:06:01.000Z",
+                  "uid": "35240-9cdeceb8-6ebe-450f-97a0-23e19b549900"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:01.000Z",
+              "updatedAt": "2026-06-05T15:06:01.000Z",
+              "uid": "35240-beee2e31-6ea6-4033-a926-1017677bc389"
+            },
+            {
+              "name": "Update Workspace",
+              "id": "77d72904-740e-43b7-ab6f-bd3d05717b62",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/workspaces/:workspaceId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "workspaces",
+                    ":workspaceId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "8631ec99-c2d5-4b5c-b96e-4a653484a56b",
+                      "key": "workspaceId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "0ea5ca41-8314-4ff3-adce-3b5fdc8b2951",
+                  "name": "Workspace updated",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/workspaces/:workspaceId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "workspaces",
+                        ":workspaceId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "workspaceId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-06-05T15:06:01.000Z",
+                  "updatedAt": "2026-06-05T15:06:01.000Z",
+                  "uid": "35240-0ea5ca41-8314-4ff3-adce-3b5fdc8b2951"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:01.000Z",
+              "updatedAt": "2026-06-05T15:06:01.000Z",
+              "uid": "35240-77d72904-740e-43b7-ab6f-bd3d05717b62"
+            },
+            {
+              "name": "Delete Workspace",
+              "id": "ffacd964-5610-4317-9677-a1eda7b8e455",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/workspaces/:workspaceId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "workspaces",
+                    ":workspaceId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "91011659-5f26-4b50-b83a-2145d6688494",
+                      "key": "workspaceId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "c3c667b9-86f0-44d6-b8db-ca5c8841e7c5",
+                  "name": "Workspace deleted",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/workspaces/:workspaceId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "workspaces",
+                        ":workspaceId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "workspaceId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-06-05T15:06:01.000Z",
+                  "updatedAt": "2026-06-05T15:06:01.000Z",
+                  "uid": "35240-c3c667b9-86f0-44d6-b8db-ca5c8841e7c5"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:01.000Z",
+              "updatedAt": "2026-06-05T15:06:01.000Z",
+              "uid": "35240-ffacd964-5610-4317-9677-a1eda7b8e455"
+            }
+          ],
+          "id": "0a15d9d5-c109-408a-be82-51f451fe0bbd",
+          "createdAt": "2026-06-05T15:06:01.000Z",
+          "updatedAt": "2026-06-05T15:06:01.000Z",
+          "uid": "35240-0a15d9d5-c109-408a-be82-51f451fe0bbd"
+        },
+        {
+          "name": "Get Workspaces",
+          "id": "fb69deba-75bf-4fff-900d-b7697def8343",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/workspaces",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "workspaces"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "96ec2ad2-7dcd-4f55-bee2-9c693b60fd19",
+              "name": "List of Workspaces",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/workspaces",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "workspaces"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:01.000Z",
+              "updatedAt": "2026-06-05T15:06:01.000Z",
+              "uid": "35240-96ec2ad2-7dcd-4f55-bee2-9c693b60fd19"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:01.000Z",
+          "updatedAt": "2026-06-05T15:06:01.000Z",
+          "uid": "35240-fb69deba-75bf-4fff-900d-b7697def8343"
+        },
+        {
+          "name": "Create Workspace",
+          "id": "eb1a3e37-f9f3-4540-bdc5-8c3e3ad1b256",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/workspaces",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "workspaces"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "52e5e15f-065a-4da6-8361-225f1a78e471",
+              "name": "Workspace created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/workspaces",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "workspaces"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:01.000Z",
+              "updatedAt": "2026-06-05T15:06:01.000Z",
+              "uid": "35240-52e5e15f-065a-4da6-8361-225f1a78e471"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:01.000Z",
+          "updatedAt": "2026-06-05T15:06:01.000Z",
+          "uid": "35240-eb1a3e37-f9f3-4540-bdc5-8c3e3ad1b256"
+        }
+      ],
+      "id": "5d350b11-5a8f-41cb-ab0a-091b22e40c21",
+      "createdAt": "2026-06-05T15:06:01.000Z",
+      "updatedAt": "2026-06-05T15:06:01.000Z",
+      "uid": "35240-5d350b11-5a8f-41cb-ab0a-091b22e40c21"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "itwin-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://ims.bentley.com/connect/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://ims.bentley.com/connect/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.bentley.com/contextcapture"
+    }
+  ]
+}

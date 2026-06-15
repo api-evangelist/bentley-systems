@@ -1,0 +1,497 @@
+{
+  "info": {
+    "_postman_id": "1169dc5c-13ba-4c8b-9be6-2fa60739b339",
+    "name": "iTwin Export API",
+    "description": "Export iModel data to web-friendly formats including 3D Tiles, glTF, and tileset bundles.\n\nContact Support:\n Name: Bentley Developer Relations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-06-05T15:06:45.000Z",
+    "updatedAt": "2026-06-05T15:06:46.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-1169dc5c-13ba-4c8b-9be6-2fa60739b339"
+  },
+  "item": [
+    {
+      "name": "exports",
+      "item": [
+        {
+          "name": "{exportId}",
+          "item": [
+            {
+              "name": "Get Export",
+              "id": "e9beb601-a729-405c-ba3b-71a6aa2638b1",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/exports/:exportId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "exports",
+                    ":exportId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "6145e054-f402-409b-9b78-96abf288a2b2",
+                      "key": "exportId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "7c94ab9f-e333-463c-b4d2-4c908e63785b",
+                  "name": "List of Export",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/exports/:exportId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "exports",
+                        ":exportId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "exportId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:46.000Z",
+                  "updatedAt": "2026-06-05T15:06:46.000Z",
+                  "uid": "35240-7c94ab9f-e333-463c-b4d2-4c908e63785b"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:46.000Z",
+              "updatedAt": "2026-06-05T15:06:46.000Z",
+              "uid": "35240-e9beb601-a729-405c-ba3b-71a6aa2638b1"
+            },
+            {
+              "name": "Update Export",
+              "id": "c4c359cd-3525-4356-b263-9de814b24d82",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/exports/:exportId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "exports",
+                    ":exportId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "1db56199-dedc-4b1f-be5a-b9197582045c",
+                      "key": "exportId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "d03d2b86-f218-414b-8499-ce9c7fe742ee",
+                  "name": "Export updated",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/exports/:exportId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "exports",
+                        ":exportId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "exportId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-06-05T15:06:46.000Z",
+                  "updatedAt": "2026-06-05T15:06:46.000Z",
+                  "uid": "35240-d03d2b86-f218-414b-8499-ce9c7fe742ee"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:46.000Z",
+              "updatedAt": "2026-06-05T15:06:46.000Z",
+              "uid": "35240-c4c359cd-3525-4356-b263-9de814b24d82"
+            },
+            {
+              "name": "Delete Export",
+              "id": "bb5cfc77-191e-445d-bba7-0c21a6204b15",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/exports/:exportId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "exports",
+                    ":exportId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "d40a573b-d5ca-43e0-8a5d-b5f78457e5c6",
+                      "key": "exportId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "4dfb820c-96c8-477f-b4cd-a9d1d874dbe5",
+                  "name": "Export deleted",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/exports/:exportId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "exports",
+                        ":exportId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "exportId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-06-05T15:06:46.000Z",
+                  "updatedAt": "2026-06-05T15:06:46.000Z",
+                  "uid": "35240-4dfb820c-96c8-477f-b4cd-a9d1d874dbe5"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:46.000Z",
+              "updatedAt": "2026-06-05T15:06:46.000Z",
+              "uid": "35240-bb5cfc77-191e-445d-bba7-0c21a6204b15"
+            }
+          ],
+          "id": "92336b6b-21b6-4015-a565-51183c391b98",
+          "createdAt": "2026-06-05T15:06:46.000Z",
+          "updatedAt": "2026-06-05T15:06:46.000Z",
+          "uid": "35240-92336b6b-21b6-4015-a565-51183c391b98"
+        },
+        {
+          "name": "Get Export",
+          "id": "ea082327-6268-4968-9ced-e6f364426634",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/exports",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "exports"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "5a10ea85-5d0a-4dd0-a764-991f0f542103",
+              "name": "List of Export",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/exports",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "exports"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:46.000Z",
+              "updatedAt": "2026-06-05T15:06:46.000Z",
+              "uid": "35240-5a10ea85-5d0a-4dd0-a764-991f0f542103"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:46.000Z",
+          "updatedAt": "2026-06-05T15:06:46.000Z",
+          "uid": "35240-ea082327-6268-4968-9ced-e6f364426634"
+        },
+        {
+          "name": "Create Export",
+          "id": "38d5c8ea-3b71-4808-856d-729bfb122669",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/exports",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "exports"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "d1291406-2e00-4da5-9c4b-20d84868294b",
+              "name": "Export created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/exports",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "exports"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:46.000Z",
+              "updatedAt": "2026-06-05T15:06:46.000Z",
+              "uid": "35240-d1291406-2e00-4da5-9c4b-20d84868294b"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:46.000Z",
+          "updatedAt": "2026-06-05T15:06:46.000Z",
+          "uid": "35240-38d5c8ea-3b71-4808-856d-729bfb122669"
+        }
+      ],
+      "id": "8b78faef-3f00-4f48-803d-ca130d96ed1f",
+      "createdAt": "2026-06-05T15:06:46.000Z",
+      "updatedAt": "2026-06-05T15:06:46.000Z",
+      "uid": "35240-8b78faef-3f00-4f48-803d-ca130d96ed1f"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "itwin-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://ims.bentley.com/connect/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://ims.bentley.com/connect/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.bentley.com/imodels-export"
+    }
+  ]
+}

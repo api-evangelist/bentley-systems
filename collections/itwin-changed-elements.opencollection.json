@@ -1,0 +1,90 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "iTwin Changed Elements API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://ims.bentley.com/connect/authorize",
+      "accessTokenUrl": "https://ims.bentley.com/connect/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Comparisons",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Comparisons",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/changedelements/comparison"
+          },
+          "docs": "Get Comparisons"
+        },
+        {
+          "info": {
+            "name": "Create Comparison",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/changedelements/comparison",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Comparison"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Change Tracking",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Change Tracking",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/changedelements/tracking"
+          },
+          "docs": "Get Change Tracking"
+        },
+        {
+          "info": {
+            "name": "Create Change Tracking",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/changedelements/tracking",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Change Tracking"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

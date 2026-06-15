@@ -1,0 +1,1693 @@
+{
+  "info": {
+    "_postman_id": "2b7c88c9-f751-480d-9b0e-a8f760734b79",
+    "name": "iTwin Library API",
+    "description": "Manage reusable component libraries \u2014 catalogs, components, parameters, and component instances.\n\nContact Support:\n Name: Bentley Developer Relations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-06-05T15:06:26.000Z",
+    "updatedAt": "2026-06-05T15:06:27.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-2b7c88c9-f751-480d-9b0e-a8f760734b79"
+  },
+  "item": [
+    {
+      "name": "catalogs",
+      "item": [
+        {
+          "name": "{catalogId}",
+          "item": [
+            {
+              "name": "components",
+              "item": [
+                {
+                  "name": "{componentId}",
+                  "item": [
+                    {
+                      "name": "parameters",
+                      "item": [
+                        {
+                          "name": "Get Parameters",
+                          "id": "ab4a78da-e334-4b3b-b280-65bc91634ece",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/catalogs/:catalogId/components/:componentId/parameters",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "catalogs",
+                                ":catalogId",
+                                "components",
+                                ":componentId",
+                                "parameters"
+                              ],
+                              "variable": [
+                                {
+                                  "id": "9de272d1-4c0a-4df6-8e6f-68aa51a9c75a",
+                                  "key": "catalogId",
+                                  "value": "<uuid>",
+                                  "description": "(Required) "
+                                },
+                                {
+                                  "id": "1400fa75-9882-4d5a-8f51-1480ea2c80c0",
+                                  "key": "componentId",
+                                  "value": "<uuid>",
+                                  "description": "(Required) "
+                                }
+                              ]
+                            }
+                          },
+                          "response": [
+                            {
+                              "id": "137ea483-ca98-4239-95fb-5b62713a765c",
+                              "name": "List of Parameters",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: oauth2",
+                                    "key": "Authorization",
+                                    "value": "<token>"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/catalogs/:catalogId/components/:componentId/parameters",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "catalogs",
+                                    ":catalogId",
+                                    "components",
+                                    ":componentId",
+                                    "parameters"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "catalogId"
+                                    },
+                                    {
+                                      "key": "componentId"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{}",
+                              "createdAt": "2026-06-05T15:06:27.000Z",
+                              "updatedAt": "2026-06-05T15:06:27.000Z",
+                              "uid": "35240-137ea483-ca98-4239-95fb-5b62713a765c"
+                            }
+                          ],
+                          "createdAt": "2026-06-05T15:06:27.000Z",
+                          "updatedAt": "2026-06-05T15:06:27.000Z",
+                          "uid": "35240-ab4a78da-e334-4b3b-b280-65bc91634ece"
+                        },
+                        {
+                          "name": "Create Parameter",
+                          "id": "b8817ac7-c2c0-471f-8462-1c12e39cce93",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/catalogs/:catalogId/components/:componentId/parameters",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "catalogs",
+                                ":catalogId",
+                                "components",
+                                ":componentId",
+                                "parameters"
+                              ],
+                              "variable": [
+                                {
+                                  "id": "66654a8f-08f9-46e2-ae80-b71f14b63cd7",
+                                  "key": "catalogId",
+                                  "value": "<uuid>",
+                                  "description": "(Required) "
+                                },
+                                {
+                                  "id": "f3c491db-8a73-40a0-9b80-a8f7cce34595",
+                                  "key": "componentId",
+                                  "value": "<uuid>",
+                                  "description": "(Required) "
+                                }
+                              ]
+                            }
+                          },
+                          "response": [
+                            {
+                              "id": "b2d94877-96b3-400c-a76a-396437dcb3c4",
+                              "name": "Parameter created",
+                              "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: oauth2",
+                                    "key": "Authorization",
+                                    "value": "<token>"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/catalogs/:catalogId/components/:componentId/parameters",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "catalogs",
+                                    ":catalogId",
+                                    "components",
+                                    ":componentId",
+                                    "parameters"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "catalogId"
+                                    },
+                                    {
+                                      "key": "componentId"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "Created",
+                              "code": 201,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{}",
+                              "createdAt": "2026-06-05T15:06:27.000Z",
+                              "updatedAt": "2026-06-05T15:06:27.000Z",
+                              "uid": "35240-b2d94877-96b3-400c-a76a-396437dcb3c4"
+                            }
+                          ],
+                          "createdAt": "2026-06-05T15:06:27.000Z",
+                          "updatedAt": "2026-06-05T15:06:27.000Z",
+                          "uid": "35240-b8817ac7-c2c0-471f-8462-1c12e39cce93"
+                        }
+                      ],
+                      "id": "43ef71aa-6881-4fc3-80a2-6b074c3148c5",
+                      "createdAt": "2026-06-05T15:06:27.000Z",
+                      "updatedAt": "2026-06-05T15:06:27.000Z",
+                      "uid": "35240-43ef71aa-6881-4fc3-80a2-6b074c3148c5"
+                    },
+                    {
+                      "name": "Get Components",
+                      "id": "4a3c68cf-690e-40e3-9192-7f6712bf7a75",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/catalogs/:catalogId/components/:componentId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "catalogs",
+                            ":catalogId",
+                            "components",
+                            ":componentId"
+                          ],
+                          "variable": [
+                            {
+                              "id": "79546f6e-3034-4320-acf2-081cd9a8bca6",
+                              "key": "catalogId",
+                              "value": "<uuid>",
+                              "description": "(Required) "
+                            },
+                            {
+                              "id": "0b36b75e-d283-4c91-9b7e-cdfe6d95eaa4",
+                              "key": "componentId",
+                              "value": "<uuid>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "id": "03e6b076-464b-4350-a463-5a29ee03f501",
+                          "name": "List of Components",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: oauth2",
+                                "key": "Authorization",
+                                "value": "<token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/catalogs/:catalogId/components/:componentId",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "catalogs",
+                                ":catalogId",
+                                "components",
+                                ":componentId"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "catalogId"
+                                },
+                                {
+                                  "key": "componentId"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{}",
+                          "createdAt": "2026-06-05T15:06:27.000Z",
+                          "updatedAt": "2026-06-05T15:06:27.000Z",
+                          "uid": "35240-03e6b076-464b-4350-a463-5a29ee03f501"
+                        }
+                      ],
+                      "createdAt": "2026-06-05T15:06:27.000Z",
+                      "updatedAt": "2026-06-05T15:06:27.000Z",
+                      "uid": "35240-4a3c68cf-690e-40e3-9192-7f6712bf7a75"
+                    },
+                    {
+                      "name": "Update Component",
+                      "id": "62c90ed6-43fc-4530-9624-f43d30deb748",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "PATCH",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/catalogs/:catalogId/components/:componentId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "catalogs",
+                            ":catalogId",
+                            "components",
+                            ":componentId"
+                          ],
+                          "variable": [
+                            {
+                              "id": "03debcbc-8bac-4756-9e92-22123c9cc206",
+                              "key": "catalogId",
+                              "value": "<uuid>",
+                              "description": "(Required) "
+                            },
+                            {
+                              "id": "4786eb3a-80d9-41b4-b913-f0a7d3cb75a4",
+                              "key": "componentId",
+                              "value": "<uuid>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "id": "58791634-4216-467d-94ac-dcdab3aa0b82",
+                          "name": "Component updated",
+                          "originalRequest": {
+                            "method": "PATCH",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: oauth2",
+                                "key": "Authorization",
+                                "value": "<token>"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/catalogs/:catalogId/components/:componentId",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "catalogs",
+                                ":catalogId",
+                                "components",
+                                ":componentId"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "catalogId"
+                                },
+                                {
+                                  "key": "componentId"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "text",
+                          "header": [],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": null,
+                          "createdAt": "2026-06-05T15:06:27.000Z",
+                          "updatedAt": "2026-06-05T15:06:27.000Z",
+                          "uid": "35240-58791634-4216-467d-94ac-dcdab3aa0b82"
+                        }
+                      ],
+                      "createdAt": "2026-06-05T15:06:27.000Z",
+                      "updatedAt": "2026-06-05T15:06:27.000Z",
+                      "uid": "35240-62c90ed6-43fc-4530-9624-f43d30deb748"
+                    },
+                    {
+                      "name": "Delete Component",
+                      "id": "7dc1564d-8adb-486a-8aee-8d0122a5b748",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                          "raw": "{{baseUrl}}/catalogs/:catalogId/components/:componentId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "catalogs",
+                            ":catalogId",
+                            "components",
+                            ":componentId"
+                          ],
+                          "variable": [
+                            {
+                              "id": "0baf20d9-b55a-455f-8bd2-b45c8f658d51",
+                              "key": "catalogId",
+                              "value": "<uuid>",
+                              "description": "(Required) "
+                            },
+                            {
+                              "id": "af7ec50f-391b-4d19-9a4c-45548560eca9",
+                              "key": "componentId",
+                              "value": "<uuid>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "id": "b1f61179-7e1d-4ecf-8069-69c4c369a75c",
+                          "name": "Component deleted",
+                          "originalRequest": {
+                            "method": "DELETE",
+                            "header": [
+                              {
+                                "description": "Added as a part of security scheme: oauth2",
+                                "key": "Authorization",
+                                "value": "<token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/catalogs/:catalogId/components/:componentId",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "catalogs",
+                                ":catalogId",
+                                "components",
+                                ":componentId"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "catalogId"
+                                },
+                                {
+                                  "key": "componentId"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "No Content",
+                          "code": 204,
+                          "_postman_previewlanguage": "text",
+                          "header": [],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": null,
+                          "createdAt": "2026-06-05T15:06:27.000Z",
+                          "updatedAt": "2026-06-05T15:06:27.000Z",
+                          "uid": "35240-b1f61179-7e1d-4ecf-8069-69c4c369a75c"
+                        }
+                      ],
+                      "createdAt": "2026-06-05T15:06:27.000Z",
+                      "updatedAt": "2026-06-05T15:06:27.000Z",
+                      "uid": "35240-7dc1564d-8adb-486a-8aee-8d0122a5b748"
+                    }
+                  ],
+                  "id": "dfd2f1c0-6a27-4ce8-8d28-92c68ca11a12",
+                  "createdAt": "2026-06-05T15:06:27.000Z",
+                  "updatedAt": "2026-06-05T15:06:27.000Z",
+                  "uid": "35240-dfd2f1c0-6a27-4ce8-8d28-92c68ca11a12"
+                },
+                {
+                  "name": "Get Components",
+                  "id": "5b94d1a7-5d64-46d6-9deb-64ae9dce791d",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/catalogs/:catalogId/components",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "catalogs",
+                        ":catalogId",
+                        "components"
+                      ],
+                      "variable": [
+                        {
+                          "id": "ea276f57-5a7b-4428-bdd2-5bd99b7ce0d3",
+                          "key": "catalogId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "c6c7c658-595e-4bc4-b531-eecf93dc7a73",
+                      "name": "List of Components",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/catalogs/:catalogId/components",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "catalogs",
+                            ":catalogId",
+                            "components"
+                          ],
+                          "variable": [
+                            {
+                              "key": "catalogId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:06:27.000Z",
+                      "updatedAt": "2026-06-05T15:06:27.000Z",
+                      "uid": "35240-c6c7c658-595e-4bc4-b531-eecf93dc7a73"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:27.000Z",
+                  "updatedAt": "2026-06-05T15:06:27.000Z",
+                  "uid": "35240-5b94d1a7-5d64-46d6-9deb-64ae9dce791d"
+                },
+                {
+                  "name": "Create Component",
+                  "id": "97f7b738-bde4-4921-955c-333bce37a861",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/catalogs/:catalogId/components",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "catalogs",
+                        ":catalogId",
+                        "components"
+                      ],
+                      "variable": [
+                        {
+                          "id": "ac41e418-e2f7-43f9-b474-4865b5b0390e",
+                          "key": "catalogId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "72d4cee0-cf61-457b-a631-1e09c338ed5d",
+                      "name": "Component created",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/catalogs/:catalogId/components",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "catalogs",
+                            ":catalogId",
+                            "components"
+                          ],
+                          "variable": [
+                            {
+                              "key": "catalogId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Created",
+                      "code": 201,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:06:27.000Z",
+                      "updatedAt": "2026-06-05T15:06:27.000Z",
+                      "uid": "35240-72d4cee0-cf61-457b-a631-1e09c338ed5d"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:27.000Z",
+                  "updatedAt": "2026-06-05T15:06:27.000Z",
+                  "uid": "35240-97f7b738-bde4-4921-955c-333bce37a861"
+                }
+              ],
+              "id": "6f7b8cd0-437d-445f-a2cc-85d53871d231",
+              "createdAt": "2026-06-05T15:06:27.000Z",
+              "updatedAt": "2026-06-05T15:06:27.000Z",
+              "uid": "35240-6f7b8cd0-437d-445f-a2cc-85d53871d231"
+            },
+            {
+              "name": "categories",
+              "item": [
+                {
+                  "name": "Get Categories",
+                  "id": "8d57a17c-a106-4f84-9f46-25de43120145",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/catalogs/:catalogId/categories",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "catalogs",
+                        ":catalogId",
+                        "categories"
+                      ],
+                      "variable": [
+                        {
+                          "id": "bf997ecd-ffbb-4465-8067-e4dd6a38ed62",
+                          "key": "catalogId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "d7b94918-0d0a-4c8a-a4c6-2da07b523f47",
+                      "name": "List of Categories",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/catalogs/:catalogId/categories",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "catalogs",
+                            ":catalogId",
+                            "categories"
+                          ],
+                          "variable": [
+                            {
+                              "key": "catalogId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:06:27.000Z",
+                      "updatedAt": "2026-06-05T15:06:27.000Z",
+                      "uid": "35240-d7b94918-0d0a-4c8a-a4c6-2da07b523f47"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:27.000Z",
+                  "updatedAt": "2026-06-05T15:06:27.000Z",
+                  "uid": "35240-8d57a17c-a106-4f84-9f46-25de43120145"
+                },
+                {
+                  "name": "Create Categorie",
+                  "id": "f74e61ae-1cb1-4d11-b575-f7f2092a2757",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/catalogs/:catalogId/categories",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "catalogs",
+                        ":catalogId",
+                        "categories"
+                      ],
+                      "variable": [
+                        {
+                          "id": "7224cc9f-ccc5-4561-b925-2b40200c1b67",
+                          "key": "catalogId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "c4325109-0960-48b0-ada9-57ec083bc57a",
+                      "name": "Categorie created",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/catalogs/:catalogId/categories",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "catalogs",
+                            ":catalogId",
+                            "categories"
+                          ],
+                          "variable": [
+                            {
+                              "key": "catalogId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Created",
+                      "code": 201,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:06:27.000Z",
+                      "updatedAt": "2026-06-05T15:06:27.000Z",
+                      "uid": "35240-c4325109-0960-48b0-ada9-57ec083bc57a"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:27.000Z",
+                  "updatedAt": "2026-06-05T15:06:27.000Z",
+                  "uid": "35240-f74e61ae-1cb1-4d11-b575-f7f2092a2757"
+                }
+              ],
+              "id": "3f884c3a-e478-4882-9a5c-b9ecd9b14403",
+              "createdAt": "2026-06-05T15:06:27.000Z",
+              "updatedAt": "2026-06-05T15:06:27.000Z",
+              "uid": "35240-3f884c3a-e478-4882-9a5c-b9ecd9b14403"
+            },
+            {
+              "name": "tags",
+              "item": [
+                {
+                  "name": "Get Tags",
+                  "id": "94ef8c07-8b0d-43e3-99f7-bcc0f451f5c4",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/catalogs/:catalogId/tags",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "catalogs",
+                        ":catalogId",
+                        "tags"
+                      ],
+                      "variable": [
+                        {
+                          "id": "3cdcc15e-4d2a-468c-bccf-78478444030f",
+                          "key": "catalogId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "29bcc859-28af-4866-a7f7-466d9d00083e",
+                      "name": "List of Tags",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/catalogs/:catalogId/tags",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "catalogs",
+                            ":catalogId",
+                            "tags"
+                          ],
+                          "variable": [
+                            {
+                              "key": "catalogId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:06:27.000Z",
+                      "updatedAt": "2026-06-05T15:06:27.000Z",
+                      "uid": "35240-29bcc859-28af-4866-a7f7-466d9d00083e"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:27.000Z",
+                  "updatedAt": "2026-06-05T15:06:27.000Z",
+                  "uid": "35240-94ef8c07-8b0d-43e3-99f7-bcc0f451f5c4"
+                },
+                {
+                  "name": "Create Tag",
+                  "id": "979d04c7-0def-4baa-aef5-7ad4bc1b41ea",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/catalogs/:catalogId/tags",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "catalogs",
+                        ":catalogId",
+                        "tags"
+                      ],
+                      "variable": [
+                        {
+                          "id": "3513225b-af86-4c1c-a027-09361ec8560e",
+                          "key": "catalogId",
+                          "value": "<uuid>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "5ed9e291-d152-4554-b850-21aef2a72325",
+                      "name": "Tag created",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/catalogs/:catalogId/tags",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "catalogs",
+                            ":catalogId",
+                            "tags"
+                          ],
+                          "variable": [
+                            {
+                              "key": "catalogId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Created",
+                      "code": 201,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-06-05T15:06:27.000Z",
+                      "updatedAt": "2026-06-05T15:06:27.000Z",
+                      "uid": "35240-5ed9e291-d152-4554-b850-21aef2a72325"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:06:27.000Z",
+                  "updatedAt": "2026-06-05T15:06:27.000Z",
+                  "uid": "35240-979d04c7-0def-4baa-aef5-7ad4bc1b41ea"
+                }
+              ],
+              "id": "8e41acaf-bf6c-4668-a9ad-a05449ba707a",
+              "createdAt": "2026-06-05T15:06:27.000Z",
+              "updatedAt": "2026-06-05T15:06:27.000Z",
+              "uid": "35240-8e41acaf-bf6c-4668-a9ad-a05449ba707a"
+            },
+            {
+              "name": "Get Catalog",
+              "id": "420e17d8-0ccc-4694-8714-7379bb99fa02",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/catalogs/:catalogId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "catalogs",
+                    ":catalogId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "58e971cb-b603-43fa-b291-a24f33f0c24a",
+                      "key": "catalogId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "9a1f24b4-3089-4a9d-8607-0a0b289bc286",
+                  "name": "List of Catalog",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/catalogs/:catalogId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "catalogs",
+                        ":catalogId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "catalogId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-06-05T15:06:27.000Z",
+                  "updatedAt": "2026-06-05T15:06:27.000Z",
+                  "uid": "35240-9a1f24b4-3089-4a9d-8607-0a0b289bc286"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:27.000Z",
+              "updatedAt": "2026-06-05T15:06:27.000Z",
+              "uid": "35240-420e17d8-0ccc-4694-8714-7379bb99fa02"
+            },
+            {
+              "name": "Update Catalog",
+              "id": "40b6fceb-ff11-47dc-8296-10b9c75a218c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/catalogs/:catalogId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "catalogs",
+                    ":catalogId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "a355ccd1-0e8c-43a5-89b8-844093588a3d",
+                      "key": "catalogId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "d6eebd82-d6d6-45fe-8d32-45fc230f0e39",
+                  "name": "Catalog updated",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/catalogs/:catalogId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "catalogs",
+                        ":catalogId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "catalogId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-06-05T15:06:27.000Z",
+                  "updatedAt": "2026-06-05T15:06:27.000Z",
+                  "uid": "35240-d6eebd82-d6d6-45fe-8d32-45fc230f0e39"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:27.000Z",
+              "updatedAt": "2026-06-05T15:06:27.000Z",
+              "uid": "35240-40b6fceb-ff11-47dc-8296-10b9c75a218c"
+            },
+            {
+              "name": "Delete Catalog",
+              "id": "36dc1655-c8e6-4107-aaf6-755f49fcd902",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/catalogs/:catalogId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "catalogs",
+                    ":catalogId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "cb3851ef-f84a-42fe-a986-1abc85f485e6",
+                      "key": "catalogId",
+                      "value": "<uuid>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "eb2f463d-be22-4b92-8069-348fa84fdd13",
+                  "name": "Catalog deleted",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/catalogs/:catalogId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "catalogs",
+                        ":catalogId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "catalogId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-06-05T15:06:27.000Z",
+                  "updatedAt": "2026-06-05T15:06:27.000Z",
+                  "uid": "35240-eb2f463d-be22-4b92-8069-348fa84fdd13"
+                }
+              ],
+              "createdAt": "2026-06-05T15:06:27.000Z",
+              "updatedAt": "2026-06-05T15:06:27.000Z",
+              "uid": "35240-36dc1655-c8e6-4107-aaf6-755f49fcd902"
+            }
+          ],
+          "id": "c6bb5ac8-7a5c-435b-b215-cc24da1c352c",
+          "createdAt": "2026-06-05T15:06:27.000Z",
+          "updatedAt": "2026-06-05T15:06:27.000Z",
+          "uid": "35240-c6bb5ac8-7a5c-435b-b215-cc24da1c352c"
+        },
+        {
+          "name": "Get Catalog",
+          "id": "50be8f25-6840-47e6-9495-f7611823dbae",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/catalogs",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "catalogs"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "dba24f38-5b9c-447b-8a30-3b0697246fa6",
+              "name": "List of Catalog",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/catalogs",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "catalogs"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:27.000Z",
+              "updatedAt": "2026-06-05T15:06:27.000Z",
+              "uid": "35240-dba24f38-5b9c-447b-8a30-3b0697246fa6"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:27.000Z",
+          "updatedAt": "2026-06-05T15:06:27.000Z",
+          "uid": "35240-50be8f25-6840-47e6-9495-f7611823dbae"
+        },
+        {
+          "name": "Create Catalog",
+          "id": "b2fe65f2-4e79-4b1d-a151-f958766670b3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/catalogs",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "catalogs"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "23c38a5b-2c7a-422e-acf0-8600f2350f33",
+              "name": "Catalog created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/catalogs",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "catalogs"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-06-05T15:06:27.000Z",
+              "updatedAt": "2026-06-05T15:06:27.000Z",
+              "uid": "35240-23c38a5b-2c7a-422e-acf0-8600f2350f33"
+            }
+          ],
+          "createdAt": "2026-06-05T15:06:27.000Z",
+          "updatedAt": "2026-06-05T15:06:27.000Z",
+          "uid": "35240-b2fe65f2-4e79-4b1d-a151-f958766670b3"
+        }
+      ],
+      "id": "72b45c57-6177-471c-919a-a3224e120f30",
+      "createdAt": "2026-06-05T15:06:27.000Z",
+      "updatedAt": "2026-06-05T15:06:27.000Z",
+      "uid": "35240-72b45c57-6177-471c-919a-a3224e120f30"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "itwin-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://ims.bentley.com/connect/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://ims.bentley.com/connect/authorize",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.bentley.com/library"
+    }
+  ]
+}
