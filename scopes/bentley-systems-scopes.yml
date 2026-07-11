@@ -1,0 +1,269 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/itwin-access-control-openapi.yml, openapi/itwin-carbon-calculation-openapi.yml,
+  openapi/itwin-cesium-curated-content-openapi.yml, openapi/itwin-changed-elements-openapi.yml,
+  openapi/itwin-clash-detection-openapi.yml, openapi/itwin-edfs-openapi.yml, openapi/itwin-export-openapi.yml,
+  openapi/itwin-forms-openapi.yml, openapi/itwin-geospatial-features-openapi.yml, openapi/itwin-grouping-mapping-openapi.yml,
+  openapi/itwin-imodels-openapi.yml, openapi/itwin-insights-openapi.yml, openapi/itwin-issues-openapi.yml,
+  openapi/itwin-itwins-openapi.yml, openapi/itwin-library-openapi.yml, openapi/itwin-mesh-export-openapi.yml,
+  openapi/itwin-named-groups-openapi.yml, openapi/itwin-pnid-openapi.yml, openapi/itwin-reality-analysis-openapi.yml,
+  openapi/itwin-reality-conversion-openapi.yml, openapi/itwin-reality-management-openapi.yml,
+  openapi/itwin-reality-modeling-openapi.yml, openapi/itwin-saved-views-openapi.yml, openapi/itwin-scenes-openapi.yml,
+  openapi/itwin-schedules-openapi.yml, openapi/itwin-sensor-data-openapi.yml, openapi/itwin-storage-openapi.yml,
+  openapi/itwin-synchronization-openapi.yml, openapi/itwin-transformations-openapi.yml, openapi/itwin-users-openapi.yml,
+  openapi/itwin-webhooks-openapi.yml
+schemes:
+- name: OAuth2
+  source: openapi/itwin-access-control-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-carbon-calculation-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-cesium-curated-content-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-changed-elements-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-clash-detection-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-edfs-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-export-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-forms-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-geospatial-features-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-grouping-mapping-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-imodels-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-insights-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-issues-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-itwins-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-library-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-mesh-export-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-named-groups-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-pnid-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-reality-analysis-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-reality-conversion-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-reality-management-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-reality-modeling-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-saved-views-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-scenes-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-schedules-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-sensor-data-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-storage-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-synchronization-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-transformations-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-users-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+- name: OAuth2
+  source: openapi/itwin-webhooks-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://ims.bentley.com/connect/authorize
+    tokenUrl: https://ims.bentley.com/connect/token
+  description: iTwin Platform OAuth2 — Bentley IMS
+scopes:
+- scope: itwin-platform
+  description: Full access to iTwin Platform APIs
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/itwin-access-control-openapi.yml
+  - openapi/itwin-carbon-calculation-openapi.yml
+  - openapi/itwin-cesium-curated-content-openapi.yml
+  - openapi/itwin-changed-elements-openapi.yml
+  - openapi/itwin-clash-detection-openapi.yml
+  - openapi/itwin-edfs-openapi.yml
+  - openapi/itwin-export-openapi.yml
+  - openapi/itwin-forms-openapi.yml
+  - openapi/itwin-geospatial-features-openapi.yml
+  - openapi/itwin-grouping-mapping-openapi.yml
+  - openapi/itwin-imodels-openapi.yml
+  - openapi/itwin-insights-openapi.yml
+  - openapi/itwin-issues-openapi.yml
+  - openapi/itwin-itwins-openapi.yml
+  - openapi/itwin-library-openapi.yml
+  - openapi/itwin-mesh-export-openapi.yml
+  - openapi/itwin-named-groups-openapi.yml
+  - openapi/itwin-pnid-openapi.yml
+  - openapi/itwin-reality-analysis-openapi.yml
+  - openapi/itwin-reality-conversion-openapi.yml
+  - openapi/itwin-reality-management-openapi.yml
+  - openapi/itwin-reality-modeling-openapi.yml
+  - openapi/itwin-saved-views-openapi.yml
+  - openapi/itwin-scenes-openapi.yml
+  - openapi/itwin-schedules-openapi.yml
+  - openapi/itwin-sensor-data-openapi.yml
+  - openapi/itwin-storage-openapi.yml
+  - openapi/itwin-synchronization-openapi.yml
+  - openapi/itwin-transformations-openapi.yml
+  - openapi/itwin-users-openapi.yml
+  - openapi/itwin-webhooks-openapi.yml

@@ -677,6 +677,8 @@ apis:
   - url: openapi/itwin-pnid-openapi.yml
     type: OpenAPI
 common:
+- type: OAuthScopes
+  url: scopes/bentley-systems-scopes.yml
 - type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/bentley-systems/overview
 - type: Arazzo
