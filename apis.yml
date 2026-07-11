@@ -677,6 +677,12 @@ apis:
   - url: openapi/itwin-pnid-openapi.yml
     type: OpenAPI
 common:
+- type: VulnerabilityDisclosure
+  url: security/bentley-systems-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/bentley-systems-domain-security.yml
+- type: Authentication
+  url: authentication/bentley-systems-authentication.yml
 - type: OAuthScopes
   url: scopes/bentley-systems-scopes.yml
 - type: PostmanWorkspace
