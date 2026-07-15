@@ -677,6 +677,8 @@ apis:
   - url: openapi/itwin-pnid-openapi.yml
     type: OpenAPI
 common:
+- type: AgenticAccess
+  url: agentic-access/bentley-systems-agentic-access.yml
 - type: VulnerabilityDisclosure
   url: security/bentley-systems-vulnerability-disclosure.yml
 - type: DomainSecurity
