@@ -1,0 +1,265 @@
+openapi: 3.1.0
+info:
+  title: iTwin Control Access iModels API
+  description: Role-based access control for iTwins — permissions, roles, group membership, owner members, invitations, shares, and job-based access.
+  version: '1.0'
+  contact:
+    name: Bentley Developer Relations
+    url: https://developer.bentley.com/apis/access-control/
+  license:
+    name: Bentley Developer Portal Terms
+    url: https://developer.bentley.com/legal/
+servers:
+- url: https://api.bentley.com/accesscontrol
+  description: iTwin Platform Production
+security:
+- OAuth2: []
+tags:
+- name: iModels
+  description: Create, query, clone, fork, and delete iModels.
+paths:
+  /:
+    get:
+      tags:
+      - iModels
+      summary: Get iModels
+      operationId: GetIModels
+      parameters:
+      - name: iTwinId
+        in: query
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - name: $top
+        in: query
+        schema:
+          type: integer
+      - name: $skip
+        in: query
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: List of iModels
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IModelList'
+    post:
+      tags:
+      - iModels
+      summary: Create iModel
+      operationId: CreateIModel
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateIModel'
+      responses:
+        '201':
+          description: iModel created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IModel'
+  /{iModelId}:
+    parameters:
+    - name: iModelId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - iModels
+      summary: Get iModel
+      operationId: GetIModel
+      responses:
+        '200':
+          description: iModel details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IModel'
+    patch:
+      tags:
+      - iModels
+      summary: Update iModel
+      operationId: UpdateIModel
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateIModel'
+      responses:
+        '200':
+          description: iModel updated
+    delete:
+      tags:
+      - iModels
+      summary: Delete iModel
+      operationId: DeleteIModel
+      responses:
+        '204':
+          description: iModel deleted
+  /{iModelId}/clone:
+    parameters:
+    - name: iModelId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    post:
+      tags:
+      - iModels
+      summary: Clone iModel
+      operationId: CloneIModel
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CloneIModel'
+      responses:
+        '202':
+          description: Clone job accepted
+  /{iModelId}/fork:
+    parameters:
+    - name: iModelId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    post:
+      tags:
+      - iModels
+      summary: Fork iModel
+      operationId: ForkIModel
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ForkIModel'
+      responses:
+        '202':
+          description: Fork job accepted
+components:
+  schemas:
+    IModelList:
+      type: object
+      properties:
+        iModels:
+          type: array
+          items:
+            $ref: '#/components/schemas/IModel'
+    CreateIModel:
+      type: object
+      required:
+      - iTwinId
+      - name
+      properties:
+        iTwinId:
+          type: string
+          format: uuid
+        name:
+          type: string
+        description:
+          type: string
+        extent:
+          type: object
+          properties:
+            southWest:
+              type: object
+              properties:
+                latitude:
+                  type: number
+                longitude:
+                  type: number
+            northEast:
+              type: object
+              properties:
+                latitude:
+                  type: number
+                longitude:
+                  type: number
+    IModel:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        displayName:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        state:
+          type: string
+          enum:
+          - initialized
+          - notInitialized
+        iTwinId:
+          type: string
+          format: uuid
+        createdDateTime:
+          type: string
+          format: date-time
+        creatorId:
+          type: string
+          format: uuid
+        dataCenterLocation:
+          type: string
+    CloneIModel:
+      type: object
+      required:
+      - iTwinId
+      - name
+      properties:
+        iTwinId:
+          type: string
+          format: uuid
+        name:
+          type: string
+        changesetId:
+          type: string
+    ForkIModel:
+      type: object
+      required:
+      - iTwinId
+      - name
+      properties:
+        iTwinId:
+          type: string
+          format: uuid
+        name:
+          type: string
+        changesetId:
+          type: string
+    UpdateIModel:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: iTwin Platform OAuth2 — Bentley IMS
+      flows:
+        authorizationCode:
+          authorizationUrl: https://ims.bentley.com/connect/authorize
+          tokenUrl: https://ims.bentley.com/connect/token
+          scopes:
+            itwin-platform: Full access to iTwin Platform APIs
+externalDocs:
+  description: iTwin Access Control API Documentation
+  url: https://developer.bentley.com/apis/access-control/

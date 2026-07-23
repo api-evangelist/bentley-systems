@@ -1,0 +1,114 @@
+openapi: 3.1.0
+info:
+  title: iTwin Control Access Files API
+  description: Role-based access control for iTwins — permissions, roles, group membership, owner members, invitations, shares, and job-based access.
+  version: '1.0'
+  contact:
+    name: Bentley Developer Relations
+    url: https://developer.bentley.com/apis/access-control/
+  license:
+    name: Bentley Developer Portal Terms
+    url: https://developer.bentley.com/legal/
+servers:
+- url: https://api.bentley.com/accesscontrol
+  description: iTwin Platform Production
+security:
+- OAuth2: []
+tags:
+- name: Files
+  description: Files resources for the iTwin Storage API.
+paths:
+  /folders/{folderId}/files:
+    parameters:
+    - name: folderId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Files
+      summary: Get Files
+      operationId: GetFiles
+      responses:
+        '200':
+          description: List of Files
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Files
+      summary: Create File
+      operationId: CreateFile
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: File created
+          content:
+            application/json:
+              schema:
+                type: object
+  /files/{fileId}:
+    parameters:
+    - name: fileId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Files
+      summary: Get Files
+      operationId: GetFiles
+      responses:
+        '200':
+          description: List of Files
+          content:
+            application/json:
+              schema:
+                type: object
+    patch:
+      tags:
+      - Files
+      summary: Update File
+      operationId: UpdateFile
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: File updated
+    delete:
+      tags:
+      - Files
+      summary: Delete File
+      operationId: DeleteFile
+      responses:
+        '204':
+          description: File deleted
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: iTwin Platform OAuth2 — Bentley IMS
+      flows:
+        authorizationCode:
+          authorizationUrl: https://ims.bentley.com/connect/authorize
+          tokenUrl: https://ims.bentley.com/connect/token
+          scopes:
+            itwin-platform: Full access to iTwin Platform APIs
+externalDocs:
+  description: iTwin Access Control API Documentation
+  url: https://developer.bentley.com/apis/access-control/

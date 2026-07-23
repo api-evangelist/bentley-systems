@@ -1,0 +1,138 @@
+openapi: 3.1.0
+info:
+  title: iTwin Control Access Named Versions API
+  description: Role-based access control for iTwins — permissions, roles, group membership, owner members, invitations, shares, and job-based access.
+  version: '1.0'
+  contact:
+    name: Bentley Developer Relations
+    url: https://developer.bentley.com/apis/access-control/
+  license:
+    name: Bentley Developer Portal Terms
+    url: https://developer.bentley.com/legal/
+servers:
+- url: https://api.bentley.com/accesscontrol
+  description: iTwin Platform Production
+security:
+- OAuth2: []
+tags:
+- name: Named Versions
+  description: Create and query named versions that pin a point in an iModel's history.
+paths:
+  /{iModelId}/namedversions:
+    parameters:
+    - name: iModelId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Named Versions
+      summary: Get Named Versions
+      operationId: GetNamedVersions
+      responses:
+        '200':
+          description: List of named versions
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NamedVersionList'
+    post:
+      tags:
+      - Named Versions
+      summary: Create Named Version
+      operationId: CreateNamedVersion
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateNamedVersion'
+      responses:
+        '201':
+          description: Named version created
+  /{iModelId}/namedversions/{namedVersionId}:
+    parameters:
+    - name: iModelId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    - name: namedVersionId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Named Versions
+      summary: Get Named Version
+      operationId: GetNamedVersion
+      responses:
+        '200':
+          description: Named version details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NamedVersion'
+components:
+  schemas:
+    NamedVersionList:
+      type: object
+      properties:
+        namedVersions:
+          type: array
+          items:
+            $ref: '#/components/schemas/NamedVersion'
+    NamedVersion:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        displayName:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        changesetId:
+          type: string
+        changesetIndex:
+          type: integer
+        createdDateTime:
+          type: string
+          format: date-time
+        state:
+          type: string
+          enum:
+          - visible
+          - hidden
+    CreateNamedVersion:
+      type: object
+      required:
+      - name
+      - changesetId
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        changesetId:
+          type: string
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: iTwin Platform OAuth2 — Bentley IMS
+      flows:
+        authorizationCode:
+          authorizationUrl: https://ims.bentley.com/connect/authorize
+          tokenUrl: https://ims.bentley.com/connect/token
+          scopes:
+            itwin-platform: Full access to iTwin Platform APIs
+externalDocs:
+  description: iTwin Access Control API Documentation
+  url: https://developer.bentley.com/apis/access-control/

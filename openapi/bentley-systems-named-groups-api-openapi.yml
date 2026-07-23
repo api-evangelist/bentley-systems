@@ -1,0 +1,107 @@
+openapi: 3.1.0
+info:
+  title: iTwin Control Access Named Groups API
+  description: Role-based access control for iTwins — permissions, roles, group membership, owner members, invitations, shares, and job-based access.
+  version: '1.0'
+  contact:
+    name: Bentley Developer Relations
+    url: https://developer.bentley.com/apis/access-control/
+  license:
+    name: Bentley Developer Portal Terms
+    url: https://developer.bentley.com/legal/
+servers:
+- url: https://api.bentley.com/accesscontrol
+  description: iTwin Platform Production
+security:
+- OAuth2: []
+tags:
+- name: Named Groups
+  description: Named Groups resources for the iTwin Named Groups API.
+paths:
+  /:
+    get:
+      tags:
+      - Named Groups
+      summary: Get Named Groups
+      operationId: GetNamedGroups
+      responses:
+        '200':
+          description: List of Named Groups
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Named Groups
+      summary: Create Named Group
+      operationId: CreateNamedGroup
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Named Group created
+          content:
+            application/json:
+              schema:
+                type: object
+  /{groupId}:
+    parameters:
+    - name: groupId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Named Groups
+      summary: Get Named Groups
+      operationId: GetNamedGroups
+      responses:
+        '200':
+          description: List of Named Groups
+          content:
+            application/json:
+              schema:
+                type: object
+    patch:
+      tags:
+      - Named Groups
+      summary: Update Named Group
+      operationId: UpdateNamedGroup
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Named Group updated
+    delete:
+      tags:
+      - Named Groups
+      summary: Delete Named Group
+      operationId: DeleteNamedGroup
+      responses:
+        '204':
+          description: Named Group deleted
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: iTwin Platform OAuth2 — Bentley IMS
+      flows:
+        authorizationCode:
+          authorizationUrl: https://ims.bentley.com/connect/authorize
+          tokenUrl: https://ims.bentley.com/connect/token
+          scopes:
+            itwin-platform: Full access to iTwin Platform APIs
+externalDocs:
+  description: iTwin Access Control API Documentation
+  url: https://developer.bentley.com/apis/access-control/

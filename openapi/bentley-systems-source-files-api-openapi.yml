@@ -1,0 +1,77 @@
+openapi: 3.1.0
+info:
+  title: iTwin Control Access Source Files API
+  description: Role-based access control for iTwins — permissions, roles, group membership, owner members, invitations, shares, and job-based access.
+  version: '1.0'
+  contact:
+    name: Bentley Developer Relations
+    url: https://developer.bentley.com/apis/access-control/
+  license:
+    name: Bentley Developer Portal Terms
+    url: https://developer.bentley.com/legal/
+servers:
+- url: https://api.bentley.com/accesscontrol
+  description: iTwin Platform Production
+security:
+- OAuth2: []
+tags:
+- name: Source Files
+  description: Source Files resources for the iTwin Synchronization API.
+paths:
+  /imodels/{iModelId}/storageConnections/{connectionId}/sourcefiles:
+    parameters:
+    - name: iModelId
+      in: path
+      required: true
+      schema:
+        type: string
+    - name: connectionId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Source Files
+      summary: Get Source Files
+      operationId: GetSourceFiles
+      responses:
+        '200':
+          description: List of Source Files
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Source Files
+      summary: Create Source File
+      operationId: CreateSourceFile
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Source File created
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: iTwin Platform OAuth2 — Bentley IMS
+      flows:
+        authorizationCode:
+          authorizationUrl: https://ims.bentley.com/connect/authorize
+          tokenUrl: https://ims.bentley.com/connect/token
+          scopes:
+            itwin-platform: Full access to iTwin Platform APIs
+externalDocs:
+  description: iTwin Access Control API Documentation
+  url: https://developer.bentley.com/apis/access-control/

@@ -1,0 +1,65 @@
+openapi: 3.1.0
+info:
+  title: iTwin Control Access Permissions API
+  description: Role-based access control for iTwins — permissions, roles, group membership, owner members, invitations, shares, and job-based access.
+  version: '1.0'
+  contact:
+    name: Bentley Developer Relations
+    url: https://developer.bentley.com/apis/access-control/
+  license:
+    name: Bentley Developer Portal Terms
+    url: https://developer.bentley.com/legal/
+servers:
+- url: https://api.bentley.com/accesscontrol
+  description: iTwin Platform Production
+security:
+- OAuth2: []
+tags:
+- name: Permissions
+  description: Permissions resources for the iTwin Access Control API.
+paths:
+  /permissions:
+    get:
+      tags:
+      - Permissions
+      summary: Get Permissions
+      operationId: GetPermissions
+      responses:
+        '200':
+          description: List of Permissions
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Permissions
+      summary: Create Permission
+      operationId: CreatePermission
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Permission created
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: iTwin Platform OAuth2 — Bentley IMS
+      flows:
+        authorizationCode:
+          authorizationUrl: https://ims.bentley.com/connect/authorize
+          tokenUrl: https://ims.bentley.com/connect/token
+          scopes:
+            itwin-platform: Full access to iTwin Platform APIs
+externalDocs:
+  description: iTwin Access Control API Documentation
+  url: https://developer.bentley.com/apis/access-control/

@@ -1,0 +1,123 @@
+openapi: 3.1.0
+info:
+  title: iTwin Control Access Changesets API
+  description: Role-based access control for iTwins — permissions, roles, group membership, owner members, invitations, shares, and job-based access.
+  version: '1.0'
+  contact:
+    name: Bentley Developer Relations
+    url: https://developer.bentley.com/apis/access-control/
+  license:
+    name: Bentley Developer Portal Terms
+    url: https://developer.bentley.com/legal/
+servers:
+- url: https://api.bentley.com/accesscontrol
+  description: iTwin Platform Production
+security:
+- OAuth2: []
+tags:
+- name: Changesets
+  description: Manage changesets that record modifications to an iModel.
+paths:
+  /{iModelId}/changesets:
+    parameters:
+    - name: iModelId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Changesets
+      summary: Get Changesets
+      operationId: GetChangesets
+      responses:
+        '200':
+          description: List of changesets
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChangesetList'
+    post:
+      tags:
+      - Changesets
+      summary: Create Changeset
+      operationId: CreateChangeset
+      responses:
+        '201':
+          description: Changeset created
+  /{iModelId}/changesets/{changesetId}:
+    parameters:
+    - name: iModelId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    - name: changesetId
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Changesets
+      summary: Get Changeset
+      operationId: GetChangeset
+      responses:
+        '200':
+          description: Changeset details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Changeset'
+components:
+  schemas:
+    Changeset:
+      type: object
+      properties:
+        id:
+          type: string
+        displayName:
+          type: string
+        description:
+          type: string
+        index:
+          type: integer
+        parentId:
+          type: string
+        creatorId:
+          type: string
+          format: uuid
+        pushDateTime:
+          type: string
+          format: date-time
+        state:
+          type: string
+        containingChanges:
+          type: integer
+        fileSize:
+          type: integer
+          format: int64
+        briefcaseId:
+          type: integer
+    ChangesetList:
+      type: object
+      properties:
+        changesets:
+          type: array
+          items:
+            $ref: '#/components/schemas/Changeset'
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: iTwin Platform OAuth2 — Bentley IMS
+      flows:
+        authorizationCode:
+          authorizationUrl: https://ims.bentley.com/connect/authorize
+          tokenUrl: https://ims.bentley.com/connect/token
+          scopes:
+            itwin-platform: Full access to iTwin Platform APIs
+externalDocs:
+  description: iTwin Access Control API Documentation
+  url: https://developer.bentley.com/apis/access-control/
