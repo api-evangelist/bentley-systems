@@ -1,0 +1,230 @@
+openapi: 3.1.0
+info:
+  title: iTwin Clash Detection API
+  description: Detect geometry clashes between 3D elements. Define tests, suppression rules, and retrieve clash run results.
+  version: '1.0'
+  contact:
+    name: Bentley Developer Relations
+    url: https://developer.bentley.com/apis/clash-detection/
+  license:
+    name: Bentley Developer Portal Terms
+    url: https://developer.bentley.com/legal/
+servers:
+- url: https://api.bentley.com/clashdetection
+  description: iTwin Platform Production
+externalDocs:
+  description: iTwin Clash Detection API Documentation
+  url: https://developer.bentley.com/apis/clash-detection/
+tags:
+- name: Tests
+  description: Tests resources for the iTwin Clash Detection API.
+- name: Runs
+  description: Runs resources for the iTwin Clash Detection API.
+- name: Suppression Rules
+  description: Suppression Rules resources for the iTwin Clash Detection API.
+security:
+- OAuth2: []
+paths:
+  /tests:
+    get:
+      tags:
+      - Tests
+      summary: Get Tests
+      operationId: GetTests
+      responses:
+        '200':
+          description: List of Tests
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Tests
+      summary: Create Test
+      operationId: CreateTest
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Test created
+          content:
+            application/json:
+              schema:
+                type: object
+  /tests/{testId}:
+    parameters:
+    - name: testId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Tests
+      summary: Get Tests
+      operationId: GetTests
+      responses:
+        '200':
+          description: List of Tests
+          content:
+            application/json:
+              schema:
+                type: object
+    patch:
+      tags:
+      - Tests
+      summary: Update Test
+      operationId: UpdateTest
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Test updated
+    delete:
+      tags:
+      - Tests
+      summary: Delete Test
+      operationId: DeleteTest
+      responses:
+        '204':
+          description: Test deleted
+  /runs:
+    get:
+      tags:
+      - Runs
+      summary: Get Runs
+      operationId: GetRuns
+      responses:
+        '200':
+          description: List of Runs
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Runs
+      summary: Create Run
+      operationId: CreateRun
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Run created
+          content:
+            application/json:
+              schema:
+                type: object
+  /runs/{runId}:
+    parameters:
+    - name: runId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Runs
+      summary: Get Runs
+      operationId: GetRuns
+      responses:
+        '200':
+          description: List of Runs
+          content:
+            application/json:
+              schema:
+                type: object
+    patch:
+      tags:
+      - Runs
+      summary: Update Run
+      operationId: UpdateRun
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Run updated
+    delete:
+      tags:
+      - Runs
+      summary: Delete Run
+      operationId: DeleteRun
+      responses:
+        '204':
+          description: Run deleted
+  /suppression-rules:
+    get:
+      tags:
+      - Suppression Rules
+      summary: Get Suppression Rules
+      operationId: GetSuppressionRules
+      responses:
+        '200':
+          description: List of Suppression Rules
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Suppression Rules
+      summary: Create Suppression Rule
+      operationId: CreateSuppressionRule
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Suppression Rule created
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: "iTwin Platform OAuth2 \u2014 Bentley IMS"
+      flows:
+        authorizationCode:
+          authorizationUrl: https://ims.bentley.com/connect/authorize
+          tokenUrl: https://ims.bentley.com/connect/token
+          scopes:
+            itwin-platform: Full access to iTwin Platform APIs
+  schemas:
+    Error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+            details:
+              type: array
+              items:
+                type: object

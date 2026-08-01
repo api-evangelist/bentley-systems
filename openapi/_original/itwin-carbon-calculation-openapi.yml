@@ -1,0 +1,212 @@
+openapi: 3.1.0
+info:
+  title: iTwin Carbon Calculation API
+  description: Compute embodied carbon footprint using EC3 integrations and iModel quantity takeoffs.
+  version: '1.0'
+  contact:
+    name: Bentley Developer Relations
+    url: https://developer.bentley.com/apis/carbon-calculation/
+  license:
+    name: Bentley Developer Portal Terms
+    url: https://developer.bentley.com/legal/
+servers:
+- url: https://api.bentley.com/carboncalculation
+  description: iTwin Platform Production
+externalDocs:
+  description: iTwin Carbon Calculation API Documentation
+  url: https://developer.bentley.com/apis/carbon-calculation/
+tags:
+- name: Configurations
+  description: Configurations resources for the iTwin Carbon Calculation API.
+- name: Reports
+  description: Reports resources for the iTwin Carbon Calculation API.
+- name: Jobs
+  description: Jobs resources for the iTwin Carbon Calculation API.
+- name: Templates
+  description: Templates resources for the iTwin Carbon Calculation API.
+- name: Materials
+  description: Materials resources for the iTwin Carbon Calculation API.
+security:
+- OAuth2: []
+paths:
+  /ec3/configurations:
+    get:
+      tags:
+      - Configurations
+      summary: Get Configurations
+      operationId: GetConfigurations
+      responses:
+        '200':
+          description: List of Configurations
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Configurations
+      summary: Create Configuration
+      operationId: CreateConfiguration
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Configuration created
+          content:
+            application/json:
+              schema:
+                type: object
+  /ec3/reports:
+    get:
+      tags:
+      - Reports
+      summary: Get Reports
+      operationId: GetReports
+      responses:
+        '200':
+          description: List of Reports
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Reports
+      summary: Create Report
+      operationId: CreateReport
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Report created
+          content:
+            application/json:
+              schema:
+                type: object
+  /ec3/jobs:
+    get:
+      tags:
+      - Jobs
+      summary: Get Jobs
+      operationId: GetJobs
+      responses:
+        '200':
+          description: List of Jobs
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Jobs
+      summary: Create Job
+      operationId: CreateJob
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Job created
+          content:
+            application/json:
+              schema:
+                type: object
+  /ec3/templates:
+    get:
+      tags:
+      - Templates
+      summary: Get Templates
+      operationId: GetTemplates
+      responses:
+        '200':
+          description: List of Templates
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Templates
+      summary: Create Template
+      operationId: CreateTemplate
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Template created
+          content:
+            application/json:
+              schema:
+                type: object
+  /ec3/materials:
+    get:
+      tags:
+      - Materials
+      summary: Get Materials
+      operationId: GetMaterials
+      responses:
+        '200':
+          description: List of Materials
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Materials
+      summary: Create Material
+      operationId: CreateMaterial
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Material created
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: "iTwin Platform OAuth2 \u2014 Bentley IMS"
+      flows:
+        authorizationCode:
+          authorizationUrl: https://ims.bentley.com/connect/authorize
+          tokenUrl: https://ims.bentley.com/connect/token
+          scopes:
+            itwin-platform: Full access to iTwin Platform APIs
+  schemas:
+    Error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+            details:
+              type: array
+              items:
+                type: object

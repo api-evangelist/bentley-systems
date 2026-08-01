@@ -1,0 +1,122 @@
+openapi: 3.1.0
+info:
+  title: iTwin Export API
+  description: Export iModel data to web-friendly formats including 3D Tiles, glTF, and tileset bundles.
+  version: '1.0'
+  contact:
+    name: Bentley Developer Relations
+    url: https://developer.bentley.com/apis/export/
+  license:
+    name: Bentley Developer Portal Terms
+    url: https://developer.bentley.com/legal/
+servers:
+- url: https://api.bentley.com/imodels-export
+  description: iTwin Platform Production
+externalDocs:
+  description: iTwin Export API Documentation
+  url: https://developer.bentley.com/apis/export/
+tags:
+- name: Export
+  description: Export resources for the iTwin Export API.
+security:
+- OAuth2: []
+paths:
+  /exports:
+    get:
+      tags:
+      - Export
+      summary: Get Export
+      operationId: GetExport
+      responses:
+        '200':
+          description: List of Export
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Export
+      summary: Create Export
+      operationId: CreateExport
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Export created
+          content:
+            application/json:
+              schema:
+                type: object
+  /exports/{exportId}:
+    parameters:
+    - name: exportId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Export
+      summary: Get Export
+      operationId: GetExport
+      responses:
+        '200':
+          description: List of Export
+          content:
+            application/json:
+              schema:
+                type: object
+    patch:
+      tags:
+      - Export
+      summary: Update Export
+      operationId: UpdateExport
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Export updated
+    delete:
+      tags:
+      - Export
+      summary: Delete Export
+      operationId: DeleteExport
+      responses:
+        '204':
+          description: Export deleted
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: "iTwin Platform OAuth2 \u2014 Bentley IMS"
+      flows:
+        authorizationCode:
+          authorizationUrl: https://ims.bentley.com/connect/authorize
+          tokenUrl: https://ims.bentley.com/connect/token
+          scopes:
+            itwin-platform: Full access to iTwin Platform APIs
+  schemas:
+    Error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+            details:
+              type: array
+              items:
+                type: object

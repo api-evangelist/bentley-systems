@@ -1,0 +1,122 @@
+openapi: 3.1.0
+info:
+  title: iTwin Geospatial Features API
+  description: "Manage geospatial feature collections \u2014 GeoJSON-style points, lines, polygons."
+  version: '1.0'
+  contact:
+    name: Bentley Developer Relations
+    url: https://developer.bentley.com/apis/geospatial-features/
+  license:
+    name: Bentley Developer Portal Terms
+    url: https://developer.bentley.com/legal/
+servers:
+- url: https://api.bentley.com/geospatial-features
+  description: iTwin Platform Production
+externalDocs:
+  description: iTwin Geospatial Features API Documentation
+  url: https://developer.bentley.com/apis/geospatial-features/
+tags:
+- name: Features
+  description: Features resources for the iTwin Geospatial Features API.
+security:
+- OAuth2: []
+paths:
+  /collections:
+    get:
+      tags:
+      - Features
+      summary: Get Features
+      operationId: GetFeatures
+      responses:
+        '200':
+          description: List of Features
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Features
+      summary: Create Feature
+      operationId: CreateFeature
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Feature created
+          content:
+            application/json:
+              schema:
+                type: object
+  /collections/{collectionId}:
+    parameters:
+    - name: collectionId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Features
+      summary: Get Features
+      operationId: GetFeatures
+      responses:
+        '200':
+          description: List of Features
+          content:
+            application/json:
+              schema:
+                type: object
+    patch:
+      tags:
+      - Features
+      summary: Update Feature
+      operationId: UpdateFeature
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Feature updated
+    delete:
+      tags:
+      - Features
+      summary: Delete Feature
+      operationId: DeleteFeature
+      responses:
+        '204':
+          description: Feature deleted
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: "iTwin Platform OAuth2 \u2014 Bentley IMS"
+      flows:
+        authorizationCode:
+          authorizationUrl: https://ims.bentley.com/connect/authorize
+          tokenUrl: https://ims.bentley.com/connect/token
+          scopes:
+            itwin-platform: Full access to iTwin Platform APIs
+  schemas:
+    Error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+            details:
+              type: array
+              items:
+                type: object

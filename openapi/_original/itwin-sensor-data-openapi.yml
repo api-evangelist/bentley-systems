@@ -1,0 +1,146 @@
+openapi: 3.1.0
+info:
+  title: iTwin Sensor Data API
+  description: Ingest, store, and query IoT sensor telemetry associated with iTwin assets.
+  version: '1.0'
+  contact:
+    name: Bentley Developer Relations
+    url: https://developer.bentley.com/apis/sensor-data/
+  license:
+    name: Bentley Developer Portal Terms
+    url: https://developer.bentley.com/legal/
+servers:
+- url: https://api.bentley.com/sensor-data
+  description: iTwin Platform Production
+externalDocs:
+  description: iTwin Sensor Data API Documentation
+  url: https://developer.bentley.com/apis/sensor-data/
+tags:
+- name: Devices
+  description: Devices resources for the iTwin Sensor Data API.
+- name: Sensors
+  description: Sensors resources for the iTwin Sensor Data API.
+- name: Observations
+  description: Observations resources for the iTwin Sensor Data API.
+security:
+- OAuth2: []
+paths:
+  /devices:
+    get:
+      tags:
+      - Devices
+      summary: Get Devices
+      operationId: GetDevices
+      responses:
+        '200':
+          description: List of Devices
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Devices
+      summary: Create Device
+      operationId: CreateDevice
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Device created
+          content:
+            application/json:
+              schema:
+                type: object
+  /sensors:
+    get:
+      tags:
+      - Sensors
+      summary: Get Sensors
+      operationId: GetSensors
+      responses:
+        '200':
+          description: List of Sensors
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Sensors
+      summary: Create Sensor
+      operationId: CreateSensor
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Sensor created
+          content:
+            application/json:
+              schema:
+                type: object
+  /observations:
+    get:
+      tags:
+      - Observations
+      summary: Get Observations
+      operationId: GetObservations
+      responses:
+        '200':
+          description: List of Observations
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Observations
+      summary: Create Observation
+      operationId: CreateObservation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Observation created
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: "iTwin Platform OAuth2 \u2014 Bentley IMS"
+      flows:
+        authorizationCode:
+          authorizationUrl: https://ims.bentley.com/connect/authorize
+          tokenUrl: https://ims.bentley.com/connect/token
+          scopes:
+            itwin-platform: Full access to iTwin Platform APIs
+  schemas:
+    Error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+            details:
+              type: array
+              items:
+                type: object

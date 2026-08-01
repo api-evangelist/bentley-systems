@@ -1,0 +1,222 @@
+openapi: 3.1.0
+info:
+  title: Enterprise Data Federation Service (EDFS) API
+  description: "Federate access to data held in Bentley and third-party repositories \u2014 ProjectWise, SharePoint, external\
+    \ systems."
+  version: '1.0'
+  contact:
+    name: Bentley Developer Relations
+    url: https://developer.bentley.com/apis/edfs/
+  license:
+    name: Bentley Developer Portal Terms
+    url: https://developer.bentley.com/legal/
+servers:
+- url: https://api.bentley.com/edfs
+  description: iTwin Platform Production
+externalDocs:
+  description: Enterprise Data Federation Service (EDFS) API Documentation
+  url: https://developer.bentley.com/apis/edfs/
+tags:
+- name: Sources
+  description: Sources resources for the Enterprise Data Federation Service (EDFS) API.
+- name: Schemas
+  description: Schemas resources for the Enterprise Data Federation Service (EDFS) API.
+- name: Queries
+  description: Queries resources for the Enterprise Data Federation Service (EDFS) API.
+- name: Policies
+  description: Policies resources for the Enterprise Data Federation Service (EDFS) API.
+security:
+- OAuth2: []
+paths:
+  /sources:
+    get:
+      tags:
+      - Sources
+      summary: Get Sources
+      operationId: GetSources
+      responses:
+        '200':
+          description: List of Sources
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Sources
+      summary: Create Source
+      operationId: CreateSource
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Source created
+          content:
+            application/json:
+              schema:
+                type: object
+  /sources/{sourceId}:
+    parameters:
+    - name: sourceId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Sources
+      summary: Get Sources
+      operationId: GetSources
+      responses:
+        '200':
+          description: List of Sources
+          content:
+            application/json:
+              schema:
+                type: object
+    patch:
+      tags:
+      - Sources
+      summary: Update Source
+      operationId: UpdateSource
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Source updated
+    delete:
+      tags:
+      - Sources
+      summary: Delete Source
+      operationId: DeleteSource
+      responses:
+        '204':
+          description: Source deleted
+  /schemas:
+    get:
+      tags:
+      - Schemas
+      summary: Get Schemas
+      operationId: GetSchemas
+      responses:
+        '200':
+          description: List of Schemas
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Schemas
+      summary: Create Schema
+      operationId: CreateSchema
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Schema created
+          content:
+            application/json:
+              schema:
+                type: object
+  /queries:
+    get:
+      tags:
+      - Queries
+      summary: Get Queries
+      operationId: GetQueries
+      responses:
+        '200':
+          description: List of Queries
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Queries
+      summary: Create Querie
+      operationId: CreateQuerie
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Querie created
+          content:
+            application/json:
+              schema:
+                type: object
+  /policies:
+    get:
+      tags:
+      - Policies
+      summary: Get Policies
+      operationId: GetPolicies
+      responses:
+        '200':
+          description: List of Policies
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Policies
+      summary: Create Policie
+      operationId: CreatePolicie
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Policie created
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: "iTwin Platform OAuth2 \u2014 Bentley IMS"
+      flows:
+        authorizationCode:
+          authorizationUrl: https://ims.bentley.com/connect/authorize
+          tokenUrl: https://ims.bentley.com/connect/token
+          scopes:
+            itwin-platform: Full access to iTwin Platform APIs
+  schemas:
+    Error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+            details:
+              type: array
+              items:
+                type: object

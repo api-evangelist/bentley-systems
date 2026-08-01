@@ -1,0 +1,321 @@
+openapi: 3.1.0
+info:
+  title: iTwin Access Control API
+  description: "Role-based access control for iTwins \u2014 permissions, roles, group membership, owner members, invitations,\
+    \ shares, and job-based access."
+  version: '1.0'
+  contact:
+    name: Bentley Developer Relations
+    url: https://developer.bentley.com/apis/access-control/
+  license:
+    name: Bentley Developer Portal Terms
+    url: https://developer.bentley.com/legal/
+servers:
+- url: https://api.bentley.com/accesscontrol
+  description: iTwin Platform Production
+externalDocs:
+  description: iTwin Access Control API Documentation
+  url: https://developer.bentley.com/apis/access-control/
+tags:
+- name: Members
+  description: Members resources for the iTwin Access Control API.
+- name: Groups
+  description: Groups resources for the iTwin Access Control API.
+- name: Roles
+  description: Roles resources for the iTwin Access Control API.
+- name: Invitations
+  description: Invitations resources for the iTwin Access Control API.
+- name: Shares
+  description: Shares resources for the iTwin Access Control API.
+- name: Jobs
+  description: Jobs resources for the iTwin Access Control API.
+- name: Permissions
+  description: Permissions resources for the iTwin Access Control API.
+security:
+- OAuth2: []
+paths:
+  /itwins/{iTwinId}/members/users:
+    parameters:
+    - name: iTwinId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Members
+      summary: Get Members
+      operationId: GetMembers
+      responses:
+        '200':
+          description: List of Members
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Members
+      summary: Create Member
+      operationId: CreateMember
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Member created
+          content:
+            application/json:
+              schema:
+                type: object
+  /itwins/{iTwinId}/members/groups:
+    parameters:
+    - name: iTwinId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Groups
+      summary: Get Groups
+      operationId: GetGroups
+      responses:
+        '200':
+          description: List of Groups
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Groups
+      summary: Create Group
+      operationId: CreateGroup
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Group created
+          content:
+            application/json:
+              schema:
+                type: object
+  /itwins/{iTwinId}/roles:
+    parameters:
+    - name: iTwinId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Roles
+      summary: Get Roles
+      operationId: GetRoles
+      responses:
+        '200':
+          description: List of Roles
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Roles
+      summary: Create Role
+      operationId: CreateRole
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Role created
+          content:
+            application/json:
+              schema:
+                type: object
+  /itwins/{iTwinId}/invitations:
+    parameters:
+    - name: iTwinId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Invitations
+      summary: Get Invitations
+      operationId: GetInvitations
+      responses:
+        '200':
+          description: List of Invitations
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Invitations
+      summary: Create Invitation
+      operationId: CreateInvitation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Invitation created
+          content:
+            application/json:
+              schema:
+                type: object
+  /itwins/{iTwinId}/shares:
+    parameters:
+    - name: iTwinId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Shares
+      summary: Get Shares
+      operationId: GetShares
+      responses:
+        '200':
+          description: List of Shares
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Shares
+      summary: Create Share
+      operationId: CreateShare
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Share created
+          content:
+            application/json:
+              schema:
+                type: object
+  /itwins/{iTwinId}/jobs:
+    parameters:
+    - name: iTwinId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Jobs
+      summary: Get Jobs
+      operationId: GetJobs
+      responses:
+        '200':
+          description: List of Jobs
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Jobs
+      summary: Create Job
+      operationId: CreateJob
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Job created
+          content:
+            application/json:
+              schema:
+                type: object
+  /permissions:
+    get:
+      tags:
+      - Permissions
+      summary: Get Permissions
+      operationId: GetPermissions
+      responses:
+        '200':
+          description: List of Permissions
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Permissions
+      summary: Create Permission
+      operationId: CreatePermission
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Permission created
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: "iTwin Platform OAuth2 \u2014 Bentley IMS"
+      flows:
+        authorizationCode:
+          authorizationUrl: https://ims.bentley.com/connect/authorize
+          tokenUrl: https://ims.bentley.com/connect/token
+          scopes:
+            itwin-platform: Full access to iTwin Platform APIs
+  schemas:
+    Error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+            details:
+              type: array
+              items:
+                type: object

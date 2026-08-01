@@ -1,0 +1,250 @@
+openapi: 3.1.0
+info:
+  title: iTwin Scenes API
+  description: Configure 3D scenes that compose iModels, reality data, OpenStreetMap, and terrain into a viewer experience.
+  version: '1.0'
+  contact:
+    name: Bentley Developer Relations
+    url: https://developer.bentley.com/apis/scenes/
+  license:
+    name: Bentley Developer Portal Terms
+    url: https://developer.bentley.com/legal/
+servers:
+- url: https://api.bentley.com/scenes
+  description: iTwin Platform Production
+externalDocs:
+  description: iTwin Scenes API Documentation
+  url: https://developer.bentley.com/apis/scenes/
+tags:
+- name: Scenes
+  description: Scenes resources for the iTwin Scenes API.
+- name: Layers
+  description: Layers resources for the iTwin Scenes API.
+- name: Extensions
+  description: Extensions resources for the iTwin Scenes API.
+security:
+- OAuth2: []
+paths:
+  /:
+    get:
+      tags:
+      - Scenes
+      summary: Get Scenes
+      operationId: GetScenes
+      responses:
+        '200':
+          description: List of Scenes
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Scenes
+      summary: Create Scene
+      operationId: CreateScene
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Scene created
+          content:
+            application/json:
+              schema:
+                type: object
+  /{sceneId}:
+    parameters:
+    - name: sceneId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Scenes
+      summary: Get Scenes
+      operationId: GetScenes
+      responses:
+        '200':
+          description: List of Scenes
+          content:
+            application/json:
+              schema:
+                type: object
+    patch:
+      tags:
+      - Scenes
+      summary: Update Scene
+      operationId: UpdateScene
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Scene updated
+    delete:
+      tags:
+      - Scenes
+      summary: Delete Scene
+      operationId: DeleteScene
+      responses:
+        '204':
+          description: Scene deleted
+  /{sceneId}/layers:
+    parameters:
+    - name: sceneId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Layers
+      summary: Get Layers
+      operationId: GetLayers
+      responses:
+        '200':
+          description: List of Layers
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Layers
+      summary: Create Layer
+      operationId: CreateLayer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Layer created
+          content:
+            application/json:
+              schema:
+                type: object
+  /{sceneId}/layers/{layerId}:
+    parameters:
+    - name: sceneId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    - name: layerId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Layers
+      summary: Get Layers
+      operationId: GetLayers
+      responses:
+        '200':
+          description: List of Layers
+          content:
+            application/json:
+              schema:
+                type: object
+    patch:
+      tags:
+      - Layers
+      summary: Update Layer
+      operationId: UpdateLayer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Layer updated
+    delete:
+      tags:
+      - Layers
+      summary: Delete Layer
+      operationId: DeleteLayer
+      responses:
+        '204':
+          description: Layer deleted
+  /{sceneId}/extensions:
+    parameters:
+    - name: sceneId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Extensions
+      summary: Get Extensions
+      operationId: GetExtensions
+      responses:
+        '200':
+          description: List of Extensions
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Extensions
+      summary: Create Extension
+      operationId: CreateExtension
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Extension created
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: "iTwin Platform OAuth2 \u2014 Bentley IMS"
+      flows:
+        authorizationCode:
+          authorizationUrl: https://ims.bentley.com/connect/authorize
+          tokenUrl: https://ims.bentley.com/connect/token
+          scopes:
+            itwin-platform: Full access to iTwin Platform APIs
+  schemas:
+    Error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+            details:
+              type: array
+              items:
+                type: object

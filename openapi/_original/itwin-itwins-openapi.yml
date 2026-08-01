@@ -1,0 +1,194 @@
+openapi: 3.1.0
+info:
+  title: iTwins API
+  description: "Create, manage, and query iTwin containers \u2014 the top-level organizational unit for iModels, reality data,\
+    \ and project context."
+  version: '1.0'
+  contact:
+    name: Bentley Developer Relations
+    url: https://developer.bentley.com/apis/itwins/
+  license:
+    name: Bentley Developer Portal Terms
+    url: https://developer.bentley.com/legal/
+servers:
+- url: https://api.bentley.com/itwins
+  description: iTwin Platform Production
+externalDocs:
+  description: iTwins API Documentation
+  url: https://developer.bentley.com/apis/itwins/
+tags:
+- name: iTwins
+  description: iTwins resources for the iTwins API.
+- name: Repositories
+  description: Repositories resources for the iTwins API.
+- name: Exports
+  description: Exports resources for the iTwins API.
+- name: Recents
+  description: Recents resources for the iTwins API.
+security:
+- OAuth2: []
+paths:
+  /itwins:
+    get:
+      tags:
+      - iTwins
+      summary: Get iTwins
+      operationId: GetiTwins
+      responses:
+        '200':
+          description: List of iTwins
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - iTwins
+      summary: Create iTwin
+      operationId: CreateiTwin
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: iTwin created
+          content:
+            application/json:
+              schema:
+                type: object
+  /itwins/{iTwinId}/repositories:
+    parameters:
+    - name: iTwinId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Repositories
+      summary: Get Repositories
+      operationId: GetRepositories
+      responses:
+        '200':
+          description: List of Repositories
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Repositories
+      summary: Create Repositorie
+      operationId: CreateRepositorie
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Repositorie created
+          content:
+            application/json:
+              schema:
+                type: object
+  /itwins/{iTwinId}/exports:
+    parameters:
+    - name: iTwinId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      tags:
+      - Exports
+      summary: Get Exports
+      operationId: GetExports
+      responses:
+        '200':
+          description: List of Exports
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Exports
+      summary: Create Export
+      operationId: CreateExport
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Export created
+          content:
+            application/json:
+              schema:
+                type: object
+  /itwins/myitwins/recents:
+    get:
+      tags:
+      - Recents
+      summary: Get Recents
+      operationId: GetRecents
+      responses:
+        '200':
+          description: List of Recents
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      tags:
+      - Recents
+      summary: Create Recent
+      operationId: CreateRecent
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Recent created
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: "iTwin Platform OAuth2 \u2014 Bentley IMS"
+      flows:
+        authorizationCode:
+          authorizationUrl: https://ims.bentley.com/connect/authorize
+          tokenUrl: https://ims.bentley.com/connect/token
+          scopes:
+            itwin-platform: Full access to iTwin Platform APIs
+  schemas:
+    Error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+            details:
+              type: array
+              items:
+                type: object
