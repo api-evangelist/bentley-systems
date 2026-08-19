@@ -1,0 +1,110 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "iTwin Control Access API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://ims.bentley.com/connect/authorize",
+      "accessTokenUrl": "https://ims.bentley.com/connect/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Access",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Access",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/accesscontrol/reality-data/:realityDataId/readaccess",
+            "params": [
+              {
+                "name": "realityDataId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Access"
+        },
+        {
+          "info": {
+            "name": "Create Acce",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/accesscontrol/reality-data/:realityDataId/readaccess",
+            "params": [
+              {
+                "name": "realityDataId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Acce"
+        },
+        {
+          "info": {
+            "name": "Get Access",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/accesscontrol/reality-data/:realityDataId/writeaccess",
+            "params": [
+              {
+                "name": "realityDataId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Access"
+        },
+        {
+          "info": {
+            "name": "Create Acce",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/accesscontrol/reality-data/:realityDataId/writeaccess",
+            "params": [
+              {
+                "name": "realityDataId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Acce"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

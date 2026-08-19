@@ -1,0 +1,80 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "iTwin Control Access Parameters API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://ims.bentley.com/connect/authorize",
+      "accessTokenUrl": "https://ims.bentley.com/connect/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Parameters",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Parameters",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/accesscontrol/catalogs/:catalogId/components/:componentId/parameters",
+            "params": [
+              {
+                "name": "catalogId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "componentId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Parameters"
+        },
+        {
+          "info": {
+            "name": "Create Parameter",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/accesscontrol/catalogs/:catalogId/components/:componentId/parameters",
+            "params": [
+              {
+                "name": "catalogId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "componentId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Parameter"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

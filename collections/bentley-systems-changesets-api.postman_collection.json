@@ -1,0 +1,338 @@
+{
+  "item": [
+    {
+      "id": "268e7b80-489e-4d1b-82fa-e54fdc262e6d",
+      "name": "Changesets",
+      "description": {
+        "content": "Manage changesets that record modifications to an iModel.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "bd5a66e5-47c2-419f-a28c-516c0412100c",
+          "name": "Get Changesets",
+          "request": {
+            "name": "Get Changesets",
+            "description": {},
+            "url": {
+              "path": [
+                ":iModelId",
+                "changesets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "iModelId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c182048a-e49c-42c1-a808-1f91afa481ab",
+              "name": "List of changesets",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":iModelId",
+                    "changesets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "iModelId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"changesets\": [\n    {\n      \"id\": \"string\",\n      \"displayName\": \"string\",\n      \"description\": \"string\",\n      \"index\": 2677,\n      \"parentId\": \"string\",\n      \"creatorId\": \"a66fb905-65f2-09ee-eb8f-fe6ffed10fd4\",\n      \"pushDateTime\": \"2017-09-25T00:05:00.492Z\",\n      \"state\": \"string\",\n      \"containingChanges\": 6407,\n      \"fileSize\": 5657,\n      \"briefcaseId\": 6916\n    },\n    {\n      \"id\": \"string\",\n      \"displayName\": \"string\",\n      \"description\": \"string\",\n      \"index\": 5741,\n      \"parentId\": \"string\",\n      \"creatorId\": \"7645e8ed-4914-c86a-baaf-a836fbbebb4b\",\n      \"pushDateTime\": \"1993-08-09T09:38:38.464Z\",\n      \"state\": \"string\",\n      \"containingChanges\": 8214,\n      \"fileSize\": 9842,\n      \"briefcaseId\": 2954\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fcbfdddb-f327-44a7-b952-cb6663690914",
+          "name": "Create Changeset",
+          "request": {
+            "name": "Create Changeset",
+            "description": {},
+            "url": {
+              "path": [
+                ":iModelId",
+                "changesets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "iModelId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "80d0cb06-68b7-4634-8a40-77bef116dea8",
+              "name": "Changeset created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":iModelId",
+                    "changesets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "iModelId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5a25f474-b664-4c4d-b1af-4340fc6c9c26",
+          "name": "Get Changeset",
+          "request": {
+            "name": "Get Changeset",
+            "description": {},
+            "url": {
+              "path": [
+                ":iModelId",
+                "changesets",
+                ":changesetId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "iModelId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "changesetId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b559c7c2-7aab-41fa-a7de-3fbb081b5984",
+              "name": "Changeset details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":iModelId",
+                    "changesets",
+                    ":changesetId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "iModelId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "changesetId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"displayName\": \"string\",\n  \"description\": \"string\",\n  \"index\": 5743,\n  \"parentId\": \"string\",\n  \"creatorId\": \"55951c09-854a-cc5a-5410-e9880bddcb1d\",\n  \"pushDateTime\": \"2011-03-18T20:05:10.453Z\",\n  \"state\": \"string\",\n  \"containingChanges\": 8156,\n  \"fileSize\": 8785,\n  \"briefcaseId\": 8817\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.bentley.com/accesscontrol",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "itwin-platform"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://ims.bentley.com/connect/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://ims.bentley.com/connect/authorize"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "77c4755c-fc48-4e15-b9fb-71974c6d76ad",
+    "name": "iTwin Control Access Changesets API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Role-based access control for iTwins — permissions, roles, group membership, owner members, invitations, shares, and job-based access.\n\nContact Support:\n Name: Bentley Developer Relations",
+      "type": "text/plain"
+    }
+  }
+}

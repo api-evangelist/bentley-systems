@@ -1,0 +1,89 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "iTwin Control Access Changesets API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://ims.bentley.com/connect/authorize",
+      "accessTokenUrl": "https://ims.bentley.com/connect/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Changesets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Changesets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/accesscontrol/:iModelId/changesets",
+            "params": [
+              {
+                "name": "iModelId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Changesets"
+        },
+        {
+          "info": {
+            "name": "Create Changeset",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/accesscontrol/:iModelId/changesets",
+            "params": [
+              {
+                "name": "iModelId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create Changeset"
+        },
+        {
+          "info": {
+            "name": "Get Changeset",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/accesscontrol/:iModelId/changesets/:changesetId",
+            "params": [
+              {
+                "name": "iModelId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "changesetId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Changeset"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

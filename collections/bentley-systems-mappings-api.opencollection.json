@@ -1,0 +1,238 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "iTwin Control Access Mappings API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://ims.bentley.com/connect/authorize",
+      "accessTokenUrl": "https://ims.bentley.com/connect/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Mappings",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Mappings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/accesscontrol/mappings"
+          },
+          "docs": "Get Mappings"
+        },
+        {
+          "info": {
+            "name": "Create Mapping",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/accesscontrol/mappings",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Mapping"
+        },
+        {
+          "info": {
+            "name": "Get Mappings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/accesscontrol/mappings/:mappingId",
+            "params": [
+              {
+                "name": "mappingId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Mappings"
+        },
+        {
+          "info": {
+            "name": "Update Mapping",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.bentley.com/accesscontrol/mappings/:mappingId",
+            "params": [
+              {
+                "name": "mappingId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Mapping"
+        },
+        {
+          "info": {
+            "name": "Delete Mapping",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.bentley.com/accesscontrol/mappings/:mappingId",
+            "params": [
+              {
+                "name": "mappingId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Mapping"
+        },
+        {
+          "info": {
+            "name": "Get Mappings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/accesscontrol/reporting/mappings"
+          },
+          "docs": "Get Mappings"
+        },
+        {
+          "info": {
+            "name": "Create Mapping",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/accesscontrol/reporting/mappings",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Mapping"
+        },
+        {
+          "info": {
+            "name": "Get Mappings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/accesscontrol/reporting/mappings/:mappingId",
+            "params": [
+              {
+                "name": "mappingId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Mappings"
+        },
+        {
+          "info": {
+            "name": "Update Mapping",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.bentley.com/accesscontrol/reporting/mappings/:mappingId",
+            "params": [
+              {
+                "name": "mappingId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Mapping"
+        },
+        {
+          "info": {
+            "name": "Delete Mapping",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.bentley.com/accesscontrol/reporting/mappings/:mappingId",
+            "params": [
+              {
+                "name": "mappingId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Mapping"
+        },
+        {
+          "info": {
+            "name": "Get Mappings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/accesscontrol/reporting/mappings/:mappingId/groups",
+            "params": [
+              {
+                "name": "mappingId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Mappings"
+        },
+        {
+          "info": {
+            "name": "Create Mapping",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/accesscontrol/reporting/mappings/:mappingId/groups",
+            "params": [
+              {
+                "name": "mappingId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Mapping"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

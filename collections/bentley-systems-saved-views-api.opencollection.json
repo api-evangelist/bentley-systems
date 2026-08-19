@@ -1,0 +1,114 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "iTwin Control Access Saved Views API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://ims.bentley.com/connect/authorize",
+      "accessTokenUrl": "https://ims.bentley.com/connect/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Saved Views",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Saved Views",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/accesscontrol/"
+          },
+          "docs": "Get Saved Views"
+        },
+        {
+          "info": {
+            "name": "Create Saved View",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/accesscontrol/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Saved View"
+        },
+        {
+          "info": {
+            "name": "Get Saved Views",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/accesscontrol/:savedViewId",
+            "params": [
+              {
+                "name": "savedViewId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Saved Views"
+        },
+        {
+          "info": {
+            "name": "Update Saved View",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.bentley.com/accesscontrol/:savedViewId",
+            "params": [
+              {
+                "name": "savedViewId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Saved View"
+        },
+        {
+          "info": {
+            "name": "Delete Saved View",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.bentley.com/accesscontrol/:savedViewId",
+            "params": [
+              {
+                "name": "savedViewId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Saved View"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

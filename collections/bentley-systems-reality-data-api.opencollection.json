@@ -1,0 +1,114 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "iTwin Control Access Reality Data API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://ims.bentley.com/connect/authorize",
+      "accessTokenUrl": "https://ims.bentley.com/connect/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Reality Data",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Reality Data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/accesscontrol/reality-data"
+          },
+          "docs": "Get Reality Data"
+        },
+        {
+          "info": {
+            "name": "Create Reality Data",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/accesscontrol/reality-data",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Reality Data"
+        },
+        {
+          "info": {
+            "name": "Get Reality Data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/accesscontrol/reality-data/:realityDataId",
+            "params": [
+              {
+                "name": "realityDataId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Reality Data"
+        },
+        {
+          "info": {
+            "name": "Update Reality Data",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.bentley.com/accesscontrol/reality-data/:realityDataId",
+            "params": [
+              {
+                "name": "realityDataId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Reality Data"
+        },
+        {
+          "info": {
+            "name": "Delete Reality Data",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.bentley.com/accesscontrol/reality-data/:realityDataId",
+            "params": [
+              {
+                "name": "realityDataId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Reality Data"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

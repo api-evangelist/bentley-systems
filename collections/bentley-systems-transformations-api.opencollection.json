@@ -1,0 +1,114 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "iTwin Control Access Transformations API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://ims.bentley.com/connect/authorize",
+      "accessTokenUrl": "https://ims.bentley.com/connect/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Transformations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Transformations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/accesscontrol/"
+          },
+          "docs": "Get Transformations"
+        },
+        {
+          "info": {
+            "name": "Create Transformation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/accesscontrol/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Transformation"
+        },
+        {
+          "info": {
+            "name": "Get Transformations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/accesscontrol/:transformationId",
+            "params": [
+              {
+                "name": "transformationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Transformations"
+        },
+        {
+          "info": {
+            "name": "Update Transformation",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.bentley.com/accesscontrol/:transformationId",
+            "params": [
+              {
+                "name": "transformationId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Transformation"
+        },
+        {
+          "info": {
+            "name": "Delete Transformation",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.bentley.com/accesscontrol/:transformationId",
+            "params": [
+              {
+                "name": "transformationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Transformation"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

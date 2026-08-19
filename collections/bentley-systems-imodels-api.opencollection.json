@@ -1,0 +1,175 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "iTwin Control Access iModels API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://ims.bentley.com/connect/authorize",
+      "accessTokenUrl": "https://ims.bentley.com/connect/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "iModels",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get iModels",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/accesscontrol/",
+            "params": [
+              {
+                "name": "iTwinId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get iModels"
+        },
+        {
+          "info": {
+            "name": "Create iModel",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/accesscontrol/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create iModel"
+        },
+        {
+          "info": {
+            "name": "Get iModel",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.bentley.com/accesscontrol/:iModelId",
+            "params": [
+              {
+                "name": "iModelId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get iModel"
+        },
+        {
+          "info": {
+            "name": "Update iModel",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.bentley.com/accesscontrol/:iModelId",
+            "params": [
+              {
+                "name": "iModelId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update iModel"
+        },
+        {
+          "info": {
+            "name": "Delete iModel",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.bentley.com/accesscontrol/:iModelId",
+            "params": [
+              {
+                "name": "iModelId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete iModel"
+        },
+        {
+          "info": {
+            "name": "Clone iModel",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/accesscontrol/:iModelId/clone",
+            "params": [
+              {
+                "name": "iModelId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Clone iModel"
+        },
+        {
+          "info": {
+            "name": "Fork iModel",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.bentley.com/accesscontrol/:iModelId/fork",
+            "params": [
+              {
+                "name": "iModelId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Fork iModel"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

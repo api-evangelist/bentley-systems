@@ -1,0 +1,361 @@
+{
+  "item": [
+    {
+      "id": "962149b5-ae5a-4264-b32b-0c7a53ec428f",
+      "name": "Named Versions",
+      "description": {
+        "content": "Create and query named versions that pin a point in an iModel's history.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7770fa47-7128-4865-8fd5-1b0ef656f3eb",
+          "name": "Get Named Versions",
+          "request": {
+            "name": "Get Named Versions",
+            "description": {},
+            "url": {
+              "path": [
+                ":iModelId",
+                "namedversions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "iModelId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "108c4816-286b-4d00-88bd-c16ccf17b474",
+              "name": "List of named versions",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":iModelId",
+                    "namedversions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "iModelId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"namedVersions\": [\n    {\n      \"id\": \"523fadbb-eeb3-3c5a-cd4a-0ca166df6cad\",\n      \"displayName\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"changesetId\": \"string\",\n      \"changesetIndex\": 7427,\n      \"createdDateTime\": \"1961-12-16T05:47:55.071Z\",\n      \"state\": \"hidden\"\n    },\n    {\n      \"id\": \"3cf23fda-6ca2-7ddb-f9dd-7b7bef17a791\",\n      \"displayName\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"changesetId\": \"string\",\n      \"changesetIndex\": 3591,\n      \"createdDateTime\": \"1955-03-18T04:21:03.837Z\",\n      \"state\": \"hidden\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "518b9c48-779e-4c30-98fb-40783ed0aa79",
+          "name": "Create Named Version",
+          "request": {
+            "name": "Create Named Version",
+            "description": {},
+            "url": {
+              "path": [
+                ":iModelId",
+                "namedversions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "iModelId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"changesetId\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "be14f9cb-faff-4933-9f73-62259d26c66a",
+              "name": "Named version created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":iModelId",
+                    "namedversions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "iModelId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"changesetId\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1f42e7d8-6b5a-4abc-83e8-f403a150edeb",
+          "name": "Get Named Version",
+          "request": {
+            "name": "Get Named Version",
+            "description": {},
+            "url": {
+              "path": [
+                ":iModelId",
+                "namedversions",
+                ":namedVersionId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "iModelId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "namedVersionId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7d889ab4-b19f-414c-abbf-a80ae4d16d5f",
+              "name": "Named version details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":iModelId",
+                    "namedversions",
+                    ":namedVersionId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "iModelId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "namedVersionId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"fed8504e-5c97-8138-fd97-e2fc56763792\",\n  \"displayName\": \"string\",\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"changesetId\": \"string\",\n  \"changesetIndex\": 4468,\n  \"createdDateTime\": \"2020-09-02T20:31:34.656Z\",\n  \"state\": \"visible\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.bentley.com/accesscontrol",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "itwin-platform"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://ims.bentley.com/connect/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://ims.bentley.com/connect/authorize"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "61b15557-3034-4b81-bc97-9887e3b605e4",
+    "name": "iTwin Control Access Named Versions API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Role-based access control for iTwins — permissions, roles, group membership, owner members, invitations, shares, and job-based access.\n\nContact Support:\n Name: Bentley Developer Relations",
+      "type": "text/plain"
+    }
+  }
+}
