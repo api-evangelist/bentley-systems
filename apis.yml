@@ -3053,6 +3053,8 @@ apis:
   humanURL: https://developer.bentley.com/apis/access-control-v2/
   baseURL: https://api.bentley.com/accesscontrol
   tags:
+  - Event
+  tags_raw:
   - Events
   properties:
   - type: OpenAPI
@@ -3325,6 +3327,8 @@ apis:
   humanURL: https://developer.bentley.com/apis/access-control-v2/
   baseURL: https://api.bentley.com/accesscontrol
   tags:
+  - Export
+  tags_raw:
   - Exports
   properties:
   - type: OpenAPI
@@ -3869,6 +3873,8 @@ apis:
   humanURL: https://developer.bentley.com/apis/access-control-v2/
   baseURL: https://api.bentley.com/accesscontrol
   tags:
+  - File
+  tags_raw:
   - Files
   properties:
   - type: OpenAPI
@@ -4277,6 +4283,8 @@ apis:
   humanURL: https://developer.bentley.com/apis/access-control-v2/
   baseURL: https://api.bentley.com/accesscontrol
   tags:
+  - Group
+  tags_raw:
   - Groups
   properties:
   - type: OpenAPI
@@ -4413,6 +4421,8 @@ apis:
   humanURL: https://developer.bentley.com/apis/access-control-v2/
   baseURL: https://api.bentley.com/accesscontrol
   tags:
+  - Image
+  tags_raw:
   - Images
   properties:
   - type: OpenAPI
@@ -5229,6 +5239,8 @@ apis:
   humanURL: https://developer.bentley.com/apis/access-control-v2/
   baseURL: https://api.bentley.com/accesscontrol
   tags:
+  - Job
+  tags_raw:
   - Jobs
   properties:
   - type: OpenAPI
@@ -6861,6 +6873,8 @@ apis:
   humanURL: https://developer.bentley.com/apis/access-control-v2/
   baseURL: https://api.bentley.com/accesscontrol
   tags:
+  - OData
+  tags_raw:
   - ODATA
   properties:
   - type: OpenAPI
@@ -7541,6 +7555,8 @@ apis:
   humanURL: https://developer.bentley.com/apis/access-control-v2/
   baseURL: https://api.bentley.com/accesscontrol
   tags:
+  - Query
+  tags_raw:
   - Queries
   properties:
   - type: OpenAPI
@@ -10125,6 +10141,8 @@ apis:
   humanURL: https://developer.bentley.com/apis/access-control-v2/
   baseURL: https://api.bentley.com/accesscontrol
   tags:
+  - Task
+  tags_raw:
   - Tasks
   properties:
   - type: OpenAPI
@@ -10669,6 +10687,8 @@ apis:
   humanURL: https://developer.bentley.com/apis/access-control-v2/
   baseURL: https://api.bentley.com/accesscontrol
   tags:
+  - Transformation
+  tags_raw:
   - Transformations
   properties:
   - type: OpenAPI
@@ -10941,6 +10961,8 @@ apis:
   humanURL: https://developer.bentley.com/apis/access-control-v2/
   baseURL: https://api.bentley.com/accesscontrol
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
@@ -11213,6 +11235,8 @@ apis:
   humanURL: https://developer.bentley.com/apis/access-control-v2/
   baseURL: https://api.bentley.com/accesscontrol
   tags:
+  - Webhook
+  tags_raw:
   - Webhooks
   properties:
   - type: OpenAPI
@@ -11485,6 +11509,8 @@ apis:
   humanURL: https://developer.bentley.com/apis/access-control-v2/
   baseURL: https://api.bentley.com/accesscontrol
   tags:
+  - Workflows
+  tags_raw:
   - Workflow
   properties:
   - type: OpenAPI
