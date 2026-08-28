@@ -11,8 +11,14 @@ info:
     description.
   version: 1.0.0
 sourceDescriptions:
+- name: attachmentsApi
+  url: ../openapi/bentley-systems-attachments-api-openapi.yml
+  type: openapi
+- name: commentsApi
+  url: ../openapi/bentley-systems-comments-api-openapi.yml
+  type: openapi
 - name: issuesApi
-  url: ../openapi/itwin-issues-openapi.yml
+  url: ../openapi/bentley-systems-issues-api-openapi.yml
   type: openapi
 workflows:
 - workflowId: file-issue

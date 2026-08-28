@@ -12,8 +12,11 @@ info:
     underlying OpenAPI description.
   version: 1.0.0
 sourceDescriptions:
-- name: imodelsApi
-  url: ../openapi/itwin-imodels-openapi.yml
+- name: changesetsApi
+  url: ../openapi/bentley-systems-changesets-api-openapi.yml
+  type: openapi
+- name: namedVersionsApi
+  url: ../openapi/bentley-systems-named-versions-api-openapi.yml
   type: openapi
 workflows:
 - workflowId: tag-named-version

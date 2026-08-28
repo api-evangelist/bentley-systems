@@ -13,8 +13,14 @@ info:
     opening the underlying OpenAPI description.
   version: 1.0.0
 sourceDescriptions:
+- name: auditTrailApi
+  url: ../openapi/bentley-systems-audit-trail-api-openapi.yml
+  type: openapi
 - name: issuesApi
-  url: ../openapi/itwin-issues-openapi.yml
+  url: ../openapi/bentley-systems-issues-api-openapi.yml
+  type: openapi
+- name: workflowApi
+  url: ../openapi/bentley-systems-workflow-api-openapi.yml
   type: openapi
 workflows:
 - workflowId: advance-issue

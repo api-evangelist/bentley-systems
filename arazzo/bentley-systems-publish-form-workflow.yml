@@ -11,8 +11,14 @@ info:
     read and executed without opening the underlying OpenAPI description.
   version: 1.0.0
 sourceDescriptions:
-- name: formsApi
-  url: ../openapi/itwin-forms-openapi.yml
+- name: attachmentsApi
+  url: ../openapi/bentley-systems-attachments-api-openapi.yml
+  type: openapi
+- name: instancesApi
+  url: ../openapi/bentley-systems-instances-api-openapi.yml
+  type: openapi
+- name: templatesApi
+  url: ../openapi/bentley-systems-templates-api-openapi.yml
   type: openapi
 workflows:
 - workflowId: publish-form

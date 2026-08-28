@@ -11,8 +11,14 @@ info:
     without opening the underlying OpenAPI description.
   version: 1.0.0
 sourceDescriptions:
-- name: imodelsApi
-  url: ../openapi/itwin-imodels-openapi.yml
+- name: briefcasesApi
+  url: ../openapi/bentley-systems-briefcases-api-openapi.yml
+  type: openapi
+- name: changesetsApi
+  url: ../openapi/bentley-systems-changesets-api-openapi.yml
+  type: openapi
+- name: locksApi
+  url: ../openapi/bentley-systems-locks-api-openapi.yml
   type: openapi
 workflows:
 - workflowId: authoring-session

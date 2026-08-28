@@ -13,7 +13,7 @@ info:
   version: 1.0.0
 sourceDescriptions:
 - name: imodelsApi
-  url: ../openapi/itwin-imodels-openapi.yml
+  url: ../openapi/bentley-systems-imodels-api-openapi.yml
   type: openapi
 workflows:
 - workflowId: clone-imodel

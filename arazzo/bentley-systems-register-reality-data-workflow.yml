@@ -14,8 +14,8 @@ info:
     description.
   version: 1.0.0
 sourceDescriptions:
-- name: realityManagementApi
-  url: ../openapi/itwin-reality-management-openapi.yml
+- name: realityDataApi
+  url: ../openapi/bentley-systems-reality-data-api-openapi.yml
   type: openapi
 workflows:
 - workflowId: register-reality-data

@@ -11,11 +11,11 @@ info:
     without opening the underlying OpenAPI descriptions.
   version: 1.0.0
 sourceDescriptions:
-- name: itwinsApi
-  url: ../openapi/itwin-itwins-openapi.yml
-  type: openapi
 - name: imodelsApi
-  url: ../openapi/itwin-imodels-openapi.yml
+  url: ../openapi/bentley-systems-imodels-api-openapi.yml
+  type: openapi
+- name: itwinsApi
+  url: ../openapi/bentley-systems-itwins-api-openapi.yml
   type: openapi
 workflows:
 - workflowId: provision-imodel
