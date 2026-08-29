@@ -14,6 +14,9 @@ info:
     description.
   version: 1.0.0
 sourceDescriptions:
+- name: accessApi
+  url: ../openapi/bentley-systems-access-api-openapi.yml
+  type: openapi
 - name: realityDataApi
   url: ../openapi/bentley-systems-reality-data-api-openapi.yml
   type: openapi
@@ -48,7 +51,7 @@ workflows:
     description: >-
       Read the reality data record back to confirm the registration succeeded
       before requesting upload access.
-    operationPath: '{$sourceDescriptions.realityManagementApi.url}#/paths/~1reality-data~1{realityDataId}/get'
+    operationPath: '{$sourceDescriptions.realityDataApi.url}#/paths/~1reality-data~1{realityDataId}/get'
     parameters:
     - name: realityDataId
       in: path
@@ -61,7 +64,7 @@ workflows:
     description: >-
       Request a write-access container URL for the reality data so a client can
       upload the underlying files.
-    operationPath: '{$sourceDescriptions.realityManagementApi.url}#/paths/~1reality-data~1{realityDataId}~1writeaccess/post'
+    operationPath: '{$sourceDescriptions.accessApi.url}#/paths/~1reality-data~1{realityDataId}~1writeaccess/post'
     parameters:
     - name: realityDataId
       in: path
