@@ -11790,6 +11790,9 @@ apis:
   - type: APIReference
     url: https://developer.bentley.com/apis/pnid-to-itwin-v2/operations/
 common:
+- type: CapabilityMap
+  url: capabilities/bentley-systems-capability-edges.yml
+  name: Bentley Systems Business Capability Map
 - type: AgenticAccess
   url: agentic-access/bentley-systems-agentic-access.yml
 - type: VulnerabilityDisclosure

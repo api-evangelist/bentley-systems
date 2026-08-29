@@ -1,0 +1,88 @@
+slug: bentley-systems
+provider: Bentley Systems
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 7
+edges:
+- tag: Webhooks
+  spec_file: bentley-systems-webhooks-api-openapi.yml
+  capability_id: BC-4270.80
+  capability_id_l1: BC-4270
+  capability_name: Webhook & Event Subscription Management
+  confidence: 0.8
+  evidence: POST /  CreateWebhook; PATCH /{subscriptionId}  UpdateWebhook; DELETE /{subscriptionId}  DeleteWebhook
+  reason: CRUD over webhook subscriptions keyed by subscriptionId is exactly outbound webhook & event
+    subscription lifecycle on a developer platform.
+- tag: Permissions
+  spec_file: bentley-systems-permissions-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.78
+  evidence: GET /permissions  GetPermissions; "Role-based access control for iTwins — permissions, roles,
+    group membership"
+  reason: The operations enumerate and create permissions within a stated role-based access control model,
+    which is access management for the platform.
+- tag: Members
+  spec_file: bentley-systems-members-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.75
+  evidence: GET /itwins/{iTwinId}/members/users; "Role-based access control for iTwins — permissions,
+    roles, group membership, owner members, invitations"
+  reason: Operations add and list user members of an iTwin, which together with the stated RBAC scope
+    is identity and access administration for the platform.
+- tag: Roles
+  spec_file: bentley-systems-roles-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.75
+  evidence: GET /itwins/{iTwinId}/roles ... "Role-based access control for iTwins — permissions, roles,
+    group membership"
+  reason: Roles scoped to an iTwin, combined with the access-control description, indicates RBAC role
+    administration, i.e. identity and access management. Confidence tempered because the description text
+    is shared boilerplate across split tags.
+- tag: Access
+  spec_file: bentley-systems-access-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.7
+  evidence: '"Role-based access control for iTwins — permissions, roles, group membership, owner members,
+    invitations, shares"; GET /reality-data/{realityDataId}/readaccess, POST /reality-data/{realityDataId}/writeaccess'
+  reason: Operations grant and read read/write access rights on platform resources, which is identity
+    and access management. Confidence tempered because the endpoints are narrow resource-permission calls
+    on reality data rather than a full IAM surface.
+- tag: Authorization
+  spec_file: bentley-systems-authorization-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.7
+  evidence: '"Role-based access control for iTwins — permissions, roles, group membership, owner members,
+    invitations, shares"; GET /authorization-information  GetAuthorization'
+  reason: The operations retrieve authorization information within a documented role-based access control
+    surface (permissions, roles, group membership, invitations), which is identity and access management.
+    Confidence held moderate because only two thin operations are exposed.
+- tag: Users
+  spec_file: bentley-systems-users-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.7
+  evidence: GET /{iModelId}/users  GetIModelUsers; POST /users  CreateUser; DELETE /users/{userId}  DeleteUser
+    — within "Role-based access control for iTwins — permissions, roles, group membership"
+  reason: User account lifecycle and per-iModel user access listing sits under identity & access management.
+    Confidence tempered because the spec description is boilerplate and the tag could be a simple directory
+    read.
