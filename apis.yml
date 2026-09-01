@@ -6885,7 +6885,7 @@ apis:
   humanURL: https://developer.bentley.com/apis/access-control-v2/
   baseURL: https://api.bentley.com/accesscontrol
   tags:
-  - ODATA
+  - OData
   tags_raw:
   - ODATA
   properties:
@@ -10699,7 +10699,7 @@ apis:
   humanURL: https://developer.bentley.com/apis/access-control-v2/
   baseURL: https://api.bentley.com/accesscontrol
   tags:
-  - Transformations
+  - Transformation
   tags_raw:
   - Transformations
   properties:
