@@ -2,21 +2,21 @@
   "repo": "bentley-systems",
   "feeds": [
     {
-      "source": "https://blog.bentley.com/comments/feed/",
-      "feed_url": "https://blog.bentley.com/comments/feed/",
-      "title": "",
-      "saved": 0,
-      "method": "none"
-    },
-    {
       "source": "https://twitter.com/BentleySystems",
       "feed_url": "https://twitter.com/BentleySystems",
       "title": "",
       "saved": 0,
       "method": "none"
+    },
+    {
+      "source": "https://blog.bentley.com/comments/feed/",
+      "feed_url": "https://blog.bentley.com/comments/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
-  "fetched": "2026-08-30T22:33:40Z",
+  "fetched": "2026-09-06T19:17:18Z",
   "post_count": 6,
   "feed_nature": "vendor-blog",
   "feed_nature_basis": "blog_subdomain",
