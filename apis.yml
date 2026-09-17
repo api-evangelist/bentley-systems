@@ -6879,144 +6879,6 @@ apis:
     url: https://developer.bentley.com/apis/pnid-to-itwin-v2/
   - type: APIReference
     url: https://developer.bentley.com/apis/pnid-to-itwin-v2/operations/
-- aid: bentley-systems:bentley-systems-odata-api
-  name: Bentley Systems ODATA API
-  description: ODATA resources for the iTwin Insights API.
-  humanURL: https://developer.bentley.com/apis/access-control-v2/
-  baseURL: https://api.bentley.com/accesscontrol
-  tags:
-  - OData
-  tags_raw:
-  - ODATA
-  properties:
-  - type: OpenAPI
-    url: openapi/bentley-systems-odata-api-openapi.yml
-  - type: Documentation
-    url: https://developer.bentley.com/apis/access-control-v2/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/access-control-v2/operations/
-  - type: GraphQL
-    url: graphql/bentley-systems-graphql.md
-  - type: Documentation
-    url: https://developer.bentley.com/apis/itwins/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/itwins/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/users/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/users/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/imodels-v2/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/imodels-v2/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/storage/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/storage/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/webhooks-v2/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/webhooks-v2/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/synchronization/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/synchronization/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/reality-management/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/reality-management/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/contextcapture/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/contextcapture/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/reality-analysis/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/reality-analysis/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/realityconversion/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/realityconversion/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/schedules/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/schedules/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/insights/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/insights/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/carbon-calculation/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/carbon-calculation/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/clash-detection-v2/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/clash-detection-v2/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/changed-elements-v2/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/changed-elements-v2/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/issues-v1/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/issues-v1/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/forms-v2/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/forms-v2/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/library/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/library/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/savedviews/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/savedviews/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/scenes/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/scenes/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/named-groups/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/named-groups/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/grouping-and-mapping/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/grouping-and-mapping/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/transformations/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/transformations/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/export/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/export/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/mesh-export/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/mesh-export/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/sensor-data/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/sensor-data/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/cesium-curated-content/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/cesium-curated-content/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/geospatial-features/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/geospatial-features/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/edfs/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/edfs/operations/
-  - type: Documentation
-    url: https://developer.bentley.com/apis/pnid-to-itwin-v2/
-  - type: APIReference
-    url: https://developer.bentley.com/apis/pnid-to-itwin-v2/operations/
 - aid: bentley-systems:bentley-systems-parameters-api
   name: Bentley Systems Parameters API
   description: Parameters resources for the iTwin Library API.
@@ -11663,6 +11525,142 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/bentley-systems-workspaces-api-openapi.yml
+  - type: Documentation
+    url: https://developer.bentley.com/apis/access-control-v2/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/access-control-v2/operations/
+  - type: GraphQL
+    url: graphql/bentley-systems-graphql.md
+  - type: Documentation
+    url: https://developer.bentley.com/apis/itwins/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/itwins/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/users/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/users/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/imodels-v2/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/imodels-v2/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/storage/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/storage/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/webhooks-v2/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/webhooks-v2/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/synchronization/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/synchronization/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/reality-management/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/reality-management/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/contextcapture/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/contextcapture/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/reality-analysis/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/reality-analysis/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/realityconversion/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/realityconversion/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/schedules/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/schedules/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/insights/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/insights/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/carbon-calculation/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/carbon-calculation/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/clash-detection-v2/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/clash-detection-v2/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/changed-elements-v2/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/changed-elements-v2/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/issues-v1/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/issues-v1/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/forms-v2/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/forms-v2/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/library/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/library/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/savedviews/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/savedviews/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/scenes/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/scenes/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/named-groups/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/named-groups/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/grouping-and-mapping/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/grouping-and-mapping/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/transformations/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/transformations/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/export/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/export/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/mesh-export/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/mesh-export/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/sensor-data/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/sensor-data/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/cesium-curated-content/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/cesium-curated-content/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/geospatial-features/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/geospatial-features/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/edfs/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/edfs/operations/
+  - type: Documentation
+    url: https://developer.bentley.com/apis/pnid-to-itwin-v2/
+  - type: APIReference
+    url: https://developer.bentley.com/apis/pnid-to-itwin-v2/operations/
+- aid: bentley-systems:bentley-systems-odata-api
+  name: Bentley Systems ODATA API
+  description: ODATA resources for the iTwin Insights API.
+  humanURL: https://developer.bentley.com/apis/visualization/
+  baseURL: https://api.bentley.com/visualization
+  tags:
+  - ODATA
+  properties:
+  - type: OpenAPI
+    url: openapi/bentley-systems-odata-api-openapi.yml
   - type: Documentation
     url: https://developer.bentley.com/apis/access-control-v2/
   - type: APIReference
