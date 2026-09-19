@@ -1025,6 +1025,8 @@ apis:
   humanURL: https://developer.bentley.com/apis/access-control-v2/
   baseURL: https://api.bentley.com/accesscontrol
   tags:
+  - Calendar
+  tags_raw:
   - Calendars
   properties:
   - type: OpenAPI
@@ -8791,6 +8793,8 @@ apis:
   humanURL: https://developer.bentley.com/apis/access-control-v2/
   baseURL: https://api.bentley.com/accesscontrol
   tags:
+  - Schedule
+  tags_raw:
   - Schedules
   properties:
   - type: OpenAPI
@@ -8927,6 +8931,8 @@ apis:
   humanURL: https://developer.bentley.com/apis/access-control-v2/
   baseURL: https://api.bentley.com/accesscontrol
   tags:
+  - Schema
+  tags_raw:
   - Schemas
   properties:
   - type: OpenAPI
@@ -9199,6 +9205,8 @@ apis:
   humanURL: https://developer.bentley.com/apis/access-control-v2/
   baseURL: https://api.bentley.com/accesscontrol
   tags:
+  - Share
+  tags_raw:
   - Shares
   properties:
   - type: OpenAPI
@@ -11521,6 +11529,8 @@ apis:
   humanURL: https://developer.bentley.com/apis/access-control-v2/
   baseURL: https://api.bentley.com/accesscontrol
   tags:
+  - Workspace
+  tags_raw:
   - Workspaces
   properties:
   - type: OpenAPI
@@ -11657,6 +11667,8 @@ apis:
   humanURL: https://developer.bentley.com/apis/visualization/
   baseURL: https://api.bentley.com/visualization
   tags:
+  - OData
+  tags_raw:
   - ODATA
   properties:
   - type: OpenAPI
