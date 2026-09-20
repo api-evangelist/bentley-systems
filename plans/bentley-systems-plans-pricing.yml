@@ -10,6 +10,11 @@ provenance:
   grounding: every price_text was found verbatim in the fetched page text
 audience: developer-api
 pricing_basis: per-call
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-09-20'
+  managed_tier: Standard
 published: true
 note: Credit-based API pricing; per-service credit rates listed (e.g. iModels 1 Credit per 2 GB, Reporting
   1 Credit per 250000 Rows Processed). $1.20 per credit with Standard.
