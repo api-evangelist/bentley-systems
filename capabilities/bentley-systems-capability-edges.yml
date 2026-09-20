@@ -11,7 +11,7 @@ capability_model:
   attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
     CC BY 4.0
   notice: NOTICE
-edge_count: 6
+edge_count: 11
 edges:
 - tag: Permissions
   spec_file: bentley-systems-permissions-api-openapi.yml
@@ -33,6 +33,16 @@ edges:
     iTwins"
   reason: Role definition per iTwin inside an explicitly RBAC surface — identity and access management,
     not HR role/job architecture.
+- tag: Webhooks
+  spec_file: bentley-systems-webhooks-api-openapi.yml
+  capability_id: BC-4270.80
+  capability_id_l1: BC-4270
+  capability_name: Webhook & Event Subscription Management
+  confidence: 0.8
+  evidence: POST /  CreateWebhook; PATCH /{subscriptionId}  UpdateWebhook; DELETE /{subscriptionId}  DeleteWebhook
+  reason: CRUD over webhook subscriptions keyed by subscriptionId is exactly outbound webhook & event
+    subscription lifecycle on a developer platform.
+  recovered_from: sweep-20260828T235257Z-edges.json
 - tag: Members
   spec_file: bentley-systems-members-api-openapi.yml
   capability_id: BC-620.20
@@ -66,6 +76,30 @@ edges:
   reason: WBS nodes hung off a schedule id are construction programme work-breakdown structures, i.e.
     capital project planning and scheduling controls. Confidence tempered by only two operations and no
     schemas.
+- tag: Access
+  spec_file: bentley-systems-access-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.7
+  evidence: '"Role-based access control for iTwins — permissions, roles, group membership, owner members,
+    invitations, shares"; GET /reality-data/{realityDataId}/readaccess, POST /reality-data/{realityDataId}/writeaccess'
+  reason: Operations grant and read read/write access rights on platform resources, which is identity
+    and access management. Confidence tempered because the endpoints are narrow resource-permission calls
+    on reality data rather than a full IAM surface.
+  recovered_from: sweep-20260828T235257Z-edges.json
+- tag: Authorization
+  spec_file: bentley-systems-authorization-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.7
+  evidence: '"Role-based access control for iTwins — permissions, roles, group membership, owner members,
+    invitations, shares"; GET /authorization-information  GetAuthorization'
+  reason: The operations retrieve authorization information within a documented role-based access control
+    surface (permissions, roles, group membership, invitations), which is identity and access management.
+    Confidence held moderate because only two thin operations are exposed.
+  recovered_from: sweep-20260828T235257Z-edges.json
 - tag: Reality Data
   spec_file: bentley-systems-reality-data-api-openapi.yml
   capability_id: BC-5060.40
@@ -77,3 +111,27 @@ edges:
     managed for infrastructure projects; CRUD over that catalogue fits geospatial and survey data management
     within digital engineering / asset information. Some chance it is better read as generic data management,
     hence 0.7.
+- tag: Reports
+  spec_file: bentley-systems-reports-api-openapi.yml
+  capability_id: BC-610.50
+  capability_id_l1: BC-610
+  capability_name: Analytics & BI Management
+  confidence: 0.7
+  evidence: POST /reporting/reports  CreateReport; GET /reporting/reports/{reportId}/datasources  Get
+    Reports
+  reason: Report definitions bound to datasources constitute reporting/BI delivery over iTwin data. The
+    /ec3/reports path hints at embodied-carbon reporting, adding some ambiguity, so confidence is held
+    below 0.8.
+  recovered_from: vertical-engineering-services-edges.json
+- tag: Users
+  spec_file: bentley-systems-users-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.7
+  evidence: GET /{iModelId}/users  GetIModelUsers; POST /users  CreateUser; DELETE /users/{userId}  DeleteUser
+    — within "Role-based access control for iTwins — permissions, roles, group membership"
+  reason: User account lifecycle and per-iModel user access listing sits under identity & access management.
+    Confidence tempered because the spec description is boilerplate and the tag could be a simple directory
+    read.
+  recovered_from: sweep-20260828T235257Z-edges.json
