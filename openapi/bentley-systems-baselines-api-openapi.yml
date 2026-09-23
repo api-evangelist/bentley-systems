@@ -1,16 +1,15 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: iTwin Control Access Baselines API
-  description: Role-based access control for iTwins — permissions, roles, group membership, owner members, invitations, shares, and job-based access.
-  version: '1.0'
-  contact:
-    name: Bentley Developer Relations
-    url: https://developer.bentley.com/apis/access-control/
+  title: Bentley Systems Baselines API
   license:
     name: Bentley Developer Portal Terms
     url: https://developer.bentley.com/legal/
+  version: '1.0'
+  description: 'Operations tagged Baselines across 2 of this provider''s published API definitions: itwin-imodels-openapi.yml, itwin-schedules-openapi.yml. Each path carries the servers of the definition it was published in.'
 servers:
-- url: https://api.bentley.com/accesscontrol
+- url: https://api.bentley.com/imodels
+  description: iTwin Platform Production
+- url: https://api.bentley.com/schedules
   description: iTwin Platform Production
 security:
 - OAuth2: []
@@ -34,6 +33,9 @@ paths:
       responses:
         '200':
           description: Baseline file metadata and download URL
+    servers:
+    - url: https://api.bentley.com/imodels
+      description: iTwin Platform Production
   /{scheduleId}/baselines:
     parameters:
     - name: scheduleId
@@ -72,6 +74,9 @@ paths:
             application/json:
               schema:
                 type: object
+    servers:
+    - url: https://api.bentley.com/schedules
+      description: iTwin Platform Production
 components:
   securitySchemes:
     OAuth2:
@@ -83,6 +88,6 @@ components:
           tokenUrl: https://ims.bentley.com/connect/token
           scopes:
             itwin-platform: Full access to iTwin Platform APIs
-externalDocs:
-  description: iTwin Access Control API Documentation
-  url: https://developer.bentley.com/apis/access-control/
+x-refined-from:
+- itwin-imodels-openapi.yml
+- itwin-schedules-openapi.yml

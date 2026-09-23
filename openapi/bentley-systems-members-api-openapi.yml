@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: iTwin Control Access Members API
+  title: iTwin Access Control Members API
   description: Role-based access control for iTwins — permissions, roles, group membership, owner members, invitations, shares, and job-based access.
   version: '1.0'
   contact:
