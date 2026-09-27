@@ -72,7 +72,7 @@ paths:
       tags:
       - Groups
       summary: Get Groups
-      operationId: GetGroups
+      operationId: getMappingsByMappingIdGroups
       responses:
         '200':
           description: List of Groups
@@ -80,11 +80,13 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetGroups
     post:
       tags:
       - Groups
       summary: Create Group
-      operationId: CreateGroup
+      operationId: postMappingsByMappingIdGroups
       requestBody:
         required: true
         content:
@@ -98,6 +100,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: CreateGroup
     servers:
     - url: https://api.bentley.com/grouping-and-mapping
       description: iTwin Platform Production
@@ -106,7 +110,7 @@ paths:
       tags:
       - Groups
       summary: Get Groups
-      operationId: GetGroups
+      operationId: getGroups
       responses:
         '200':
           description: List of Groups
@@ -114,11 +118,13 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetGroups
     post:
       tags:
       - Groups
       summary: Create Group
-      operationId: CreateGroup
+      operationId: postGroups
       requestBody:
         required: true
         content:
@@ -132,6 +138,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: CreateGroup
     servers:
     - url: https://api.bentley.com/savedviews
       description: iTwin Platform Production
@@ -147,7 +155,7 @@ paths:
       tags:
       - Groups
       summary: Get Groups
-      operationId: GetGroups
+      operationId: getGroupsByGroupId
       responses:
         '200':
           description: List of Groups
@@ -155,6 +163,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetGroups
     patch:
       tags:
       - Groups

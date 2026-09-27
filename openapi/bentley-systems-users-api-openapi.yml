@@ -107,7 +107,7 @@ paths:
       tags:
       - Users
       summary: Get Users
-      operationId: GetUsers
+      operationId: getUsersByUserId
       responses:
         '200':
           description: List of Users
@@ -115,6 +115,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetUsers
     patch:
       tags:
       - Users

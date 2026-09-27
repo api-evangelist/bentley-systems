@@ -61,7 +61,7 @@ paths:
       tags:
       - Webhooks
       summary: Get Webhooks
-      operationId: GetWebhooks
+      operationId: getBySubscriptionId
       responses:
         '200':
           description: List of Webhooks
@@ -69,6 +69,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetWebhooks
     patch:
       tags:
       - Webhooks

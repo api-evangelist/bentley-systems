@@ -74,7 +74,7 @@ paths:
       tags:
       - Tasks
       summary: Get Tasks
-      operationId: GetTasks
+      operationId: getByScheduleIdTasksByTaskId
       responses:
         '200':
           description: List of Tasks
@@ -82,6 +82,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetTasks
     patch:
       tags:
       - Tasks

@@ -61,7 +61,7 @@ paths:
       tags:
       - Workspaces
       summary: Get Workspaces
-      operationId: GetWorkspaces
+      operationId: getWorkspacesByWorkspaceId
       responses:
         '200':
           description: List of Workspaces
@@ -69,6 +69,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetWorkspaces
     patch:
       tags:
       - Workspaces

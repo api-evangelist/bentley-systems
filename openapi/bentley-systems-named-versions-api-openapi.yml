@@ -80,18 +80,6 @@ paths:
                 $ref: '#/components/schemas/NamedVersion'
 components:
   schemas:
-    CreateNamedVersion:
-      type: object
-      required:
-      - name
-      - changesetId
-      properties:
-        name:
-          type: string
-        description:
-          type: string
-        changesetId:
-          type: string
     NamedVersion:
       type: object
       properties:
@@ -123,6 +111,18 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/NamedVersion'
+    CreateNamedVersion:
+      type: object
+      required:
+      - name
+      - changesetId
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        changesetId:
+          type: string
   securitySchemes:
     OAuth2:
       type: oauth2

@@ -56,7 +56,7 @@ paths:
       tags:
       - Reports
       summary: Get Reports
-      operationId: GetReports
+      operationId: getReportingReports
       responses:
         '200':
           description: List of Reports
@@ -64,11 +64,13 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetReports
     post:
       tags:
       - Reports
       summary: Create Report
-      operationId: CreateReport
+      operationId: postReportingReports
       requestBody:
         required: true
         content:
@@ -82,6 +84,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: CreateReport
     servers:
     - url: https://api.bentley.com/insights
       description: iTwin Platform Production
@@ -97,7 +101,7 @@ paths:
       tags:
       - Reports
       summary: Get Reports
-      operationId: GetReports
+      operationId: getReportingReportsByReportId
       responses:
         '200':
           description: List of Reports
@@ -105,6 +109,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetReports
     patch:
       tags:
       - Reports
@@ -142,7 +148,7 @@ paths:
       tags:
       - Reports
       summary: Get Reports
-      operationId: GetReports
+      operationId: getReportingReportsByReportIdDatasources
       responses:
         '200':
           description: List of Reports
@@ -150,11 +156,13 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetReports
     post:
       tags:
       - Reports
       summary: Create Report
-      operationId: CreateReport
+      operationId: postReportingReportsByReportIdDatasources
       requestBody:
         required: true
         content:
@@ -168,6 +176,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: CreateReport
     servers:
     - url: https://api.bentley.com/insights
       description: iTwin Platform Production

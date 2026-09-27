@@ -61,7 +61,7 @@ paths:
       tags:
       - Export
       summary: Get Export
-      operationId: GetExport
+      operationId: getExportsByExportId
       responses:
         '200':
           description: List of Export
@@ -69,6 +69,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetExport
     patch:
       tags:
       - Export

@@ -74,7 +74,7 @@ paths:
       tags:
       - Resources
       summary: Get Resources
-      operationId: GetResources
+      operationId: getByScheduleIdResourcesByResourceId
       responses:
         '200':
           description: List of Resources
@@ -82,6 +82,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetResources
     patch:
       tags:
       - Resources

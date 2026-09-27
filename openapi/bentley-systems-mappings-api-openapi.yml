@@ -63,7 +63,7 @@ paths:
       tags:
       - Mappings
       summary: Get Mappings
-      operationId: GetMappings
+      operationId: getMappingsByMappingId
       responses:
         '200':
           description: List of Mappings
@@ -71,6 +71,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetMappings
     patch:
       tags:
       - Mappings
@@ -101,7 +103,7 @@ paths:
       tags:
       - Mappings
       summary: Get Mappings
-      operationId: GetMappings
+      operationId: getReportingMappings
       responses:
         '200':
           description: List of Mappings
@@ -109,11 +111,13 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetMappings
     post:
       tags:
       - Mappings
       summary: Create Mapping
-      operationId: CreateMapping
+      operationId: postReportingMappings
       requestBody:
         required: true
         content:
@@ -127,6 +131,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: CreateMapping
     servers:
     - url: https://api.bentley.com/insights
       description: iTwin Platform Production
@@ -142,7 +148,7 @@ paths:
       tags:
       - Mappings
       summary: Get Mappings
-      operationId: GetMappings
+      operationId: getReportingMappingsByMappingId
       responses:
         '200':
           description: List of Mappings
@@ -150,11 +156,13 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetMappings
     patch:
       tags:
       - Mappings
       summary: Update Mapping
-      operationId: UpdateMapping
+      operationId: patchReportingMappingsByMappingId
       requestBody:
         required: true
         content:
@@ -164,14 +172,18 @@ paths:
       responses:
         '200':
           description: Mapping updated
+      x-operation-id-source: normalized
+      x-operation-id-original: UpdateMapping
     delete:
       tags:
       - Mappings
       summary: Delete Mapping
-      operationId: DeleteMapping
+      operationId: deleteReportingMappingsByMappingId
       responses:
         '204':
           description: Mapping deleted
+      x-operation-id-source: normalized
+      x-operation-id-original: DeleteMapping
     servers:
     - url: https://api.bentley.com/insights
       description: iTwin Platform Production
@@ -187,7 +199,7 @@ paths:
       tags:
       - Mappings
       summary: Get Mappings
-      operationId: GetMappings
+      operationId: getReportingMappingsByMappingIdGroups
       responses:
         '200':
           description: List of Mappings
@@ -195,11 +207,13 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetMappings
     post:
       tags:
       - Mappings
       summary: Create Mapping
-      operationId: CreateMapping
+      operationId: postReportingMappingsByMappingIdGroups
       requestBody:
         required: true
         content:
@@ -213,6 +227,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: CreateMapping
     servers:
     - url: https://api.bentley.com/insights
       description: iTwin Platform Production

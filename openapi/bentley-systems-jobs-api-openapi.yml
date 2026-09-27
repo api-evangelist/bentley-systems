@@ -69,7 +69,7 @@ paths:
       tags:
       - Jobs
       summary: Get Jobs
-      operationId: GetJobs
+      operationId: getEc3Jobs
       responses:
         '200':
           description: List of Jobs
@@ -77,11 +77,13 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetJobs
     post:
       tags:
       - Jobs
       summary: Create Job
-      operationId: CreateJob
+      operationId: postEc3Jobs
       requestBody:
         required: true
         content:
@@ -95,6 +97,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: CreateJob
     servers:
     - url: https://api.bentley.com/carboncalculation
       description: iTwin Platform Production
@@ -103,7 +107,7 @@ paths:
       tags:
       - Jobs
       summary: Get Jobs
-      operationId: GetJobs
+      operationId: getJobs
       responses:
         '200':
           description: List of Jobs
@@ -111,11 +115,13 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetJobs
     post:
       tags:
       - Jobs
       summary: Create Job
-      operationId: CreateJob
+      operationId: postJobs
       requestBody:
         required: true
         content:
@@ -129,6 +135,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: CreateJob
     servers:
     - url: https://api.bentley.com/pnid
       description: iTwin Platform Production
@@ -144,7 +152,7 @@ paths:
       tags:
       - Jobs
       summary: Get Jobs
-      operationId: GetJobs
+      operationId: getJobsByJobId
       responses:
         '200':
           description: List of Jobs
@@ -152,6 +160,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetJobs
     patch:
       tags:
       - Jobs
@@ -189,7 +199,7 @@ paths:
       tags:
       - Jobs
       summary: Get Jobs
-      operationId: GetJobs
+      operationId: getJobsByJobIdProgress
       responses:
         '200':
           description: List of Jobs
@@ -197,11 +207,13 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetJobs
     post:
       tags:
       - Jobs
       summary: Create Job
-      operationId: CreateJob
+      operationId: postJobsByJobIdProgress
       requestBody:
         required: true
         content:
@@ -215,6 +227,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: CreateJob
     servers:
     - url: https://api.bentley.com/realitydataanalysis
       description: iTwin Platform Production

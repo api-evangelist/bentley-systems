@@ -61,7 +61,7 @@ paths:
       tags:
       - Mesh Export
       summary: Get Mesh Export
-      operationId: GetMeshExport
+      operationId: getByExportId
       responses:
         '200':
           description: List of Mesh Export
@@ -69,6 +69,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetMeshExport
     patch:
       tags:
       - Mesh Export

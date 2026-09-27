@@ -56,7 +56,7 @@ paths:
       tags:
       - Templates
       summary: Get Templates
-      operationId: GetTemplates
+      operationId: getFormDefinitions
       responses:
         '200':
           description: List of Templates
@@ -64,11 +64,13 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetTemplates
     post:
       tags:
       - Templates
       summary: Create Template
-      operationId: CreateTemplate
+      operationId: postFormDefinitions
       requestBody:
         required: true
         content:
@@ -82,6 +84,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: CreateTemplate
     servers:
     - url: https://api.bentley.com/forms
       description: iTwin Platform Production
@@ -97,7 +101,7 @@ paths:
       tags:
       - Templates
       summary: Get Templates
-      operationId: GetTemplates
+      operationId: getFormDefinitionsByDefinitionId
       responses:
         '200':
           description: List of Templates
@@ -105,6 +109,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetTemplates
     patch:
       tags:
       - Templates

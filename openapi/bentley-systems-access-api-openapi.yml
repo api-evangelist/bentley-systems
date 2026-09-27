@@ -68,7 +68,7 @@ paths:
       tags:
       - Access
       summary: Get Access
-      operationId: GetAccess
+      operationId: getRealityDataByRealityDataIdWriteaccess
       responses:
         '200':
           description: List of Access
@@ -76,11 +76,13 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetAccess
     post:
       tags:
       - Access
       summary: Create Acce
-      operationId: CreateAcce
+      operationId: postRealityDataByRealityDataIdWriteaccess
       requestBody:
         required: true
         content:
@@ -94,6 +96,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: CreateAcce
 components:
   securitySchemes:
     OAuth2:

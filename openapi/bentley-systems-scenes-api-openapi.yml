@@ -61,7 +61,7 @@ paths:
       tags:
       - Scenes
       summary: Get Scenes
-      operationId: GetScenes
+      operationId: getBySceneId
       responses:
         '200':
           description: List of Scenes
@@ -69,6 +69,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetScenes
     patch:
       tags:
       - Scenes

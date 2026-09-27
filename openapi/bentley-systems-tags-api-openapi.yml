@@ -70,7 +70,7 @@ paths:
       tags:
       - Tags
       summary: Get Tags
-      operationId: GetTags
+      operationId: getBySavedViewIdTags
       responses:
         '200':
           description: List of Tags
@@ -78,11 +78,13 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetTags
     post:
       tags:
       - Tags
       summary: Create Tag
-      operationId: CreateTag
+      operationId: postBySavedViewIdTags
       requestBody:
         required: true
         content:
@@ -96,6 +98,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: CreateTag
     servers:
     - url: https://api.bentley.com/savedviews
       description: iTwin Platform Production

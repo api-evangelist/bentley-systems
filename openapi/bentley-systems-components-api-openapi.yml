@@ -74,7 +74,7 @@ paths:
       tags:
       - Components
       summary: Get Components
-      operationId: GetComponents
+      operationId: getCatalogsByCatalogIdComponentsByComponentId
       responses:
         '200':
           description: List of Components
@@ -82,6 +82,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetComponents
     patch:
       tags:
       - Components

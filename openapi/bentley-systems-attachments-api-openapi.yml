@@ -70,7 +70,7 @@ paths:
       tags:
       - Attachments
       summary: Get Attachments
-      operationId: GetAttachments
+      operationId: getByIssueIdAttachments
       responses:
         '200':
           description: List of Attachments
@@ -78,11 +78,13 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetAttachments
     post:
       tags:
       - Attachments
       summary: Create Attachment
-      operationId: CreateAttachment
+      operationId: postByIssueIdAttachments
       requestBody:
         required: true
         content:
@@ -96,6 +98,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: CreateAttachment
     servers:
     - url: https://api.bentley.com/issues
       description: iTwin Platform Production

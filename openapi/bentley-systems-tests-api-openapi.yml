@@ -61,7 +61,7 @@ paths:
       tags:
       - Tests
       summary: Get Tests
-      operationId: GetTests
+      operationId: getTestsByTestId
       responses:
         '200':
           description: List of Tests
@@ -69,6 +69,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetTests
     patch:
       tags:
       - Tests

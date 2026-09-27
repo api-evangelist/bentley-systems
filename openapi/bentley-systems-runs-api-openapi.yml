@@ -65,7 +65,7 @@ paths:
       tags:
       - Runs
       summary: Get Runs
-      operationId: GetRuns
+      operationId: getRunsByRunId
       responses:
         '200':
           description: List of Runs
@@ -73,6 +73,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetRuns
     patch:
       tags:
       - Runs
@@ -115,7 +117,7 @@ paths:
       tags:
       - Runs
       summary: Get Runs
-      operationId: GetRuns
+      operationId: getImodelsByIModelIdStorageConnectionsByConnectionIdRun
       responses:
         '200':
           description: List of Runs
@@ -123,11 +125,13 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetRuns
     post:
       tags:
       - Runs
       summary: Create Run
-      operationId: CreateRun
+      operationId: postImodelsByIModelIdStorageConnectionsByConnectionIdRun
       requestBody:
         required: true
         content:
@@ -141,6 +145,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: CreateRun
     servers:
     - url: https://api.bentley.com/synchronization
       description: iTwin Platform Production
@@ -156,7 +162,7 @@ paths:
       tags:
       - Runs
       summary: Get Runs
-      operationId: GetRuns
+      operationId: getByTransformationIdRun
       responses:
         '200':
           description: List of Runs
@@ -164,11 +170,13 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetRuns
     post:
       tags:
       - Runs
       summary: Create Run
-      operationId: CreateRun
+      operationId: postByTransformationIdRun
       requestBody:
         required: true
         content:
@@ -182,6 +190,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: CreateRun
     servers:
     - url: https://api.bentley.com/transformations
       description: iTwin Platform Production

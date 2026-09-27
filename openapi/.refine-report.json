@@ -120,9 +120,7 @@
     "bentley-systems-events-api-openapi.yml",
     "bentley-systems-webhooks-api-openapi.yml"
   ],
-  "archived": [
-    "deleted 1 superseded output(s) from the previous generation"
-  ],
+  "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
@@ -168,8 +166,7 @@
     "tag 'Baselines' spans 2 source specs (itwin-imodels-openapi.yml, itwin-schedules-openapi.yml): per-path servers applied",
     "tag 'Users' spans 2 source specs (itwin-imodels-openapi.yml, itwin-users-openapi.yml): per-path servers applied",
     "tag 'Tags' spans 2 source specs (itwin-library-openapi.yml, itwin-saved-views-openapi.yml): per-path servers applied",
-    "superseded outputs removed: bentley-systems-o-data-api-openapi.yml",
-    "apis.yml register: written (+1 apis, 87 total)"
+    "apis.yml register: already-registered"
   ],
   "skipped": [
     "_original/itwin-reality-conversion-openapi.yml: archived document superseded by a larger archived document",
@@ -222,8 +219,8 @@
     "bentley-systems-models-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "bentley-systems-named-groups-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "bentley-systems-named-versions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "bentley-systems-o-data-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "bentley-systems-observations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "bentley-systems-odata-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "bentley-systems-parameters-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "bentley-systems-permissions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "bentley-systems-policies-api-openapi.yml: previously refined output, superseded by openapi/_original/",

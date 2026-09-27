@@ -68,7 +68,7 @@ paths:
       tags:
       - Files
       summary: Get Files
-      operationId: GetFiles
+      operationId: getFilesByFileId
       responses:
         '200':
           description: List of Files
@@ -76,6 +76,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetFiles
     patch:
       tags:
       - Files

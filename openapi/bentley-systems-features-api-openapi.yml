@@ -61,7 +61,7 @@ paths:
       tags:
       - Features
       summary: Get Features
-      operationId: GetFeatures
+      operationId: getCollectionsByCollectionId
       responses:
         '200':
           description: List of Features
@@ -69,6 +69,8 @@ paths:
             application/json:
               schema:
                 type: object
+      x-operation-id-source: normalized
+      x-operation-id-original: GetFeatures
     patch:
       tags:
       - Features
