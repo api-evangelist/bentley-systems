@@ -152,26 +152,6 @@ paths:
           description: Fork job accepted
 components:
   schemas:
-    UpdateIModel:
-      type: object
-      properties:
-        name:
-          type: string
-        description:
-          type: string
-    CloneIModel:
-      type: object
-      required:
-      - iTwinId
-      - name
-      properties:
-        iTwinId:
-          type: string
-          format: uuid
-        name:
-          type: string
-        changesetId:
-          type: string
     IModel:
       type: object
       properties:
@@ -200,13 +180,39 @@ components:
           format: uuid
         dataCenterLocation:
           type: string
-    IModelList:
+    CloneIModel:
+      type: object
+      required:
+      - iTwinId
+      - name
+      properties:
+        iTwinId:
+          type: string
+          format: uuid
+        name:
+          type: string
+        changesetId:
+          type: string
+    UpdateIModel:
       type: object
       properties:
-        iModels:
-          type: array
-          items:
-            $ref: '#/components/schemas/IModel'
+        name:
+          type: string
+        description:
+          type: string
+    ForkIModel:
+      type: object
+      required:
+      - iTwinId
+      - name
+      properties:
+        iTwinId:
+          type: string
+          format: uuid
+        name:
+          type: string
+        changesetId:
+          type: string
     CreateIModel:
       type: object
       required:
@@ -237,19 +243,13 @@ components:
                   type: number
                 longitude:
                   type: number
-    ForkIModel:
+    IModelList:
       type: object
-      required:
-      - iTwinId
-      - name
       properties:
-        iTwinId:
-          type: string
-          format: uuid
-        name:
-          type: string
-        changesetId:
-          type: string
+        iModels:
+          type: array
+          items:
+            $ref: '#/components/schemas/IModel'
   securitySchemes:
     OAuth2:
       type: oauth2

@@ -73,6 +73,13 @@ paths:
                 $ref: '#/components/schemas/Changeset'
 components:
   schemas:
+    ChangesetList:
+      type: object
+      properties:
+        changesets:
+          type: array
+          items:
+            $ref: '#/components/schemas/Changeset'
     Changeset:
       type: object
       properties:
@@ -101,13 +108,6 @@ components:
           format: int64
         briefcaseId:
           type: integer
-    ChangesetList:
-      type: object
-      properties:
-        changesets:
-          type: array
-          items:
-            $ref: '#/components/schemas/Changeset'
   securitySchemes:
     OAuth2:
       type: oauth2
