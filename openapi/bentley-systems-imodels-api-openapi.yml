@@ -152,67 +152,6 @@ paths:
           description: Fork job accepted
 components:
   schemas:
-    IModel:
-      type: object
-      properties:
-        id:
-          type: string
-          format: uuid
-        displayName:
-          type: string
-        name:
-          type: string
-        description:
-          type: string
-        state:
-          type: string
-          enum:
-          - initialized
-          - notInitialized
-        iTwinId:
-          type: string
-          format: uuid
-        createdDateTime:
-          type: string
-          format: date-time
-        creatorId:
-          type: string
-          format: uuid
-        dataCenterLocation:
-          type: string
-    CloneIModel:
-      type: object
-      required:
-      - iTwinId
-      - name
-      properties:
-        iTwinId:
-          type: string
-          format: uuid
-        name:
-          type: string
-        changesetId:
-          type: string
-    UpdateIModel:
-      type: object
-      properties:
-        name:
-          type: string
-        description:
-          type: string
-    ForkIModel:
-      type: object
-      required:
-      - iTwinId
-      - name
-      properties:
-        iTwinId:
-          type: string
-          format: uuid
-        name:
-          type: string
-        changesetId:
-          type: string
     CreateIModel:
       type: object
       required:
@@ -243,6 +182,67 @@ components:
                   type: number
                 longitude:
                   type: number
+    ForkIModel:
+      type: object
+      required:
+      - iTwinId
+      - name
+      properties:
+        iTwinId:
+          type: string
+          format: uuid
+        name:
+          type: string
+        changesetId:
+          type: string
+    IModel:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        displayName:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        state:
+          type: string
+          enum:
+          - initialized
+          - notInitialized
+        iTwinId:
+          type: string
+          format: uuid
+        createdDateTime:
+          type: string
+          format: date-time
+        creatorId:
+          type: string
+          format: uuid
+        dataCenterLocation:
+          type: string
+    UpdateIModel:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+    CloneIModel:
+      type: object
+      required:
+      - iTwinId
+      - name
+      properties:
+        iTwinId:
+          type: string
+          format: uuid
+        name:
+          type: string
+        changesetId:
+          type: string
     IModelList:
       type: object
       properties:
