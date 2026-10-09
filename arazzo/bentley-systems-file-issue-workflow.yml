@@ -57,7 +57,7 @@ workflows:
     description: >-
       Attach a supporting file to the issue so reviewers can see the evidence
       behind the report.
-    operationId: CreateAttachment
+    operationId: postByIssueIdAttachments
     parameters:
     - name: issueId
       in: path

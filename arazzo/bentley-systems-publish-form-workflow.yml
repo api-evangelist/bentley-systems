@@ -46,7 +46,7 @@ workflows:
     description: >-
       Create the reusable form template. Its definition id is referenced by the
       submitted instance.
-    operationId: CreateTemplate
+    operationId: postFormDefinitions
     requestBody:
       contentType: application/json
       payload: $inputs.template
@@ -72,7 +72,7 @@ workflows:
     description: >-
       Attach a supporting file to the submitted form instance so the captured
       data carries its evidence.
-    operationId: CreateAttachment
+    operationId: postByIssueIdAttachments
     parameters:
     - name: formId
       in: path
