@@ -1,0 +1,83 @@
+edges:
+- partner_name: Open Geospatial Consortium
+  partner: ogc
+  detected_by: sweep-geospatial.py
+  first_seen: '2026-10-14'
+  partner_match: register
+  type: register
+  direction: partner-built
+  channel: standard-directory
+  relationship: standard-participant
+  evidence: https://portal.ogc.org/public_ogc/compliance/implementing.php?org_match=Bentley%20Systems,%20Inc.
+  conformance:
+    organization: Bentley Systems, Inc.
+    domain: bentley.com
+    products: 5
+    compliant_specs: []
+    implementing_specs:
+    - City Geography Markup Language (CityGML) Encoding Standard 1.0
+    - Geography Markup Language (GML) Encoding Specification 3.0
+    - Geography Markup Language (GML) Encoding Specification 3.1.1
+    - Geography Markup Language 2.1.1
+    - Geography Markup Language 2.1.2
+    - KML 2.1 Reference - An OGC Best Practice 2.1.0
+    - Web Feature Service (WFS) Implementation Specification 1.1.0
+    - Web Feature Service 1.0.0
+    - Web Feature Service 2.0 Interface Standard (also ISO 19142) 2.0
+    - Web Map Service 1.1.1
+    - Web Map Service Client (WMS) Implementation Specification 1.3.0
+    products_list:
+    - name: MicroStation
+      version: v8i (8.11)
+      type: Client (Desktop, Mobile, or Web)
+      pid: '576'
+      valid_until: null
+      compliant: []
+    - name: Bentley Map
+      version: v8i
+      type: Client (Desktop, Mobile, or Web)
+      pid: '583'
+      valid_until: null
+      compliant: []
+    - name: Geo Web Publisher
+      version: v8i (8.11)
+      type: Server
+      pid: '705'
+      valid_until: null
+      compliant: []
+    - name: Bentley Geo Web Publisher
+      version: v8i (SELECTseries 4)
+      type: Server
+      pid: '1076'
+      valid_until: null
+      compliant: []
+    - name: Bentley Map
+      version: V8i
+      type: Client (Desktop, Mobile, or Web)
+      pid: '1195'
+      valid_until: null
+      compliant: []
+  match:
+    method: domain
+    domain: bentley.com
+  contract_reference:
+    register: portal.ogc.org/public_ogc/compliance
+    spec_file: null
+    role: implementation-registration
+    registered_name: Bentley Systems, Inc.
+    register_id: Bentley Systems, Inc.
+    detected_by: sweep-geospatial.py
+    detected: '2026-10-14'
+generated: '2026-10-14'
+method: searched
+checked:
+- https://partners.bentley.com/
+marketplace_apps:
+- marketplace: own
+  channel: partner-built
+  app: bentley-systems
+  url: https://partners.bentley.com/
+  app_count: null
+  adapter: sweep-construction.py:unreadable
+  listed: 0
+  status: not-machine-readable (HTTP 200; partner login portal (Impartner), no public partner or app directory)
