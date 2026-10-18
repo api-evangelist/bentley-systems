@@ -3,7 +3,11 @@ provider: Bentley Systems
 generated_by: planning/capability-mapping/scripts/classify_capabilities.py
 model: claude-opus-5
 frame:
+- Chemicals
+- Engineering Services
 - Infrastructure
+- Mining & Metals
+- Power & Water Utilities
 min_confidence: 0.7
 capability_model:
   source: https://github.com/vincentmakes/turbo-ea-capabilities
@@ -11,28 +15,66 @@ capability_model:
   attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
     CC BY 4.0
   notice: NOTICE
-edge_count: 11
+edge_count: 26
 edges:
 - tag: Permissions
   spec_file: bentley-systems-permissions-api-openapi.yml
   capability_id: BC-620.20
   capability_id_l1: BC-620
   capability_name: Identity & Access Management
-  confidence: 0.85
-  evidence: '"Role-based access control for iTwins — permissions, roles, group membership..."; GET /permissions,
-    POST /permissions'
-  reason: Operations create and list permissions within an explicitly described role-based access control
-    surface — identity and access management.
+  confidence: 0.88
+  evidence: Role-based access control for iTwins — permissions, roles, group membership, owner members,
+    invitations, shares
+  reason: The operations create and list permissions within an explicit RBAC service, which is squarely
+    Identity & Access Management rather than any engineering-domain capability.
 - tag: Roles
   spec_file: bentley-systems-roles-api-openapi.yml
   capability_id: BC-620.20
   capability_id_l1: BC-620
   capability_name: Identity & Access Management
-  confidence: 0.85
-  evidence: GET /itwins/{iTwinId}/roles, POST /itwins/{iTwinId}/roles; "Role-based access control for
-    iTwins"
-  reason: Role definition per iTwin inside an explicitly RBAC surface — identity and access management,
-    not HR role/job architecture.
+  confidence: 0.88
+  evidence: Role-based access control for iTwins — permissions, roles, group membership
+  reason: Creating and listing roles within an explicit RBAC service is Identity & Access Management;
+    no engineering-domain reading of 'Roles' fits the operations.
+- tag: Materials
+  spec_file: bentley-systems-materials-api-openapi.yml
+  capability_id: BC-740.20
+  capability_id_l1: BC-740
+  capability_name: Climate & Carbon Management
+  confidence: 0.82
+  evidence: '"Compute embodied carbon footprint using EC3 integrations and iModel quantity takeoffs"'
+  reason: Materials here are inputs to embodied-carbon calculation via EC3, which is carbon footprint
+    computation — Climate & Carbon Management.
+- tag: Tests
+  spec_file: bentley-systems-tests-api-openapi.yml
+  capability_id: BC-1120.60
+  capability_id_l1: BC-1120
+  capability_name: Multi-Discipline Design Coordination Management
+  confidence: 0.82
+  evidence: '"Detect geometry clashes between 3D elements. Define tests, suppression rules, and retrieve
+    clash run results."'
+  reason: The 'tests' here are clash-detection tests over 3D design models, which is exactly cross-discipline
+    coordination / clash detection on the integrated model. Not software testing despite the tag string.
+- tag: Schedules
+  spec_file: bentley-systems-schedules-api-openapi.yml
+  capability_id: BC-1150.10
+  capability_id_l1: BC-1150
+  capability_name: Construction Planning Management
+  confidence: 0.8
+  evidence: Plan and manage 4D construction schedules — tasks, resources, calendars, baselines, animations,
+    and work breakdown.
+  reason: Explicitly construction schedule planning with tasks, baselines and work breakdown, matching
+    Construction Planning Management (construction sequencing, master schedules).
+- tag: Shares
+  spec_file: bentley-systems-shares-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.8
+  evidence: Role-based access control for iTwins — permissions, roles, group membership, owner members,
+    invitations, shares, and job-based access
+  reason: Shares are access-grant objects within the Access Control API, so creating/listing them is administration
+    of access rights.
 - tag: Webhooks
   spec_file: bentley-systems-webhooks-api-openapi.yml
   capability_id: BC-4270.80
@@ -43,6 +85,48 @@ edges:
   reason: CRUD over webhook subscriptions keyed by subscriptionId is exactly outbound webhook & event
     subscription lifecycle on a developer platform.
   recovered_from: sweep-20260828T235257Z-edges.json
+- tag: Suppression Rules
+  spec_file: bentley-systems-suppression-rules-api-openapi.yml
+  capability_id: BC-1120.60
+  capability_id_l1: BC-1120
+  capability_name: Multi-Discipline Design Coordination Management
+  confidence: 0.78
+  evidence: Detect geometry clashes between 3D elements. Define tests, suppression rules, and retrieve
+    clash run results.
+  reason: Suppression rules filter results of geometry clash detection, which is explicitly named in Multi-Discipline
+    Design Coordination Management (clash detection, integrated model management).
+- tag: Tasks
+  spec_file: bentley-systems-tasks-api-openapi.yml
+  capability_id: BC-900.30
+  capability_id_l1: BC-900
+  capability_name: Project Management
+  confidence: 0.78
+  evidence: '"Plan and manage 4D construction schedules — tasks, resources, calendars, baselines, animations,
+    and work breakdown"; Create Task / Update Task'
+  reason: Schedule tasks with resources, baselines and work breakdown are project planning and tracking
+    artefacts, mapping to Project Management; some chance the better fit is programme-level portfolio
+    planning, hence not 0.9.
+- tag: Configurations
+  spec_file: bentley-systems-configurations-api-openapi.yml
+  capability_id: BC-740.20
+  capability_id_l1: BC-740
+  capability_name: Climate & Carbon Management
+  confidence: 0.75
+  evidence: '"Compute embodied carbon footprint using EC3 integrations and iModel quantity takeoffs" —
+    GET/POST /ec3/configurations'
+  reason: Despite the generic tag string, the operations configure embodied-carbon calculations against
+    EC3 and model quantity takeoffs, which is carbon footprint computation. The 'Configurations' resource
+    is the setup object for that carbon calculation, so the capability is Climate & Carbon Management.
+- tag: Events
+  spec_file: bentley-systems-events-api-openapi.yml
+  capability_id: BC-4270.80
+  capability_id_l1: BC-4270
+  capability_name: Webhook & Event Subscription Management
+  confidence: 0.75
+  evidence: Subscribe to iTwin Platform events. Create, list, update, and delete webhook subscriptions.
+  reason: The tag exposes platform event types for outbound webhook subscriptions, which is precisely
+    webhook and event subscription management in the developer-platform capability; it is the event-schema
+    half of that surface rather than the subscription half, hence 0.75.
 - tag: Members
   spec_file: bentley-systems-members-api-openapi.yml
   capability_id: BC-620.20
@@ -54,6 +138,27 @@ edges:
   reason: Operations add and list user members of an iTwin, which the spec description confirms is role-based
     access control — identity and access management. Some chance this is treated as pure platform plumbing,
     hence 0.75.
+- tag: Resources
+  spec_file: bentley-systems-resources-api-openapi.yml
+  capability_id: BC-1150.10
+  capability_id_l1: BC-1150
+  capability_name: Construction Planning Management
+  confidence: 0.75
+  evidence: Plan and manage 4D construction schedules — tasks, resources, calendars, baselines, animations,
+    and work breakdown.
+  reason: Resources are scheduled against 4D construction schedules with tasks, calendars and work breakdown,
+    which is construction sequencing and master schedule planning. Some ambiguity between construction
+    planning and generic project scheduling keeps this below 0.8.
+- tag: Work Breakdown
+  spec_file: bentley-systems-work-breakdown-api-openapi.yml
+  capability_id: BC-900.30
+  capability_id_l1: BC-900
+  capability_name: Project Management
+  confidence: 0.75
+  evidence: Plan and manage 4D construction schedules — tasks, resources, calendars, baselines, animations,
+    and work breakdown
+  reason: Work breakdown structure operations on construction schedules are project planning/execution
+    artefacts; closest honest fit is Project Management under Project & Portfolio Management.
 - tag: iModels
   spec_file: bentley-systems-imodels-api-openapi.yml
   capability_id: BC-5060
@@ -66,16 +171,6 @@ edges:
     operations (create, clone, fork, update) realise digital engineering and asset information management.
     L2 left open because the operations do not distinguish BIM management from digital twin/asset data
     stewardship.
-- tag: Work Breakdown
-  spec_file: bentley-systems-work-breakdown-api-openapi.yml
-  capability_id: BC-5020.30
-  capability_id_l1: BC-5020
-  capability_name: Planning & Scheduling
-  confidence: 0.72
-  evidence: GET /{scheduleId}/wbs  GetWorkBreakdown  Get Work Breakdown
-  reason: WBS nodes hung off a schedule id are construction programme work-breakdown structures, i.e.
-    capital project planning and scheduling controls. Confidence tempered by only two operations and no
-    schemas.
 - tag: Access
   spec_file: bentley-systems-access-api-openapi.yml
   capability_id: BC-620.20
@@ -88,6 +183,17 @@ edges:
     and access management. Confidence tempered because the endpoints are narrow resource-permission calls
     on reality data rather than a full IAM surface.
   recovered_from: sweep-20260828T235257Z-edges.json
+- tag: Animations
+  spec_file: bentley-systems-animations-api-openapi.yml
+  capability_id: BC-1150.10
+  capability_id_l1: BC-1150
+  capability_name: Construction Planning Management
+  confidence: 0.7
+  evidence: Plan and manage 4D construction schedules — tasks, resources, calendars, baselines, animations,
+    and work breakdown
+  reason: Animations belong to the iTwin Schedules API, which plans 4D construction schedules; animations
+    are the time-sequenced construction simulation, i.e. construction sequencing/planning. Some ambiguity
+    as animation could be seen as pure visualisation, hence 0.7.
 - tag: Authorization
   spec_file: bentley-systems-authorization-api-openapi.yml
   capability_id: BC-620.20
@@ -100,6 +206,37 @@ edges:
     surface (permissions, roles, group membership, invitations), which is identity and access management.
     Confidence held moderate because only two thin operations are exposed.
   recovered_from: sweep-20260828T235257Z-edges.json
+- tag: Invitations
+  spec_file: bentley-systems-invitations-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.7
+  evidence: '"Role-based access control for iTwins — permissions, roles, group membership, owner members,
+    invitations"; POST /itwins/{iTwinId}/invitations CreateInvitation'
+  reason: Invitations here are the access-granting mechanism within an RBAC surface, i.e. user access
+    provisioning. Maps to Identity & Access Management, though it is platform plumbing so confidence is
+    moderate.
+- tag: Mappings
+  spec_file: bentley-systems-mappings-api-openapi.yml
+  capability_id: BC-610.50
+  capability_id_l1: BC-610
+  capability_name: Analytics & BI Management
+  confidence: 0.7
+  evidence: '"Build custom reports and dashboards on iModel data — mappings, groups, properties, and OData
+    endpoints"; operations include "/reporting/mappings/{mappingId}/groups"'
+  reason: Mappings define how model data is mapped into reporting groups/properties for Insights reports
+    — reporting/BI delivery. Not a design or document capability.
+- tag: OData
+  spec_file: bentley-systems-odata-api-openapi.yml
+  capability_id: BC-610.50
+  capability_id_l1: BC-610
+  capability_name: Analytics & BI Management
+  confidence: 0.7
+  evidence: '"Build custom reports and dashboards on iModel data — mappings, groups, properties, and OData
+    endpoints"; GET /reporting/odata/{reportId}'
+  reason: OData endpoints expose Insights report data for BI consumption, realising analytics/BI delivery
+    rather than any engineering-specific capability.
 - tag: Reality Data
   spec_file: bentley-systems-reality-data-api-openapi.yml
   capability_id: BC-5060.40
@@ -123,6 +260,27 @@ edges:
     /ec3/reports path hints at embodied-carbon reporting, adding some ambiguity, so confidence is held
     below 0.8.
   recovered_from: vertical-engineering-services-edges.json
+- tag: Saved Views
+  spec_file: bentley-systems-saved-views-api-openapi.yml
+  capability_id: BC-1120.50
+  capability_id_l1: BC-1120
+  capability_name: Design Software & CAD Management
+  confidence: 0.7
+  evidence: Persist and share saved iModel viewer states — camera positions, display styles, category
+    visibility.
+  reason: Operations manage persisted 3D model viewer states within the iModel design environment, which
+    belongs to the digital design/CAD-BIM tooling capability. Confidence moderated because the surface
+    is viewer-state persistence rather than design authoring per se.
+- tag: Scenes
+  spec_file: bentley-systems-scenes-api-openapi.yml
+  capability_id: BC-1120.50
+  capability_id_l1: BC-1120
+  capability_name: Design Software & CAD Management
+  confidence: 0.7
+  evidence: Configure 3D scenes that compose iModels, reality data, OpenStreetMap, and terrain into a
+    viewer experience.
+  reason: Scene composition of iModels, reality data and terrain is management of the 3D/BIM digital design
+    environment. Moderate confidence as it is a visualisation configuration surface.
 - tag: Users
   spec_file: bentley-systems-users-api-openapi.yml
   capability_id: BC-620.20
