@@ -56,3 +56,16 @@
       latest_authorization: '2026-08-04'
   status: not-a-workflow
   arazzo: null
+- slug: bentley-systems-microsoft-teams-own
+  label: Microsoft Teams (own)
+  partner: microsoft-teams
+  partner_name: Microsoft Teams (own)
+  category: Microsoft Teams app
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appsource.microsoft.com/en-us/product/office/WA104381873
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
