@@ -15,7 +15,7 @@ capability_model:
   attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
     CC BY 4.0
   notice: NOTICE
-edge_count: 26
+edge_count: 27
 edges:
 - tag: Permissions
   spec_file: bentley-systems-permissions-api-openapi.yml
@@ -281,6 +281,17 @@ edges:
     viewer experience.
   reason: Scene composition of iModels, reality data and terrain is management of the 3D/BIM digital design
     environment. Moderate confidence as it is a visualisation configuration surface.
+- tag: Tasks
+  spec_file: bentley-systems-tasks-api-openapi.yml
+  capability_id: BC-1150.10
+  capability_id_l1: BC-1150
+  capability_name: Construction Planning Management
+  confidence: 0.7
+  evidence: '"Plan and manage 4D construction schedules — tasks, resources, calendars, baselines, animations,
+    and work breakdown"; POST /{scheduleId}/tasks CreateTask'
+  reason: Operations create and maintain tasks within construction schedules, which is construction sequencing/scheduling.
+    Some ambiguity with generic project planning, but the spec explicitly frames it as 4D construction
+    schedules.
 - tag: Users
   spec_file: bentley-systems-users-api-openapi.yml
   capability_id: BC-620.20
