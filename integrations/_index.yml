@@ -69,3 +69,160 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: bentley-systems-4m-analytics-inc
+  label: 4M Analytics Inc.
+  partner: 4m-analytics
+  partner_name: 4M Analytics Inc.
+  category: Applications and Plug-ins
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.bentley.com/en/ecosystem-catalog/catalog/?listing=15132
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Bentley Ecosystem Catalog (bentley.com/en/ecosystem-catalog; the page's own PRM locator query)
+    spec_file: null
+    role: bentley-systems-app
+    registered_name: 4M Analytics Inc.
+    matched_domain: 4manalytics.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - 4M Analytics
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-engineering-cad.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: bentley-systems-imerso-as
+  label: Imerso AS
+  partner: imerso
+  partner_name: Imerso AS
+  category: Applications and Plug-ins
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.bentley.com/en/ecosystem-catalog/catalog/?listing=14204
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Bentley Ecosystem Catalog (bentley.com/en/ecosystem-catalog; the page's own PRM locator query)
+    spec_file: null
+    role: bentley-systems-app
+    registered_name: Imerso AS
+    matched_domain: imerso.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Imerso
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-engineering-cad.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: bentley-systems-skywatch-space-applications-inc
+  label: SkyWatch Space Applications,  Inc.
+  partner: skywatch
+  partner_name: SkyWatch Space Applications,  Inc.
+  category: Data and Data Capture
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.bentley.com/en/ecosystem-catalog/catalog/?listing=42015
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Bentley Ecosystem Catalog (bentley.com/en/ecosystem-catalog; the page's own PRM locator query)
+    spec_file: null
+    role: bentley-systems-app
+    registered_name: SkyWatch Space Applications,  Inc.
+    matched_domain: skywatch.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - SkyWatch
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-engineering-cad.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: bentley-systems-tomtom-north-america-inc
+  label: TomTom North America, Inc.
+  partner: tomtom
+  partner_name: TomTom North America, Inc.
+  category: Data and Data Capture
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.bentley.com/en/ecosystem-catalog/catalog/?listing=60113
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Bentley Ecosystem Catalog (bentley.com/en/ecosystem-catalog; the page's own PRM locator query)
+    spec_file: null
+    role: bentley-systems-app
+    registered_name: TomTom North America, Inc.
+    matched_domain: tomtom.com
+    matched_by: domain
+    listings: 2
+    sample_apps:
+    - Mobility data historic and real-time for analysis across road networks.
+    - Orbis Maps
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-engineering-cad.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: bentley-systems-up42-gmbh
+  label: UP42 GmbH
+  partner: up42
+  partner_name: UP42 GmbH
+  category: Data and Data Capture
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.bentley.com/en/ecosystem-catalog/catalog/?listing=66414
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Bentley Ecosystem Catalog (bentley.com/en/ecosystem-catalog; the page's own PRM locator query)
+    spec_file: null
+    role: bentley-systems-app
+    registered_name: UP42 GmbH
+    matched_domain: up42.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - UP42 Platform
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-engineering-cad.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: bentley-systems-dronebase-inc-dba-zeitview
+  label: DroneBase Inc. DBA Zeitview
+  partner: zeitview
+  partner_name: DroneBase Inc. DBA Zeitview
+  category: Applications and Plug-ins
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.bentley.com/en/ecosystem-catalog/catalog/?listing=23154
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Bentley Ecosystem Catalog (bentley.com/en/ecosystem-catalog; the page's own PRM locator query)
+    spec_file: null
+    role: bentley-systems-app
+    registered_name: DroneBase Inc. DBA Zeitview
+    matched_domain: zeitview.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Zeitview
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-engineering-cad.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
