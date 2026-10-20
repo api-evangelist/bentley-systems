@@ -175,70 +175,6 @@ edges:
     detected: '2026-10-19'
   detected_by: sweep-engineering-cad.py
   detected: '2026-10-19'
-- partner_name: GovRAMP
-  partner: null
-  partner_match: register
-  type: register
-  channel: standard-directory
-  relationship: standard-participant
-  direction: partner-built
-  evidence: https://govramp.org/program-participants
-  category: GovRAMP authorization
-  contract_reference:
-    register: GovRAMP Program Participants (govramp.org/program-participants)
-    standard: GovRAMP
-    spec_file: null
-    role: govramp-authorized
-    registered_name: Bentley Systems
-    register_id: SR26013
-    matched_domain: bentley.com
-    matched_by: domain
-    domain_source: contact-email
-    statuses:
-    - Authorized
-    offerings:
-    - Bentley for Government
-    signal_note: certified_products = one entry per AUTHORIZED impact level (Authorized / Provisionally Authorized),
-      never per offering; Progressing / Pending / Ready / Core are participation only
-    detected_by: sweep-gov-cloud.py
-    detected: '2026-10-15'
-    certified_products:
-    - product: GovRAMP Moderate
-      impact_level: Moderate
-      lapsed: false
-      latest_authorization: '2026-08-04'
-  detected_by: sweep-gov-cloud.py
-  first_seen: '2026-10-15'
-- partner_name: Cloud Security Alliance STAR Registry
-  partner: null
-  partner_match: register
-  type: register
-  channel: standard-directory
-  relationship: standard-participant
-  direction: partner-built
-  evidence: https://cloudsecurityalliance.org/star/registry/bentley-systems/services/assetwise-alim-connect-edition-manageservices
-  category: Cloud security assurance
-  contract_reference:
-    register: CSA STAR Registry (cloudsecurityalliance.org/star/registry)
-    spec_file: null
-    standard: CSA STAR
-    role: star-level-1
-    registered_name: Bentley Systems
-    registry_id: bentley-systems
-    service_url: https://www.bentley.com/en
-    matched_domain: bentley.com
-    matched_by: domain
-    identity_source: the service URL the organisation filed on its STAR listing (no lookup)
-    levels:
-    - STAR Level 1
-    certified_products: []
-    signal_note: STAR Level 1 (CAIQ self-assessment) = participation; certified_products = one entry per STAR Level
-      2 / STAR for AI Level 2 assessment TYPE (third-party certification, attestation, C-STAR, ValidAIted); lapsed
-      = every instance marked (Deprecated) by the registry; service counts never recorded
-    detected_by: sweep-compliance-assurance.py
-    detected: '2026-10-20'
-  detected_by: sweep-compliance-assurance.py
-  first_seen: '2026-10-20'
 - partner_name: Open Geospatial Consortium
   partner: ogc
   detected_by: sweep-geospatial.py
@@ -307,7 +243,149 @@ edges:
     registered_name: Bentley Systems, Inc.
     register_id: Bentley Systems, Inc.
     detected_by: sweep-geospatial.py
-    detected: '2026-10-14'
+    detected: '2026-10-19'
+- partner_name: GovRAMP
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://govramp.org/program-participants
+  category: GovRAMP authorization
+  contract_reference:
+    register: GovRAMP Program Participants (govramp.org/program-participants)
+    standard: GovRAMP
+    spec_file: null
+    role: govramp-authorized
+    registered_name: Bentley Systems
+    register_id: SR26013
+    matched_domain: bentley.com
+    matched_by: domain
+    domain_source: contact-email
+    statuses:
+    - Authorized
+    offerings:
+    - Bentley for Government
+    signal_note: certified_products = one entry per AUTHORIZED impact level (Authorized / Provisionally Authorized),
+      never per offering; Progressing / Pending / Ready / Core are participation only
+    detected_by: sweep-gov-cloud.py
+    detected: '2026-10-15'
+    certified_products:
+    - product: GovRAMP Moderate
+      impact_level: Moderate
+      lapsed: false
+      latest_authorization: '2026-08-04'
+  detected_by: sweep-gov-cloud.py
+  first_seen: '2026-10-15'
+- partner_name: Cloud Security Alliance STAR Registry
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://cloudsecurityalliance.org/star/registry/bentley-systems/services/assetwise-alim-connect-edition-manageservices
+  category: Cloud security assurance
+  contract_reference:
+    register: CSA STAR Registry (cloudsecurityalliance.org/star/registry)
+    spec_file: null
+    standard: CSA STAR
+    role: star-level-1
+    registered_name: Bentley Systems
+    registry_id: bentley-systems
+    service_url: https://www.bentley.com/en
+    matched_domain: bentley.com
+    matched_by: domain
+    identity_source: the service URL the organisation filed on its STAR listing (no lookup)
+    levels:
+    - STAR Level 1
+    certified_products: []
+    signal_note: STAR Level 1 (CAIQ self-assessment) = participation; certified_products = one entry per STAR Level
+      2 / STAR for AI Level 2 assessment TYPE (third-party certification, attestation, C-STAR, ValidAIted); lapsed
+      = every instance marked (Deprecated) by the registry; service counts never recorded
+    detected_by: sweep-compliance-assurance.py
+    detected: '2026-10-20'
+  detected_by: sweep-compliance-assurance.py
+  first_seen: '2026-10-20'
+- partner_name: Khronos Group (members)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.khronos.org/members/list
+  category: graphics standards body membership
+  partner_tier: contributor
+  contract_reference:
+    register: Khronos Group members list (khronos.org/members/list)
+    standard: Khronos Group
+    spec_file: null
+    role: khronos-member
+    registered_name: Bentley Systems Inc
+    register_id: https://www.khronos.org/members/list
+    matched_domain: bentley.com
+    matched_by: domain
+    signal_note: 'participation only: membership level is partner_tier, never counted'
+    detected_by: sweep-xr-graphics.py
+    detected: '2026-10-20'
+  detected_by: sweep-xr-graphics.py
+  first_seen: '2026-10-20'
+- partner_name: Alliance for OpenUSD (AOUSD)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://aousd.org/members/
+  category: OpenUSD standards body
+  partner_tier: general
+  contract_reference:
+    register: Alliance for OpenUSD members (aousd.org/members; landscape.aousd.org/data/full.json)
+    standard: OpenUSD
+    spec_file: null
+    role: aousd-member
+    registered_name: Bentley Systems
+    register_id: aousd-members--general--bentley-systems
+    matched_domain: bentley.com
+    matched_by: domain
+    signal_note: 'participation only: steering / general is partner_tier, never counted'
+    detected_by: sweep-xr-graphics.py
+    detected: '2026-10-20'
+  detected_by: sweep-xr-graphics.py
+  first_seen: '2026-10-20'
+- partner_name: SkillsMP (skillsmp.com)
+  partner: null
+  partner_match: register
+  type: register
+  direction: partner-built
+  category: Agent Skills register
+  evidence: https://skillsmp.com/creators/itwin
+  channel: standard-directory
+  relationship: compatible
+  shape: agent-skills
+  evidence_kind: register-listing
+  degree: listed
+  report_only: true
+  agent_skills_register:
+    repos:
+    - itwin
+    repo_verified: false
+    signal_note: the provider's own-org repos the register lists; skill / install counts never read
+  contract_reference:
+    register: SkillsMP (skillsmp.com) (public sitemap / list)
+    spec_file: null
+    standard: Agent Skills (agentskills.io)
+    role: agent-skills-listing
+    matched_org: itwin
+    matched_by: org-profile-domain:bentley.com
+    sample_skills: []
+    detected_by: sweep-agent-skills.py
+    detected: '2026-10-20'
+  detected_by: sweep-agent-skills.py
+  first_seen: '2026-10-20'
 generated: '2026-10-14'
 method: searched
 checked:
@@ -319,6 +397,17 @@ checked:
 - https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud-15/suppliers
 - https://www.bentley.com/en/ecosystem-catalog/catalog/
 - microsoft-teams/integrations/microsoft-teams-integration-edges.yml
+- https://landscape.aousd.org/data/full.json
+- https://www.khronos.org/conformance/adopters/conformant-companies
+- https://www.khronos.org/conformance/adopters/conformant-products
+- https://www.khronos.org/conformance/adopters/file-format-adopters
+- https://www.khronos.org/members/list
+- https://api.github.com
+- https://claude-plugins.dev/sitemap.xml
+- https://github.com/VoltAgent/awesome-agent-skills
+- https://officialskills.sh/sitemap.xml
+- https://skillsmp.com/sitemap.xml
+- https://www.skills.sh/sitemap.xml
 marketplace_apps:
 - marketplace: own
   channel: partner-built
