@@ -1,4 +1,4 @@
-# Bentley Systems (bentley-systems)
+# Bentley Systems
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,888 +66,324 @@
 
 Bentley Systems (NASDAQ: BSY) is an infrastructure engineering software company providing comprehensive applications and cloud services for the design, construction, and operations of infrastructure across roads, bridges, rail, water, energy, and the built environment. Bentley exposes its developer platform through iTwin — a digital twin platform with 30+ REST APIs covering iModel data management, reality capture, project scheduling, reporting, visualization, clash detection, and webhooks. The company reports $1.3 billion in annual revenue, ~5,500 colleagues across 42 countries, and serves 42,000 accounts in 189 countries.
 
-**APIs.json:** [https://github.com/api-evangelist/bentley-systems](https://github.com/api-evangelist/bentley-systems)
+**Areas:** Infrastructure Engineering · Digital Twin · BIM · CAD · Reality Capture · Construction · Asset Management · Geospatial · iTwin · iModel
+
+## Bentley Systems on APIs.io
+
+Everything profiled for Bentley Systems is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/bentley-systems/](https://apis.io/providers/bentley-systems/)** — or go straight to one of the APIs or properties below.
+
+### APIs (87)
+
+- [iTwin Visualization API](https://apis.io/apis/bentley-systems/itwin-visualization-api/) — Server-side visualization service for rendering iTwins in web browsers without client compute. Supports interactive viewers and image generation.
+- [Bentley Systems Access API](https://apis.io/apis/bentley-systems/bentley-systems-access-api/) — Access resources for the iTwin Reality Management API.
+- [Bentley Systems Animations API](https://apis.io/apis/bentley-systems/bentley-systems-animations-api/) — Animations resources for the iTwin Schedules API.
+- [Bentley Systems Attachments API](https://apis.io/apis/bentley-systems/bentley-systems-attachments-api/) — Attachments resources for the iTwin Forms API.
+- [Bentley Systems Audit Trail API](https://apis.io/apis/bentley-systems/bentley-systems-audit-trail-api/) — Audit Trail resources for the iTwin Issues API.
+- [Bentley Systems Authorization API](https://apis.io/apis/bentley-systems/bentley-systems-authorization-api/) — Authorization resources for the iTwin Synchronization API.
+- [Bentley Systems Baselines API](https://apis.io/apis/bentley-systems/bentley-systems-baselines-api/) — Manage iModel baseline files.
+- [Bentley Systems Briefcases API](https://apis.io/apis/bentley-systems/bentley-systems-briefcases-api/) — Acquire and release briefcases for iModel authoring sessions.
+- [Bentley Systems Calendars API](https://apis.io/apis/bentley-systems/bentley-systems-calendars-api/) — Calendars resources for the iTwin Schedules API.
+- [Bentley Systems Catalog API](https://apis.io/apis/bentley-systems/bentley-systems-catalog-api/) — Catalog resources for the iTwin Library API.
+- [Bentley Systems Categories API](https://apis.io/apis/bentley-systems/bentley-systems-categories-api/) — Categories resources for the iTwin Library API.
+- [Bentley Systems Cesium API](https://apis.io/apis/bentley-systems/bentley-systems-cesium-api/) — Cesium resources for the iTwin Cesium Curated Content API.
+- [Bentley Systems Change Tracking API](https://apis.io/apis/bentley-systems/bentley-systems-change-tracking-api/) — Change Tracking resources for the iTwin Changed Elements API.
+- [Bentley Systems Changesets API](https://apis.io/apis/bentley-systems/bentley-systems-changesets-api/) — Manage changesets that record modifications to an iModel.
+- [Bentley Systems Comments API](https://apis.io/apis/bentley-systems/bentley-systems-comments-api/) — Comments resources for the iTwin Issues API.
+- [Bentley Systems Comparisons API](https://apis.io/apis/bentley-systems/bentley-systems-comparisons-api/) — Comparisons resources for the iTwin Changed Elements API.
+- [Bentley Systems Components API](https://apis.io/apis/bentley-systems/bentley-systems-components-api/) — Components resources for the iTwin Library API.
+- [Bentley Systems Configurations API](https://apis.io/apis/bentley-systems/bentley-systems-configurations-api/) — Configurations resources for the iTwin Carbon Calculation API.
+- [Bentley Systems Connections API](https://apis.io/apis/bentley-systems/bentley-systems-connections-api/) — Connections resources for the iTwin Synchronization API.
+- [Bentley Systems Connectors API](https://apis.io/apis/bentley-systems/bentley-systems-connectors-api/) — Connectors resources for the iTwin Synchronization API.
+- [Bentley Systems Content API](https://apis.io/apis/bentley-systems/bentley-systems-content-api/) — Content resources for the iTwin Storage API.
+- [Bentley Systems Detectors API](https://apis.io/apis/bentley-systems/bentley-systems-detectors-api/) — Detectors resources for the iTwin Reality Analysis API.
+- [Bentley Systems Devices API](https://apis.io/apis/bentley-systems/bentley-systems-devices-api/) — Devices resources for the iTwin Sensor Data API.
+- [Bentley Systems Events API](https://apis.io/apis/bentley-systems/bentley-systems-events-api/) — Events resources for the iTwin Webhooks API.
+- [Bentley Systems Export API](https://apis.io/apis/bentley-systems/bentley-systems-export-api/) — Export resources for the iTwin Export API.
+- [Bentley Systems Exports API](https://apis.io/apis/bentley-systems/bentley-systems-exports-api/) — Exports resources for the iTwins API.
+- [Bentley Systems Extensions API](https://apis.io/apis/bentley-systems/bentley-systems-extensions-api/) — Extensions resources for the iTwin Scenes API.
+- [Bentley Systems Extractions API](https://apis.io/apis/bentley-systems/bentley-systems-extractions-api/) — Extractions resources for the iTwin Grouping and Mapping API.
+- [Bentley Systems Features API](https://apis.io/apis/bentley-systems/bentley-systems-features-api/) — Features resources for the iTwin Geospatial Features API.
+- [Bentley Systems Files API](https://apis.io/apis/bentley-systems/bentley-systems-files-api/) — Files resources for the iTwin Storage API.
+- [Bentley Systems Folders API](https://apis.io/apis/bentley-systems/bentley-systems-folders-api/) — Folders resources for the iTwin Storage API.
+- [Bentley Systems Forms API](https://apis.io/apis/bentley-systems/bentley-systems-forms-api/) — Forms resources for the iTwin Issues API.
+- [Bentley Systems Groups API](https://apis.io/apis/bentley-systems/bentley-systems-groups-api/) — Groups resources for the iTwin Access Control API.
+- [Bentley Systems Images API](https://apis.io/apis/bentley-systems/bentley-systems-images-api/) — Images resources for the iTwin Saved Views API.
+- [Bentley Systems iModels API](https://apis.io/apis/bentley-systems/bentley-systems-imodels-api/) — Create, query, clone, fork, and delete iModels.
+- [Bentley Systems Instances API](https://apis.io/apis/bentley-systems/bentley-systems-instances-api/) — Instances resources for the iTwin Forms API.
+- [Bentley Systems Invitations API](https://apis.io/apis/bentley-systems/bentley-systems-invitations-api/) — Invitations resources for the iTwin Access Control API.
+- [Bentley Systems Issues API](https://apis.io/apis/bentley-systems/bentley-systems-issues-api/) — Issues resources for the iTwin Issues API.
+- [Bentley Systems iTwins API](https://apis.io/apis/bentley-systems/bentley-systems-itwins-api/) — iTwins resources for the iTwins API.
+- [Bentley Systems Jobs API](https://apis.io/apis/bentley-systems/bentley-systems-jobs-api/) — Jobs resources for the iTwin Access Control API.
+- [Bentley Systems Layers API](https://apis.io/apis/bentley-systems/bentley-systems-layers-api/) — Layers resources for the iTwin Scenes API.
+- [Bentley Systems Locks API](https://apis.io/apis/bentley-systems/bentley-systems-locks-api/) — Acquire and release element-level locks during authoring.
+- [Bentley Systems Mappings API](https://apis.io/apis/bentley-systems/bentley-systems-mappings-api/) — Mappings resources for the iTwin Grouping and Mapping API.
+- [Bentley Systems Materials API](https://apis.io/apis/bentley-systems/bentley-systems-materials-api/) — Materials resources for the iTwin Carbon Calculation API.
+- [Bentley Systems Me API](https://apis.io/apis/bentley-systems/bentley-systems-me-api/) — Me resources for the iTwin Users API.
+- [Bentley Systems Members API](https://apis.io/apis/bentley-systems/bentley-systems-members-api/) — Members resources for the iTwin Access Control API.
+- [Bentley Systems Mesh Export API](https://apis.io/apis/bentley-systems/bentley-systems-mesh-export-api/) — Mesh Export resources for the iTwin Mesh Export API.
+- [Bentley Systems Models API](https://apis.io/apis/bentley-systems/bentley-systems-models-api/) — Models resources for the iTwin P&ID to iTwin API.
+- [Bentley Systems Named Groups API](https://apis.io/apis/bentley-systems/bentley-systems-named-groups-api/) — Named Groups resources for the iTwin Named Groups API.
+- [Bentley Systems Named Versions API](https://apis.io/apis/bentley-systems/bentley-systems-named-versions-api/) — Create and query named versions that pin a point in an iModel's history.
+- [Bentley Systems Observations API](https://apis.io/apis/bentley-systems/bentley-systems-observations-api/) — Observations resources for the iTwin Sensor Data API.
+- [Bentley Systems Parameters API](https://apis.io/apis/bentley-systems/bentley-systems-parameters-api/) — Parameters resources for the iTwin Library API.
+- [Bentley Systems Permissions API](https://apis.io/apis/bentley-systems/bentley-systems-permissions-api/) — Permissions resources for the iTwin Access Control API.
+- [Bentley Systems Policies API](https://apis.io/apis/bentley-systems/bentley-systems-policies-api/) — Policies resources for the Enterprise Data Federation Service (EDFS) API.
+- [Bentley Systems Properties API](https://apis.io/apis/bentley-systems/bentley-systems-properties-api/) — Properties resources for the iTwin Grouping and Mapping API.
+- [Bentley Systems Queries API](https://apis.io/apis/bentley-systems/bentley-systems-queries-api/) — Queries resources for the Enterprise Data Federation Service (EDFS) API.
+- [Bentley Systems Reality Data API](https://apis.io/apis/bentley-systems/bentley-systems-reality-data-api/) — Reality Data resources for the iTwin Reality Management API.
+- [Bentley Systems Recents API](https://apis.io/apis/bentley-systems/bentley-systems-recents-api/) — Recents resources for the iTwins API.
+- [Bentley Systems Reports API](https://apis.io/apis/bentley-systems/bentley-systems-reports-api/) — Reports resources for the iTwin Carbon Calculation API.
+- [Bentley Systems Repositories API](https://apis.io/apis/bentley-systems/bentley-systems-repositories-api/) — Repositories resources for the iTwins API.
+- [Bentley Systems Resources API](https://apis.io/apis/bentley-systems/bentley-systems-resources-api/) — Resources resources for the iTwin Schedules API.
+- [Bentley Systems Roles API](https://apis.io/apis/bentley-systems/bentley-systems-roles-api/) — Roles resources for the iTwin Access Control API.
+- [Bentley Systems Runs API](https://apis.io/apis/bentley-systems/bentley-systems-runs-api/) — Runs resources for the iTwin Clash Detection API.
+- [Bentley Systems Saved Views API](https://apis.io/apis/bentley-systems/bentley-systems-saved-views-api/) — Saved Views resources for the iTwin Saved Views API.
+- [Bentley Systems Scenes API](https://apis.io/apis/bentley-systems/bentley-systems-scenes-api/) — Scenes resources for the iTwin Scenes API.
+- [Bentley Systems Schedules API](https://apis.io/apis/bentley-systems/bentley-systems-schedules-api/) — Schedules resources for the iTwin Schedules API.
+- [Bentley Systems Schemas API](https://apis.io/apis/bentley-systems/bentley-systems-schemas-api/) — Schemas resources for the Enterprise Data Federation Service (EDFS) API.
+- [Bentley Systems Sensors API](https://apis.io/apis/bentley-systems/bentley-systems-sensors-api/) — Sensors resources for the iTwin Sensor Data API.
+- [Bentley Systems Shares API](https://apis.io/apis/bentley-systems/bentley-systems-shares-api/) — Shares resources for the iTwin Access Control API.
+- [Bentley Systems Source Files API](https://apis.io/apis/bentley-systems/bentley-systems-source-files-api/) — Source Files resources for the iTwin Synchronization API.
+- [Bentley Systems Sources API](https://apis.io/apis/bentley-systems/bentley-systems-sources-api/) — Sources resources for the Enterprise Data Federation Service (EDFS) API.
+- [Bentley Systems Suppression Rules API](https://apis.io/apis/bentley-systems/bentley-systems-suppression-rules-api/) — Suppression Rules resources for the iTwin Clash Detection API.
+- [Bentley Systems Symbols API](https://apis.io/apis/bentley-systems/bentley-systems-symbols-api/) — Symbols resources for the iTwin P&ID to iTwin API.
+- [Bentley Systems Tags API](https://apis.io/apis/bentley-systems/bentley-systems-tags-api/) — Tags resources for the iTwin Library API.
+- [Bentley Systems Tasks API](https://apis.io/apis/bentley-systems/bentley-systems-tasks-api/) — Tasks resources for the iTwin Schedules API.
+- [Bentley Systems Templates API](https://apis.io/apis/bentley-systems/bentley-systems-templates-api/) — Templates resources for the iTwin Carbon Calculation API.
+- [Bentley Systems Tests API](https://apis.io/apis/bentley-systems/bentley-systems-tests-api/) — Tests resources for the iTwin Clash Detection API.
+- [Bentley Systems Thumbnails API](https://apis.io/apis/bentley-systems/bentley-systems-thumbnails-api/) — Retrieve iModel preview thumbnails.
+- [Bentley Systems Transformations API](https://apis.io/apis/bentley-systems/bentley-systems-transformations-api/) — Transformations resources for the iTwin Transformations API.
+- [Bentley Systems Trash API](https://apis.io/apis/bentley-systems/bentley-systems-trash-api/) — Trash resources for the iTwin Storage API.
+- [Bentley Systems Users API](https://apis.io/apis/bentley-systems/bentley-systems-users-api/) — Manage user access and statistics for iModels.
+- [Bentley Systems Versions API](https://apis.io/apis/bentley-systems/bentley-systems-versions-api/) — Versions resources for the iTwin Storage API.
+- [Bentley Systems Webhooks API](https://apis.io/apis/bentley-systems/bentley-systems-webhooks-api/) — Webhooks resources for the iTwin Webhooks API.
+- [Bentley Systems Work Breakdown API](https://apis.io/apis/bentley-systems/bentley-systems-work-breakdown-api/) — Work Breakdown resources for the iTwin Schedules API.
+- [Bentley Systems Workflow API](https://apis.io/apis/bentley-systems/bentley-systems-workflow-api/) — Workflow resources for the iTwin Issues API.
+- [Bentley Systems Workspaces API](https://apis.io/apis/bentley-systems/bentley-systems-workspaces-api/) — Workspaces resources for the iTwin Reality Modeling API.
+- [Bentley Systems ODATA API](https://apis.io/apis/bentley-systems/bentley-systems-odata-api/) — ODATA resources for the iTwin Insights API.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Arazzo workflows (8)
 
-## Tags
+Multi-step workflows that chain operations into a business task.
 
-- Infrastructure Engineering
-- Digital Twin
-- BIM
-- CAD
-- Reality Capture
-- Construction
-- Asset Management
-- Geospatial
-- iTwin
-- iModel
+- [Bentley Advance an Issue Through Its Workflow](https://apis.io/arazzos/bentley-systems/bentley-systems-advance-issue-workflow/)
+- [Bentley Start an iModel Authoring Session](https://apis.io/arazzos/bentley-systems/bentley-systems-authoring-session-workflow/)
+- [Bentley Clone an iModel and Wait for It](https://apis.io/arazzos/bentley-systems/bentley-systems-clone-imodel-workflow/)
+- [Bentley File an Issue With an Attachment and Comment](https://apis.io/arazzos/bentley-systems/bentley-systems-file-issue-workflow/)
+- [Bentley Provision an iModel Inside a New iTwin](https://apis.io/arazzos/bentley-systems/bentley-systems-provision-imodel-workflow/)
+- [Bentley Publish a Form Template and Submit an Instance](https://apis.io/arazzos/bentley-systems/bentley-systems-publish-form-workflow/)
+- [Bentley Register Reality Data and Grant Write Access](https://apis.io/arazzos/bentley-systems/bentley-systems-register-reality-data-workflow/)
+- [Bentley Tag a Named Version From the Latest Changeset](https://apis.io/arazzos/bentley-systems/bentley-systems-tag-named-version-workflow/)
 
-## Timestamps
+#### GraphQL (1)
 
-- **Created:** 2026-05-23
-- **Modified:** 2026-05-23
+GraphQL schemas.
 
-## APIs
+- [Moved to /providers/bentley-systems/](https://apis.io/graphqls/bentley-systems/bentley-systems-graphql/)
 
-### iTwin Access Control API
+#### Agentic access (1)
 
-Manage user permissions, roles, group memberships, owner members, share invitations, and job-based access for iTwin projects. Provides role-based access control across the iTwin Platform with 39 operations covering invitations, group/user membership, share links, and permission discovery.
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- **Human URL:** [https://developer.bentley.com/apis/access-control-v2/](https://developer.bentley.com/apis/access-control-v2/)
-- **Base URL:** `https://api.bentley.com/accesscontrol`
+- [Bentley Systems Agentic Access](https://apis.io/agentic-access/bentley-systems/bentley-systems-agentic-access/)
 
-#### Tags
+#### JSON Schema (8)
 
-- Access Control
-- Identity
-- Permissions
-- Roles
-- Groups
-- Members
-- Invitations
-- Administration
+The data models the API reads and writes.
 
-#### Properties
+- [Changeset](https://apis.io/schemas/bentley-systems/bentley-changeset/)
+- [iModel](https://apis.io/schemas/bentley-systems/bentley-imodel/)
+- [Issue](https://apis.io/schemas/bentley-systems/bentley-issue/)
+- [iTwin](https://apis.io/schemas/bentley-systems/bentley-itwin/)
+- [NamedVersion](https://apis.io/schemas/bentley-systems/bentley-named-version/)
+- [RealityData](https://apis.io/schemas/bentley-systems/bentley-reality-data/)
+- [ScheduleTask](https://apis.io/schemas/bentley-systems/bentley-schedule-task/)
+- [WebhookSubscription](https://apis.io/schemas/bentley-systems/bentley-webhook-subscription/)
 
-- [Documentation](https://developer.bentley.com/apis/access-control-v2/)
-- [API Reference](https://developer.bentley.com/apis/access-control-v2/operations/)
-- [OpenAPI](openapi/itwin-access-control-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-access-control.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-access-control.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### JSON Structure (5)
 
-### iTwins API
+Data models expressed in JSON Structure.
 
-Create, manage, and query iTwin containers — the top-level organizational unit that holds iModels, reality data, schedules, and project context. The iTwins API administers projects, organizations, repositories, and hierarchy across the iTwin Platform.
+- [Bentley Changeset Structure](https://apis.io/json-structure/bentley-systems/bentley-changeset-structure/)
+- [Bentley Imodel Structure](https://apis.io/json-structure/bentley-systems/bentley-imodel-structure/)
+- [Bentley Itwin Structure](https://apis.io/json-structure/bentley-systems/bentley-itwin-structure/)
+- [Bentley Named Version Structure](https://apis.io/json-structure/bentley-systems/bentley-named-version-structure/)
+- [Bentley Reality Data Structure](https://apis.io/json-structure/bentley-systems/bentley-reality-data-structure/)
 
-- **Human URL:** [https://developer.bentley.com/apis/itwins/](https://developer.bentley.com/apis/itwins/)
-- **Base URL:** `https://api.bentley.com/itwins`
+#### JSON-LD (1)
 
-#### Tags
+Linked-data contexts for the provider's vocabulary.
 
-- iTwins
-- Projects
-- Organizations
-- Administration
-- Hierarchy
-- Repositories
+- [Bentley Systems Context](https://apis.io/jsonld/bentley-systems/bentley-systems-context/)
 
-#### Properties
+#### Vocabulary (1)
 
-- [Documentation](https://developer.bentley.com/apis/itwins/)
-- [API Reference](https://developer.bentley.com/apis/itwins/operations/)
-- [OpenAPI](openapi/itwin-itwins-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-itwins.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-itwins.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+The provider's domain terms, defined.
 
-### iTwin Users API
+- [Bentley iTwin Platform Vocabulary](https://apis.io/vocabularies/bentley-systems/bentley-systems-vocabulary/)
 
-Read user account profile information for users authorized to the iTwin Platform. Provides identity lookup and profile data used by other iTwin services.
+#### Examples (13)
 
-- **Human URL:** [https://developer.bentley.com/apis/users/](https://developer.bentley.com/apis/users/)
-- **Base URL:** `https://api.bentley.com/users`
+Example requests and responses.
 
-#### Tags
+- [Bentley Carbon Calculation Example](https://apis.io/examples/bentley-systems/bentley-carbon-calculation-example/)
+- [Bentley Changeset Example](https://apis.io/examples/bentley-systems/bentley-changeset-example/)
+- [Bentley Clash Test Example](https://apis.io/examples/bentley-systems/bentley-clash-test-example/)
+- [Bentley Imodel Create Example](https://apis.io/examples/bentley-systems/bentley-imodel-create-example/)
+- [Bentley Imodel Example](https://apis.io/examples/bentley-systems/bentley-imodel-example/)
+- [Bentley Issue Example](https://apis.io/examples/bentley-systems/bentley-issue-example/)
+- [Bentley Itwin Example](https://apis.io/examples/bentley-systems/bentley-itwin-example/)
+- [Bentley Named Version Example](https://apis.io/examples/bentley-systems/bentley-named-version-example/)
+- [Bentley Reality Data Example](https://apis.io/examples/bentley-systems/bentley-reality-data-example/)
+- [Bentley Saved View Example](https://apis.io/examples/bentley-systems/bentley-saved-view-example/)
+- [Bentley Schedule Task Example](https://apis.io/examples/bentley-systems/bentley-schedule-task-example/)
+- [Bentley Synchronization Run Example](https://apis.io/examples/bentley-systems/bentley-synchronization-run-example/)
+- [Bentley Webhook Subscription Example](https://apis.io/examples/bentley-systems/bentley-webhook-subscription-example/)
 
-- Users
-- Identity
-- Profiles
-- Administration
+#### Collections (148)
 
-#### Properties
+Postman and Open Collection request collections.
 
-- [Documentation](https://developer.bentley.com/apis/users/)
-- [API Reference](https://developer.bentley.com/apis/users/operations/)
-- [OpenAPI](openapi/itwin-users-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-users.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-users.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [iTwin Control Access API](https://apis.io/collections/bentley-systems/open-bentley-systems-access-api/)
+- [iTwin Control Access Animations API](https://apis.io/collections/bentley-systems/open-bentley-systems-animations-api/)
+- [iTwin Control Access Attachments API](https://apis.io/collections/bentley-systems/open-bentley-systems-attachments-api/)
+- [iTwin Control Access Audit Trail API](https://apis.io/collections/bentley-systems/open-bentley-systems-audit-trail-api/)
+- [iTwin Control Access Authorization API](https://apis.io/collections/bentley-systems/open-bentley-systems-authorization-api/)
+- [iTwin Control Access Baselines API](https://apis.io/collections/bentley-systems/open-bentley-systems-baselines-api/)
+- [iTwin Control Access Briefcases API](https://apis.io/collections/bentley-systems/open-bentley-systems-briefcases-api/)
+- [iTwin Control Access Calendars API](https://apis.io/collections/bentley-systems/open-bentley-systems-calendars-api/)
+- [iTwin Control Access Catalog API](https://apis.io/collections/bentley-systems/open-bentley-systems-catalog-api/)
+- [iTwin Control Access Categories API](https://apis.io/collections/bentley-systems/open-bentley-systems-categories-api/)
+- [iTwin Control Access Cesium API](https://apis.io/collections/bentley-systems/open-bentley-systems-cesium-api/)
+- [iTwin Control Access Change Tracking API](https://apis.io/collections/bentley-systems/open-bentley-systems-change-tracking-api/)
+- [iTwin Control Access Changesets API](https://apis.io/collections/bentley-systems/open-bentley-systems-changesets-api/)
+- [iTwin Control Access Comments API](https://apis.io/collections/bentley-systems/open-bentley-systems-comments-api/)
+- [iTwin Control Access Comparisons API](https://apis.io/collections/bentley-systems/open-bentley-systems-comparisons-api/)
+- [iTwin Control Access Components API](https://apis.io/collections/bentley-systems/open-bentley-systems-components-api/)
+- [iTwin Control Access Configurations API](https://apis.io/collections/bentley-systems/open-bentley-systems-configurations-api/)
+- [iTwin Control Access Connections API](https://apis.io/collections/bentley-systems/open-bentley-systems-connections-api/)
+- [iTwin Control Access Connectors API](https://apis.io/collections/bentley-systems/open-bentley-systems-connectors-api/)
+- [iTwin Control Access Content API](https://apis.io/collections/bentley-systems/open-bentley-systems-content-api/)
+- [iTwin Control Access Detectors API](https://apis.io/collections/bentley-systems/open-bentley-systems-detectors-api/)
+- [iTwin Control Access Devices API](https://apis.io/collections/bentley-systems/open-bentley-systems-devices-api/)
+- [iTwin Control Access Events API](https://apis.io/collections/bentley-systems/open-bentley-systems-events-api/)
+- [iTwin Control Access Export API](https://apis.io/collections/bentley-systems/open-bentley-systems-export-api/)
+- [iTwin Control Access Exports API](https://apis.io/collections/bentley-systems/open-bentley-systems-exports-api/)
+- …and 123 more published on APIs.io
 
-### iTwin iModels API
+#### Governance rules (2)
 
-Create, clone, fork, query, and manage iModels — Bentley's specialized information containers for the lifecycle of infrastructure assets. Covers changesets, named versions, locks, briefcases, users, baselines, thumbnails, and changesets-extended-data across 51 operations.
+Spectral rulesets for the provider's contracts.
 
-- **Human URL:** [https://developer.bentley.com/apis/imodels-v2/](https://developer.bentley.com/apis/imodels-v2/)
-- **Base URL:** `https://api.bentley.com/imodels`
+- [Bentley Systems — jsonschema rules](https://apis.io/rules/bentley-systems/bentley-systems-jsonschema-spectral-rules/)
+- [Bentley Systems API Rules](https://apis.io/rules/bentley-systems/bentley-systems-rules/)
 
-#### Tags
+#### Security (3)
 
-- iModels
-- Changesets
-- Named Versions
-- Briefcases
-- Locks
-- Versioning
-- Digital Twin
-- Data Management
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Properties
+- [Bentley Systems Authentication](https://apis.io/security/bentley-systems/bentley-systems-authentication/)
+- [Bentley Systems Domain Security](https://apis.io/security/bentley-systems/bentley-systems-domain-security/)
+- [Bentley Systems Vulnerability Disclosure](https://apis.io/security/bentley-systems/bentley-systems-vulnerability-disclosure/)
 
-- [Documentation](https://developer.bentley.com/apis/imodels-v2/)
-- [API Reference](https://developer.bentley.com/apis/imodels-v2/operations/)
-- [OpenAPI](openapi/itwin-imodels-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-imodels.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-imodels.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### OAuth scopes (1)
 
-### iTwin Storage API
+The permissions the API asks for.
 
-Store and retrieve files inside iTwin containers — folders, files, file versions, and trashed items. Supports upload, copy, lock, and content download operations across 27 endpoints.
+- [Bentley Systems Scopes](https://apis.io/scopes/bentley-systems/bentley-systems-scopes/)
 
-- **Human URL:** [https://developer.bentley.com/apis/storage/](https://developer.bentley.com/apis/storage/)
-- **Base URL:** `https://api.bentley.com/storage`
+#### Plans and pricing (2)
 
-#### Tags
+Published plans, tiers and prices.
 
-- Storage
-- Files
-- Folders
-- Uploads
-- Versions
-- Content
+- [Bentley Systems Plans Pricing](https://apis.io/plans/bentley-systems/bentley-systems-plans-pricing/)
+- [Bentley Systems Price Estimates](https://apis.io/plans/bentley-systems/bentley-systems-price-estimates/)
 
-#### Properties
+#### Rate limits (1)
 
-- [Documentation](https://developer.bentley.com/apis/storage/)
-- [API Reference](https://developer.bentley.com/apis/storage/operations/)
-- [OpenAPI](openapi/itwin-storage-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-storage.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-storage.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Published request limits.
 
-### iTwin Webhooks API
+- [Bentley Systems Rate Limits](https://apis.io/rate-limits/bentley-systems/bentley-systems-rate-limits/)
 
-Subscribe to iTwin Platform events. Create, list, update, and delete webhook subscriptions to receive callbacks when iModels, iTwins, reality data, synchronization jobs, and other resources change state.
+#### FinOps (1)
 
-- **Human URL:** [https://developer.bentley.com/apis/webhooks-v2/](https://developer.bentley.com/apis/webhooks-v2/)
-- **Base URL:** `https://api.bentley.com/webhooks`
+What the API costs to run, by operation.
 
-#### Tags
+- [Bentley Systems Finops](https://apis.io/finops/bentley-systems/bentley-systems-finops/)
 
-- Webhooks
-- Events
-- Subscriptions
-- Notifications
-- EventDriven
+## Where to find this API
 
-#### Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-- [Documentation](https://developer.bentley.com/apis/webhooks-v2/)
-- [API Reference](https://developer.bentley.com/apis/webhooks-v2/operations/)
-- [OpenAPI](openapi/itwin-webhooks-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-webhooks.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-webhooks.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### iTwin Synchronization API
-
-Synchronize native design files (DGN, DWG, IFC, SHP, RVT, and more) from Azure Blob Storage, iTwin Storage, or ProjectWise into iModels. Manages connections, source files, runs, and synchronization configurations across 42 operations.
-
-- **Human URL:** [https://developer.bentley.com/apis/synchronization/](https://developer.bentley.com/apis/synchronization/)
-- **Base URL:** `https://api.bentley.com/synchronization`
-
-#### Tags
-
-- Synchronization
-- Connections
-- Connectors
-- Source Files
-- DGN
-- IFC
-- Project Delivery
-
-#### Properties
-
-- [Documentation](https://developer.bentley.com/apis/synchronization/)
-- [API Reference](https://developer.bentley.com/apis/synchronization/operations/)
-- [OpenAPI](openapi/itwin-synchronization-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-synchronization.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-synchronization.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### iTwin Reality Management API
-
-Organize and manage reality data — photos, point clouds, meshes, 3D Tiles, and orthophotos. Provides metadata management and access control for reality capture deliverables across the iTwin Platform.
-
-- **Human URL:** [https://developer.bentley.com/apis/reality-management/](https://developer.bentley.com/apis/reality-management/)
-- **Base URL:** `https://api.bentley.com/reality-management`
-
-#### Tags
-
-- Reality Capture
-- Reality Data
-- Point Clouds
-- Meshes
-- 3D Tiles
-- Photogrammetry
-
-#### Properties
-
-- [Documentation](https://developer.bentley.com/apis/reality-management/)
-- [API Reference](https://developer.bentley.com/apis/reality-management/operations/)
-- [OpenAPI](openapi/itwin-reality-management-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-reality-management.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-reality-management.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### iTwin Reality Modeling API (ContextCapture)
-
-Submit reality modeling jobs that process photos and laser scans into 3D meshes, point clouds, and 3D Tiles using Bentley's ContextCapture engine. Covers workspaces, settings, and job management.
-
-- **Human URL:** [https://developer.bentley.com/apis/contextcapture/](https://developer.bentley.com/apis/contextcapture/)
-- **Base URL:** `https://api.bentley.com/contextcapture`
-
-#### Tags
-
-- Reality Modeling
-- ContextCapture
-- Photogrammetry
-- 3D Reconstruction
-- Jobs
-
-#### Properties
-
-- [Documentation](https://developer.bentley.com/apis/contextcapture/)
-- [API Reference](https://developer.bentley.com/apis/contextcapture/operations/)
-- [OpenAPI](openapi/itwin-reality-modeling-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-reality-modeling.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-reality-modeling.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### iTwin Reality Analysis API
-
-Run AI-powered analyses against reality data — object detection, segmentation, lines/polygon extraction, change detection — across 19 operations spanning jobs, output results, and detectors.
-
-- **Human URL:** [https://developer.bentley.com/apis/reality-analysis/](https://developer.bentley.com/apis/reality-analysis/)
-- **Base URL:** `https://api.bentley.com/realitydataanalysis`
-
-#### Tags
-
-- Reality Analysis
-- AI
-- Machine Learning
-- Object Detection
-- Change Detection
-- Reality Capture
-
-#### Properties
-
-- [Documentation](https://developer.bentley.com/apis/reality-analysis/)
-- [API Reference](https://developer.bentley.com/apis/reality-analysis/operations/)
-- [OpenAPI](openapi/itwin-reality-analysis-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-reality-analysis.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-reality-analysis.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### iTwin Reality Conversion API
-
-Convert reality data formats between point cloud, mesh, and 3D Tile representations. Submit conversion jobs and retrieve outputs.
-
-- **Human URL:** [https://developer.bentley.com/apis/realityconversion/](https://developer.bentley.com/apis/realityconversion/)
-- **Base URL:** `https://api.bentley.com/realityconversion`
-
-#### Tags
-
-- Reality Conversion
-- Format Conversion
-- Point Clouds
-- Meshes
-- 3D Tiles
-
-#### Properties
-
-- [Documentation](https://developer.bentley.com/apis/realityconversion/)
-- [API Reference](https://developer.bentley.com/apis/realityconversion/operations/)
-- [OpenAPI](openapi/itwin-reality-conversion-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-reality-conversion.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-reality-conversion.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### iTwin Schedules API
-
-Plan and manage 4D construction schedules. The largest iTwin API surface — 128 operations — covering tasks, resources, calendars, baselines, animations, work breakdown structures, and progress tracking for SYNCHRO-grade project management.
-
-- **Human URL:** [https://developer.bentley.com/apis/schedules/](https://developer.bentley.com/apis/schedules/)
-- **Base URL:** `https://api.bentley.com/schedules`
-
-#### Tags
-
-- Schedules
-- Scheduling
-- Tasks
-- Resources
-- 4D Construction
-- SYNCHRO
-- Project Management
-- Gantt
-
-#### Properties
-
-- [Documentation](https://developer.bentley.com/apis/schedules/)
-- [API Reference](https://developer.bentley.com/apis/schedules/operations/)
-- [OpenAPI](openapi/itwin-schedules-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-schedules.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-schedules.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### iTwin Insights API (Reporting)
-
-Build custom reports and dashboards on top of iModel data. Define mappings, groups, properties, and ODATA endpoints to extract structured data for Power BI, Tableau, and custom analytics. 62 operations span reports, mappings, extractions, calculated properties, and ODATA.
-
-- **Human URL:** [https://developer.bentley.com/apis/insights/](https://developer.bentley.com/apis/insights/)
-- **Base URL:** `https://api.bentley.com/insights`
-
-#### Tags
-
-- Insights
-- Reporting
-- Dashboards
-- ODATA
-- Analytics
-- Business Intelligence
-- Mappings
-
-#### Properties
-
-- [Documentation](https://developer.bentley.com/apis/insights/)
-- [API Reference](https://developer.bentley.com/apis/insights/operations/)
-- [OpenAPI](openapi/itwin-insights-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-insights.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-insights.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### iTwin Carbon Calculation API
-
-Compute embodied carbon footprint across infrastructure projects using EC3 (Embodied Carbon in Construction Calculator) integrations and iModel quantity takeoffs. 15 operations covering carbon templates, materials, and EPD lookups.
-
-- **Human URL:** [https://developer.bentley.com/apis/carbon-calculation/](https://developer.bentley.com/apis/carbon-calculation/)
-- **Base URL:** `https://api.bentley.com/carboncalculation`
-
-#### Tags
-
-- Carbon
-- Sustainability
-- EC3
-- Embodied Carbon
-- ESG
-- Quantity Takeoff
-
-#### Properties
-
-- [Documentation](https://developer.bentley.com/apis/carbon-calculation/)
-- [API Reference](https://developer.bentley.com/apis/carbon-calculation/operations/)
-- [OpenAPI](openapi/itwin-carbon-calculation-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-carbon-calculation.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-carbon-calculation.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### iTwin Clash Detection API
-
-Detect geometry clashes between 3D elements in iModels. Define clash tests, suppression rules, and retrieve clash run results across 20 operations.
-
-- **Human URL:** [https://developer.bentley.com/apis/clash-detection-v2/](https://developer.bentley.com/apis/clash-detection-v2/)
-- **Base URL:** `https://api.bentley.com/clashdetection`
-
-#### Tags
-
-- Clash Detection
-- Validation
-- Quality Assurance
-- BIM Coordination
-
-#### Properties
-
-- [Documentation](https://developer.bentley.com/apis/clash-detection-v2/)
-- [API Reference](https://developer.bentley.com/apis/clash-detection-v2/operations/)
-- [OpenAPI](openapi/itwin-clash-detection-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-clash-detection.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-clash-detection.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### iTwin Changed Elements API
-
-Track and query design changes between iModel versions. Enables visual diff workflows and change reporting across project iterations.
-
-- **Human URL:** [https://developer.bentley.com/apis/changed-elements-v2/](https://developer.bentley.com/apis/changed-elements-v2/)
-- **Base URL:** `https://api.bentley.com/changedelements`
-
-#### Tags
-
-- Changed Elements
-- Change Tracking
-- Versioning
-- BIM Coordination
-
-#### Properties
-
-- [Documentation](https://developer.bentley.com/apis/changed-elements-v2/)
-- [API Reference](https://developer.bentley.com/apis/changed-elements-v2/operations/)
-- [OpenAPI](openapi/itwin-changed-elements-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-changed-elements.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-changed-elements.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### iTwin Issues API
-
-Manage issues raised against project deliverables — observations, defects, RFIs, punch list items. Supports attachments, comments, audit trail, and workflow transitions across 29 operations.
-
-- **Human URL:** [https://developer.bentley.com/apis/issues-v1/](https://developer.bentley.com/apis/issues-v1/)
-- **Base URL:** `https://api.bentley.com/issues`
-
-#### Tags
-
-- Issues
-- Issue Tracking
-- Punchlist
-- RFI
-- Collaboration
-- Project Delivery
-
-#### Properties
-
-- [Documentation](https://developer.bentley.com/apis/issues-v1/)
-- [API Reference](https://developer.bentley.com/apis/issues-v1/operations/)
-- [OpenAPI](openapi/itwin-issues-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-issues.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-issues.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### iTwin Forms API
-
-Define and submit forms — field-data capture templates used for inspections, checklists, and project-data collection. 29 operations covering form definitions, instances, and attachments.
-
-- **Human URL:** [https://developer.bentley.com/apis/forms-v2/](https://developer.bentley.com/apis/forms-v2/)
-- **Base URL:** `https://api.bentley.com/forms`
-
-#### Tags
-
-- Forms
-- Data Collection
-- Inspections
-- Checklists
-- Field Capture
-
-#### Properties
-
-- [Documentation](https://developer.bentley.com/apis/forms-v2/)
-- [API Reference](https://developer.bentley.com/apis/forms-v2/operations/)
-- [OpenAPI](openapi/itwin-forms-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-forms.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-forms.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### iTwin Library API
-
-Manage reusable component libraries — catalogs, components, parameters, and component instances. 60 operations span catalog management, search, ingest, and component definition.
-
-- **Human URL:** [https://developer.bentley.com/apis/library/](https://developer.bentley.com/apis/library/)
-- **Base URL:** `https://api.bentley.com/library`
-
-#### Tags
-
-- Library
-- Catalog
-- Components
-- Reusable Assets
-- Parameters
-
-#### Properties
-
-- [Documentation](https://developer.bentley.com/apis/library/)
-- [API Reference](https://developer.bentley.com/apis/library/operations/)
-- [OpenAPI](openapi/itwin-library-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-library.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-library.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### iTwin Saved Views API
-
-Persist and share saved iModel viewer states — camera positions, display styles, category visibility, model selections, and viewport overrides. 22 operations covering groups, tags, images, and extensions.
-
-- **Human URL:** [https://developer.bentley.com/apis/savedviews/](https://developer.bentley.com/apis/savedviews/)
-- **Base URL:** `https://api.bentley.com/savedviews`
-
-#### Tags
-
-- Saved Views
-- Visualization
-- Camera
-- Display Styles
-- Collaboration
-
-#### Properties
-
-- [Documentation](https://developer.bentley.com/apis/savedviews/)
-- [API Reference](https://developer.bentley.com/apis/savedviews/operations/)
-- [OpenAPI](openapi/itwin-saved-views-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-saved-views.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-saved-views.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### iTwin Scenes API
-
-Configure 3D scenes that compose iModels, reality data, OpenStreetMap, terrain, and overlays into a single viewer experience. 19 operations covering scenes, layers, and scene extensions.
-
-- **Human URL:** [https://developer.bentley.com/apis/scenes/](https://developer.bentley.com/apis/scenes/)
-- **Base URL:** `https://api.bentley.com/scenes`
-
-#### Tags
-
-- Scenes
-- Visualization
-- 3D
-- Composition
-- Layers
-
-#### Properties
-
-- [Documentation](https://developer.bentley.com/apis/scenes/)
-- [API Reference](https://developer.bentley.com/apis/scenes/operations/)
-- [OpenAPI](openapi/itwin-scenes-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-scenes.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-scenes.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### iTwin Named Groups API
-
-Create and manage logical groupings of iTwin elements by query, selection, or hierarchy. Used by reporting, validation, and visualization workflows.
-
-- **Human URL:** [https://developer.bentley.com/apis/named-groups/](https://developer.bentley.com/apis/named-groups/)
-- **Base URL:** `https://api.bentley.com/namedgroups`
-
-#### Tags
-
-- Named Groups
-- Element Grouping
-- Queries
-- Selections
-
-#### Properties
-
-- [Documentation](https://developer.bentley.com/apis/named-groups/)
-- [API Reference](https://developer.bentley.com/apis/named-groups/operations/)
-- [OpenAPI](openapi/itwin-named-groups-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-named-groups.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-named-groups.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### iTwin Grouping and Mapping API
-
-Map iModel elements to logical groups and property mappings used in reporting and analysis workflows. Bridges the geometric element world to the tabular reporting world. 24 operations.
-
-- **Human URL:** [https://developer.bentley.com/apis/grouping-and-mapping/](https://developer.bentley.com/apis/grouping-and-mapping/)
-- **Base URL:** `https://api.bentley.com/grouping-and-mapping`
-
-#### Tags
-
-- Grouping
-- Mapping
-- Property Mapping
-- Reporting
-- Calculated Properties
-
-#### Properties
-
-- [Documentation](https://developer.bentley.com/apis/grouping-and-mapping/)
-- [API Reference](https://developer.bentley.com/apis/grouping-and-mapping/operations/)
-- [OpenAPI](openapi/itwin-grouping-mapping-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-grouping-mapping.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-grouping-mapping.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### iTwin Transformations API
-
-Submit and manage transformation jobs that derive new iModels from existing ones — element filtering, schema migration, and data shaping. 22 operations covering transformations and runs.
-
-- **Human URL:** [https://developer.bentley.com/apis/transformations/](https://developer.bentley.com/apis/transformations/)
-- **Base URL:** `https://api.bentley.com/transformations`
-
-#### Tags
-
-- Transformations
-- Data Transformation
-- iModel Filtering
-- Schema Migration
-- Jobs
-
-#### Properties
-
-- [Documentation](https://developer.bentley.com/apis/transformations/)
-- [API Reference](https://developer.bentley.com/apis/transformations/operations/)
-- [OpenAPI](openapi/itwin-transformations-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-transformations.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-transformations.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### iTwin Export API
-
-Export iModel data to web-friendly formats including 3D Tiles, glTF, and tileset bundles. Supports browser-ready visualization pipelines.
-
-- **Human URL:** [https://developer.bentley.com/apis/export/](https://developer.bentley.com/apis/export/)
-- **Base URL:** `https://api.bentley.com/imodels-export`
-
-#### Tags
-
-- Export
-- 3D Tiles
-- glTF
-- Web Visualization
-- Mesh Export
-
-#### Properties
-
-- [Documentation](https://developer.bentley.com/apis/export/)
-- [API Reference](https://developer.bentley.com/apis/export/operations/)
-- [OpenAPI](openapi/itwin-export-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-export.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-export.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### iTwin Mesh Export API
-
-Export 3D mesh geometry from iModels for use in CesiumJS, Three.js, Unity, and Unreal Engine visualizations.
-
-- **Human URL:** [https://developer.bentley.com/apis/mesh-export/](https://developer.bentley.com/apis/mesh-export/)
-- **Base URL:** `https://api.bentley.com/mesh-export`
-
-#### Tags
-
-- Mesh Export
-- Geometry
-- 3D Tiles
-- glTF
-- Cesium
-- Web Visualization
-
-#### Properties
-
-- [Documentation](https://developer.bentley.com/apis/mesh-export/)
-- [API Reference](https://developer.bentley.com/apis/mesh-export/operations/)
-- [OpenAPI](openapi/itwin-mesh-export-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-mesh-export.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-mesh-export.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### iTwin Visualization API
-
-Server-side visualization service for rendering iTwins in web browsers without client compute. Supports interactive viewers and image generation.
-
-- **Human URL:** [https://developer.bentley.com/apis/visualization/](https://developer.bentley.com/apis/visualization/)
-- **Base URL:** `https://api.bentley.com/visualization`
-
-#### Tags
-
-- Visualization
-- Rendering
-- Web Visualization
-- Streaming
-
-#### Properties
-
-- [Documentation](https://developer.bentley.com/apis/visualization/)
-- [Postman Collection](collections/itwin-access-control.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-access-control.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-carbon-calculation.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-carbon-calculation.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-cesium-curated-content.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-cesium-curated-content.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-changed-elements.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-changed-elements.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-clash-detection.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-clash-detection.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-edfs.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-edfs.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-export.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-export.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-forms.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-forms.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-geospatial-features.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-geospatial-features.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-grouping-mapping.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-grouping-mapping.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-imodels.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-imodels.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-insights.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-insights.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-issues.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-issues.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-itwins.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-itwins.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-library.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-library.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-mesh-export.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-mesh-export.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-named-groups.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-named-groups.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-pnid.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-pnid.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-reality-analysis.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-reality-analysis.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-reality-conversion.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-reality-conversion.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-reality-management.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-reality-management.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-reality-modeling.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-reality-modeling.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-saved-views.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-saved-views.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-scenes.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-scenes.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-schedules.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-schedules.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-sensor-data.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-sensor-data.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-storage.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-storage.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-synchronization.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-synchronization.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-transformations.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-transformations.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-users.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-users.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/itwin-webhooks.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-webhooks.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### iTwin Sensor Data API
-
-Ingest, store, and query IoT sensor telemetry associated with iTwin assets. Provides device, sensor, observation, and time-series endpoints.
-
-- **Human URL:** [https://developer.bentley.com/apis/sensor-data/](https://developer.bentley.com/apis/sensor-data/)
-- **Base URL:** `https://api.bentley.com/sensor-data`
-
-#### Tags
-
-- Sensor Data
-- IoT
-- Time Series
-- Telemetry
-- Devices
-- Observations
-
-#### Properties
-
-- [Documentation](https://developer.bentley.com/apis/sensor-data/)
-- [API Reference](https://developer.bentley.com/apis/sensor-data/operations/)
-- [OpenAPI](openapi/itwin-sensor-data-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-sensor-data.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-sensor-data.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### iTwin Cesium Curated Content API
-
-Access Cesium's curated geospatial content — Cesium World Terrain, Bing Maps imagery, OpenStreetMap buildings — for streaming into iTwin viewers.
-
-- **Human URL:** [https://developer.bentley.com/apis/cesium-curated-content/](https://developer.bentley.com/apis/cesium-curated-content/)
-- **Base URL:** `https://api.bentley.com/curated-content`
-
-#### Tags
-
-- Cesium
-- Curated Content
-- Geospatial
-- Imagery
-- Terrain
-- Streaming
-
-#### Properties
-
-- [Documentation](https://developer.bentley.com/apis/cesium-curated-content/)
-- [API Reference](https://developer.bentley.com/apis/cesium-curated-content/operations/)
-- [OpenAPI](openapi/itwin-cesium-curated-content-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-cesium-curated-content.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-cesium-curated-content.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### iTwin Geospatial Features API
-
-Manage geospatial feature collections — GeoJSON-style points, lines, polygons — associated with iTwins. Supports overlay layers in viewers.
-
-- **Human URL:** [https://developer.bentley.com/apis/geospatial-features/](https://developer.bentley.com/apis/geospatial-features/)
-- **Base URL:** `https://api.bentley.com/geospatial-features`
-
-#### Tags
-
-- Geospatial
-- Features
-- GeoJSON
-- GIS
-- Overlays
-
-#### Properties
-
-- [Documentation](https://developer.bentley.com/apis/geospatial-features/)
-- [API Reference](https://developer.bentley.com/apis/geospatial-features/operations/)
-- [OpenAPI](openapi/itwin-geospatial-features-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-geospatial-features.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-geospatial-features.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Enterprise Data Federation Service (EDFS) API
-
-Federate access to data held in Bentley and third-party repositories — ProjectWise, SharePoint, and external systems — so that iTwin applications can query unified asset metadata. 24 operations across data sources, schemas, queries, and federation policies.
-
-- **Human URL:** [https://developer.bentley.com/apis/edfs/](https://developer.bentley.com/apis/edfs/)
-- **Base URL:** `https://api.bentley.com/edfs`
-
-#### Tags
-
-- EDFS
-- Data Federation
-- ProjectWise
-- Enterprise Data
-- Federated Queries
-
-#### Properties
-
-- [Documentation](https://developer.bentley.com/apis/edfs/)
-- [API Reference](https://developer.bentley.com/apis/edfs/operations/)
-- [OpenAPI](openapi/itwin-edfs-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-edfs.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-edfs.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### iTwin P&ID to iTwin API
-
-Convert Process & Instrumentation Diagrams (P&IDs) into iTwin-compatible intelligent data — symbols, lines, and connectivity — using AI extraction. 14 operations covering jobs, outputs, and training.
-
-- **Human URL:** [https://developer.bentley.com/apis/pnid-to-itwin-v2/](https://developer.bentley.com/apis/pnid-to-itwin-v2/)
-- **Base URL:** `https://api.bentley.com/pnid`
-
-#### Tags
-
-- PnID
-- Process Diagrams
-- Plant Engineering
-- AI Extraction
-- Symbols
-
-#### Properties
-
-- [Documentation](https://developer.bentley.com/apis/pnid-to-itwin-v2/)
-- [API Reference](https://developer.bentley.com/apis/pnid-to-itwin-v2/operations/)
-- [OpenAPI](openapi/itwin-pnid-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/itwin-pnid.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/itwin-pnid.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [Arazzo Workflows](arazzo/) — [Arazzo Specification](https://spec.openapis.org/arazzo/latest.html)
-- [Developer Portal](https://developer.bentley.com)
-- [Portal](https://developer.bentley.com)
+- [Website](https://www.bentley.com/)
 - [Documentation](https://developer.bentley.com/apis/)
-- [API Reference](https://developer.bentley.com/apis/)
-- [Getting Started](https://developer.bentley.com/tutorials/quickstart-web-and-service-apps/)
-- [Quickstart](https://developer.bentley.com/tutorials/quickstart-web-and-service-apps/)
-- [Tutorials](https://developer.bentley.com/tutorials/)
-- [Authentication](https://developer.bentley.com/apis/overview/authorization/)
-- [Sign Up](https://www.bentley.com/forms/register/)
+- [Getting started](https://developer.bentley.com/tutorials/quickstart-web-and-service-apps/)
+- [API reference](https://developer.bentley.com/apis/)
 - [Pricing](https://developer.bentley.com/pricing/)
-- [Plans](plans/bentley-systems-plans-pricing.yml)
-- [Rate Limits](rate-limits/bentley-systems-rate-limits.yml)
-- [Fin Ops](finops/bentley-systems-finops.yml)
-- [Status Page](https://status.bentley.com)
-- [Changelog](https://developer.bentley.com/community/)
-- [Compliance](https://www.bentley.com/legal/data-privacy/)
-- [Terms of Service](https://developer.bentley.com/legal/)
-- [Privacy Policy](https://www.bentley.com/legal/privacy-policy/)
-- [GitHub Organization](https://github.com/iTwin)
-- [GitHub Organization](https://github.com/bentleysystems)
-- [SDK](https://github.com/iTwin/itwinjs-core)
-- [SDK](https://github.com/iTwin/iTwinUI)
-- [SDK](https://github.com/iTwin/imodels-clients)
-- [SDK](https://github.com/iTwin/mobile-sdk-ios)
-- [SDK](https://github.com/iTwin/mobile-sdk-android)
-- [SDK](https://github.com/iTwin/viewer)
-- [SDK](https://github.com/iTwin/itwin-unreal-plugin)
-- [SDK](https://github.com/iTwin/presentation)
-- [SDK](https://github.com/iTwin/appui)
-- [SDK](https://github.com/bentleysystems/MicroStationPython)
-- [SDK](https://github.com/bentleysystems/openstaadpy)
-- [SDK](https://github.com/bentleysystems/openstaad-mcp)
-- [Sandbox](https://developer.bentley.com/tutorials/web-application-quick-start/)
-- [Console](https://developer.bentley.com/my-apps/)
-- [LinkedIn](https://www.linkedin.com/company/bentley-systems)
-- [YouTube](https://www.youtube.com/user/BentleySystems)
-- [X (Twitter)](https://twitter.com/BentleySystems)
-- [Blog](https://blog.bentley.com)
 - [Support](https://www.bentley.com/support/)
-- [Community](https://developer.bentley.com/community/)
-- [Vocabulary Of Terms](vocabulary/bentley-systems-vocabulary.yml)
-- [JSON-LD](json-ld/bentley-systems-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [L L Ms Txt](https://bentley.com/llms.txt)
+- [Changelog](https://developer.bentley.com/community/)
+- [Blog](https://blog.bentley.com)
+- [Compliance](https://www.bentley.com/legal/data-privacy/)
+- [Terms of service](https://developer.bentley.com/legal/)
+- [Privacy policy](https://www.bentley.com/legal/privacy-policy/)
+- [GitHub](https://github.com/iTwin)
+- [Status](https://status.bentley.com)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** info@apievangelist.com
-**URL:** https://apievangelist.com
+**Kin Score 64.2** — strong · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 78.6 |
+| Contract quality | 51.8 |
+| Contract governance | 13.6 |
+| Operational transparency | 76.3 |
+| Developer ergonomics | 82.1 |
+| Access clarity | 64.5 |
+
+**Agent readiness 24.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | — |
+
+**Regulatory alignment 36.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/bentley-systems/](https://apis.io/providers/bentley-systems/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Bentley Systems: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/bentley-systems/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
